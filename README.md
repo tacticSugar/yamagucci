@@ -2,6 +2,7 @@
 
 - [Нейминг веток, пулреквестов, коммитов и задач](./.docs/naming.md)
 - [Как начать](./.docs/howtostart.md)
+- [Стили](./.docs/styles.md)
 - [Структура папок проектов](./.docs/folders.md)
 - [Загрузка данных](./.docs/fetch.md)
 - [Типизация](./.docs/typescript.md)
