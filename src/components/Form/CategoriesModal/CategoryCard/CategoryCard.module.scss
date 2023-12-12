@@ -1,0 +1,27 @@
+@import 'styles/variables';
+
+.category {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  background-color: $bad-white;
+  border-radius: 1.5rem;
+  width: fit-content;
+
+  &__name {
+    font-size: 1.5rem;
+    color: $black;
+  }
+  &__type {
+    font-size: 1rem;
+    color: $gray-main;
+  }
+  &__closeIcon {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    cursor: pointer;
+  }
+}

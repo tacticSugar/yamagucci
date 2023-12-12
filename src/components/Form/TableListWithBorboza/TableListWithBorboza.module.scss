@@ -1,0 +1,51 @@
+@import 'styles/variables';
+
+.table {
+  width: 100%;
+}
+.table th {
+  padding-bottom: 2rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0.8rem;
+  font-size: 1.8rem;
+}
+.table td {
+  text-align: left;
+}
+.table tbody tr td {
+  padding: 0.8rem;
+}
+
+.th {
+  &__checkbox {
+    width: 5%;
+  }
+  &__id {
+    width: 50%;
+  }
+  &__price {
+    width: 5%;
+  }
+  &__sale {
+    width: 5%;
+  }
+  &__preorder {
+    width: 5%;
+  }
+}
+
+.nameCell {
+  width: 22rem;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.8rem;
+  max-width: 22rem;
+}
+
+.inputPrice {
+  padding: 2rem 3rem;
+  border: 1px solid $gray-main;
+  border-radius: 1.5rem;
+  max-width: 15rem;
+}

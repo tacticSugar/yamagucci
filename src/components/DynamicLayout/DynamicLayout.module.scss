@@ -1,0 +1,31 @@
+@import 'styles/variables';
+
+.adminLayout {
+  display: grid;
+  grid-template-columns: 23rem 4fr;
+  grid-template-rows: 6rem 1fr;
+  gap: 0px 0px;
+  font-size: 2rem;
+  grid-template-areas:
+    'header header .'
+    'navigation main .'
+    '. . .';
+  main {
+    grid-area: main;
+    padding-right: 1rem;
+    padding-left: 9rem;
+    margin-top: 2rem;
+  }
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: navigation;
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+.publicLayout {
+}

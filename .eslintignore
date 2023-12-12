@@ -1,0 +1,12 @@
+**/.next
+**/.dist
+/.storyboook/**
+**/node_modules
+**/next-env.d.ts
+config/**
+**/next-env.d.ts
+
+ckeditor5
+**/test.tsx
+**/Wysiwyg.tsx
+**/types

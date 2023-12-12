@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.header {
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid $bad-white;
+  align-items: center;
+}
+
+.select {
+  font-weight: 700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  cursor: pointer;
+}
+.year {
+  font-weight: 700;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: $gray-main;
+  font-size: 1.5rem;
+}

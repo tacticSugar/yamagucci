@@ -1,0 +1,21 @@
+@import 'styles/variables';
+
+.columnVisibilityWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  border-bottom: 1px solid $gray-light;
+}
+
+.checkboxGroupHeader {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $gray-main;
+  margin-bottom: 1rem;
+}
+
+.labelClassName {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+}

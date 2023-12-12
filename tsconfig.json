@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution":"node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/StoryTemplate.tsx", "src/api/useFetchRentTypes/__tests__/fetchRentTypes"],
+  "exclude": ["node_modules", "icons.ts", "schema.d.ts", "ckeditor5", "**/types"]
+}

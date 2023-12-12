@@ -1,0 +1,94 @@
+@import 'styles/variables';
+
+.label {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  &_sm {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contentClassName {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(42, 42, 47, 0.6);
+  z-index: 60;
+}
+
+.mainOptionClassname {
+  font-size: 1.5rem;
+  color: $blue-main;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.subOptionClassname {
+  font-size: 1.5rem;
+  color: $blue-main;
+  font-weight: 400;
+}
+
+.modalContentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionWrapperClassname {
+  min-width: 100%;
+}
+
+.selectedCategoriesModal {
+  align-self: flex-end;
+  width: 50%;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.selectedCategoriesContainer {
+  max-height: 40vh;
+  overflow: auto;
+}
+
+.buttonsModal {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  margin-top: 12rem;
+  gap: 2rem;
+
+  .btnModal {
+    width: 100%;
+  }
+}
+
+.closeModalIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $bad-white;
+  cursor: pointer;
+  border-radius: 50%;
+}

@@ -1,0 +1,11 @@
+@import 'styles/variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem;
+  border-right: 1px solid $gray-light;
+  height: 6rem;
+}

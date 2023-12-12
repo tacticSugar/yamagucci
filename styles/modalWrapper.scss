@@ -1,0 +1,90 @@
+.ModalWrapper {
+  &--fade,
+  &--toBottom,
+  &--toTop,
+  &--toLeft {
+    &.ReactModal__Overlay {
+      will-change: opacity;
+      transition-property: opacity;
+      transition-duration: 200ms;
+      transition-timing-function: ease-in-out;
+      opacity: 0;
+      &--after-open {
+        opacity: 1;
+      }
+      &--before-close {
+        opacity: 0;
+      }
+    }
+    .ReactModal__Content {
+      will-change: transform;
+      transition-property: transform;
+      transition-duration: 200ms;
+      transition-timing-function: ease-in-out;
+      z-index: 10;
+      background-color: #ffffff;
+    }
+  }
+  &--toBottom {
+    .ReactModal__Content {
+      transform: translateY(-100%);
+      &--after-open {
+        transform: translateY(0);
+      }
+      &--before-close {
+        transform: translateY(-100%);
+      }
+    }
+  }
+  &--toTop {
+    .ReactModal__Content {
+      transform: translateY(100%);
+      &--after-open {
+        transform: translateY(0);
+      }
+      &--before-close {
+        transform: translateY(100%);
+      }
+    }
+  }
+  &--toLeft {
+    .ReactModal__Content {
+      transform: translateX(99.99%);
+      transition-timing-function: ease-in-out;
+      &--after-open {
+        transition-delay: 100ms;
+        transform: translateX(0);
+      }
+      &--before-close {
+        transform: translateX(99.99%);
+      }
+    }
+  }
+  &--height {
+    .ReactModal__Content {
+      will-change: max-height;
+      transition-property: max-height;
+      transition-duration: 200ms;
+      transition-timing-function: ease-in-out;
+      max-height: 0;
+      z-index: 10;
+      background-color: #ffffff;
+      &--after-open {
+        max-height: 2000px;
+      }
+      &--before-close {
+        max-height: 0;
+      }
+    }
+  }
+}
+
+.ModalWrapper_disableScroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  touch-action: none;
+  -ms-touch-action: none;
+  overflow-y: hidden;
+}

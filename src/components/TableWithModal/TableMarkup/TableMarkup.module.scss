@@ -1,0 +1,15 @@
+.canSort {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.iconAsc {
+  scale: 1;
+}
+
+.iconDesc {
+  scale: -1;
+}

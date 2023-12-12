@@ -1,0 +1,39 @@
+@import 'styles/variables';
+
+.textarea {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__labelAndTooltip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  &__tooltip {
+    color: $blue-main;
+  }
+
+  &__textarea {
+    padding: 2rem 3rem;
+    border: 1px solid $gray-main;
+    border-radius: 1.5rem;
+
+    &:focus {
+      border-color: $black;
+    }
+    &::placeholder {
+      font-size: 1.8rem;
+      color: $gray-main;
+    }
+  }
+}

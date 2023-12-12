@@ -1,0 +1,78 @@
+@import 'styles/variables';
+
+.search {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
+}
+.customSearch {
+  margin: 3rem 0;
+}
+.list {
+  user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.listTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.cardAdditionalProduct {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bad-white;
+  height: 126px;
+  min-height: 126px;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  color: $black;
+  user-select: 'none';
+  position: relative;
+}
+.flexCol {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.marginLeft {
+  margin-left: auto;
+}
+
+.product {
+  &__id {
+    font-size: 1.6rem;
+  }
+  &__img {
+    border-radius: 1.5rem;
+  }
+  &__name {
+    color: $blue-main;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  &__price {
+    font-size: 2.2rem;
+    color: $gray-main;
+  }
+  &__delete {
+    cursor: pointer;
+  }
+}
+.grab {
+  cursor: move;
+}
+.iconKnob {
+  fill: $gray-black;
+}
+.dragged {
+  background-color: $gray-main;
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+    0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,16 @@
+.groupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.groupTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+}
+
+.groupItems {
+  display: flex;
+  align-items: center;
+}

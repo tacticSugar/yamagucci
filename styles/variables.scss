@@ -1,0 +1,67 @@
+///////////////////////////////////          COLORS
+
+$base-gradient: linear-gradient(90deg, #edc0bf 0, #c4caef 60%);
+$reverse-gradient: linear-gradient(90deg, #c4caef 0, #edc0bf 60%);
+
+// Grays
+$gray-light: #e0e0e0;
+$gray-main: #939393;
+$gray-dark: #575757;
+$gray-black: #333333;
+
+// Blues
+$blue-light: #2e90f8;
+$blue-main: #007aff;
+
+// Reds
+$red-main: #e03638;
+
+// Greens
+$green-main: #00ff1a;
+
+// Whites
+$bad-white: #f1f1f1;
+$white: #ffffff;
+$black: #181818;
+
+///////////////////////////////////          FONT-SIZE
+
+$text-sm: 1rem;
+$text-md: 1.2rem;
+$text-xl: 1.5rem;
+$text-xxl: 2rem;
+$text-xxxl: 3rem;
+
+///////////////////////////////////          BREAKPOINTS
+
+$mobile: 769px;
+$tablet: 1025px;
+$desktop: 1441px;
+
+//Mixins //----------PC FIRST
+@mixin max_custom($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+@mixin max_mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin max_tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin max_desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+:export {
+  mobile: $mobile;
+  tablet: $tablet;
+  desktop: $desktop;
+}

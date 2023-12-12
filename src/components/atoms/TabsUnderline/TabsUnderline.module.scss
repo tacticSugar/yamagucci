@@ -1,0 +1,46 @@
+@import 'styles/variables';
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+  gap: 0px 0px;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    gap: 6rem;
+    padding: 2rem;
+    border: 1px solid $gray-light;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+  }
+}
+
+.tabPanelWrapper {
+  border-left: 1px solid $gray-light;
+  border-right: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
+}
+
+.loader {
+  height: 5rem;
+  border-radius: 0.8rem;
+  cursor: default;
+}
+
+.loaderPanel {
+  height: 10rem;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}

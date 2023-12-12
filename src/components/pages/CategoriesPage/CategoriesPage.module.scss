@@ -1,0 +1,16 @@
+@import 'styles/variables';
+
+.column {
+  &__name {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.iconExpand {
+  fill: $blue-main;
+}
+
+.link {
+  color: $blue-main;
+}

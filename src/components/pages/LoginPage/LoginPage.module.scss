@@ -1,0 +1,107 @@
+@import 'styles/variables';
+
+.signin {
+  display: flex;
+}
+
+.formWrapper {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.8rem;
+    padding: 25px;
+    min-width: 32rem;
+    height: 40%;
+    min-height: 35rem;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1.5rem 2rem;
+  .input {
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(65, 62, 62, 0.55);
+    background: transparent;
+    padding: 7px 0;
+    width: 100%;
+    color: #383636;
+    font-size: 1.6rem;
+    &::placeholder {
+      color: transparent;
+    }
+    &:placeholder-shown ~ .inputLabel {
+      top: 20px;
+      cursor: text;
+      font-size: 1.6rem;
+    }
+  }
+  .inputLabel {
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    color: rgba(75, 72, 72, 0.62);
+    font-size: 1.2rem;
+    user-select: none;
+  }
+}
+
+.inputLabel:focus {
+  border-width: 3px;
+  padding-bottom: 6px;
+  font-weight: 700;
+  ~ .inputLabel {
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
+
+.inputError {
+  border-color: $red-main;
+}
+
+.error {
+  color: rgba(161, 15, 15, 0.81);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.signInBtn {
+  align-self: center;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  background-color: $blue-main;
+  padding: 6px 15px;
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+  &:hover {
+    background-color: $blue-light;
+  }
+  &:active {
+    background-color: $blue-main;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray-main;
+    pointer-events: none;
+  }
+}
+
+.magicButton {
+  align-self: center;
+}

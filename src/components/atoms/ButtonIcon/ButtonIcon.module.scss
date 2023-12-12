@@ -1,0 +1,84 @@
+@import 'styles/variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  height: fit-content;
+  gap: 1rem;
+  height: 6rem;
+  max-height: 6rem;
+  cursor: pointer;
+  &:active {
+    scale: 0.9;
+  }
+  &:hover {
+    div {
+      rotate: 90deg;
+    }
+  }
+}
+
+.labelClassName {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+// COLOR VARIANTS
+.color {
+  &_grayDark {
+    background-color: $gray-dark;
+    color: $white;
+  }
+
+  &_gray {
+    background-color: $gray-main;
+    color: $white;
+  }
+
+  &_blue {
+    background-color: $blue-main;
+    color: $white;
+  }
+
+  &_red {
+    background-color: $red-main;
+    color: $white;
+  }
+
+  &_black {
+    background-color: $black;
+    color: $green-main;
+  }
+
+  &_transparent {
+    background-color: transparent;
+    color: $white;
+  }
+
+  &_transparentBlue {
+    background-color: transparent;
+    color: $blue-main;
+  }
+
+  &_transparentRed {
+    background-color: transparent;
+    color: $red-main;
+  }
+}
+
+// PADDING VARIANTS
+.padding {
+  &_slim {
+    padding: 0.5rem 2rem;
+    height: 3rem;
+    max-height: 3rem;
+    border-radius: 0.8rem;
+  }
+
+  &_wide {
+    padding: 2rem;
+  }
+}

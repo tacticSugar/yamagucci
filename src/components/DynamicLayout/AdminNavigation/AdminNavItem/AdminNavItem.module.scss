@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  &__subItem {
+    padding-left: 1.5rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  &__title {
+    color: $black;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+  &__chevron {
+    fill: $blue-main;
+    &_open {
+      scale: -1;
+    }
+  }
+}
+
+.iconClassname {
+  fill: black;
+}

@@ -1,0 +1,114 @@
+@import 'styles/variables';
+
+.cardBanner {
+  padding: 2rem;
+  background-color: $bad-white;
+  max-height: 22rem;
+  height: 22rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.img {
+  border-radius: 0.8rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  &__calendar {
+    margin-right: 2.5rem;
+  }
+
+  &__name {
+    background-color: $white;
+    border: 1px solid $gray-main;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    height: 6rem;
+    max-height: 6rem;
+  }
+
+  &__labelWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $gray-main;
+    font-size: 1.5rem;
+  }
+
+  &__delayInput {
+    background-color: $white;
+    border: 1px solid $gray-main;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 15rem;
+    height: 6rem;
+    max-height: 6rem;
+  }
+
+  &__calendarAndDelay {
+    display: flex;
+    flex-shrink: 1;
+  }
+
+  &__buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.grab {
+  cursor: move;
+}
+
+.htmlCard {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  max-height: 22rem;
+  height: 22rem;
+  border-radius: 1.5rem;
+  background-color: $gray-main;
+
+  &__buttons {
+    z-index: 10;
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+.open {
+  display: flex;
+}
+
+.textarea {
+  z-index: 10;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  color: $green-main;
+  background-color: $black;
+}

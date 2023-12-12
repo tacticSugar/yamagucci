@@ -1,0 +1,31 @@
+@import 'styles/variables';
+
+.minMaxWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.minMaxInput {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  width: 6rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  &::placeholder{
+    font-size: 1rem;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  position: relative;
+  padding: 1rem 1.5rem;
+  border: 1px solid $gray-main;
+  border-radius: 1.5rem;
+
+  &::placeholder {
+  // transform:translate3d(0,-1px,0);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 400;
+  }
+}
