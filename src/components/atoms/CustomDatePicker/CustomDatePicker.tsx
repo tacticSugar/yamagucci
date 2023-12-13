@@ -50,29 +50,16 @@ const CustomDatePicker: FC<CustomDatePickerTypes> = ({ className, label, startDa
     'декабрь'
   ]
   /** кастомный компонент даты */
-  const CustomDateInput: FC<CustomDateInputProps> = forwardRef(({ onClick, value }, ref) => {
-    /** обрабатывает нажатие */
-    const handleClickInput = () => {
-      /** подтверждает действие */
-      const confirmed = window.confirm('Вы точно хотите изменить дату?')
-
-      if (confirmed) {
-        onClick()
-      }
-    }
-
-    return (
-      <button
-        onClick={handleClickInput}
-        // @ts-ignore
-        ref={ref}
-        type='button'
-      >
-        {value || 'Введите дату'}
-      </button>
-    )
-  }
-  )
+  const CustomDateInput: FC<CustomDateInputProps> = forwardRef(({ onClick, value }, ref) => (
+    <button
+      onClick={onClick}
+      // @ts-ignore
+      ref={ref}
+      type='button'
+    >
+      {value || 'Введите дату'}
+    </button>
+  ))
   /** кастомный день */
   const renderDayContents = (day, date) => _getDay(date)
 
