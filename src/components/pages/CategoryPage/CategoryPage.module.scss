@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+.form {
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.formButtons {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}

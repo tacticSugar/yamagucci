@@ -11,6 +11,7 @@ import CustomTextarea from './CustomTextarea/CustomTextarea'
 import styles from './Form.module.scss'
 import RentAndSizeVariants from './RentAndSizeVariants/RentAndSizeVariants'
 import SearchAdditionalProduct from './SearchAdditionalProduct/SearchAdditionalProduct'
+import TechParamsList from './TechParamsList/TechParamsList'
 
 /** рендерит ckeditor lazy */
 const Ckeditor = dynamic(() => import('./Ckeditor/Ckeditor'), { ssr: false })
@@ -120,6 +121,13 @@ const Form: FC<any> = ({ formContent }) => (
             key={index}
           />
         )
+      case 'params':
+        return (
+          <TechParamsList
+            {...item}
+            key={index}
+          />
+        )
       case 'size':
         return (
           <RentAndSizeVariants
@@ -137,8 +145,10 @@ const Form: FC<any> = ({ formContent }) => (
       case 'password':
       case 'email':
         return _renderInput(item)
-      default:
+      case 'hidden':
         return ''
+      default:
+        return 'добавить новый тип формы'
     }
   })
 )

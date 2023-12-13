@@ -8,26 +8,28 @@ export type InputTypes = {
   checked?: boolean
   /** группа инпутов */
   group?: InputTypes[]
-  /** название группы */
+    /** название группы */
   groupTitle?: string
-  /** инпуты в группе */
+    /** инпуты в группе */
   inputs?: InputTypes[]
-  /** лейбл */
+    /** лейбл */
   label?: string
-  /** класс на лейбл */
+    /** класс на лейбл */
   labelClassName?: string
-  /** заголовок списка */
+    /** заголовок списка */
   listTitle?: string
-  /** имя */
+    /** имя */
   name?: string
-  /** ф-ция обработчик инпута */
+    /** ф-ция обработчик инпута */
   onChange?: (e: unknown) => void
-  /** опции */
+    /** опции */
   options?: any
-  /** api опшнов */
+    /** api опшнов */
   optionsApi?: string
-  /** плейсхолдер */
+    /** плейсхолдер */
   placeholder?: string
+  /** кол-во строк */
+  textAreaRows?: number
   /** тип */
   type?: 'text' | 'radio' | 'email' | 'password' | 'select' | 'checkbox'
   /** для валидации */
@@ -70,6 +72,8 @@ type TabInput = {
   optionsApi?: string
   /** плейсхолдер */
   placeholder?: string
+  /** кол-во строк */
+  textAreaRows?: number
   /** тип */
   type?: string
   /** для валидации */
@@ -82,7 +86,7 @@ type TabInput = {
   withList?: boolean
 }
 
-type ProductTab = {
+type FormTab = {
   /** класс на панель */
   panelClassName: string
   /** контент таба */
@@ -91,7 +95,9 @@ type ProductTab = {
   tabTitle: string
 }
 
-export type ProductTabs = {
+export type FormTabs = {
   /** табы */
-  productTabs: ProductTab[]
+  categoryTabs?: FormTab[]
+  /** табы */
+  productTabs?: FormTab[]
 }

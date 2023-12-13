@@ -10,7 +10,7 @@ import ErrorMessage from '@/src/components/Form/ErrorMessage/ErrorMessage'
 import styles from './CustomTextarea.module.scss'
 
 /** кастомный инпут */
-const CustomTextarea: FC<CustomInputTypes> = ({ cfgStyles, label, name, placeholder, type, widthNumber = 100 }) => {
+const CustomTextarea: FC<CustomInputTypes> = ({ cfgStyles, label, name, placeholder, textAreaRows = 10, type, widthNumber = 100 }) => {
   /** контекст формы */
   const {
     formState: { errors },
@@ -42,7 +42,7 @@ const CustomTextarea: FC<CustomInputTypes> = ({ cfgStyles, label, name, placehol
       </div>
       <textarea
         placeholder={placeholder}
-        rows={10}
+        rows={textAreaRows}
         {...register(name)}
         className={styles.textarea__textarea}
         id={id}
