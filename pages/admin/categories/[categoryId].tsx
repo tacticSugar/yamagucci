@@ -2,8 +2,8 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { GetStaticProps } from 'next'
 import { memo } from 'react'
 
-import { getProduct, QUERY_KEY_FETCH_PRODUCT } from '@/src/api/useFetchProduct/useFetchProduct'
-import ProductPage from '@/src/components/pages/ProductPage/ProductPage'
+import { getCategory, QUERY_KEY_FETCH_CATEGORY } from '@/src/api/useFetchCategory/useFetchCategory'
+import CategoryPage from '@/src/components/pages/CategoryPage/CategoryPage'
 
 /** загрузка данных. */
 // ts-prune-ignore-next
@@ -12,20 +12,20 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const queryClient = new QueryClient()
 
   /** слаг страны */
-  const productId = context?.params?.productId?.toString()
+  const categoryId = context?.params?.categoryId?.toString()
 
   try {
     await Promise.all([
       await queryClient.prefetchQuery({
-        queryFn: () => getProduct({ productId }),
-        queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId }]
+        queryFn: () => getCategory({ categoryId }),
+        queryKey: [QUERY_KEY_FETCH_CATEGORY, { categoryId }]
       })
     ])
 
     /** список продуктов */
-    const product = queryClient.getQueryData([QUERY_KEY_FETCH_PRODUCT, { productId }])
+    const category = queryClient.getQueryData([QUERY_KEY_FETCH_CATEGORY, { categoryId }])
 
-    if (!product) {
+    if (!category) {
       return {
         redirect: {
           destination: '/404',
@@ -61,4 +61,4 @@ export const getStaticPaths = async (): Promise<any> => ({
 })
 
 // ts-prune-ignore-next
-export default memo(ProductPage)
+export default memo(CategoryPage)

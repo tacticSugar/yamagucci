@@ -2,10 +2,10 @@ import { paths as schema } from '@/src/types/schema'
 
 import { QUERY_KEY_FETCH_RENT_TYPES } from './useFetchRentTypes'
 
-export type ResultRentTypes = schema['/api/admin/rent_types']['get']['responses']['200']['content']['application/json']
+export type FetchRentTypesOriginalResult = schema['/api/admin/rent_types']['get']['responses']['200']['content']['application/json']
 
 /** тип ключа */
-export type QueryKeyType = [
+export type FetchRentTypesQueryKeyType = [
   typeof QUERY_KEY_FETCH_RENT_TYPES,
   {
     /** mockVariant */
@@ -13,7 +13,7 @@ export type QueryKeyType = [
   }
   ];
 
-export type FetchRentParams = {
+export type FetchRentTypesParams = {
   /** mockVariant */
   mockVariant?:string
   /** имя поля в форме */

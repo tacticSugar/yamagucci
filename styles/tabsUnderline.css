@@ -37,10 +37,22 @@
   padding: 3rem 2rem;
   row-gap: 5rem;
 }
-
 .tab-panel-rent {
   padding: 3rem 2rem;
 }
 .tab-panel-size {
   padding: 3rem 2rem;
+}
+.tab-panel-tech {
+  display: block !important;
+  width:  100%;
+  padding: 3rem 2rem;
+}
+.tab-panel-category-main {
+  padding: 3rem 2rem;
+  row-gap: 5rem;
+}
+.tab-panel-category-seo {
+  padding: 3rem 2rem;
+  row-gap: 3rem;
 }

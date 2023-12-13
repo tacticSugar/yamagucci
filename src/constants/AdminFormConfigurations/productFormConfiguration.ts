@@ -1,7 +1,7 @@
-import { ProductTabs } from '@/src/components/Form/_types'
-import { BRANDS_API, CATEGORIES_API, CATEGORIES_SCHEMA_API, STATUSES_API } from '@/src/constants/constants'
+import { FormTabs } from '@/src/components/Form/_types'
+import { BRANDS_API, CATEGORIES_SCHEMA_API, STATUSES_API } from '@/src/constants/constants'
 
-export const productFormConfiguration: ProductTabs = {
+export const productFormConfiguration: FormTabs = {
   productTabs: [
     {
       panelClassName: 'tab-panel-system',
@@ -180,7 +180,6 @@ export const productFormConfiguration: ProductTabs = {
           cfgStyles: { padding: '2rem' },
           label: 'Категория для сравнения',
           name: 'category_compare',
-          optionsApi: CATEGORIES_API,
           placeholder: 'Выберите категорию',
           type: 'select',
           validations: [],
@@ -318,6 +317,16 @@ export const productFormConfiguration: ProductTabs = {
         }
       ],
       tabTitle: 'SEO'
+    },
+    {
+      panelClassName: 'tab-panel-tech',
+      tabContent: [
+        {
+          name: 'params',
+          type: 'params'
+        }
+      ],
+      tabTitle: 'Тех. Хар.'
     },
     {
       panelClassName: 'tab-panel-rent',

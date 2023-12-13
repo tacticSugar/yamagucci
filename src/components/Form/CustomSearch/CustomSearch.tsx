@@ -64,7 +64,7 @@ const CustomSearch:FC<CustomSearchTypes> = ({
     if (onChange) {
       e.stopPropagation()
       onChange(item)
-      !isErasedSearchAfterPick && setSearchValue(item?.item_id || item || '')
+      !isErasedSearchAfterPick && setSearchValue(item?.item_id || item?.name || item || '')
       closeOnItemClick && toggleOpen(false)
     } else {
       formMethods?.setValue(name, item.id)

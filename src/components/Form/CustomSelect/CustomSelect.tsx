@@ -104,12 +104,11 @@ const CustomSelect:FC<CustomInputTypes> = ({
               key={item.id}
               onClick={() => handlePickOption(item)}
             >
-              <span
+              <div
                 className={cn(styles.option, currentOption === item.id && styles.selected)}
+                dangerouslySetInnerHTML={{ __html: item.name }}
                 data-value={item.id}
-              >
-                {item.name}
-              </span>
+              />
             </div>
           ))}
       </div>
