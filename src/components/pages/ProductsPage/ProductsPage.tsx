@@ -9,6 +9,7 @@ import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import LoaderQuery from '@/src/components/atoms/LoaderQuery/LoaderQuery'
 import { ColumnResultProducts } from '@/src/components/TableWithModal/_types'
 import TableWithModal from '@/src/components/TableWithModal/TableWithModal'
+import { PAGE_PRODUCTS } from '@/src/constants/constants'
 import { IconExternalLink, IconPen, IconSearch } from '@/src/constants/icons'
 import times from '@/src/lib/times'
 
@@ -98,7 +99,7 @@ const ProductPage = () => {
       {
         cell: info => (
           <Link
-            href={`/products/${info?.row?.original?.id}`}
+            href={`${PAGE_PRODUCTS}/${info?.row?.original?.id}`}
             title='Редактировать'
           >
             <IconWrapper IconComponent={IconPen} />
