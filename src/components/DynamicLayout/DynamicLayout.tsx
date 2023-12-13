@@ -6,6 +6,7 @@ import { type FC, HTMLAttributes, PropsWithChildren, useCallback } from 'react'
 import { COOKIES } from '@/src/constants/constants'
 
 import AdminHeader from './AdminHeader/AdminHeader'
+import PublicHeader from '../PublicHeader/PublicHeader'
 import AdminNavigation from './AdminNavigation/AdminNavigation'
 import styles from './DynamicLayout.module.scss'
 
@@ -37,9 +38,7 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({ 
         )
         : (
           <div className={styles.publicLayout}>
-            <header>
-              HEADER
-            </header>
+            <PublicHeader />
             {children}
             <footer>
               FOOTER

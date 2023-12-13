@@ -40,10 +40,11 @@ import IconPen from 'public/assets/icons/pen.svg'
 import IconTooltip from 'public/assets/icons/tooltip.svg'
 import IconClose from 'public/assets/icons/close.svg'
 import IconPlus from 'public/assets/icons/plus.svg'
+import IconLocation from 'public/assets/icons/location.svg'
 
 
 // ts-prune-ignore-next
-export {IconGame, IconCode, IconAddressBook, IconBadge, IconBrands, IconCash, IconChecked, IconComment, IconDigger, IconFile, IconFileImage, IconGlobe, IconHome, IconList, IconMarathon, IconOrders, IconPoop, IconPrayer, IconQrcode, IconRestroom, IconSearch, IconStore, IconUnicorn, IconArrowDown, IconExternalLink, IconPen, IconTooltip, IconClose, IconPlus, IconMinusCircle, IconDnd, IconArrowUpDown, IconEye, IconBox, IconSave, IconTrash, IconEyeCrossed, IconArrowLeft, IconArrowRight, IconArrowUp, IconPlusInSquare, IconMinusInSquare}
+export {IconGame, IconCode, IconAddressBook, IconBadge, IconBrands, IconCash, IconChecked, IconComment, IconDigger, IconFile, IconFileImage, IconGlobe, IconHome, IconList, IconMarathon, IconOrders, IconPoop, IconPrayer, IconQrcode, IconRestroom, IconSearch, IconStore, IconUnicorn, IconArrowDown, IconExternalLink, IconPen, IconTooltip, IconClose, IconPlus, IconMinusCircle, IconDnd, IconArrowUpDown, IconEye, IconBox, IconSave, IconTrash, IconEyeCrossed, IconArrowLeft, IconArrowRight, IconArrowUp, IconPlusInSquare, IconMinusInSquare, IconLocation,}
 
 
 
