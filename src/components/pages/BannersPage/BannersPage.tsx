@@ -15,7 +15,6 @@ import styles from './BannersPage.module.scss'
 const BannersPage: FC<FetchBannersResult> = ({ archivedBanners, currentBanners }) => {
   /** стейт банеров */
   const [banners, setBanners] = useState<Banner[]>(currentBanners)
-  console.log('banners', banners)
 
   /** реф */
   const customHolderRef = useRef(null)
