@@ -2,20 +2,14 @@ import { useQuery, UseQueryResult } from '@tanstack/react-query'
 
 import { axiosBearerGet } from '@/src/api/axiosInstances'
 
-type FetchOptionsParamsType = {
-  /** на какие опции делать запрос */
-  optionsApi: string
-}
+import { FetchOptionsParams, FetchOptionsQueryKeyType } from './_types'
 
 /** ключ под которым записываем */
-const QUERY_KEY_FETCH_OPTIONS = 'options'
+export const QUERY_KEY_FETCH_OPTIONS = 'options'
 
-/** тип ключа */
-type QueryKeyType = [typeof QUERY_KEY_FETCH_OPTIONS, FetchOptionsParamsType];
-
-/** функция запроса продуктов */
+/** функция запроса различный опций (любое апи) */
 // ts-prune-ignore-next
-export const getOptions = async ({ optionsApi }: FetchOptionsParamsType): Promise<any> => {
+export const getOptions = async ({ optionsApi }: FetchOptionsParams): Promise<any> => {
   /** дата продуктов */
   const { data } = await axiosBearerGet.get<any>(optionsApi)
 
@@ -23,7 +17,7 @@ export const getOptions = async ({ optionsApi }: FetchOptionsParamsType): Promis
 }
 
 /** хук запроса списка продуктов */
-const useFetchOptions = ({ optionsApi }: FetchOptionsParamsType): UseQueryResult<any, Error> => useQuery<any, Error, any, QueryKeyType>({
+const useFetchOptions = ({ optionsApi }: FetchOptionsParams): UseQueryResult<any, Error> => useQuery<any, Error, any, FetchOptionsQueryKeyType>({
   enabled: !!optionsApi,
   queryFn: () => getOptions({ optionsApi }),
   queryKey: [QUERY_KEY_FETCH_OPTIONS, { optionsApi }]

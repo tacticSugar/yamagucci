@@ -2,7 +2,7 @@ import { useToggle } from '@reactuses/core'
 import { type FC, useEffect, useMemo, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
 
-import useFetchOptions from '@/src/api/useFetchOptions/useFetchOptions'
+import useFetchCategories from '@/src/api/useFetchCategories/useFetchCategories'
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import ModalWrapper from '@/src/components/atoms/ModalWrapper/ModalWrapper'
@@ -18,12 +18,10 @@ const CategoriesModal: FC<CategoriesModalTypes> = ({
   cfgStyles,
   label,
   name,
-  optionsApi,
   widthNumber
 }) => {
   /** все категории */
-  const { data: categories, isLoading } = useFetchOptions({ optionsApi })
-  // console.log('data', data)
+  const { data: categories, isLoading } = useFetchCategories()
 
   /** контекст формы */
   const {
