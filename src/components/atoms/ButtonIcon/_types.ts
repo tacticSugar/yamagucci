@@ -1,10 +1,10 @@
-export type ButtonIconType = {
+export type ButtonIconTypes = {
   /** элемент обертки */
   as?: string | React.JSXElementConstructor<any>
   /** доп. класс на кнопку */
   className?: string
   /** цвета кнопки */
-  colorVariant: 'grayDark' | 'gray' | 'blue' | 'red' | 'black' | 'transparentBlue' | 'transparentRed' | 'transparent'
+  colorVariant: 'grayDark' | 'gray' | 'blue' | 'red' | 'black' | 'transparentBlue' | 'transparentRed' | 'transparent' | 'transparentGray'
   /** флаг состояния */
   disabled?: boolean
   /** иконка */

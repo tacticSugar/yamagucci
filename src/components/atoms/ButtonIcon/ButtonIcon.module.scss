@@ -58,6 +58,11 @@
     color: $white;
   }
 
+  &_transparentGray {
+    background-color: transparent;
+    color: $gray-main;
+  }
+
   &_transparentBlue {
     background-color: transparent;
     color: $blue-main;

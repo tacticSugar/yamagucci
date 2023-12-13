@@ -90,9 +90,9 @@ const BannerCard: FC<BannerCardTypes> = forwardRef(({ banner, customHolderRef },
             withIcon={true}
           />
           <ButtonIcon
-            colorVariant='red'
+            colorVariant={banner.status ? 'red' : 'blue'}
             icon={IconBox}
-            label={'В архив'}
+            label={banner.status ? 'В архив' : 'Восстановить'}
             paddingVariant={'wide'}
             withIcon={true}
           />

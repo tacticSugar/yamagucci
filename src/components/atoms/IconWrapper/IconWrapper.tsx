@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import { motion } from 'framer-motion'
 import { FC } from 'react'
 
 import { IconWrapperTypes } from './_types'
@@ -13,13 +12,12 @@ const IconWrapper: FC<IconWrapperTypes> = ({ IconComponent, iconClassname, onCli
   if (!isFunction) return null
 
   return (
-    <motion.div
+    <div
       className={cn(styles.wrapper, wrapperClassname)}
-      layout
       onClick={onClick}
     >
       <IconComponent className={cn(iconClassname || styles.icon)} />
-    </motion.div>
+    </div>
   )
 }
 
