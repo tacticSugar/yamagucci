@@ -2,12 +2,11 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { useFormContext } from 'react-hook-form'
 
-import useFetchOptions from '@/src/api/useFetchOptions/useFetchOptions'
+import useFetchBorbozaIds from '@/src/api/useFetchBorbozaIds/useFetchBorbozaIds'
 import useFetchRentTypes from '@/src/api/useFetchRentTypes/useFetchRentTypes'
 import useFetchSizeTypes from '@/src/api/useFetchSizeTypes/useFetchSizeTypes'
 import LoaderQuery from '@/src/components/atoms/LoaderQuery/LoaderQuery'
 import TableListWithBorboza from '@/src/components/Form/TableListWithBorboza/TableListWithBorboza'
-import { BORBOZA_PRODUCTS_API } from '@/src/constants/constants'
 import times from '@/src/lib/times'
 
 import { RentAndSizeVariantsTypes } from './_types'
@@ -20,7 +19,7 @@ const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }
   /** варианты размеров */
   const { data: sizeTypes, isLoading: isLoadingSizes } = useFetchSizeTypes({ mockVariant, name })
   /** список айди борбозы */
-  const { data: borbozaIds } = useFetchOptions({ optionsApi: BORBOZA_PRODUCTS_API })
+  const { data: borbozaIds } = useFetchBorbozaIds()
   /** урл для айди товара */
   const { query } = useRouter()
   /** методы формы */
@@ -31,10 +30,10 @@ const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }
   /** изначальные значения */
   const initialOptions = (name === 'rent' ? rentTypes : sizeTypes)?.data?.map((type) => {
     /** находить опцию */
-    const option = defaultOptions?.find((opt) => opt[name === 'rent' ? 'rent_id' : 'size_id'] === type.id)
+    const option = defaultOptions?.find((opt) => opt[name === 'rent' ? 'rent_id' : 'size_id'] === type?.id)
 
     if (option) {
-      return { ...option, isChecked: !!option.borboza_id }
+      return { ...option, isChecked: !!option?.borboza_id }
     } else {
       /** по умолчанию */
       const baseOption = {
@@ -47,8 +46,8 @@ const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }
       }
 
       return name === 'rent'
-        ? { ...baseOption, rent_id: type.id, rent_type: type }
-        : { ...baseOption, size: type, size_id: type.id }
+        ? { ...baseOption, rent_id: type?.id, rent_type: type }
+        : { ...baseOption, size: type, size_id: type?.id }
     }
   })
 
