@@ -1,19 +1,28 @@
 @import 'styles/variables';
 
 .footer{
-    &__top{
+    &__app{
         background-color: #E03638;
         position: relative;
         z-index: 5;
         padding: 15px 0;
+        &:hover .footer__appPhone {
+            transform: translateY(-30px);
+            @include nlg{
+                transform: translateY(-13px);
+            }
+            @include nsm{
+                transform: none;
+            }
+        }
     }
-    &__topWrapper{
+    &__appWrapper{
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
     }
-    &__topText{
+    &__appText{
         position: relative;
         max-width: 285px;
         font-style: normal;
@@ -69,17 +78,16 @@
             }
           }
     }
-    &__topPhone{
+    &__appPhone{
         position: relative;
         align-self: flex-end;
-        width: 340px;
-        height: 100%;
-        margin-bottom: -30px;
+        width: 430px;
+        margin-bottom: -70px;
         transition: all .5s ease;
 
         @include nlgx {
-        width: 430px;
-        margin-bottom: -70px;
+        width: 340px;
+        margin-bottom: -30px;
         }
         @include nlg {
         width: 26vw;
@@ -94,7 +102,7 @@
         margin-bottom: 0px;
         }
 
-        > img {
+         img {
             position: absolute;
             left: 0;
             bottom: -15px; /*wrapper's padding*/
@@ -113,7 +121,143 @@
 
     }
 
-    &:hover &__topPhone {
-        margin-bottom: 0;
+    &__footerPublic{
+        position: relative;
+        background: #181818;
+        padding: 80px 0;
+        z-index: 10;
+    }
+
+    &__appPointsWrapper{
+        max-width: 274px;
+        @include nlg {
+          max-width: 22vw;
+        }
+        @include nsm {
+          order: 4;
+          max-width: unset;
+        }
+    }
+
+    &__appPoints{
+        background: #181818;
+        border-radius: 15px;
+        padding: 10px 20px;
+    
+        font-style: normal;
+        font-weight: 600;
+        font-size: 19.0392px;
+        line-height: 129%;
+    
+        color: #FFFFFF;
+        @include nlg {
+          padding: 0.7vw 1.4vw;
+          text-align: center;
+          font-size: 1.6vw;
+        }
+        @include nsm {
+          padding: 4vw 6vw;
+    
+          text-align: center;
+          font-size: 6vw;
+        }
+    
+        span {
+          display: block;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16.8448px;
+          line-height: 129%;
+    
+          color: #FFFFFF;
+          @include nlg {
+            text-align: center;
+            font-size: 1.4vw;
+          }
+          @include nsm {
+            text-align: center;
+            font-size: 5vw;
+          }
+        }
+    
+        svg {
+            vertical-align: baseline;
+            width: .8em;
+            height: auto;
+        }
+    }
+
+    &__appPointsDescrip{
+        margin-top: 0.8em;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #FFFFFF;
+        @include nlg {
+          font-size: 1.1vw;
+        }
+        @include nsm {
+          display: none;
+        }
+    }
+
+    &__appDownloadWrapper{
+        column-gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        @include nlgx {
+          column-gap: 70px;
+        }
+        @include nlg {
+          column-gap: 1.1vw;
+        }
+        @include nsm {
+          display: none;
+        }
+    
+        svg {
+          width: 100px;
+          height: auto;
+          background: white;
+          @include nlg {
+            width: 7.5vw;
+          }
+        }
+    }
+
+    &__appSvgFooter{
+        width: 100px;
+        height: 100px;
+        // background: url(/images/mob-app-popup/site_yamaguchi_general_footer_qr-code_s5o0ykx6.svg) no-repeat center;
+        // background-size: cover;
+        background: white;
+        @include nlg {
+          width: 7.5vw;
+          height: auto;
+        }
+    }
+
+    &__appLinkWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        @include nlgx {
+          flex-direction: column;
+          align-items: center;
+          column-gap: 16px;
+        }
+    
+        a { 
+            img {
+            cursor: pointer;
+            width: 160px;
+                @include nlg {
+                    width: 12vw;
+                }
+            }
+        }
     }
 }
