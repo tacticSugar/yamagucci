@@ -2,16 +2,16 @@
 
 .footer{
     &__top{
-        height: 124px;
         background-color: #E03638;
         position: relative;
-        z-index: 2;
+        z-index: 5;
         padding: 15px 0;
     }
     &__topWrapper{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 100%;
     }
     &__topText{
         position: relative;
@@ -68,5 +68,52 @@
               }
             }
           }
+    }
+    &__topPhone{
+        position: relative;
+        align-self: flex-end;
+        width: 340px;
+        height: 100%;
+        margin-bottom: -30px;
+        transition: all .5s ease;
+
+        @include nlgx {
+        width: 430px;
+        margin-bottom: -70px;
+        }
+        @include nlg {
+        width: 26vw;
+        margin-bottom: -15px;
+        }
+        @include nsm {
+        order: 1;
+        position: unset;
+
+        margin: 0 auto;
+        width: 75%;
+        margin-bottom: 0px;
+        }
+
+        > img {
+            position: absolute;
+            left: 0;
+            bottom: -15px; /*wrapper's padding*/
+            width: 100%;
+            height: auto;
+            @include nlg {
+                bottom: -1.2vw;
+            }
+            @include nsm {
+                bottom: calc(100% + 2px); /* + border */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 75%;
+            }
+        }
+
+    }
+
+    &:hover &__topPhone {
+        margin-bottom: 0;
     }
 }

@@ -18,12 +18,14 @@ const PublicFooter: FC = () => (
                     </div>
                     <div className={styles.footer__topPhone}>
                         <picture>
-                            <Image src={'/assets/images/PublicFooter/phone.svg'} alt="Yamaguchi App" fill/>
-                            <source media="(max-width: 767px)" srcSet="/assets/images/PublicFooter/phone-mob.webp 449w,
-                            /assets/images/PublicFooter/phone.svg"/>
+                            <Image src={'/assets/images/PublicFooter/phone.svg'} 
+                            alt="Yamaguchi App" 
+                            fill 
+                            loading='eager'/>
+                            <source media="(max-width: 767px)" srcSet="/assets/images/PublicFooter/phone-mob.webp"/>
                         </picture>
-                        
                     </div>
+                    
                 </div>
             </Container>
         </div>
