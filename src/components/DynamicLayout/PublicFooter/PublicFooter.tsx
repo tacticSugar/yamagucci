@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import Image from 'next/image'
 
 import Container from '@/src/components/DynamicLayout/Container/Container';
 
@@ -16,13 +17,18 @@ const PublicFooter: FC = () => (
                         <p>online-тренировки <span>СПЕШИ</span></p>
                     </div>
                     <div className={styles.footer__topPhone}>
-                        <img src="" alt="Yamaguchi App" />
+                        <picture>
+                            <Image src={'/assets/images/PublicFooter/phone.svg'} alt="Yamaguchi App" fill/>
+                            <source media="(max-width: 767px)" srcSet="/assets/images/PublicFooter/phone-mob.webp 449w,
+                            /assets/images/PublicFooter/phone.svg"/>
+                        </picture>
+                        
                     </div>
                 </div>
             </Container>
         </div>
 
-        
+
    </div>
 );
 
