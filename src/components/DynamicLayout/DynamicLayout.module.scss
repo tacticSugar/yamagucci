@@ -1,6 +1,8 @@
 @import 'styles/variables';
 
 .adminLayout {
+  max-width: 1920px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 23rem 4fr;
   grid-template-rows: 6rem 1fr;

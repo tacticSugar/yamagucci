@@ -1,9 +1,11 @@
 import { type FC, memo } from 'react'
 
+import ListMiniBanners from '@/src/components/ListMiniBanners/ListMiniBanners'
+
 /** домашняя страница */
 const Home: FC = () => (
   <div>
-    Public Home
+    <ListMiniBanners />
   </div>
 )
 
