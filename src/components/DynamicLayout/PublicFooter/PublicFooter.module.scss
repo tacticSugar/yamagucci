@@ -1,0 +1,72 @@
+@import 'styles/variables';
+
+.footer{
+    &__top{
+        height: 124px;
+        background-color: #E03638;
+        position: relative;
+        z-index: 2;
+        padding: 15px 0;
+    }
+    &__topWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__topText{
+        position: relative;
+        max-width: 285px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        color: #FFFFFF;
+        > p {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+      
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13.2558px;
+      
+            color: #000000;
+            @include nlg {
+              font-size: 1vw;
+            }
+            @include nsm {
+              position: relative;
+              right: unset;
+              bottom: unset;
+      
+              margin: 5vw auto 7vw;
+              width: max-content;
+      
+              font-size: 4vw;
+            }
+      
+            > span {
+              position: absolute;
+              bottom: 70%;
+              right: -10%;
+      
+              padding: 1px;
+      
+              font-style: normal;
+              font-weight: 900;
+              font-size: 6.29651px;
+              color: #FFFFFF;
+      
+              background: #181818;
+              transform: rotate(11.73deg);
+              @include nlg {
+                font-size: .5vw;
+              }
+              @include nsm {
+                padding: 2vw 1vw;
+                line-height: 0;
+                font-size: 2vw;
+              }
+            }
+          }
+    }
+}

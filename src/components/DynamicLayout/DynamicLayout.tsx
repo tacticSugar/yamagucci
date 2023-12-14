@@ -7,6 +7,7 @@ import { COOKIES } from '@/src/constants/constants'
 
 import AdminHeader from './AdminHeader/AdminHeader'
 import AdminNavigation from './AdminNavigation/AdminNavigation'
+import PublicFooter from './PublicFooter/PublicFooter';
 import styles from './DynamicLayout.module.scss'
 
 /** компонент динамического лейаута */
@@ -42,7 +43,7 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({ 
             </header>
             {children}
             <footer>
-              FOOTER
+              <PublicFooter />
             </footer>
           </div>
         )}
