@@ -1,0 +1,40 @@
+.container {
+  padding: 5rem 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.mainImg {
+  height: 63rem;
+  aspect-ratio: 1/1;
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+  width: 52rem;
+
+  &__title {
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 135%;
+  }
+
+  &__slogan {
+    margin-bottom: 20px;
+    color: #e03638;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 110%;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    margin-bottom: auto;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+  }
+}
