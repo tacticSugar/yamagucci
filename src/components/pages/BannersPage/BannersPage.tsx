@@ -4,12 +4,15 @@ import SortableList, { SortableItem } from 'react-easy-sort'
 
 import { Banner, FetchBannersResult } from '@/src/api/useFetchBanners/_types'
 import useFetchBanners from '@/src/api/useFetchBanners/useFetchBanners'
+import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
+import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
+import { IconHome, IconPlus, IconTrash } from '@/src/constants/icons'
 
 import BannerCard from './BannerCard/BannerCard'
 import styles from './BannersPage.module.scss'
 
 /** страница баннеров */
-const BannersPage: FC<FetchBannersResult> = ({ currentBanners }) => {
+const BannersPage: FC<FetchBannersResult> = ({ archivedBanners, currentBanners }) => {
   /** стейт банеров */
   const [banners, setBanners] = useState<Banner[]>(currentBanners)
 
@@ -39,22 +42,52 @@ const BannersPage: FC<FetchBannersResult> = ({ currentBanners }) => {
     handlePostRequest(updatedBanners)
   }
 
+  /** туду */
+  const handleArchiveClick = () => {
+    setBanners(archivedBanners)
+  }
+
   return (
-    <SortableList
-      className={styles.list}
-      customHolderRef={customHolderRef}
-      draggedItemClassName={styles.dragged}
-      onSortEnd={onSortEnd}
-    >
-      {banners?.map(banner => (
-        <SortableItem key={banner?.id}>
-          <BannerCard
-            banner={banner}
-            customHolderRef={customHolderRef}
+    <>
+      <div className={styles.headerWrapper}>
+        <h1>
+          Баннеры
+        </h1>
+        <div className={styles.headerButtons}>
+          <ButtonIcon
+            colorVariant={'transparentGray'}
+            icon={IconTrash}
+            label={'Архив'}
+            onClick={handleArchiveClick}
+            paddingVariant={'slim'}
+            withIcon={true}
           />
-        </SortableItem>
-      ))}
-    </SortableList>
+          <ButtonIcon
+            colorVariant='transparentBlue'
+            icon={IconPlus}
+            label={'Добавить'}
+            paddingVariant={'slim'}
+            withIcon={true}
+          />
+          <IconWrapper IconComponent={IconHome} />
+        </div>
+      </div>
+      <SortableList
+        className={styles.list}
+        customHolderRef={customHolderRef}
+        draggedItemClassName={styles.dragged}
+        onSortEnd={onSortEnd}
+      >
+        {banners?.map(banner => (
+          <SortableItem key={banner?.id}>
+            <BannerCard
+              banner={banner}
+              customHolderRef={customHolderRef}
+            />
+          </SortableItem>
+        ))}
+      </SortableList>
+    </>
   )
 }
 

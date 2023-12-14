@@ -2,11 +2,11 @@ import cn from 'classnames'
 
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 
-import { ButtonIconType } from './_types'
+import { ButtonIconTypes } from './_types'
 import styles from './ButtonIcon.module.scss'
 
 /** компонент кнопки с иконкой */
-const ButtonIcon: React.FC<ButtonIconType> = ({
+const ButtonIcon: React.FC<ButtonIconTypes> = ({
   as: Tag = 'button',
   className,
   colorVariant,
