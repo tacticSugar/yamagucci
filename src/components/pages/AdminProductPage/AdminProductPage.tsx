@@ -2,17 +2,18 @@ import { useRouter } from 'next/router'
 import { FC, memo } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 
-import useFetchProduct, { ResultProduct } from '@/src/api/useFetchProduct/useFetchProduct'
+import { FetchProductOriginalResult } from '@/src/api/useFetchProduct/_types'
+import useFetchProduct from '@/src/api/useFetchProduct/useFetchProduct'
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import TabsUnderline from '@/src/components/atoms/TabsUnderline/TabsUnderline'
 import Form from '@/src/components/Form/Form'
 import { productFormConfiguration } from '@/src/constants/AdminFormConfigurations/productFormConfiguration'
 import { IconSave, IconTrash } from '@/src/constants/icons'
 
-import styles from './ProductPage.module.scss'
+import styles from './AdminProductPage.module.scss'
 
 /** страница тестовая */
-const ProductPage: FC<ResultProduct> = ({ data }) => {
+const AdminProductPage: FC<FetchProductOriginalResult> = ({ data }) => {
   /** методы из формы */
   const formMethods = useForm({
     defaultValues: { ...data },
@@ -81,7 +82,7 @@ const Wrapper: FC = () => {
   if (!data) return null
 
   return (
-    <ProductPage data={data?.data} />
+    <AdminProductPage data={data?.data} />
   )
 }
 

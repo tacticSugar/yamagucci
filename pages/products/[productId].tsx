@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import { memo } from 'react'
 
 import { getProduct, QUERY_KEY_FETCH_PRODUCT } from '@/src/api/useFetchProduct/useFetchProduct'
-import AdminProductPage from '@/src/components/pages/AdminProductPage/AdminProductPage'
+import PublicProductPage from '@/src/components/pages/PublicProductPage/PublicProductPage'
 
 /** загрузка данных. */
 // ts-prune-ignore-next
@@ -21,18 +21,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
         queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId }]
       })
     ])
-
-    /** список продуктов */
-    const product = queryClient.getQueryData([QUERY_KEY_FETCH_PRODUCT, { productId }])
-
-    if (!product) {
-      return {
-        redirect: {
-          destination: '/404',
-          permanent: false
-        }
-      }
-    }
 
     return {
       props: {
@@ -61,4 +49,4 @@ export const getStaticPaths = async (): Promise<any> => ({
 })
 
 // ts-prune-ignore-next
-export default memo(AdminProductPage)
+export default memo(PublicProductPage)
