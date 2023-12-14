@@ -1,0 +1,17 @@
+.list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.imgWrapper {
+  height: 34rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.img {
+}
