@@ -7,6 +7,7 @@ import styles from './PublicFooter.module.scss'
 /* Внешний футер */
 const PublicFooter: FC = () => (
    <div className={styles.footer}>
+
         <div className={styles.footer__top}>
             <Container>
                 <div className={styles.footer__topWrapper}>
@@ -20,6 +21,8 @@ const PublicFooter: FC = () => (
                 </div>
             </Container>
         </div>
+
+        
    </div>
 );
 
