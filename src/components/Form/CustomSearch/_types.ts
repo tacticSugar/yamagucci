@@ -15,6 +15,8 @@ export type CustomSearchTypes = {
   inputWrapperClassName?: string
   /** пустой инпут после выбора */
   isErasedSearchAfterPick?: boolean
+  /** можно ли поменять инпут и сохранить */
+  isInputChangable?: boolean
   /** показывать лоадер */
   isLoading?: boolean
   /** массив опшнов */

@@ -1,9 +1,4 @@
 export type TableListWithBorbozaTypes = {
-  /** айди борбозы */
-  borbozaIds: {
-    /** дата */
-    data?: any[]
-  }
   /** начальные опции */
   initialOptions: any[]
   /** имя поля формы */
