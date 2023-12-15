@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { useFormContext } from 'react-hook-form'
 
-import useFetchBorbozaIds from '@/src/api/useFetchBorbozaIds/useFetchBorbozaIds'
 import useFetchRentTypes from '@/src/api/useFetchRentTypes/useFetchRentTypes'
 import useFetchSizeTypes from '@/src/api/useFetchSizeTypes/useFetchSizeTypes'
 import LoaderQuery from '@/src/components/atoms/LoaderQuery/LoaderQuery'
@@ -18,8 +17,6 @@ const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }
   const { data: rentTypes, isLoading: isLoadingRents } = useFetchRentTypes({ mockVariant, name })
   /** варианты размеров */
   const { data: sizeTypes, isLoading: isLoadingSizes } = useFetchSizeTypes({ mockVariant, name })
-  /** список айди борбозы */
-  const { data: borbozaIds } = useFetchBorbozaIds()
   /** урл для айди товара */
   const { query } = useRouter()
   /** методы формы */
@@ -33,12 +30,12 @@ const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }
     const option = defaultOptions?.find((opt) => opt[name === 'rent' ? 'rent_id' : 'size_id'] === type?.id)
 
     if (option) {
-      return { ...option, isChecked: !!option?.borboza_id }
+      return { ...option, isActive: !!option?.borboza_id }
     } else {
       /** по умолчанию */
       const baseOption = {
         borboza_id: '',
-        isChecked: false,
+        isActive: false,
         price: '',
         price_preorder: '',
         price_promotion: '',
@@ -65,7 +62,6 @@ const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }
 
   return (
     <TableListWithBorboza
-      borbozaIds={borbozaIds}
       initialOptions={initialOptions}
       name={name}
       optionTypes={name === 'rent' ? rentTypes : sizeTypes}

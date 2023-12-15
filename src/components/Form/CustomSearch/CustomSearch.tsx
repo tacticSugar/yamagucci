@@ -22,6 +22,7 @@ const CustomSearch:FC<CustomSearchTypes> = ({
   disabledIds = [],
   inputWrapperClassName,
   isErasedSearchAfterPick = false,
+  isInputChangable,
   isLoading,
   items,
   label,
@@ -79,6 +80,8 @@ const CustomSearch:FC<CustomSearchTypes> = ({
 
       setSearchValue('')
     } else {
+      if (onChange && isInputChangable) { onChange({ name: e.target.value }) }
+
       setSearchValue(e.target.value)
     }
   }

@@ -22,10 +22,6 @@ const LoginPage = () => {
     handleSubmit,
     register
   } = useForm({
-    defaultValues: {
-      email: 'povarovalexey@gmail.com',
-      password: '123'
-    },
     mode: 'onBlur',
     resolver: yupResolver(loginSchema)
   })
