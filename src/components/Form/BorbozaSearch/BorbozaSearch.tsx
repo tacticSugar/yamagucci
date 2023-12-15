@@ -4,16 +4,18 @@ import escapeRegExp from 'escape-string-regexp'
 import IconSearch from 'public/assets/icons/search.svg'
 import IconTooltip from 'public/assets/icons/tooltip.svg'
 import React, { FC, useCallback, useMemo, useRef, useState } from 'react'
+import { useFormContext } from 'react-hook-form'
 
 import useFetchBorbozaIds from '@/src/api/useFetchBorbozaIds/useFetchBorbozaIds'
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import LoaderQuery from '@/src/components/atoms/LoaderQuery/LoaderQuery'
 import useOutsideClick from '@/src/lib/useOutSideClick'
 
+import { BorbozaSearchTypes } from './_types'
 import styles from './BorbozaSearch.module.scss'
 
 /** кастомный селект */
-const BorbozaSearch:FC = ({
+const BorbozaSearch:FC<BorbozaSearchTypes> = ({
   cfgStyles,
   className,
   defaultValueProps,
@@ -21,16 +23,22 @@ const BorbozaSearch:FC = ({
   isLoading,
   label,
   mainOptionClassname,
+  name,
   onChange,
   optionWrapperClassname,
   placeholder,
   widthNumber,
   withTooltip = true
 }) => {
+  /** контекст формы */
+  const formMethods = useFormContext()
+  /** текущая опция */
+  const currentOption = name && formMethods?.getValues(name)
+
   /** список айди борбозы */
   const { data: borbozaIds } = useFetchBorbozaIds()
   /** стейт поиска */
-  const [searchValue, setSearchValue] = useState(defaultValueProps || '')
+  const [searchValue, setSearchValue] = useState(defaultValueProps || currentOption || '')
   /** регулярное выражение */
   const regex = useMemo(() => new RegExp(escapeRegExp(searchValue.toString()), 'i'), [searchValue])
   /** стейт для открытия опшнов */
@@ -44,7 +52,9 @@ const BorbozaSearch:FC = ({
 
   /** обработчик выбора опции */
   const handlePickOption = (item) => {
-    onChange(item)
+    if (onChange) onChange(item)
+    if (name) formMethods?.setValue(name, item.item_id)
+
     setSearchValue(item?.title)
     toggleOpen(false)
   }
@@ -52,7 +62,8 @@ const BorbozaSearch:FC = ({
   /** обработчик ввода значения */
   const handleInputValue = (e) => {
     if (e.target.value === '') {
-      onChange('')
+      if (onChange) onChange('')
+
       setSearchValue('')
     } else {
       setSearchValue(e.target.value)
@@ -117,17 +128,23 @@ const BorbozaSearch:FC = ({
           : (
             borbozaIds?.data?.length && (
               <div className={cn(styles.options, optionWrapperClassname, isOpen && styles.open)}>
-                {filteredItems?.map((item, index) => (
-                  <React.Fragment key={index}>
+                {filteredItems.length
+                  ? filteredItems?.map((item, index) => (
                     <div
                       className={cn(styles.option, mainOptionClassname)}
                       dangerouslySetInnerHTML={{ __html: item?.title?.replace(regex, markedSpan) }}
-                      data-value={item.id}
+                      data-value={item.item_id}
+                      key={index}
                       onClick={() => handlePickOption(item)}
                     />
-                  </React.Fragment>
-                )
-                )}
+                  )
+                  )
+                  : (
+                    <div
+                      className={cn(styles.option, mainOptionClassname)}
+                      dangerouslySetInnerHTML={{ __html: 'Ничего не найдено' }}
+                    />
+                  )}
               </div>
             )
           )}

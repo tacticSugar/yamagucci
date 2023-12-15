@@ -22,8 +22,7 @@ export const productFormConfiguration: FormTabs = {
         {
           label: 'Borboza ID',
           name: 'borboza_id',
-          placeholder: 'Подключите товар к системе учёта',
-          type: 'search',
+          type: 'borbozaSearch',
           validations: [],
           widthNumber: 49
         },
