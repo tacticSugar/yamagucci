@@ -142,7 +142,7 @@ const CategoriesModal: FC<CategoriesModalTypes> = ({
             maxItems={3000}
             onChange={onChange}
             optionWrapperClassname={styles.optionWrapperClassname}
-            placeholder='Выберите категорию'
+            placeholder='выберите категорию'
             subOptionClassname={styles.subOptionClassname}
             withCheckboxes={true}
           />

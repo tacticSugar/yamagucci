@@ -22,10 +22,9 @@ export const productFormConfiguration: FormTabs = {
         {
           label: 'Borboza ID',
           name: 'borboza_id',
-          placeholder: 'Подключите товар к системе учёта',
-          type: 'search',
+          type: 'borbozaSearch',
           validations: [],
-          widthNumber: 49
+          widthNumber: 39
         },
         {
           label: 'Цена',
@@ -33,7 +32,7 @@ export const productFormConfiguration: FormTabs = {
           placeholder: '2 700 000',
           type: 'number',
           validations: [],
-          widthNumber: 14
+          widthNumber: 19
         },
         {
           label: 'Цена по акции',
@@ -41,7 +40,7 @@ export const productFormConfiguration: FormTabs = {
           placeholder: '2 700 000',
           type: 'number',
           validations: [],
-          widthNumber: 14
+          widthNumber: 19
         },
         {
           label: 'Цена предзаказа',
@@ -49,7 +48,7 @@ export const productFormConfiguration: FormTabs = {
           placeholder: '2 700 000',
           type: 'number',
           validations: [],
-          widthNumber: 14
+          widthNumber: 19
         },
         {
           label: 'Название товара',
