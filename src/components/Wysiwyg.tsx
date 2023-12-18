@@ -1,47 +1,64 @@
+import { NextScript } from 'next/document';
 import { FC, useEffect, useState } from 'react'
-
-/** */
-const scripts = ['/assets/testCss/gsap.min-new.js', '/assets/testCss/ScrollTrigger.min.js', '/assets/testCss/ScrollMagic.min.js', '/assets/testCss/swiper.min.js', '/assets/testCss/script.js']
-/** */
-const styles = ['/assets/testCss/styles.css', '/assets/testCss/swiper.min.css']
+import { useHasMounted } from '../lib/useHasMounted';
 
 /** домашняя страница */
-const Wysiwyg: FC = () => {
-  /** */
-  const [htmlContent, setHtmlContent] = useState('')
-
-  console.log('htmlContent', htmlContent)
+const Wysiwyg: FC = ({landingName}) => {
+  const [htmlContent, setHtmlContent] = useState<string>('');
+  const hasMounted = useHasMounted();
   useEffect(() => {
-    // fetch HTML content from the API route
-    fetch('/api/getHtml')
-      .then((response) => response.json())
-      .then((data) => {
-        setHtmlContent(data.htmlContent)
+    const fetchHtmlContent = async () => {
+      try {
+        // Load the HTML content based on the product name
+        const response = await fetch(`/${landingName}/index.html`);
+        if (response.ok) {
+          const htmlContent = await response.text();
+          // Process the HTML content, e.g., extract styles and scripts
+          processHtmlContent(htmlContent);
+        }
+      } catch (error) {
+        console.error('Error fetching HTML content', error);
+      }
+    };
 
-        scripts.forEach(src => {
-          /** */
-          const element = document.createElement('script')
-          element.src = src
-          document.body.appendChild(element)
-        })
-        styles.forEach(src => {
-          /** */
-          const element = document.createElement('link')
-          element.rel = 'stylesheet'
-          element.href = src
-          document.head.appendChild(element)
-        })
-      })
-      .catch((error) => {
-        console.error('Error fetching HTML content:', error)
-      })
-  }, [])
+    fetchHtmlContent();
+  }, []);
+
+  const processHtmlContent = (htmlContent: string) => {
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlContent, 'text/html');
+    const styles = doc.querySelectorAll('link[rel="stylesheet"]');
+    const scripts = doc.querySelectorAll('script');
+    const scriptSrcs = Array.from(scripts).map(script => script.getAttribute('src')).filter(Boolean);
+    const content = doc.querySelector('body')?.innerHTML;
+
+    setHtmlContent(content)
+    styles.forEach(src => {
+      /** */
+      const element = document.createElement('link')
+      element.rel = 'stylesheet'
+      element.href = src.href
+      document.head.appendChild(element)
+    })
+    scriptSrcs?.forEach(src => {
+      /** */
+      const element = document.createElement('script')
+      element.src = src
+      document.body.appendChild(element)
+    })
+
+
+  };
+
+
+  if (!hasMounted) return null
 
   return (
     <>
       <div
         dangerouslySetInnerHTML={{ __html: htmlContent }}
-        style={{ maxWidth: '1280px', overflow: 'hidden' }}
+        style={{ maxWidth: '1920px', overflow: 'hidden', margin: '0 auto' }}
       />
     </>
   )
