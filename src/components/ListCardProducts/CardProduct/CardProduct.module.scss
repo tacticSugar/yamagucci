@@ -1,0 +1,38 @@
+@import 'styles/variables';
+
+.card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #292929;
+  border-radius: 2rem;
+  max-width: 26rem;
+  gap: 1rem;
+}
+
+.priceWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 2rem;
+  color: $white;
+}
+
+.priceOld {
+  font-size: 1.6rem;
+  color: $gray-main;
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+.name {
+  font-size: 1.4rem;
+  color: $gray-main;
+}
+
+.description {
+  font-size: 1.9rem;
+  color: $white;
+}
