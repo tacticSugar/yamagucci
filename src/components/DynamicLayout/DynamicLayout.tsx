@@ -24,12 +24,13 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({ 
     router.reload()
   }, [queryClient, router])
 
-  /** проверка на админку */
-  const isAdmin = router?.pathname?.includes('admin')
+  /** проверка на роут админки */
+  const isAdminRoute = router?.pathname?.includes('admin')
 
+  /** проверка на админку */
   return (
     <>
-      {isAdmin
+      {isAdminRoute
         ? (
           <div className={styles.adminLayout}>
             <AdminHeader handleLoginLogout={handleLoginLogout} />

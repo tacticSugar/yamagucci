@@ -10,25 +10,25 @@ import styles from './ListMiniBanners.module.scss'
 const miniBanners =
 [
   {
-    href: '/products/yamaguchi-xi',
+    href: '/products/yamaguchi-xu',
     id: 1,
     img: '/assets/temp/1_minibanner_l.webp',
     title: 'mini banner1'
   },
   {
-    href: '/products/yamaguchi-xi',
+    href: '/products/yamaguchi-xu',
     id: 2,
     img: '/assets/temp/2_minibanner_l.webp',
     title: 'mini banner2'
   },
   {
-    href: '/products/yamaguchi-xi',
+    href: '/products/yamaguchi-xu',
     id: 3,
     img: '/assets/temp/3_minibanner_l.webp',
     title: 'mini banner3'
   },
   {
-    href: '/products/yamaguchi-xi',
+    href: '/products/yamaguchi-xu',
     id: 4,
     img: '/assets/temp/4_minibanner_l.webp',
     title: 'mini banner1'

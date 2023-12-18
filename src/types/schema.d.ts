@@ -7,6 +7,43 @@
 export interface paths {
   "/api/": {
   };
+  "/api/admin/articles": {
+    /** Список статей */
+    get: {
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": {
+              data: components["schemas"]["ArticleSchema"][];
+            };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/articles/{article}": {
+    /** Одна статья */
+    get: {
+      parameters: {
+        path: {
+          /**
+           * @description ID статьи
+           * @example 3
+           */
+          article: string;
+        };
+      };
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": components["schemas"]["ArticleSchema"];
+          };
+        };
+      };
+    };
+  };
   "/api/admin/badges": {
     /** Список бейджей */
     get: {
@@ -629,6 +666,43 @@ export interface paths {
       };
     };
   };
+  "/api/admin/category_for_news": {
+    /** Список категорий новостей */
+    get: {
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": {
+              data: components["schemas"]["CategoryForNewsSchema"][];
+            };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/category_for_news/{category_for_news}": {
+    /** Одна категория новостей */
+    get: {
+      parameters: {
+        path: {
+          /**
+           * @description ID категории
+           * @example 3
+           */
+          category_for_news: string;
+        };
+      };
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": components["schemas"]["CategoryForNewsSchema"];
+          };
+        };
+      };
+    };
+  };
   "/api/admin/files": {
     /** Список файлов */
     get: {
@@ -709,6 +783,80 @@ export interface paths {
                 updated_at?: string | null;
               };
             };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/news": {
+    /** Список новостей */
+    get: {
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": {
+              data: components["schemas"]["NewsSchema"][];
+            };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/news/{news}": {
+    /** Одна новость */
+    get: {
+      parameters: {
+        path: {
+          /**
+           * @description ID новости
+           * @example 3
+           */
+          news: string;
+        };
+      };
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": components["schemas"]["NewsSchema"];
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/pages": {
+    /** Список страниц */
+    get: {
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": {
+              data: components["schemas"]["PageSchema"][];
+            };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/pages/{page}": {
+    /** Одна страница */
+    get: {
+      parameters: {
+        path: {
+          /**
+           * @description ID страницы
+           * @example 11
+           */
+          page: string;
+        };
+      };
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": components["schemas"]["PageSchema"];
           };
         };
       };
@@ -2206,6 +2354,80 @@ export interface paths {
       };
     };
   };
+  "/api/admin/seo": {
+    /** Список SEO страниц */
+    get: {
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": {
+              data: components["schemas"]["SeoSchema"][];
+            };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/seo/{seo}": {
+    /** Seo одной страницы */
+    get: {
+      parameters: {
+        path: {
+          /**
+           * @description ID записи
+           * @example 3
+           */
+          seo: string;
+        };
+      };
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": components["schemas"]["SeoSchema"];
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/seo_meta": {
+    /** Список мета-тегов */
+    get: {
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": {
+              data: components["schemas"]["SeoMetaSchema"][];
+            };
+          };
+        };
+      };
+    };
+  };
+  "/api/admin/seo_meta/{seo_meta}": {
+    /** Один мета тег */
+    get: {
+      parameters: {
+        path: {
+          /**
+           * @description ID записи
+           * @example 1
+           */
+          seo_meta: string;
+        };
+      };
+      responses: {
+        /** @description Ok */
+        200: {
+          content: {
+            "application/json": components["schemas"]["SeoMetaSchema"];
+          };
+        };
+      };
+    };
+  };
   "/api/admin/sizes": {
     /** Список размеров */
     get: {
@@ -2473,9 +2695,9 @@ export interface paths {
       requestBody?: {
         content: {
           "application/json": {
-            /** @example povarovalexey@gmail.com */
+            /** @example email@domain.com */
             email?: string;
-            /** @example 123 */
+            /** @example password */
             password?: string;
           };
         };
@@ -2486,11 +2708,11 @@ export interface paths {
           content: {
             "application/json": {
               /** @example foobar */
-              access_token?: string;
+              access_token: string;
               /** @example bearer */
-              token_type?: string;
+              token_type: string;
               /** @example 20160 */
-              expires_in?: number;
+              expires_in: number;
             };
           };
         };
@@ -2522,35 +2744,6 @@ export interface paths {
       };
     };
   };
-  "/api/auth/refresh": {
-    /** Обновление токена */
-    post: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              /** @example foobar */
-              access_token?: string;
-              /** @example bearer */
-              token_type?: string;
-              /** @example 20160 */
-              expires_in?: number;
-            };
-          };
-        };
-        /** @description Error: Unauthorized */
-        401: {
-          content: {
-            "application/json": {
-              /** @example Unauthenticated */
-              error?: string;
-            };
-          };
-        };
-      };
-    };
-  };
   "/api/auth/me": {
     /** Данные пользователя */
     post: {
@@ -2560,17 +2753,41 @@ export interface paths {
           content: {
             "application/json": {
               /** @example 1 */
-              id?: number;
-              /** @example user@mail.ru */
-              name?: string;
-              /** @example user */
-              email?: Record<string, never>;
+              id: number;
+              /**
+               * @description Имя
+               * @example Иван
+               */
+              first_name: string | null;
+              /**
+               * @description Отчество
+               * @example Иванович
+               */
+              middle_name: string | null;
+              /**
+               * @description Фамилия
+               * @example Иванов
+               */
+              last_name: string | null;
+              /**
+               * @description Email
+               * @example user@email.com
+               */
+              email: string;
+              /**
+               * @description Роль
+               * @example user
+               */
+              role: string | null;
+              /**
+               * @description Телефон
+               * @example 9151711111
+               */
+              phone: string | null;
               /** @example 2023-07-07T07:11:40.000000Z */
-              email_verified_at?: Record<string, unknown> | null;
+              created_at: Record<string, never>;
               /** @example 2023-07-07T07:11:40.000000Z */
-              created_at?: Record<string, never>;
-              /** @example 2023-07-07T07:11:40.000000Z */
-              updated_at?: Record<string, never>;
+              updated_at: Record<string, never>;
             };
           };
         };
@@ -2717,6 +2934,37 @@ export type webhooks = Record<string, never>;
 
 export interface components {
   schemas: {
+    /** Статья */
+    ArticleSchema: {
+      /**
+       * @description Внутренний ID записи на сайте
+       * @example 189
+       */
+      id: number;
+      /**
+       * @description Заголовок страницы
+       * @example Массажные кресла - перспективы технологической эволюции
+       */
+      title: string | null;
+      /** @example <p>Сегодня технический прогресс всё шире охватывает индустрию производства высокотехнологичных товаров для здоровья, постоянно расширяя покупательский выбор  впечатляющим ассортиментом первоклассных массажных кресел</p> */
+      teaser: string | null;
+      /** @example <p>Сегодня технический прогресс всё шире охватывает индустрию производства высокотехнологичных товаров для здоровья, постоянно расширяя покупательский выбор  впечатляющим ассортиментом первоклассных массажных кресел</p> */
+      body: string | null;
+      /** @example 1 */
+      status: number | null;
+      /**
+       * @description Дата создания
+       * @example 2022-03-21T17:07:02.000000Z
+       */
+      created_at: string | null;
+      /**
+       * @description Дата обновления
+       * @example 2022-03-21T17:07:02.000000Z
+       */
+      updated_at: string | null;
+      /** @description SEO страницы */
+      seo?: components["schemas"]["SeoSchema"];
+    };
     /** Информация о товаре из Борбозы */
     BorbozaProductSchema: {
       /**
@@ -2754,6 +3002,97 @@ export interface components {
        * @example Бандаж на локтевой сустав Yamaguchi Aeroprene Elbow Support (черный, размер S)
        */
       title: string | null;
+    };
+    /** Категория новостей */
+    CategoryForNewsSchema: {
+      /**
+       * @description Внутренний ID записи на сайте
+       * @example 189
+       */
+      id: number;
+      /**
+       * @description Название категории
+       * @example Здоровье
+       */
+      name: string | null;
+      /**
+       * @description Порядок
+       * @example 1
+       */
+      sort: number | null;
+      /**
+       * @description Активность
+       * @example 1
+       */
+      active: number | null;
+    };
+    /** Новость */
+    NewsSchema: {
+      /**
+       * @description ID новости на сайте
+       * @example 189
+       */
+      id: number;
+      /**
+       * @description Заголовок страницы
+       * @example Новости: 15 мая состоялось от
+       */
+      title: string | null;
+      /** @example <p>В клинике кинезиотерапии и реабилитац */
+      teaser: string | null;
+      /** @example <p>В клинике кинезиотера */
+      body: string | null;
+      /** @example 1 */
+      status: number;
+      /** @example 1 */
+      sticky: number;
+      /** @example 1 */
+      type: number;
+      /**
+       * @description Дата создания
+       * @example 2022-03-21T17:07:02.000000Z
+       */
+      created_at: string | null;
+      /**
+       * @description Дата обновления
+       * @example 2022-03-21T17:07:02.000000Z
+       */
+      updated_at: string | null;
+      /** @description SEO страницы */
+      seo: components["schemas"]["SeoSchema"];
+    };
+    /** Страница */
+    PageSchema: {
+      /**
+       * @description ID страницы
+       * @example 189
+       */
+      id: number;
+      /**
+       * @description Название
+       * @example Беспроцентный кредит: 0-0-12!
+       */
+      name: string | null;
+      /** @example 1 */
+      status: number;
+      /** @example credit */
+      template: string | null;
+      /** @example dscds */
+      teaser: string | null;
+      /** @example <p>В клинике кинезиотера */
+      body: string | null;
+      /**
+       * @description Дата создания
+       * @example 2022-03-21T17:07:02.000000Z
+       */
+      created_at: string | null;
+      /**
+       * @description Дата обновления
+       * @example 2022-03-21T17:07:02.000000Z
+       */
+      updated_at: string | null;
+      /** @description SEO страницы */
+      seo: components["schemas"]["SeoSchema"];
     };
     /** Галерея фото и видео товаров */
     ProductGallerySchema: {
@@ -3454,6 +3793,81 @@ export interface components {
         /** @description Информация о товаре из Борбозы */
         borboza_product: components["schemas"]["BorbozaProductSchema"];
       };
+    };
+    /** Мета-тег */
+    SeoMetaSchema: {
+      /**
+       * @description Внутренний ID записи на сайте
+       * @example 18
+       */
+      id: number;
+      /**
+       * @description ID адреса в таблице ya_seo
+       * @example 463
+       */
+      seo_id: number;
+      /**
+       * @description name meta-тега
+       * @example description
+       */
+      name: string | null;
+      /**
+       * @description content meta-тега
+       * @example Оплатить представленный на сайте товар
+       */
+      content: string | null;
+      /** @description http_equiv meta-тега */
+      http_equiv: string | null;
+      /** @description property meta-тега */
+      property: string | null;
+    };
+    /** Seo страницы */
+    SeoSchema: {
+      /**
+       * @description Внутренний ID записи на сайте
+       * @example 189
+       */
+      id: number;
+      /**
+       * @description URL страницы
+       * @example evolution.php
+       */
+      url: string | null;
+      /**
+       * @description Заголовок страницы
+       * @example Массажные кресла - перспективы технологической эволюции
+       */
+      title: string | null;
+      /**
+       * @description Ключевые слова
+       * @example статья, массажные кресла, эволюция
+       */
+      keywords: string | null;
+      /**
+       * @description Description страницы
+       * @example на протяжении последний десятилетий массажные кресла стали эволюционным прорыров в области автоматизированных массажистов
+       */
+      description: string | null;
+      /**
+       * @description ID сущности, с которой связана запись
+       * @example 10
+       */
+      seoble_id: number | null;
+      /**
+       * @description Тип сущности, с которой связана запись
+       * @example App\\Models\\Article
+       */
+      seoble_type: string | null;
+      /** @example article/site/view */
+      route: string | null;
+      /** @example 1 */
+      status: number | null;
+      /** @example priceMin=25000&priceMax=1500000&attr%5B133%5D=133&filter=1 */
+      params_for_filter: string | null;
+      /** @example /aksessuari-i-gadjeti */
+      canonical: string | null;
+      /** @example 1 */
+      no_index_search_results: number | null;
     };
   };
   responses: never;
