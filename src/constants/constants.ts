@@ -1,21 +1,23 @@
 // admin api
-export const WEBAPI = 'https://api.yamaguchi.ru/api/admin'
+export const WEBAPI = 'https://api.yamaguchi.ru/api'
 
-export const BANNERS_API = '/banners'
-export const BORBOZA_PRODUCTS_API = '/borboza_products/schema'
-export const BRANDS_API = '/brands'
-export const CATEGORIES_SCHEMA_API = 'categories/schema'
-export const CATEGORIES_API = '/categories/list'
-export const CATEGORY_API = '/categories'
-export const PRODUCT_API = '/products'
-export const PRODUCTS_API = '/products/schema'
-export const RENT_TYPES_API = '/rent_types'
-export const SIZE_TYPES_API = '/sizes'
-export const STATUSES_API = '/product_statuses'
-export const PRODUCT_PARAMS_API = '/product_params'
+export const BANNERS_API = '/admin/banners'
+export const BORBOZA_PRODUCTS_API = '/admin/borboza_products/schema'
+export const BRANDS_API = '/admin/brands'
+export const CATEGORIES_SCHEMA_API = '/admin/categories/schema'
+export const CATEGORIES_API = '/admin/categories/list'
+export const CATEGORY_API = '/admin/categories'
+export const PRODUCT_API = '/admin/products'
+export const PRODUCTS_API = '/admin/products/schema'
+export const RENT_TYPES_API = '/admin/rent_types'
+export const SIZE_TYPES_API = '/admin/sizes'
+export const STATUSES_API = '/admin/product_statuses'
+export const PRODUCT_PARAMS_API = '/admin/product_params'
+export const USER_API = '/auth/me'
 
 // admin routes
 export const PAGE_LOGIN = '/admin/login'
+export const PAGE_HOME = '/'
 export const PAGE_NOT_FOUND = '/404'
 export const PAGE_PRODUCTS = '/admin/products'
 export const PAGE_BANNERS = '/admin/banners'
@@ -26,6 +28,8 @@ export const COOKIES = {
   AUTH_TOKEN: 'AUTH_TOKEN',
   AUTH_TOKEN_OLD: 'AUTH_TOKEN_OLD'
 }
+
+export const ADMIN_ROLE = 'admin'
 
 // true если код выполняется в браузере
 // ts-prune-ignore-next
