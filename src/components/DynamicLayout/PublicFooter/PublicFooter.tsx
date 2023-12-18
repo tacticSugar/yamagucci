@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import Container from '@/src/components/DynamicLayout/Container/Container';
 
-import styles from './PublicFooter.module.scss'
+import styles from './PublicFooter.module.scss';
 import ContactsBlock from '../ContactsBlock/ContactsBlock';
 
 /* Внешний футер */

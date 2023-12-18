@@ -11,4 +11,46 @@
         display: flex;
         justify-content: space-between;
     }
+    &__catalog{
+        color: #FFF;
+        span{
+            display: block;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 37px;
+        }
+    }
+    &__navigation{
+        color: #FFF;
+        span{
+            display: block;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 37px;
+        }
+    }
 }

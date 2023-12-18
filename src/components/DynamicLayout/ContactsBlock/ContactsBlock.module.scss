@@ -1,10 +1,10 @@
 @import 'styles/variables';
 
 .contactsBlock{
-    color: #fff;
     &__wrapper{
         display: flex;
         flex-direction: column;
+        color: #fff;
     }
     &__title{
         font-weight: 700;
