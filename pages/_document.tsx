@@ -5,7 +5,7 @@ import { FC } from 'react'
 const Document: FC = () => (
   <Html lang='ru'>
     <Head />
-    <body style={{ backgroundColor: "#181818"}}>
+    <body>
       <Main />
       <NextScript />
     </body>

@@ -2,17 +2,32 @@
 
 .publicHeader {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__navigationBox {
+    width: 100%;
+    background-color: $totally-black;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    @include nlg {
+      padding: 0 10px;
+    }
+    @include nsm {
+      display: none;
+    }
+  }
 
   &__navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px;
+    max-width: 1880px;
     width: 100%;
     height: 40px;
-
-    background-color: $totally-black;
   }
 
   &__yourCityBox {
@@ -30,12 +45,8 @@
     }
   }
 
-  &__imgMarker {
-  }
-
   &__yourCity {
     color: $white;
-    font-family: "Montserrat";
     font-size: 14px;
     font-weight: 300;
     line-height: 160%;
@@ -52,7 +63,6 @@
   }
 
   &__link {
-    font-family: "Montserrat";
     font-size: 14px;
     font-weight: 400;
     line-height: 160%;
@@ -76,10 +86,416 @@
   }
 
   &__more {
-    font-family: "Montserrat";
     font-size: 14px;
     font-weight: 400;
     line-height: 160%;
     color: $white;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    height: 80px;
+    padding: 0 20px;
+    max-width: 1880px;
+    width: 100%;
+    background-color: $black;
+    @include max_desktop {
+      column-gap: 15px;
+    }
+    @include nlg {
+      padding: 0 10px;
+      column-gap: 10px;
+    }
+
+    @include nsm {
+      height: 12.5vw;
+    }
+  }
+
+  &__btnsMob {
+    display: none;
+    @include nsm {
+      display: flex;
+      column-gap: 3vw;
+    }
+  }
+
+  &__btnDropDownMob {
+    padding: 0;
+    width: 9.5vw;
+    height: 9.5vw;
+    column-gap: unset;
+    &:hover {
+      div {
+        rotate: unset;
+      }
+    }
+    svg {
+      // object-position: center;
+      fill: $white;
+    }
+  }
+
+  // &__btnIconMob {
+  //   // width: 9.5vw;
+  //   // height: 9.5vw;
+  //   svg {
+  //     width: 100%;
+  //   }
+  // }
+
+  &__logo {
+    width: 210px;
+    height: 45px;
+
+    @include max_desktop {
+      width: 200px;
+    }
+
+    @include nmd {
+      width: 16vw;
+    }
+
+    @include nsm {
+      width: 25vw;
+    }
+  }
+
+  &__catalog {
+    width: 185px;
+    height: 45px;
+    &:hover {
+      div {
+        rotate: unset;
+      }
+    }
+
+    @include max_desktop {
+      width: 170px;
+    }
+
+    @include nlg {
+      width: 155px;
+    }
+
+    @include nlgs {
+      width: 185px;
+      height: 50px;
+      grid-area: catalog;
+    }
+
+    @include nsm {
+      width: 47vw;
+      height: 14.1vw;
+    }
+
+    &_des {
+      @include nlgs {
+        display: none;
+      }
+    }
+  }
+
+  &__searchBox {
+    position: relative;
+    flex: 1;
+    @include nlgs {
+      min-width: 280px;
+    }
+
+    @include nsm {
+      display: none;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 15px;
+    background-color: $gray-matt-black;
+
+    color: $gray-main;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 160%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__searchIconWrapper {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) !important;
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &__gifts {
+    width: 270px;
+    height: 50px;
+    border-radius: 15px;
+    border: 2px solid #ffd87c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      91deg,
+      #262626 12.94%,
+      #363636 53.61%,
+      #202020 94.74%
+    );
+    box-shadow: 0px 0px 14px 0px #000 inset;
+    position: relative;
+    color: #ffd674;
+    @include max_desktop {
+      width: 180px;
+    }
+    @include nlg {
+      width: 145px;
+    }
+
+    @include nlgs {
+      width: 270px;
+      grid-area: gifts;
+    }
+
+    @include nsm {
+      width: 96%;
+      height: 14.1vw;
+      max-height: 65px;
+    }
+
+    &_des {
+      @include nlgs {
+        display: none;
+      }
+    }
+  }
+
+  &__giftsText {
+    text-align: center;
+    text-shadow: 0px 4px 4px #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    @include nlg {
+      font-size: 18px;
+    }
+  }
+
+  &__giftBoxWrapper {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    @include max_desktop {
+      margin-right: 5px;
+    }
+
+    @include nlg {
+      display: none;
+    }
+
+    @include nlgs {
+      display: flex;
+    }
+  }
+
+  &__IconGlareWrapper {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    &_1 {
+      top: -10px;
+      left: 32px;
+      z-index: 22;
+      animation: glare 3s infinite ease;
+    }
+
+    &_2 {
+      right: 12px;
+      top: 2px;
+      animation: glare 3s infinite ease;
+      animation-delay: 3s;
+    }
+  }
+
+  &__mobileNav {
+    display: none;
+    @include nlgs {
+      display: flex;
+      padding: 10px 0;
+      justify-content: center;
+      align-items: center;
+      gap: 0 50px;
+      background-color: $black;
+      width: 100%;
+    }
+    @include nsm {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
+      padding: 2.5% 0;
+      gap: 2.5vw 0; 
+      grid-template-areas:
+        "popular catalog"
+        "gifts gifts";
+    }
+  }
+
+  &__popularBtn {
+    height: 50px;
+    grid-area: popular;
+    @include nsm {
+      width: 47vw;
+      height: 14.1vw;
+    }
+  }
+}
+
+.userPanel {
+  display: flex;
+  column-gap: 20px;
+  @include max_desktop {
+    column-gap: 15px;
+  }
+
+  @include nlg {
+    column-gap: 10px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    max-height: unset;
+    border-radius: 15px;
+    background-color: $gray-matt-black;
+
+    &:hover {
+      background-color: $red-main;
+    }
+
+    @include nsm {
+      background-color: $black;
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    @include nsm {
+      width: 7.8vw;
+      height: 7.8vw;
+    }
+
+    &_whatsapp {
+      background-color: $green-light;
+
+      @include nsm {
+        background-color: unset;
+
+        svg {
+          fill: green;
+        }
+      }
+    }
+  }
+
+  &__iconWrapper {
+    width: 27px;
+    object-fit: contain;
+    &_whatsapp {
+      width: 30px;
+    }
+    svg {
+      width: 100%;
+      fill: $white;
+    }
+    @include nlg {
+      width: 7.8vw;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -2px;
+    right: -2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $red-main;
+
+    color: $white;
+    font-size: 8.615px;
+    font-weight: 600;
+    line-height: 160%;
+
+    @include nsm {
+      display: none;
+    }
+  }
+
+  &__name {
+    color: $white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 160%;
+  }
+
+  &__enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: $white;
+
+    color: $black;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 160%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__iconEnter {
+    margin-right: 10px;
+    svg {
+      fill: $black;
+    }
+  }
+}
+
+@keyframes glare {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(60deg);
   }
 }
