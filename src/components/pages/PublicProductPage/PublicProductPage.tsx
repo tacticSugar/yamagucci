@@ -2,6 +2,7 @@ import type { FC } from 'react'
 
 import useFetchProduct from '@/src/api/useFetchProduct/useFetchProduct'
 import ProductHero from '@/src/components/ProductHero/ProductHero'
+import Wysiwyg from '@/src/components/Wysiwyg'
 
 type PublicProductPageTypes = {}
 
@@ -12,7 +13,11 @@ const PublicProductPage: FC<PublicProductPageTypes> = () => {
   console.log('data', data)
 
   return (
-    <ProductHero {...data?.data} />
+    <>
+      <ProductHero {...data?.data} />
+      <Wysiwyg landingName='yamaguchi-xu' />
+    </>
+
   )
 }
 
