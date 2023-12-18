@@ -34,6 +34,13 @@ const Wysiwyg: FC = ({landingName}) => {
     const content = doc.querySelector('body')?.innerHTML;
 
     setHtmlContent(content)
+    scriptSrcs?.forEach(src => {
+      /** */
+      const element = document.createElement('script')
+      element.src = src
+      element.defer = true
+      document.body.appendChild(element)
+    })
     styles.forEach(src => {
       /** */
       const element = document.createElement('link')
@@ -41,13 +48,6 @@ const Wysiwyg: FC = ({landingName}) => {
       element.href = src.href
       document.head.appendChild(element)
     })
-    scriptSrcs?.forEach(src => {
-      /** */
-      const element = document.createElement('script')
-      element.src = src
-      document.body.appendChild(element)
-    })
-
 
   };
 
