@@ -8,6 +8,7 @@ import ContactsBlock from '../ContactsBlock/ContactsBlock';
 import SubscribeBlock from '../SubscribeBlock/SubscribeBlock';
 import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
 import PaymentVariantBlock from '../PaymentVariantBlock/PaymentVariantBlock';
+import YandexReviewsBlock from '../YandexReviewsBlock/YandexReviewsBlock';
 
 /* Внешний футер */
 const PublicFooter: FC = () => (
@@ -15,16 +16,23 @@ const PublicFooter: FC = () => (
         <div className={styles.footer__footerPublic}>
             <Container>
                 <div className={styles.footer__wrapper}>
-                    <ContactsBlock />
+                    <div className={styles.footer__ContactsWrapper}>
+                        <ContactsBlock />
+                        <YandexReviewsBlock />
+                    </div>
                     <div className={styles.footer__catalog}>
                         <span>Каталог</span>
                         <ul>
-                            <li><a href="/massazhnyie-kresla">Массаж</a></li>
-                            <li><a href="/domashnij-fitnes">Спорт</a></li>
-                            <li><a href="/kosmetologicheskiye-apparaty">Красота</a></li>
-                            <li><a href="/new-products">Новинки</a></li>
-                            <li><a href="/gifts.php">Хиты</a></li>
-                            <li><a href="/sale">Акции</a></li>
+                            <div className={styles.footer__navGroup}>
+                                <li><a href="/massazhnyie-kresla">Массаж</a></li>
+                                <li><a href="/domashnij-fitnes">Спорт</a></li>
+                                <li><a href="/kosmetologicheskiye-apparaty">Красота</a></li>
+                            </div>
+                            <div className={styles.footer__navGroup}>
+                                <li><a href="/new-products">Новинки</a></li>
+                                <li><a href="/gifts.php">Хиты</a></li>
+                                <li><a href="/sale">Акции</a></li>
+                            </div>
                         </ul>
                     </div>
                     <div className={styles.footer__navigation}>

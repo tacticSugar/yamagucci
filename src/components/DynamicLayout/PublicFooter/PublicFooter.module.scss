@@ -10,6 +10,9 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        li{
+            margin-bottom: 10px;
+        }
     }
     &__catalog{
         color: #FFF;
@@ -45,9 +48,6 @@
             display: flex;
             flex-direction: column;
         }
-        li{
-            margin-bottom: 10px;
-        }
         a{
             color: #FFF;
             font-size: 18px;
@@ -63,5 +63,16 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: space-between;
+    }
+
+    &__footerPublic{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__navGroup{
+        &:first-child{
+            margin-bottom: 45px;
+        }
     }
 }
