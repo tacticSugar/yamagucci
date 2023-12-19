@@ -45,6 +45,9 @@
             display: flex;
             flex-direction: column;
         }
+        li{
+            margin-bottom: 10px;
+        }
         a{
             color: #FFF;
             font-size: 18px;
@@ -52,5 +55,13 @@
             font-weight: 300;
             line-height: 37px;
         }
+    }
+
+    &__subscribeFormLinks{
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
     }
 }

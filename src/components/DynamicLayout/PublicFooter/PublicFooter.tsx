@@ -5,6 +5,9 @@ import Container from '@/src/components/DynamicLayout/Container/Container';
 
 import styles from './PublicFooter.module.scss';
 import ContactsBlock from '../ContactsBlock/ContactsBlock';
+import SubscribeBlock from '../SubscribeBlock/SubscribeBlock';
+import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
+import PaymentVariantBlock from '../PaymentVariantBlock/PaymentVariantBlock';
 
 /* Внешний футер */
 const PublicFooter: FC = () => (
@@ -36,8 +39,10 @@ const PublicFooter: FC = () => (
                             <li><a href="/dostavka">Доставка</a></li>
                         </ul>
                     </div>
-                    <div className={styles.footer__}>
-
+                    <div className={styles.footer__subscribeFormLinks}>
+                        <SubscribeBlock />
+                        <SocialMediaLinks />
+                        <PaymentVariantBlock />
                     </div>
                 </div>
             </Container>
