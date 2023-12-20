@@ -1,7 +1,7 @@
 import { FormTabs } from '@/src/components/Form/_types'
 import { BRANDS_API, CATEGORIES_API, CATEGORIES_SCHEMA_API, STATUSES_API } from '@/src/constants/constants'
 
-export const productFormConfiguration: FormTabs = {
+export const productFormCfg: FormTabs = {
   productTabs: [
     {
       panelClassName: 'tab-panel-system',
