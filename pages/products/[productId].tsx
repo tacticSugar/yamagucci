@@ -17,8 +17,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   try {
     await Promise.all([
       await queryClient.prefetchQuery({
-        queryFn: () => getProduct({ productId }),
-        queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId }]
+        queryFn: () => getProduct({ productId: '677' }),
+        queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId: '677' }]
       })
     ])
 
