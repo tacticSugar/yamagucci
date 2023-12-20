@@ -32,15 +32,16 @@ const Wysiwyg: FC = ({landingName}) => {
 
     setHtmlContent(content)
     scriptSrcs?.forEach(src => {
-      /** */
+      /** тег скрипт */
       const element = document.createElement('script')
       element.src = src
       element.async = false
       element.defer = true
       document.body.appendChild(element)
     })
-    styles.forEach(src => {
-      /** */
+    styles.forEach((src: HTMLLinkElement) => {
+      console.log('src', src)
+      /** тег линк */
       const element = document.createElement('link')
       element.rel = 'stylesheet'
       element.href = src.href
