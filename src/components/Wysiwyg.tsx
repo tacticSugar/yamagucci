@@ -1,11 +1,8 @@
-import { NextScript } from 'next/document';
 import { FC, useEffect, useState } from 'react'
-import { useHasMounted } from '../lib/useHasMounted';
 
 /** домашняя страница */
 const Wysiwyg: FC = ({landingName}) => {
   const [htmlContent, setHtmlContent] = useState<string>('');
-  const hasMounted = useHasMounted();
   useEffect(() => {
     const fetchHtmlContent = async () => {
       try {
@@ -38,6 +35,7 @@ const Wysiwyg: FC = ({landingName}) => {
       /** */
       const element = document.createElement('script')
       element.src = src
+      element.async = false
       element.defer = true
       document.body.appendChild(element)
     })
@@ -50,9 +48,6 @@ const Wysiwyg: FC = ({landingName}) => {
     })
 
   };
-
-
-  if (!hasMounted) return null
 
   return (
     <>
