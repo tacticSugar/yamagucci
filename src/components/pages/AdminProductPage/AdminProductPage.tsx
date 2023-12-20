@@ -7,7 +7,7 @@ import useFetchProduct from '@/src/api/useFetchProduct/useFetchProduct'
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import TabsUnderline from '@/src/components/atoms/TabsUnderline/TabsUnderline'
 import Form from '@/src/components/Form/Form'
-import { productFormConfiguration } from '@/src/constants/AdminFormConfigurations/productFormConfiguration'
+import { productFormCfg } from '@/src/constants/AdminFormConfigurations/productFormCfg'
 import { IconSave, IconTrash } from '@/src/constants/icons'
 
 import styles from './AdminProductPage.module.scss'
@@ -30,9 +30,9 @@ const AdminProductPage: FC<FetchProductOriginalResult> = ({ data }) => {
   }
 
   /** заглавия табов */
-  const tabTitles = productFormConfiguration?.productTabs?.map((tab) => tab.tabTitle)
+  const tabTitles = productFormCfg?.productTabs?.map((tab) => tab.tabTitle)
   /** наполнение табов */
-  const tabPanels = productFormConfiguration?.productTabs?.map((tab, index) => (
+  const tabPanels = productFormCfg?.productTabs?.map((tab, index) => (
     <Form
       formContent={tab?.tabContent}
       key={index}

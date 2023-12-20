@@ -9,12 +9,14 @@ type PublicProductPageTypes = {}
 /** temp */
 const PublicProductPage: FC<PublicProductPageTypes> = () => {
   /** получение данных */
-  const { data } = useFetchProduct({ productId: '677' })
-  console.log('data', data)
+  const { data, isLoading } = useFetchProduct({ productId: '677' })
 
   return (
     <>
-      <ProductHero {...data?.data} />
+      <ProductHero
+        {...data?.data}
+        isLoading={isLoading}
+      />
       <Wysiwyg landingName='yamaguchi-xu' />
     </>
 
