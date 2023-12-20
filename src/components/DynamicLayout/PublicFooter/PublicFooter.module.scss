@@ -9,6 +9,10 @@
     }
     &__wrapper{
         display: flex;
+        flex-direction: column;
+    }
+    &__top{
+        display: flex;
         justify-content: space-between;
         li{
             margin-bottom: 10px;
