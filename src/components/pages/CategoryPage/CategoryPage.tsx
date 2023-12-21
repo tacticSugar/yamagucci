@@ -7,7 +7,7 @@ import useFetchCategory from '@/src/api/useFetchCategory/useFetchCategory'
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import TabsUnderline from '@/src/components/atoms/TabsUnderline/TabsUnderline'
 import Form from '@/src/components/Form/Form'
-import { categoryFormConfiguration } from '@/src/constants/AdminFormConfigurations/categoryFormConfiguration'
+import { categoryFormCfg } from '@/src/constants/AdminFormConfigurations/categoryFormCfg'
 import { IconSave, IconTrash } from '@/src/constants/icons'
 
 import styles from './CategoryPage.module.scss'
@@ -30,9 +30,9 @@ const CategoryPage: FC<FetchCategoryOriginalResult> = ({ data }) => {
   }
 
   /** заглавия табов */
-  const tabTitles = categoryFormConfiguration?.categoryTabs?.map((tab) => tab.tabTitle)
+  const tabTitles = categoryFormCfg?.categoryTabs?.map((tab) => tab.tabTitle)
   /** наполнение табов */
-  const tabPanels = categoryFormConfiguration?.categoryTabs?.map((tab, index) => (
+  const tabPanels = categoryFormCfg?.categoryTabs?.map((tab, index) => (
     <Form
       formContent={tab?.tabContent}
       key={index}

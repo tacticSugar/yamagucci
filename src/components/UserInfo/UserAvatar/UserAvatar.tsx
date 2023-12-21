@@ -3,16 +3,8 @@ import { memo } from 'react'
 
 import LoaderQuery from '@/src/components/atoms/LoaderQuery/LoaderQuery'
 
+import { UserAvatarTypes } from './_types'
 import styles from './UserAvatar.module.scss'
-
-type UserAvatarTypes = {
-  /** класс на див картинки */
-  className?: string
-  /** ссылка на картинку */
-  imageLink?: string
-  /** состояние загрузки */
-  isLoading?: boolean
-}
 
 /** аватарка пользователя */
 const UserAvatar: React.FC<UserAvatarTypes> = ({

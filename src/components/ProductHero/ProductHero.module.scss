@@ -38,3 +38,24 @@
     line-height: 100%;
   }
 }
+
+.loader {
+  &__img {
+    width: 63rem;
+    height: 63rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    width: 55rem;
+    height: 6rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  &__slogan {
+    width: 63rem;
+    height: 12rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

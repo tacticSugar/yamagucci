@@ -20,6 +20,6 @@
       "@/*": ["./*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/StoryTemplate.tsx", "src/api/useFetchRentTypes/__tests__/fetchRentTypes"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/StoryTemplate.tsx",],
   "exclude": ["node_modules", "icons.ts", "schema.d.ts", "ckeditor5", "**/types"]
 }

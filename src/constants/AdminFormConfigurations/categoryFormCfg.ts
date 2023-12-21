@@ -1,6 +1,6 @@
 import { FormTabs } from '@/src/components/Form/_types'
 
-export const categoryFormConfiguration: FormTabs = {
+export const categoryFormCfg: FormTabs = {
   categoryTabs: [
     {
       panelClassName: 'tab-panel-category-main',

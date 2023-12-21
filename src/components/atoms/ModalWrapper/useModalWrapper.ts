@@ -5,7 +5,6 @@ import { useCallback, useMemo } from 'react'
 const useModalWrapper = ({ handleClose, onBeforeClose }: {
   [key: string]: any
 }): any => {
-  // close popup handler
   /** todo: добавить комментарий */
   const handleClosePopup = useCallback(() => {
     onBeforeClose?.()

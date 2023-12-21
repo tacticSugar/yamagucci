@@ -69,7 +69,7 @@ export const pathAnim: Variants = {
     }
   }),
   init: (i: number) => ({
-    fill: 'red',
+    fill: 'white',
     opacity: (3 - i + 1) / 4,
     transition: {
       duration: 0.1
@@ -118,7 +118,7 @@ export const highlightAnim: Variants = {
 /** sparkleAnim */
 export const sparkleAnim: Variants = {
   anim: (i: number) => ({
-    fill: 'purple',
+    fill: 'red',
     opacity: randomInt(30, 60) / 10,
     rotateZ: i % 2 === 0 ? [0, 360] : [-360, 0],
     scale: 1,
