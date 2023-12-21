@@ -8,7 +8,7 @@ import Sparkles from './Sparkles'
 import Stars from './Stars'
 
 /** magicButton */
-const MagicButton: FC<MagicButtonTypes> = ({ children = 'Button Text', className, hueValue = 0, type = 'button', ...rest }) => {
+const MagicButton: FC<MagicButtonTypes> = ({ children = 'Button Text', className, disabled, hueValue = 0, type = 'button', ...rest }) => {
   /** setHover */
   const [hover, setHover] = useState<boolean>(false)
   /** sparkles */
@@ -27,10 +27,11 @@ const MagicButton: FC<MagicButtonTypes> = ({ children = 'Button Text', className
         {...rest}
         animate={hover ? 'anim' : 'init'}
         className={styles.btn}
+        disabled={disabled}
         initial='init'
         onHoverEnd={() => setHover(false)}
         onHoverStart={() => setHover(true)}
-        style={{ filter: `hue-rotate(${hueValue}deg)` }}
+        style={{ filter: `hue-rotate(${disabled ? 100 : hueValue}deg)` }}
         type={type}
         variants={buttonAnim}
         whileTap='tap'

@@ -16,7 +16,7 @@ export const PRODUCT_PARAMS_API = '/admin/product_params'
 export const USER_API = '/auth/me'
 
 // admin routes
-export const PAGE_LOGIN = '/admin/login'
+export const PAGE_LOGIN = '/login'
 export const PAGE_HOME = '/'
 export const PAGE_NOT_FOUND = '/404'
 export const PAGE_PRODUCTS = '/admin/products'
