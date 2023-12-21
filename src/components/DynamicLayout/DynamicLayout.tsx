@@ -2,11 +2,11 @@ import { useQueryClient } from '@tanstack/react-query'
 import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 import { type FC, HTMLAttributes, PropsWithChildren, useCallback } from 'react'
+import PublicHeader from 'src/components/PublicHeader/PublicHeader'
 
 import { COOKIES } from '@/src/constants/constants'
 
 import AdminHeader from './AdminHeader/AdminHeader'
-import PublicHeader from '../PublicHeader/PublicHeader'
 import AdminNavigation from './AdminNavigation/AdminNavigation'
 import styles from './DynamicLayout.module.scss'
 
@@ -23,12 +23,13 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({ 
     router.reload()
   }, [queryClient, router])
 
-  /** проверка на админку */
-  const isAdmin = router?.pathname?.includes('admin')
+  /** проверка на роут админки */
+  const isAdminRoute = router?.pathname?.includes('admin')
 
+  /** проверка на админку */
   return (
     <>
-      {isAdmin
+      {isAdminRoute
         ? (
           <div className={styles.adminLayout}>
             <AdminHeader handleLoginLogout={handleLoginLogout} />

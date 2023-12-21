@@ -1,13 +1,13 @@
+import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { HeaderLogoTypes } from './_types'
-import cn from 'classnames'
 
+import { HeaderLogoTypes } from './_types'
 import styles from './HeaderLogo.module.scss'
 
 /** компонент логотипа хэдера CRM */
-const HeaderLogo: FC<HeaderLogoTypes> = ({srcImage, styleLogoImg}) => (
+const HeaderLogo: FC<HeaderLogoTypes> = ({ srcImage, styleLogoImg }) => (
   <Link
     className={styles.logo}
     href='/'

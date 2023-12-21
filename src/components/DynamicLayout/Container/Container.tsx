@@ -17,12 +17,12 @@ const Container: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>> & Containe
   variant = 'xl',
   ...rest
 }) => (
-  <div
+  <section
     className={cn(className, styles.container, variant && styles[variant])}
     {...rest}
   >
     {children}
-  </div>
+  </section>
 )
 
 export default Container

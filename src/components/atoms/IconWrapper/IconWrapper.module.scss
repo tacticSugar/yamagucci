@@ -1,11 +1,13 @@
 @import 'styles/variables';
 
 .wrapper {
+  height: 2.4rem;
+  width: 2.4rem;
+  min-width: 2.4rem;
+  min-height: 2.4rem;
   align-items: center;
   display: flex;
-  height: 2.4rem;
   justify-content: center;
-  width: 2.4rem;
 }
 
 .icon {

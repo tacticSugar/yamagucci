@@ -1,0 +1,16 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.imgItem {
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  aspect-ratio: 3/2;
+}

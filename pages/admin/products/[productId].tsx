@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import { memo } from 'react'
 
 import { getProduct, QUERY_KEY_FETCH_PRODUCT } from '@/src/api/useFetchProduct/useFetchProduct'
-import ProductPage from '@/src/components/pages/ProductPage/ProductPage'
+import AdminProductPage from '@/src/components/pages/AdminProductPage/AdminProductPage'
 
 /** загрузка данных. */
 // ts-prune-ignore-next
@@ -61,4 +61,4 @@ export const getStaticPaths = async (): Promise<any> => ({
 })
 
 // ts-prune-ignore-next
-export default memo(ProductPage)
+export default memo(AdminProductPage)

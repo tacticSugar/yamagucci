@@ -1,5 +1,5 @@
 import { FormTabs } from '@/src/components/Form/_types'
-import { BRANDS_API, CATEGORIES_SCHEMA_API, STATUSES_API } from '@/src/constants/constants'
+import { BRANDS_API, CATEGORIES_API, CATEGORIES_SCHEMA_API, STATUSES_API } from '@/src/constants/constants'
 
 export const productFormConfiguration: FormTabs = {
   productTabs: [
@@ -22,10 +22,9 @@ export const productFormConfiguration: FormTabs = {
         {
           label: 'Borboza ID',
           name: 'borboza_id',
-          placeholder: 'Подключите товар к системе учёта',
-          type: 'search',
+          type: 'borbozaSearch',
           validations: [],
-          widthNumber: 49
+          widthNumber: 39
         },
         {
           label: 'Цена',
@@ -33,7 +32,7 @@ export const productFormConfiguration: FormTabs = {
           placeholder: '2 700 000',
           type: 'number',
           validations: [],
-          widthNumber: 15
+          widthNumber: 19
         },
         {
           label: 'Цена по акции',
@@ -41,7 +40,7 @@ export const productFormConfiguration: FormTabs = {
           placeholder: '2 700 000',
           type: 'number',
           validations: [],
-          widthNumber: 15
+          widthNumber: 19
         },
         {
           label: 'Цена предзаказа',
@@ -49,7 +48,7 @@ export const productFormConfiguration: FormTabs = {
           placeholder: '2 700 000',
           type: 'number',
           validations: [],
-          widthNumber: 15
+          widthNumber: 19
         },
         {
           label: 'Название товара',
@@ -180,6 +179,7 @@ export const productFormConfiguration: FormTabs = {
           cfgStyles: { padding: '2rem' },
           label: 'Категория для сравнения',
           name: 'category_compare',
+          optionsApi: CATEGORIES_API,
           placeholder: 'Выберите категорию',
           type: 'select',
           validations: [],

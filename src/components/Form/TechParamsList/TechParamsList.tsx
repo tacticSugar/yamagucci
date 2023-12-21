@@ -90,7 +90,7 @@ const TechParamsList: FC<TechParamsListTypes> = ({ name }) => {
       /** новый массив */
       const newArray = arrayMove(array, oldIndex, newIndex)
       newArray?.forEach((option: any, index) => {
-        option.sort = index + 1
+        option.sort = index
       })
 
       return newArray

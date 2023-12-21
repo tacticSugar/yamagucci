@@ -63,6 +63,11 @@
     color: $white;
   }
 
+  &_transparentGray {
+    background-color: transparent;
+    color: $gray-main;
+  }
+
   &_transparentBlue {
     background-color: transparent;
     color: $blue-main;
@@ -71,6 +76,11 @@
   &_transparentRed {
     background-color: transparent;
     color: $red-main;
+  }
+
+  &_blackWhite {
+    background-color: $black;
+    color: $white;
   }
 }
 

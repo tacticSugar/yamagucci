@@ -1,16 +1,18 @@
+/* eslint-disable camelcase */
 import { FC, memo } from 'react'
 
+import { UserMetaTypes } from './_types'
 import styles from './UserMeta.module.scss'
 
 /** аватарка пользователя */
-const UserMeta: FC = () => (
+const UserMeta: FC<UserMetaTypes> = ({ first_name, role }) => (
 
   <div className={styles.wrapper}>
     <p>
-      UserName
+      {first_name}
     </p>
     <p>
-      UserRole
+      {role}
     </p>
   </div>
 

@@ -16,11 +16,6 @@ export const axiosBearerPost: AxiosInstance = axios.create({
   baseURL: WEBAPI,
   method: 'post'
 })
-/** axios инстанс get запроса с bearer токеном */
-export const axiosBearerGet: AxiosInstance = axios.create({
-  baseURL: WEBAPI,
-  method: 'get'
-})
 
 axiosBearerPost.interceptors.request.use(
   async config => {
@@ -36,6 +31,12 @@ axiosBearerPost.interceptors.request.use(
   error => {
     Promise.reject(error)
   })
+
+/** axios инстанс get запроса с bearer токеном */
+export const axiosBearerGet: AxiosInstance = axios.create({
+  baseURL: WEBAPI,
+  method: 'get'
+})
 
 axiosBearerGet.interceptors.request.use(
   async config => {

@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import React, { FC } from 'react'
 
+import BorbozaSearch from './BorbozaSearch/BorbozaSearch'
 import CategoriesModal from './CategoriesModal/CategoriesModal'
 import { CustomCheckbox } from './CustomCheckbox/CustomCheckbox'
 import CustomInput from './CustomInput/CustomInput'
@@ -131,6 +132,13 @@ const Form: FC<any> = ({ formContent }) => (
       case 'size':
         return (
           <RentAndSizeVariants
+            {...item}
+            key={index}
+          />
+        )
+      case 'borbozaSearch':
+        return (
+          <BorbozaSearch
             {...item}
             key={index}
           />

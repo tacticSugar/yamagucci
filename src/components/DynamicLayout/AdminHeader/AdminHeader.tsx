@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import IconEnter from 'public/assets/icons/enter.svg'
-import { FC } from 'react'
+import { FC, memo } from 'react'
 
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import HeaderLogo from '@/src/components/atoms/HeaderLogo/HeaderLogo'
@@ -22,7 +22,7 @@ const AdminHeader: FC<AdminHeaderTypes> = ({ className, handleLoginLogout }) => 
   <header className={cn(className, styles.header)}>
     <Container>
       <div className={styles.wrapper}>
-        <HeaderLogo srcImage={'/assets/logo-full.svg'}/>
+        <HeaderLogo srcImage={'/assets/logo-full.svg'} />
         <div className={styles.meta__wrapper}>
           <UserInfo />
           <ButtonIcon
@@ -42,4 +42,4 @@ const AdminHeader: FC<AdminHeaderTypes> = ({ className, handleLoginLogout }) => 
   </header>
 )
 
-export default AdminHeader
+export default memo(AdminHeader)

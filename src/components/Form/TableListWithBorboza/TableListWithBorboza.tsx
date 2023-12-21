@@ -1,29 +1,45 @@
 import { type FC, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
 
-import CustomSearch from '@/src/components/Form/CustomSearch/CustomSearch'
+import BorbozaSearch from '@/src/components/Form/BorbozaSearch/BorbozaSearch'
 
 import { TableListWithBorbozaTypes } from './_types'
 import styles from './TableListWithBorboza.module.scss'
 
 /** компонент таблицы со списком вариантов подключений к борбозе (аренда/размеры) */
-const TableListWithBorboza: FC<TableListWithBorbozaTypes> = ({ borbozaIds, initialOptions, name, optionTypes }) => {
+const TableListWithBorboza: FC<TableListWithBorbozaTypes> = ({ initialOptions, name, optionTypes }) => {
   /** контекст формы */
   const formMethods = useFormContext()
   /** стейт аренд */
   const [options, setOptions] = useState(initialOptions)
 
-  /** обработчик изменения */
+  /** обработчик изменения инпутов */
   const handleInputChange = (id: number, field: string, value: any) => {
-    /** обновляем стейт */
+    /** новые опции */
     const updatedOptions = options?.map((option) => {
       if (option.rent_id === id || option.size_id === id) {
-        return { ...option, [field]: field === 'borboza_id' ? value?.item_id : value || '' }
+        if (field === 'isActive') {
+          if (!value || option.borboza_id) {
+            return { ...option, [field]: value }
+          } else {
+            return { ...option, [field]: false }
+          }
+        } else if (field === 'borboza_id') {
+          /** новые опции */
+          const updatedOption = { ...option, [field]: value?.item_id }
+
+          if (!value) {
+            updatedOption.isActive = false
+          }
+
+          return updatedOption
+        } else {
+          return { ...option, [field]: value }
+        }
       }
 
       return option
     })
-
     setOptions(updatedOptions)
     formMethods?.setValue(name, updatedOptions)
   }
@@ -63,8 +79,8 @@ const TableListWithBorboza: FC<TableListWithBorbozaTypes> = ({ borbozaIds, initi
             <tr key={optionType.id}>
               <td>
                 <input
-                  checked={option?.isChecked && isHaveBorbozaId}
-                  onChange={(e) => handleInputChange(optionType.id, 'isChecked', e.target.checked)}
+                  checked={option?.isActive && isHaveBorbozaId}
+                  onChange={(e) => handleInputChange(optionType.id, 'isActive', e.target.checked)}
                   type='checkbox'
                 />
               </td>
@@ -74,10 +90,8 @@ const TableListWithBorboza: FC<TableListWithBorbozaTypes> = ({ borbozaIds, initi
                 </span>
               </td>
               <td>
-                <CustomSearch
-                  closeOnItemClick={true}
+                <BorbozaSearch
                   defaultValueProps={option?.borboza_id}
-                  items={borbozaIds?.data}
                   onChange={(value) => handleInputChange(optionType.id, 'borboza_id', value)}
                 />
               </td>

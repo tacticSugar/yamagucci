@@ -3,12 +3,12 @@
   outline: none;
   white-space: nowrap;
   position: relative;
-  color: #939393;
+  color: #007aff;
   font-weight: bold;
   font-size: 1.5rem;
 
   &:hover {
-    color: #181818;
+    color: #2e90f8;
   }
 
   &::after{
@@ -23,7 +23,7 @@
   }
 
   &.tab-underline-selected {
-    color: #007AFF;
+    color: #181818;
     font-weight: bold;
     font-size: 1.5rem;
   }
