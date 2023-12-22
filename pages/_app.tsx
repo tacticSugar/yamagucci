@@ -8,6 +8,7 @@ import '@/styles/datePicker.css'
 import { Montserrat } from '@next/font/google'
 import { HydrationBoundary, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 import { FC, useState } from 'react'
 
 import DynamicLayout from '@/src/components/DynamicLayout/DynamicLayout'
@@ -21,6 +22,8 @@ const monserrat = Montserrat({
 
 /** app */
 const App: FC<AppProps> = ({ Component, pageProps }) => {
+  /** роутер */
+  const { pathname } = useRouter()
   /** queryClient */
   const [queryClient] = useState(
     () =>
@@ -35,6 +38,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       })
   )
 
+  /** проверка на роут админки */
+  const isAdminRoute = pathname?.includes('admin')
+
   return (
     <QueryClientProvider client={queryClient}>
       <HydrationBoundary state={pageProps.dehydratedState}>
@@ -48,10 +54,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         html {
           font-family: ${monserrat.style.fontFamily};
         }
+        body {
+          background-color: ${isAdminRoute ? 'white' : '#181818'};
+        }
       `}
         </style>
         <ErrorBoundary>
-          <DynamicLayout>
+          <DynamicLayout isAdminRoute={isAdminRoute}>
             <main>
               <Component {...pageProps} />
             </main>
