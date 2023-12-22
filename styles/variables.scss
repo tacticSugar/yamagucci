@@ -60,6 +60,57 @@ $desktop: 1441px;
   }
 }
 
+/* Yamaguchi mixins */
+$nlgx-media: 1699px;
+$nlgm-media: 1420px;
+$nlg-media: 1240px;
+$nmd-media: 1023px;
+$nsm-media: 767px;
+$nxs-media: 450px;
+$nxxs-media: 350px;
+
+@mixin nlgx {
+  @media all and (max-width: #{$nlgx-media}) {
+    @content;
+  }
+}
+
+@mixin nlgm {
+  @media all and (max-width: #{$nlgm-media}) {
+    @content;
+  }
+}
+
+@mixin nlg {
+  @media all and (max-width: #{$nlg-media}) {
+    @content;
+  }
+}
+
+@mixin nmd {
+  @media all and (max-width: #{$nmd-media}) {
+    @content;
+  }
+}
+
+@mixin nsm {
+  @media all and (max-width: #{$nsm-media}) {
+    @content;
+  }
+}
+
+@mixin nxs {
+  @media all and (max-width: #{$nxs-media}) {
+    @content;
+  }
+}
+
+@mixin nxxs {
+  @media all and (max-width: #{$nxxs-media}) {
+    @content;
+  }
+}
+
 :export {
   mobile: $mobile;
   tablet: $tablet;

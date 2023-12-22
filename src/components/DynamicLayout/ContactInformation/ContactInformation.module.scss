@@ -1,0 +1,68 @@
+@import 'styles/variables';
+
+.contactsBlock{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 28px;
+        @include nsm {
+          margin-bottom: 20px;
+        }
+    }
+    &__phones{
+        margin-bottom: 35px;
+
+        a {
+          display: block;
+          font-weight: 700;
+          line-height: 1.6;
+          color: white;
+          white-space: nowrap;
+    
+          &:first-child {
+            font-size: 27.3913px;
+          }
+    
+          &:hover {
+            color: #E03638;
+          }
+        }
+    
+        @include nsm {
+          margin-bottom: 20px;
+        }
+    }
+    &__worktime{
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 300;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        @include nlg {
+          font-size: 14px;
+        }
+        @include nsm {
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+    
+        &:before {
+          content: '';
+          background: url('/assets/icons/clock-ico-white.svg') center no-repeat;
+          width: 24px;
+          min-width: 24px;
+          height: 24px;
+          margin-right: 15px;
+          @include nsm {
+            display: none;
+          }
+        }
+    }
+}

@@ -29,6 +29,10 @@ export const COOKIES = {
   AUTH_TOKEN_OLD: 'AUTH_TOKEN_OLD'
 }
 
+// phone numbers
+export const COMPANY_PHONE_1 = '8 800 333-12-81'
+export const COMPANY_PHONE_2 = '+7 495 646-80-96'
+
 export const ADMIN_ROLE = 'admin'
 
 // true если код выполняется в браузере

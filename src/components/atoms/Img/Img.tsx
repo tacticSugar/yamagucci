@@ -5,7 +5,7 @@ import { ImgTypes } from './_types'
 import styles from './Img.module.scss'
 
 /** кастомный компонент Img */
-const Img: FC<ImgTypes> = ({ alt, imgClassname, photos, src }) => {
+const Img: FC<ImgTypes> = ({ alt, height, imgClassname, photos, src, width }) => {
   if (photos) {
     /** генерация тегов source */
     const sourceTags = Object.entries(photos)?.map(([size, url]) => (
@@ -22,7 +22,9 @@ const Img: FC<ImgTypes> = ({ alt, imgClassname, photos, src }) => {
         <img
           alt={alt}
           className={cn(styles.img, imgClassname)}
+          height={height}
           src={photos.original}
+          width={width}
         />
       </picture>
     )
@@ -31,7 +33,9 @@ const Img: FC<ImgTypes> = ({ alt, imgClassname, photos, src }) => {
       <img
         alt={alt}
         className={cn(styles.img, imgClassname)}
+        height={height}
         src={src}
+        width={width}
       />
     )
   } else {

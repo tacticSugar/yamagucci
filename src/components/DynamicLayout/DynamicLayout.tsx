@@ -8,7 +8,9 @@ import { COOKIES } from '@/src/constants/constants'
 import { DynamicLayoutTypes } from './_types'
 import AdminHeader from './AdminHeader/AdminHeader'
 import AdminNavigation from './AdminNavigation/AdminNavigation'
+import AppFooter from './BannerApp/BannerApp'
 import styles from './DynamicLayout.module.scss'
+import PublicFooter from './PublicFooter/PublicFooter'
 
 /** компонент динамического лейаута */
 const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>> & DynamicLayoutTypes> = ({ children, isAdminRoute }) => {
@@ -39,7 +41,8 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>> & Dyna
             </header>
             {children}
             <footer>
-              FOOTER
+              <AppFooter />
+              <PublicFooter />
             </footer>
           </div>
         )}

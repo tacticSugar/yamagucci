@@ -1,0 +1,36 @@
+@import 'styles/variables';
+
+.PaymentVariantBlock{
+    color: #fff;
+    &__title{
+        display: block;
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    &__linkWrapper{
+        align-items: center;
+        justify-content: flex-start;
+        @include nsm {
+          justify-content: space-around;
+        }
+    }
+    &__link{
+        margin-left: 20px;
+  
+        &:first-child {
+          margin: 0;
+        }
+
+        @include nlg {
+          max-width: 19%;
+        }
+
+        &:hover {
+            img{
+                transform: scale(1.1);
+                transition: all .25s ease-in-out;
+            }
+        }
+    }
+}

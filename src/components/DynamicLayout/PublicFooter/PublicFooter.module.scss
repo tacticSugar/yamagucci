@@ -1,0 +1,82 @@
+@import 'styles/variables';
+
+.footer{
+    &__footerPublic{
+        position: relative;
+        background: #181818;
+        padding: 80px 0;
+        z-index: 10;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    &__catalog{
+        color: #FFF;
+        span{
+            display: block;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 37px;
+        }
+    }
+    &__navigation{
+        color: #FFF;
+        span{
+            display: block;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 37px;
+        }
+    }
+
+    &__subscribeFormLinks{
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__footerPublic{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__navGroup{
+        &:first-child{
+            margin-bottom: 45px;
+        }
+    }
+}

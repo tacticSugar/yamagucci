@@ -16,6 +16,15 @@ html {
   font-size: 10px;
 }
 
+<<<<<<< HEAD
+body {
+  background-color: #FFFFFF;
+  /* max-width: 1920px;
+  margin: 0 auto; */
+}
+
+=======
+>>>>>>> 80e1c1bac2ff91380f32614bc2d7ceedb1f4d39c
 /* Links */
 a,
 a:link,
