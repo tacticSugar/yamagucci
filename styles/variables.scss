@@ -8,6 +8,7 @@ $gray-light: #e0e0e0;
 $gray-main: #939393;
 $gray-dark: #575757;
 $gray-black: #333333;
+$gray-matt-black: #383838;
 
 // Blues
 $blue-light: #2e90f8;
@@ -18,11 +19,18 @@ $red-main: #e03638;
 
 // Greens
 $green-main: #00ff1a;
+$green-light: #25d366;
 
 // Whites
 $bad-white: #f1f1f1;
 $white: #ffffff;
+
+// Black
 $black: #181818;
+$totally-black: #000;
+
+//Violet
+$violet: #9419ff;
 
 ///////////////////////////////////          FONT-SIZE
 
@@ -37,6 +45,7 @@ $text-xxxl: 3rem;
 $mobile: 769px;
 $tablet: 1025px;
 $desktop: 1441px;
+$nlg: 1239px;
 
 //Mixins //----------PC FIRST
 @mixin max_custom($width) {
@@ -56,6 +65,64 @@ $desktop: 1441px;
 }
 @mixin max_desktop {
   @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+/* Yamaguchi mixins */
+$nlgx-media: 1700px;
+$nlgm-media: 1421px;
+$nlg-media: 1241px;
+$nlgs-media: 1101px;
+$nmd-media: 1024px;
+$nsm-media: 768px;
+$nxs-media: 451px;
+$nxxs-media: 351px;
+
+@mixin nlgx {
+  @media all and (max-width: #{$nlgx-media}) {
+    @content;
+  }
+}
+
+@mixin nlgm {
+  @media all and (max-width: #{$nlgm-media}) {
+    @content;
+  }
+}
+
+@mixin nlg {
+  @media all and (max-width: #{$nlg-media}) {
+    @content;
+  }
+}
+
+@mixin nlgs {
+  @media all and (max-width: #{$nlgs-media}) {
+    @content;
+  }
+}
+
+@mixin nmd {
+  @media all and (max-width: #{$nmd-media}) {
+    @content;
+  }
+}
+
+@mixin nsm {
+  @media all and (max-width: #{$nsm-media}) {
+    @content;
+  }
+}
+
+@mixin nxs {
+  @media all and (max-width: #{$nxs-media}) {
+    @content;
+  }
+}
+
+@mixin nxxs {
+  @media all and (max-width: #{$nxxs-media}) {
     @content;
   }
 }

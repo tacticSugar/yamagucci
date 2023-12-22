@@ -53,6 +53,11 @@
     color: $green-main;
   }
 
+  &_grayMattBlack{
+    background-color: $gray-matt-black;
+    color: $white;
+  }
+
   &_transparent {
     background-color: transparent;
     color: $white;
@@ -71,6 +76,11 @@
   &_transparentRed {
     background-color: transparent;
     color: $red-main;
+  }
+
+  &_blackWhite {
+    background-color: $black;
+    color: $white;
   }
 }
 

@@ -1,0 +1,142 @@
+@import "styles/variables";
+
+.popupProfile {
+  padding-top: 1.5rem;
+  top: 82%;
+  right: 2rem;
+  position: absolute;
+  z-index: 444;
+  transition: all 0.2s ease;
+
+  &__popupProfileWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    min-height: 59rem;
+    border-radius: 1.5rem;
+    background-color: $white;
+    padding: 1.5rem 2rem 2.5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    row-gap: .5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: .1rem solid $bad-white;
+
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  &__link {
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    width: 100%;
+    column-gap: 1.5rem;
+
+    &:hover {
+      cursor: pointer;
+
+      .popupProfile__text {
+        color: $red-main;
+      }
+
+      svg {
+        fill: $red-main;
+      }
+    }
+  }
+
+  &__iconWrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: $gray-matt-black;
+    }
+
+    &_logo {
+      svg {
+        fill: $red-main;
+      }
+    }
+  }
+
+
+  &__text {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%;
+
+    &_weight {
+      width: 100%;
+
+      font-weight: 600;
+    }
+
+    &_phone {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      font-size: 1.2rem;
+    }
+
+    &_color {
+      color: $gray-main;
+    }
+
+  }
+
+  &__ballBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    padding: 0 1rem 0 .5rem;
+    max-width: 13rem;
+    height: 3rem;
+    background-color: $violet;
+    border-radius: .7rem;
+  }
+
+  &__ballQuantity {
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 160%;
+  }
+
+  &__ballIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    min-height: 2rem;
+
+    svg {
+      ellipse {
+        fill: $white;
+      }
+
+      path {
+        fill: $violet;
+      }
+    }
+  }
+}

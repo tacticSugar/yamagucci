@@ -1,0 +1,572 @@
+@import "styles/variables";
+
+.rotateArrow {
+  transform: rotate(180deg);
+}
+
+.hide {
+  display: none;
+}
+
+.relativeBox {
+  position: relative;
+}
+
+.imgArrow {
+  fill: $white;
+}
+
+.IconLocation {
+  fill: $white;
+}
+
+.publicHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 333;
+
+  &__navigationBox {
+    width: 100%;
+    background-color: $totally-black;
+    display: flex;
+    justify-content: center;
+
+    @include nlg {
+      padding: 0 1rem;
+    }
+
+    @include nsm {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    column-gap: 2rem;
+    height: 8rem;
+    padding: 0 2rem;
+    max-width: 188rem;
+    width: 100%;
+    background-color: $black;
+
+    z-index: 333;
+
+    @include max_desktop {
+      column-gap: 1.5rem;
+    }
+
+    @include nlg {
+      padding: 0 1rem;
+      column-gap: 1rem;
+    }
+
+    @include nsm {
+      height: 12.5vw;
+    }
+  }
+
+  &__catalog {
+    @include nlgs {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 21rem;
+    height: 4.5rem;
+
+    @include max_desktop {
+      width: 20rem;
+    }
+
+    @include nmd {
+      width: 16vw;
+    }
+
+    @include nsm {
+      width: 25vw;
+    }
+  }
+
+  &__giftsBtn {
+    @include nlgs {
+      display: none !important;
+    }
+  }
+
+  &__searchBox {
+    position: relative;
+    flex: 1;
+
+    @include nlgs {
+      min-width: 28rem;
+    }
+
+    @include nsm {
+      display: none;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    height: 50px;
+    padding-left: 2rem;
+    border-radius: 1.5rem;
+    background-color: $gray-matt-black;
+
+    color: $gray-main;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 160%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__searchIconWrapper {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%) !important;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 188rem;
+  width: 100%;
+  height: 4rem;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: $white;
+  }
+
+  &__btnCity {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 3rem;
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        fill: $red-main;
+      }
+
+      .navigation__cityName {
+        color: $red-main;
+      }
+    }
+  }
+
+
+  &__cityName {
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 160%;
+  }
+
+  &__moreBox {
+    display: flex;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        fill: $red-main;
+      }
+
+      .navigation__more {
+        color: $red-main;
+      }
+    }
+  }
+
+  &__more {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: $white;
+  }
+}
+
+.mobBtnContainer {
+  display: none;
+
+  @include nsm {
+    display: flex;
+    column-gap: 3vw;
+  }
+
+  &__btnDropDown {
+    padding: 0;
+    width: 9.5vw;
+    height: 9.5vw;
+    column-gap: unset;
+
+    &:hover {
+      div {
+        rotate: unset;
+      }
+    }
+
+    svg {
+      // object-position: center;
+      fill: $white;
+    }
+  }
+}
+
+.btnCatalog {
+  width: 18.5rem;
+  height: 4.5rem;
+
+  &:hover {
+    div {
+      rotate: unset;
+    }
+  }
+
+  @include max_desktop {
+    width: 17rem;
+  }
+
+  @include nlg {
+    width: 15.5rem;
+  }
+
+  @include nlgs {
+    width: 18.5rem;
+    height: 5rem;
+    grid-area: catalog;
+  }
+
+  @include nsm {
+    width: 47vw;
+    height: 14.1vw;
+  }
+}
+
+.btnGifts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27rem;
+  height: 5rem;
+  border-radius: 1.5rem;
+  border: 2px solid #ffd87c;
+  background: linear-gradient(91deg,
+      #262626 12.94%,
+      #363636 53.61%,
+      #202020 94.74%);
+  box-shadow: 0px 0px 1.4rem 0px #000 inset;
+  position: relative;
+  color: #ffd674;
+
+  @include max_desktop {
+    width: 18rem;
+  }
+
+  @include nlg {
+    width: 14.5rem;
+  }
+
+  @include nlgs {
+    width: 27rem;
+  }
+
+  @include nsm {
+    width: 96%;
+    height: 14.1vw;
+    max-height: 6.5rem;
+  }
+
+  &__text {
+    text-align: center;
+    text-shadow: 0px .4rem .4rem #000;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+
+    @include nlg {
+      font-size: 18px;
+    }
+  }
+
+  &__imgBox {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+
+    @include max_desktop {
+      margin-right: .5rem;
+    }
+
+    @include nlg {
+      display: none;
+    }
+
+    @include nlgs {
+      display: flex;
+    }
+  }
+
+  &__imgGlareWrapper {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+
+    &_left {
+      top: -1rem;
+      left: 3.2rem;
+      z-index: 22;
+      animation: glare 3s infinite ease;
+    }
+
+    &_right {
+      right: 1.2rem;
+      top: .2rem;
+      animation: glare 3s infinite ease;
+      animation-delay: 3s;
+    }
+  }
+}
+
+.userPanel {
+  display: flex;
+  column-gap: 2rem;
+
+  @include max_desktop {
+    column-gap: 1.5rem;
+  }
+
+  @include nlg {
+    column-gap: 1rem;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    width: 5rem;
+    height: 5rem;
+    max-height: unset;
+    border-radius: 1.5rem;
+    background-color: $gray-matt-black;
+
+    &:hover {
+      background-color: $red-main;
+    }
+
+    @include nsm {
+      background-color: $black;
+
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    @include nsm {
+      width: 7.8vw;
+      height: 7.8vw;
+    }
+
+    &_whatsapp {
+      background-color: $green-light;
+
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+        object-fit: contain;
+
+        @include nsm {
+          path {
+            fill: $green-light;
+          }
+        }
+
+        ellipse {
+          fill: transparent;
+        }
+
+        @include nsm {
+          width: 5.6vw;
+          height: 6.3vw;
+        }
+      }
+
+      @include nsm {
+        background-color: unset;
+      }
+    }
+  }
+
+  &__iconWrapper {
+    width: 2.7rem;
+    object-fit: contain;
+
+    &_whatsapp {
+      width: 3rem;
+    }
+
+    svg {
+      fill: $white;
+    }
+
+    @include nlg {
+      width: 7.8vw;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -0.2rem;
+    right: -0.2px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: $red-main;
+
+    color: $white;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 160%;
+
+    @include nsm {
+      display: none;
+    }
+  }
+
+  &__name {
+    color: $white;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 160%;
+  }
+
+  &__enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14.5rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    background-color: $white;
+
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 160%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__iconEnter {
+    margin-right: 1rem;
+
+    svg {
+      fill: $black;
+    }
+  }
+}
+
+.mobileNav {
+  display: none;
+
+  @include nlgs {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 0 5rem;
+    background-color: $black;
+    width: 100%;
+  }
+
+  @include nsm {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5% 0;
+    gap: 2.5vw 0;
+    grid-template-areas:
+      "popular catalog"
+      "gifts gifts";
+  }
+
+  &__catalog {
+    @include nlgs {
+      grid-area: catalog;
+    }
+  }
+
+  &__popularBtn {
+    height: 5rem;
+    grid-area: popular;
+
+    @include nsm {
+      width: 47vw;
+      height: 14.1vw;
+    }
+  }
+
+  &__gifts {
+    @include nlgs {
+      grid-area: gifts;
+    }
+  }
+}
+
+@keyframes glare {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(60deg);
+  }
+}

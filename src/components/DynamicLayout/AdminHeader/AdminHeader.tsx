@@ -22,7 +22,7 @@ const AdminHeader: FC<AdminHeaderTypes> = ({ className, handleLoginLogout }) => 
   <header className={cn(className, styles.header)}>
     <Container>
       <div className={styles.wrapper}>
-        <HeaderLogo />
+        <HeaderLogo srcImage={'/assets/logo-full.svg'} />
         <div className={styles.meta__wrapper}>
           <UserInfo />
           <ButtonIcon

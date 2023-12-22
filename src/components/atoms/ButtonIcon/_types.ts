@@ -4,7 +4,7 @@ export type ButtonIconTypes = {
   /** доп. класс на кнопку */
   className?: string
   /** цвета кнопки */
-  colorVariant: 'grayDark' | 'gray' | 'blue' | 'red' | 'black' | 'transparentBlue' | 'transparentRed' | 'transparent' | 'transparentGray'
+  colorVariant: 'grayDark' | 'gray' | 'blue' | 'red' | 'black' | 'transparentBlue' | 'transparentRed' | 'transparent' | 'transparentGray' | 'grayMattBlack' | 'blackWhite'
   /** флаг состояния */
   disabled?: boolean
   /** иконка */
@@ -15,10 +15,10 @@ export type ButtonIconTypes = {
   iconProps?: {
     [key: string]: any
   }
-  /** класс для обертки икноки */
+  /** класс для обертки иконки */
   iconWrapperClassName?: string
   /** лейбл */
-  label: string
+  label?: string
   /** доп. класс лейбла */
   labelClassName?: string
   /** ф-я обработчик */

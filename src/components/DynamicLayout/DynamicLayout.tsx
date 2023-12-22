@@ -2,6 +2,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import Cookies from 'js-cookie'
 import Router from 'next/router'
 import { type FC, HTMLAttributes, PropsWithChildren, useCallback } from 'react'
+import PublicHeader from '@/src/components/DynamicLayout/PublicHeader/PublicHeader'
 
 import { COOKIES } from '@/src/constants/constants'
 
@@ -34,9 +35,7 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>> & Dyna
         )
         : (
           <div className={styles.publicLayout}>
-            <header>
-              HEADER
-            </header>
+            <PublicHeader />
             {children}
             <footer>
               FOOTER
