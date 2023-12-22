@@ -43,7 +43,7 @@ import IconPlus from "public/assets/icons/plus.svg";
 import IconLocation from "public/assets/icons/location.svg";
 import IconGiftBox from "public/assets/icons/giftBox.svg";
 import IconGlare from "public/assets/icons/glare.svg";
-import IconWhatsApp from "public/assets/icons/whatsApp.svg";
+import IconWhatsApp from "public/assets/icons/WhatsApp.svg";
 import IconPhone from "public/assets/icons/phone.svg";
 import IconHeart from "public/assets/icons/heart.svg";
 import IconCart from "public/assets/icons/cart.svg";
