@@ -265,6 +265,32 @@
     color: $white;
   }
 
+  &__btnCity {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      fill: $red-main;
+    }
+
+    .navigation__cityName {
+      color: $red-main;
+    }
+  }
+
+  &__cityName {
+    color: $white;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 160%;
+  }
+
   &__moreBox {
     display: flex;
     position: relative;
@@ -670,379 +696,8 @@
   }
 }
 
-.popupSupport {
-  top: 100%;
-  right: -220px;
-  z-index: 333;
-  padding-top: 15px;
 
-  &__wrapper {
-    display: flex;
-    width: 585px;
-    background-color: $white;
-    border-radius: 15px;
-    height: 410px;
-    padding: 14px 13px;
-    column-gap: 13px;
 
-  }
-
-  &_close {
-    // transform: translateX(100%);
-    z-index: -1;
-  }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 15px;
-    height: 382px;
-
-    &_left {
-      padding: 13px 10px 18px;
-      width: 298px;
-      background-color: $bad-white;
-    }
-
-    &_right {
-      padding: 13px 15px 23px;
-      width: 248px;
-      background-color: $black;
-    }
-  }
-
-  &__titleBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-
-  &__iconSupportWrapper {
-    width: 12px;
-    height: 16px;
-    min-width: unset;
-    min-height: unset;
-    margin-right: 8px;
-
-    svg {
-      width: 100%;
-      fill: $red-main;
-    }
-  }
-
-  &__title {
-    color: $black;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 160%;
-
-    font-size: 20.95px;
-
-    &_support {
-      color: $black;
-      font-weight: 700;
-    }
-
-    &_center {
-      font-weight: 400;
-      color: $white;
-    }
-  }
-
-  &__boxNumber {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-
-    &_top {
-      margin-bottom: 5px;
-    }
-
-    &_bottom {
-      margin-bottom: 15px;
-    }
-  }
-
-  &__number {
-    color: $black;
-    font-size: 22.194px;
-    font-weight: 700;
-
-    &_white {
-      width: 100%;
-      color: $white;
-      margin-bottom: 25px;
-    }
-  }
-
-  &__text {
-    color: $black;
-    font-size: 12.684px;
-    font-weight: 400;
-    line-height: 125%;
-
-    &_underline {
-      text-decoration: underline;
-    }
-
-    &_white {
-      color: $white;
-    }
-  }
-
-  &__subtitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    width: 136px;
-    height: 25px;
-    margin-bottom: 24px;
-    padding: 4px;
-    background-color: $gray-dark;
-
-    color: $white;
-    font-size: 12.684px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  &__popupBtn {
-    width: 100%;
-    height: 50px;
-
-    &:hover {
-      svg {
-        transform: unset;
-      }
-    }
-  }
-
-  &__callBack {
-    margin-bottom: 12px;
-  }
-
-  &__videoConsultation {
-    margin-bottom: 20px;
-  }
-
-  &__iconCenterWrapper {
-    width: 20px;
-    height: 15px;
-    margin-right: 12px;
-
-    svg {
-      fill: $white;
-    }
-  }
-
-  &__listWorkingHours {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 8px;
-    margin-bottom: 25px;
-  }
-
-  &__itemWorkingHours {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-  }
-
-  &__itemText {
-    color: $white;
-    font-size: 18px;
-    font-weight: 400;
-
-    &_day {
-      width: 40px;
-    }
-
-    &_weight {
-      font-weight: 700;
-    }
-  }
-}
-
-.catalogPopup {
-  display: flex;
-  min-width: 905px;
-  height: 640px;
-  top: 100%;
-  left: 0;
-  z-index: 1111;
-
-  &_close {
-    transform: translateY(-100%);
-  }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-
-    &_left {
-      align-items: center;
-      width: 455px;
-      padding: 15px 0 25px 20px;
-      background-color: $bad-white;
-      border-radius: 0 0 0 15px;
-    }
-
-    &_right {
-      min-width: 600px;
-      background-color: $white;
-      padding: 15px 18px 24px;
-      border-radius: 0 0 15px 0;
-    }
-  }
-
-  &__topImgBox {
-    width: 100%;
-    display: flex;
-    margin-bottom: 35px;
-    column-gap: 20px;
-  }
-
-  &__imgContainer {
-    position: relative;
-    width: 125px;
-    height: 125px;
-    overflow: hidden;
-    border-radius: 15px;
-  }
-
-  &__textImg {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-
-    color: $totally-black;
-    font-size: 12.887px;
-    font-weight: 500;
-    line-height: 124%;
-
-    &_white {
-      color: $white;
-    }
-  }
-
-  &__globalCategoriesBox {
-    width: 100%;
-  }
-
-  &__globalCategories {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    width: 100%;
-    height: 47px;
-    border-radius: 15px 0 0 15px;
-
-    &:hover {
-      cursor: pointer;
-      background-color: $white;
-
-      svg {
-        fill: $white;
-      }
-    }
-  }
-
-  &__iconWrapper {
-    width: 45px;
-    height: 45px;
-    margin-right: 15px;
-
-    svg {
-      fill: $bad-white;
-    }
-  }
-
-  &__title {
-    color: $totally-black;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 260%;
-  }
-
-  &__imgCategory {
-    position: relative;
-    width: 415px;
-    height: 125px;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 25px;
-  }
-
-  &__CategoryImg {
-    width: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
-
-  &__nameCategory {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 120px;
-
-    color: $gray-matt-black;
-    font-size: 18.332px;
-    font-weight: 500;
-    line-height: 124%;
-
-    &_colorWhite {
-      color: $white;
-    }
-  }
-
-  &__linkCategory {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-
-    color: $gray-matt-black;
-    font-size: 15.34px;
-    font-weight: 500;
-    line-height: 124%;
-    text-decoration-line: underline !important;
-
-    &_colorWhite {
-      color: $white;
-    }
-  }
-
-  &__listSubcategories {
-    display: flex;
-    flex-flow: column wrap;
-    height: 460px;
-    padding-left: 5px;
-    gap: 20px 10px;
-  }
-
-  &__subcategory {
-    display: flex;
-    align-items: center;
-    width: 245px;
-  }
-
-  &__titleSubcategories {
-    color: $totally-black;
-    font-size: 18px;
-    font-weight: 400;
-    &:hover {
-      cursor: pointer;
-      color: $red-main;
-    }
-  }
-
-
-}
 
 .popupProfile {
   padding-top: 15px;

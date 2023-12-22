@@ -5,15 +5,16 @@ import { useState } from 'react'
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import HeaderLogo from '@/src/components/atoms/HeaderLogo/HeaderLogo'
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
+import PopupCatalog from '@/src/components/DynamicLayout/PopupCatalog/PopupCatalog'
+import PopupSupport from '@/src/components/DynamicLayout/PopupSupport/PopupSupport'
+import PopupYourCity from '@/src/components/DynamicLayout/PopupYourCity/PopupYourCity'
 import {
   IconArrowDown,
   IconBall,
-  IconCameraMovie,
   IconCart,
   IconCross,
   IconExit,
   IconEye,
-  IconFire,
   IconGears,
   IconGiftBox,
   IconGifts,
@@ -25,7 +26,6 @@ import {
   IconMarathon,
   IconMessage,
   IconPhone,
-  IconPhonRotary,
   IconScales,
   IconSearch,
   IconShoppingCart,
@@ -35,16 +35,12 @@ import {
 } from '@/src/constants/icons'
 
 import {
-  GlobalCategoryArrayTypes,
   moreArrayTypes,
   navLinkArrayTypes
 } from './_types'
 import {
-  arrayCity,
-  globalCategory,
   moreArray,
-  navigationLinksText,
-  subcategoriesArray
+  navigationLinksText
 } from './constants'
 import styles from './PublicHeader.module.scss'
 
@@ -61,13 +57,6 @@ function PublicHeader () {
   /** состояние popup профиля */
   const [isPopupProfileOpen, setPopupProfileOpen] = useState(false)
 
-  /** подкатегории в каталоге */
-  const [isSelectedCategory, setSelectedCategory] = useState([])
-
-  /** категория в каталоге, при наведении */
-  const [idFocusCategory, setFocusCategory] =
-  useState({ href: '/', id: 1, name: 'Массажные кресла', src: '' })
-
   /** функция открытия popup городов */
   const openPopupCity = () => {
     setPopupCityOpen(!isPopupCityOpen)
@@ -83,35 +72,19 @@ function PublicHeader () {
     setPopupCatalogOpen(!isPopupCatalogOpen)
   }
 
-  /** функция отрисовки под категорий в каталоге, при наведении */
-  const choosingCategory = (arrayCategory, idFocusCategory) => {
-    /** выбор нужного массива категорий */
-    const category = arrayCategory.find((item, index) => index + 1 === idFocusCategory)
-
-    setSelectedCategory(category)
-  }
-
-  /** функция для получения id global category при наведении */
-  const handlerIdCategory = (idFocusCategory) => {
-    /** выбор активной категории */
-    const category = globalCategory.find((item) => item.id === idFocusCategory)
-
-    setFocusCategory(category)
-  }
-
   return (
     <header className={styles.publicHeader}>
       <div className={styles.publicHeader__navigationBox}>
         <nav className={styles.navigation}>
           <div
-            className={styles.popupYourCity}
+            className={styles.navigation__btnCity}
             onClick={openPopupCity}
           >
             <IconWrapper
               IconComponent={IconLocation}
               iconClassname={styles.IconLocation}
             />
-            <p className={styles.popupYourCity__text}>
+            <p className={styles.navigation__cityName}>
               Москва
             </p>
             <IconWrapper
@@ -121,41 +94,7 @@ function PublicHeader () {
                 isPopupCityOpen ? styles.rotateArrow : ''
               )}
             />
-
-            <div
-              className={cn(
-                styles.popupYourCity__popup,
-                styles.popup,
-                isPopupCityOpen
-                  ? ''
-                  : cn(styles.popupYourCity__popup_close, styles.popup_close)
-              )}
-            >
-              <div
-                className={cn(styles.popupYourCity__dropDown, styles.dropDawnList)}
-              >
-                <input
-                  className={cn(styles.popupYourCity__input, styles.dropDawnList)}
-                  type='text'
-                />
-                <ul>
-                  <li>
-                    gh
-                  </li>
-                </ul>
-              </div>
-
-              <ul className={styles.popupYourCity__list}>
-                {arrayCity.map((item: string, index: number) => (
-                  <li
-                    className={styles.popupYourCity__item}
-                    key={index}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <PopupYourCity popupOpen={isPopupCityOpen} />
           </div>
 
           <ul className={styles.navigation__list}>
@@ -252,137 +191,7 @@ function PublicHeader () {
           withIcon={true}
         />
 
-        <div
-          className={cn(
-            styles.catalogPopup,
-            styles.popup,
-            isPopupCatalogOpen
-              ? ''
-              : cn(styles.catalogPopup_close, styles.popup_close)
-          )}
-        >
-          <div
-            className={cn(
-              styles.catalogPopup__box,
-              styles.catalogPopup__box_left
-            )}
-          >
-            <div className={styles.catalogPopup__topImgBox}>
-              <Link
-                className={styles.catalogPopup__imgContainer}
-                href='/'
-              >
-                <h6 className={cn(styles.catalogPopup__textImg)}>
-                  Новинки
-                </h6>
-                <img
-                  alt='Новинки'
-                  src='/assets/images/catalogPopup/newProducts.webp'
-                />
-              </Link>
-              <Link
-                className={styles.catalogPopup__imgContainer}
-                href='/'
-              >
-                <h6 className={cn(styles.catalogPopup__textImg)}>
-                  Идеи
-                  <br />
-                  подарков
-                </h6>
-                <img
-                  alt='Новинки'
-                  src='/assets/images/catalogPopup/giftIdeas.webp'
-                />
-              </Link>
-              <Link
-                className={styles.catalogPopup__imgContainer}
-                href='/'
-              >
-                <h6
-                  className={cn(
-                    styles.catalogPopup__textImg,
-                    styles.catalogPopup__textImg_white
-                  )}
-                >
-                  Домашний фитнес-зал
-                </h6>
-                <img
-                  alt='Новинки'
-                  src='/assets/images/catalogPopup/homeFitnessRoom.webp'
-                />
-              </Link>
-            </div>
-
-            <ul className={styles.catalogPopup__globalCategoriesBox}>
-              {globalCategory.map((category: GlobalCategoryArrayTypes) => (
-                <Link
-                  href={category.href}
-                  key={category.id}
-                  onMouseEnter={() => {
-                    choosingCategory(subcategoriesArray, category.id)
-                    handlerIdCategory(category.id)
-                  }}
-                >
-                  <li className={styles.catalogPopup__globalCategories}>
-                    <IconWrapper
-                      IconComponent={category.img}
-                      wrapperClassname={styles.catalogPopup__iconWrapper}
-                    />
-                    <p className={styles.catalogPopup__title}>
-                      {category.name}
-                    </p>
-                  </li>
-                </Link>
-              ))}
-            </ul>
-          </div>
-          <div
-            className={cn(
-              styles.catalogPopup__box,
-              styles.catalogPopup__box_right
-            )}
-          >
-            <div
-              className={styles.catalogPopup__imgCategory}
-            >
-              <img
-                alt='товары'
-                className={styles.catalogPopup__CategoryImg}
-                src={idFocusCategory?.src}
-              />
-              <p className={cn(styles.catalogPopup__nameCategory,
-                idFocusCategory?.id === 1 || idFocusCategory?.id === 5 ? styles.catalogPopup__nameCategory_colorWhite : '')}
-              >
-                {idFocusCategory?.name}
-              </p>
-              <Link
-                className={cn(styles.catalogPopup__linkCategory,
-                  idFocusCategory?.id === 1 || idFocusCategory?.id === 5 ? styles.catalogPopup__linkCategory_colorWhite : '')}
-                href={idFocusCategory?.href}
-              >
-                Смотреть все
-              </Link>
-            </div>
-
-            <ul className={styles.catalogPopup__listSubcategories} >
-              {isSelectedCategory?.map((subcategory) => (
-                <Link
-                  href={subcategory.href}
-                  key={subcategory.id}
-                >
-                  <li
-                    className={styles.catalogPopup__subcategories}
-
-                  >
-                    <p className={styles.catalogPopup__titleSubcategories}>
-                      {subcategory.name}
-                    </p>
-                  </li>
-                </Link>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <PopupCatalog popupOpen={isPopupCatalogOpen} />
 
         <div className={styles.publicHeader__searchBox}>
           <input
@@ -458,258 +267,8 @@ function PublicHeader () {
                 wrapperClassname={styles.userPanel__iconWrapper}
               />
             </button>
-            <div
-              className={cn(
-                styles.popupSupport,
-                styles.popup,
-                isPopupSupportOpen
-                  ? ''
-                  : cn(styles.popup_close, styles.popupSupport__popup_close)
-              )}
-            >
-              <div className={styles.popupSupport__wrapper}>
-                <div
-                  className={cn(
-                    styles.popupSupport__box,
-                    styles.popupSupport__box_left
-                  )}
-                >
-                  <div className={styles.popupSupport__titleBox}>
-                    <IconWrapper
-                      IconComponent={IconFire}
-                      wrapperClassname={styles.popupSupport__iconSupportWrapper}
-                    />
-                    <h4
-                      className={cn(
-                        styles.popupSupport__title,
-                        styles.popupSupport__title_support
-                      )}
-                    >
-                      Горячая линия
-                    </h4>
-                  </div>
-                  <div
-                    className={cn(
-                      styles.popupSupport__boxNumber,
-                      styles.popupSupport__boxNumber_top
-                    )}
-                  >
-                    <p className={styles.popupSupport__number}>
-                      8 800 333 12 81
-                    </p>
-                    <p className={styles.popupSupport__text}>
-                      по России
-                    </p>
-                  </div>
-                  <div
-                    className={cn(
-                      styles.popupSupport__boxNumber,
-                      styles.popupSupport__boxNumber_bottom
-                    )}
-                  >
-                    <p className={styles.popupSupport__number}>
-                      8 495 646 80 96
-                    </p>
-                    <p className={styles.popupSupport__text}>
-                      по Москве
-                    </p>
-                  </div>
 
-                  <p className={styles.popupSupport__subtitle}>
-                    круглосуточно
-                  </p>
-
-                  <ButtonIcon
-                    className={cn(
-                      styles.popupSupport__callBack,
-                      styles.popupSupport__popupBtn
-                    )}
-                    colorVariant='red'
-                    icon={IconPhonRotary}
-                    iconWrapperClassName={
-                      styles.popupSupport__callBackIconWrapper
-                    }
-                    label='Заказать звонок'
-                    paddingVariant='wide'
-                    withIcon={true}
-                  />
-
-                  {/* должно открывать форму заказа видеоконсультации */}
-
-                  <ButtonIcon
-                    className={cn(
-                      styles.popupSupport__videoConsultation,
-                      styles.popupSupport__popupBtn
-                    )}
-                    colorVariant='blackWhite'
-                    icon={IconCameraMovie}
-                    iconWrapperClassName={
-                      styles.popupSupport__videoConsultationIconWrapper
-                    }
-                    label='Видеоконсультация'
-                    paddingVariant='wide'
-                    withIcon={true}
-                  />
-
-                  {/* после мержа веток , вставить готовый компонент c link, из footer-а */}
-
-                  <p
-                    className={cn(
-                      styles.popupSupport__text,
-                      styles.popupSupport__text_underline
-                    )}
-                  >
-                    Адреса фирменных магазинов
-                  </p>
-                </div>
-                <div
-                  className={cn(
-                    styles.popupSupport__box,
-                    styles.popupSupport__box_right
-                  )}
-                >
-                  <div className={styles.popupSupport__titleBox}>
-                    <IconWrapper
-                      IconComponent={IconGears}
-                      wrapperClassname={styles.popupSupport__iconCenterWrapper}
-                    />
-                    <h4
-                      className={cn(
-                        styles.popupSupport__title,
-                        styles.popupSupport__title_center
-                      )}
-                    >
-                      Сервис-центр
-                    </h4>
-                  </div>
-
-                  <p
-                    className={cn(
-                      styles.popupSupport__number,
-                      styles.popupSupport__number_white
-                    )}
-                  >
-                    8 800 550 59 34
-                  </p>
-
-                  <ul className={styles.popupSupport__listWorkingHours}>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        ПН
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 – 18:00
-                      </p>
-                    </li>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        ВТ
-                        {' '}
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 – 18:00
-                      </p>
-                    </li>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        СР
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 – 18:00
-                      </p>
-                    </li>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        ЧТ
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 – 18:00
-                      </p>
-                    </li>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        ПТ
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 – 18:00
-                      </p>
-                    </li>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        СБ
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 –
-                        {' '}
-                        <span className={styles.popupSupport__itemText_weight}>
-                          {' '}
-                          17:00
-                        </span>
-                      </p>
-                    </li>
-                    <li className={styles.popupSupport__itemWorkingHours}>
-                      <p
-                        className={cn(
-                          styles.popupSupport__itemText,
-                          styles.popupSupport__itemText_day
-                        )}
-                      >
-                        ВС
-                      </p>
-                      <p className={styles.popupSupport__itemText}>
-                        9:00 –
-                        {' '}
-                        <span className={styles.popupSupport__itemText_weight}>
-                          {' '}
-                          17:00
-                          {' '}
-                        </span>
-                      </p>
-                    </li>
-                  </ul>
-
-                  <p
-                    className={cn(
-                      styles.popupSupport__text,
-                      styles.popupSupport__text_underline,
-                      styles.popupSupport__text_white
-                    )}
-                  >
-                    Подробнее о работе сервисного цента и Trade-In
-                  </p>
-                </div>
-              </div>
-            </div>
+            <PopupSupport popupOpen={isPopupSupportOpen} />
           </div>
 
           {/* кнопка избранное  */}

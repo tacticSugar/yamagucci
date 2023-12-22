@@ -1,0 +1,58 @@
+@import "styles/variables";
+
+.popupYourCity {
+  position: absolute;
+  z-index: 444;
+  transition: all 0.2s ease;
+  width: 600px;
+  // height: 1350px;
+  padding: 20px 0 35px;
+  top: 100%;
+  left: -20px;
+  background-color: $white;
+
+  border-radius: 0 0 15px 0;
+
+  &_close {
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+
+
+  &__list {
+    display: grid;
+    // flex-flow: column wrap;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 25px;
+    max-height: 84vh;
+    row-gap: 15px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $bad-white;
+      border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $gray-main;
+      border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $gray-dark;
+    }
+  }
+
+  &__item {
+    width: 220px;
+    font-weight: 300;
+    font-size: 18px;
+    color: $black;
+  }
+}
