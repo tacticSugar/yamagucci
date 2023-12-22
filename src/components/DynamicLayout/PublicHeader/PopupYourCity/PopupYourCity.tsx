@@ -1,17 +1,18 @@
 import cn from 'classnames'
+import { memo } from 'react'
 
-import { PopupYourCityTypes } from './_types'
-import { arrayCity } from './constants'
+import { arrayCity } from '@/src/constants/arrayListCitiesHeader'
+
 import styles from './PopupYourCity.module.scss'
 
 /** popup списка городов, в header */
-const PopupYourCity: React.FC<PopupYourCityTypes> = ({ popupOpen }) => (
+const PopupYourCity = (): JSX.Element => (
   <div
     className={cn(
-      styles.popupYourCity,
-      popupOpen
-        ? ''
-        : cn(styles.popupYourCity_close)
+      styles.popupYourCity
+      // popupOpen
+      //   ? ''
+      //   : cn(styles.popupYourCity_close)
     )}
   >
     <div
@@ -21,11 +22,7 @@ const PopupYourCity: React.FC<PopupYourCityTypes> = ({ popupOpen }) => (
         className={cn(styles.popupYourCity__input, styles.dropDawnList)}
         type='text'
       />
-      <ul>
-        <li>
-          gh
-        </li>
-      </ul>
+      {/* tODO: добавить dropDawn , стилизовать input */}
     </div>
 
     <ul className={styles.popupYourCity__list}>
@@ -41,4 +38,4 @@ const PopupYourCity: React.FC<PopupYourCityTypes> = ({ popupOpen }) => (
   </div>
 )
 
-export default PopupYourCity
+export default memo(PopupYourCity)

@@ -29,6 +29,9 @@ $white: #ffffff;
 $black: #181818;
 $totally-black: #000;
 
+//Violet
+$violet: #9419ff;
+
 ///////////////////////////////////          FONT-SIZE
 
 $text-sm: 1rem;
@@ -67,14 +70,14 @@ $nlg: 1239px;
 }
 
 /* Yamaguchi mixins */
-$nlgx-media: 1699px;
-$nlgm-media: 1420px;
-$nlg-media: 1240px;
-$nlgs-media: 1100px;
-$nmd-media: 1023px;
-$nsm-media: 767px;
-$nxs-media: 450px;
-$nxxs-media: 350px;
+$nlgx-media: 1700px;
+$nlgm-media: 1421px;
+$nlg-media: 1241px;
+$nlgs-media: 1101px;
+$nmd-media: 1024px;
+$nsm-media: 768px;
+$nxs-media: 451px;
+$nxxs-media: 351px;
 
 @mixin nlgx {
   @media all and (max-width: #{$nlgx-media}) {

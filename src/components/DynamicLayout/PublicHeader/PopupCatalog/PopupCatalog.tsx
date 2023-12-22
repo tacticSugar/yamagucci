@@ -1,29 +1,35 @@
 import cn from 'classnames'
 import Link from 'next/link'
-import { useState } from 'react'
+import { memo, useState } from 'react'
 
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
+import {
+  IconMassageChair
+} from '@/src/constants/icons'
 
-import { CatalogPopupTypes, GlobalCategoryArrayTypes } from './_types'
-import { globalCategory, subcategoriesArray } from './constants'
+import { GlobalCategoryArrayTypes } from './_types'
+import { globalCategory } from '../../../../constants/categoryList'
 import styles from './PopupCatalog.module.scss'
 
 /** popup каталога в header */
-const PopupCatalog: React.FC<CatalogPopupTypes> = ({ popupOpen }) => {
-  /** подкатегории в каталоге */
-  const [isSelectedCategory, setSelectedCategory] = useState([])
-
+const PopupCatalog = (): JSX.Element => {
   /** категория в каталоге, при наведении */
   const [idFocusCategory, setFocusCategory] =
-   useState({ href: '/', id: 1, name: 'Массажные кресла', src: '' })
-
-  /** функция отрисовки под категорий в каталоге, при наведении */
-  const choosingCategory = (arrayCategory, idFocusCategory) => {
-    /** выбор нужного массива категорий */
-    const category = arrayCategory.find((item, index) => index + 1 === idFocusCategory)
-
-    setSelectedCategory(category)
-  }
+   useState({
+     href: '/',
+     id: 1,
+     img: IconMassageChair,
+     name: 'Массажные кресла',
+     src: '/assets/images/catalogPopup/globalCategory/chair.webp',
+     subcategories: [
+       { href: '/', id: 1, name: 'Для дома' },
+       { href: '/', id: 2, name: 'Для офиса' },
+       { href: '/', id: 3, name: 'Кресла-качалки' },
+       { href: '/', id: 4, name: 'Интерьерные кресла' },
+       { href: '/', id: 5, name: 'Массажные кровати' },
+       { href: '/', id: 6, name: 'С купюро-приемником' },
+       { href: '/', id: 7, name: 'Аксессуары' }]
+   })
 
   /** функция для получения id global category при наведении */
   const handlerIdCategory = (idFocusCategory) => {
@@ -36,10 +42,7 @@ const PopupCatalog: React.FC<CatalogPopupTypes> = ({ popupOpen }) => {
   return (
     <div
       className={cn(
-        styles.catalogPopup,
-        popupOpen
-          ? ''
-          : styles.catalogPopup_close
+        styles.catalogPopup
       )}
     >
       <div
@@ -100,7 +103,7 @@ const PopupCatalog: React.FC<CatalogPopupTypes> = ({ popupOpen }) => {
               href={category.href}
               key={category.id}
               onMouseEnter={() => {
-                choosingCategory(subcategoriesArray, category.id)
+                // choosingCategory(subcategoriesArray, category.id)
                 handlerIdCategory(category.id)
               }}
             >
@@ -146,7 +149,7 @@ const PopupCatalog: React.FC<CatalogPopupTypes> = ({ popupOpen }) => {
         </div>
 
         <ul className={styles.catalogPopup__listSubcategories} >
-          {isSelectedCategory?.map((subcategory) => (
+          {idFocusCategory.subcategories?.map((subcategory) => (
             <Link
               href={subcategory.href}
               key={subcategory.id}
@@ -166,4 +169,4 @@ const PopupCatalog: React.FC<CatalogPopupTypes> = ({ popupOpen }) => {
   )
 }
 
-export default PopupCatalog
+export default memo(PopupCatalog)

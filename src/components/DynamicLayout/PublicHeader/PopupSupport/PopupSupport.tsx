@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import { memo } from 'react'
 
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
@@ -9,18 +10,17 @@ import {
   IconPhonRotary
 } from '@/src/constants/icons'
 
-import { PopupSupportTypes } from './_types'
 import styles from './PopupSupport.module.scss'
 
 /** popup поддержки ,  в header */
-const PopupSupport: React.FC<PopupSupportTypes> = ({ popupOpen }) => (
+const PopupSupport = (): JSX.Element => (
 
   <div
     className={cn(
-      styles.popupSupport,
-      popupOpen
-        ? ''
-        : styles.popupSupport_close
+      styles.popupSupport
+      // popupOpen
+      //   ? ''
+      //   : styles.popupSupport_close
     )}
   >
     <div className={styles.popupSupport__wrapper}>
@@ -268,4 +268,4 @@ const PopupSupport: React.FC<PopupSupportTypes> = ({ popupOpen }) => (
   </div>
 )
 
-export default PopupSupport
+export default memo(PopupSupport)

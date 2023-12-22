@@ -8,8 +8,3 @@ export type GlobalCategoryArrayTypes = {
   /** название строки */
   name: string
 }
-
-export type CatalogPopupTypes = {
-  /** состояние popup открыт/закрыт  */
-  popupOpen: boolean
-}

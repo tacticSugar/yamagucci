@@ -4,7 +4,7 @@ export type ButtonIconTypes = {
   /** доп. класс на кнопку */
   className?: string
   /** цвета кнопки */
-  colorVariant: 'grayDark' | 'gray' | 'blue' | 'red' | 'black' | 'transparentBlue' | 'transparentRed' | 'transparent' | 'transparentGray' | 'gray-matt-black' | 'blackWhite'
+  colorVariant: 'grayDark' | 'gray' | 'blue' | 'red' | 'black' | 'transparentBlue' | 'transparentRed' | 'transparent' | 'transparentGray' | 'grayMattBlack' | 'blackWhite'
   /** флаг состояния */
   disabled?: boolean
   /** иконка */

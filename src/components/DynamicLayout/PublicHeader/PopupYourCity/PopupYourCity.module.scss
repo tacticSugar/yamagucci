@@ -4,14 +4,14 @@
   position: absolute;
   z-index: 444;
   transition: all 0.2s ease;
-  width: 600px;
+  width: 60rem;
   // height: 1350px;
-  padding: 20px 0 35px;
+  padding: 2rem 0 3.5rem;
   top: 100%;
-  left: -20px;
+  left: -2rem;
   background-color: $white;
 
-  border-radius: 0 0 15px 0;
+  border-radius: 0 0 1.5rem 0;
 
   &_close {
     transform: translateX(-100%);
@@ -25,23 +25,23 @@
     display: grid;
     // flex-flow: column wrap;
     grid-template-columns: 1fr 2fr;
-    padding: 0 25px;
+    padding: 0 2.5rem;
     max-height: 84vh;
-    row-gap: 15px;
+    row-gap: 1.5rem;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-      width: 8px;
+      width: .8rem;
     }
 
     &::-webkit-scrollbar-track {
       background: $bad-white;
-      border-radius: 6px;
+      border-radius: .6rem;
     }
 
     &::-webkit-scrollbar-thumb {
       background: $gray-main;
-      border-radius: 6px;
+      border-radius: .6rem;
     }
 
     &::-webkit-scrollbar-thumb:hover {
@@ -50,9 +50,9 @@
   }
 
   &__item {
-    width: 220px;
+    width: 22rem;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: $black;
   }
 }
