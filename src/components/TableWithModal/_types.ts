@@ -2,8 +2,8 @@
 import { RankingInfo } from '@tanstack/match-sorter-utils'
 import { Column, FilterFn, Table } from '@tanstack/react-table'
 
-import { ResultCategories } from '@/src/api/useFetchCategories/useFetchCategories'
-import { ResultProducts } from '@/src/api/useFetchProducts/useFetchProducts'
+import { FetchCategoriesOriginalResult } from '@/src/api/useFetchCategories/_types'
+import { FetchProductsOriginalResult } from '@/src/api/useFetchProducts/_types'
 
 declare module '@tanstack/table-core' {
   export interface FilterFns {
@@ -29,8 +29,8 @@ export type TableWithModalTypes = {
   withSubcategoriesFilters?: boolean
 }
 
-export type ColumnResultProducts = ResultProducts['data'][number]
-export type ColumnResultCategories = ResultCategories['data'][number]
+export type ColumnResultProducts = FetchProductsOriginalResult['data'][number]
+export type ColumnResultCategories = FetchCategoriesOriginalResult['data'][number]
 
 export type TableMarkupTypes = {
   /** таблица */
@@ -62,3 +62,7 @@ export type DebounceInputTypes = {
   /** начальное значение  */
   value: string | number
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+
+export type ColumnVisibilityState = {
+  [key: string]: boolean
+}
