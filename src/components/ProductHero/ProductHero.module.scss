@@ -1,10 +1,13 @@
+@import 'styles/variables';
+
 .container {
   padding: 5rem 0;
-}
-.wrapper {
+  background-color: $white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10rem;
 }
+
 .mainImg {
   height: 63rem;
   aspect-ratio: 1/1;
