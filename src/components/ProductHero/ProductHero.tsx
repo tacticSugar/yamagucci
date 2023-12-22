@@ -11,65 +11,60 @@ type ProductHeroTypes = {}
 
 /** */
 const ProductHero: FC<ProductHeroTypes> = ({ gallery, isLoading, name, slogan_color, slogan_font_size, slogan_text, status }) => (
-  <Container
-    className={styles.container}
-    variant='md'
-  >
-    <div className={styles.wrapper}>
-      <LoaderQuery
-        className={styles.loader__img}
-        isLoading={isLoading}
-      >
-        <div>
-          <Img
-            imgClassname={styles.mainImg}
-            photos={gallery?.[0].photos}
-          />
-        </div>
-      </LoaderQuery>
-
-      {/* -------------------------meta------------------------- */}
-
-      <div className={styles.meta}>
-        <LoaderQuery
-          className={styles.loader__title}
-          isLoading={isLoading}
-        >
-          <h1
-            className={styles.meta__title}
-            dangerouslySetInnerHTML={{ __html: name }}
-          />
-        </LoaderQuery>
-        <LoaderQuery
-          className={styles.loader__slogan}
-          isLoading={isLoading}
-        >
-          <p
-            className={styles.meta__slogan}
-            dangerouslySetInnerHTML={{ __html: slogan_text }}
-            style={{ color: slogan_color, fontSize: slogan_font_size + 'px' }}
-          />
-        </LoaderQuery>
-        <LoaderQuery
-          className={styles.loader__title}
-          isLoading={isLoading}
-        >
-          {status?.id === 1 && (
-            <p className={styles.meta__status}>
-              Есть в наличии
-            </p>
-          )}
-        </LoaderQuery>
-        <ButtonIcon
-          colorVariant={'red'}
-          label={'КНОПАЧКИ'}
-          paddingVariant={'wide'}
-          withIcon={false}
+  <section className={styles.container}>
+    <LoaderQuery
+      className={styles.loader__img}
+      isLoading={isLoading}
+    >
+      <div>
+        <Img
+          imgClassname={styles.mainImg}
+          photos={gallery?.[0].photos}
         />
       </div>
-      {/* -------------------------meta------------------------- */}
+    </LoaderQuery>
+
+    {/* -------------------------meta------------------------- */}
+
+    <div className={styles.meta}>
+      <LoaderQuery
+        className={styles.loader__title}
+        isLoading={isLoading}
+      >
+        <h1
+          className={styles.meta__title}
+          dangerouslySetInnerHTML={{ __html: name }}
+        />
+      </LoaderQuery>
+      <LoaderQuery
+        className={styles.loader__slogan}
+        isLoading={isLoading}
+      >
+        <p
+          className={styles.meta__slogan}
+          dangerouslySetInnerHTML={{ __html: slogan_text }}
+          style={{ color: slogan_color, fontSize: slogan_font_size + 'px' }}
+        />
+      </LoaderQuery>
+      <LoaderQuery
+        className={styles.loader__title}
+        isLoading={isLoading}
+      >
+        {status?.id === 1 && (
+          <p className={styles.meta__status}>
+            Есть в наличии
+          </p>
+        )}
+      </LoaderQuery>
+      <ButtonIcon
+        colorVariant={'red'}
+        label={'КНОПАЧКИ'}
+        paddingVariant={'wide'}
+        withIcon={false}
+      />
     </div>
-  </Container>
+    {/* -------------------------meta------------------------- */}
+  </section>
 )
 
 export default ProductHero
