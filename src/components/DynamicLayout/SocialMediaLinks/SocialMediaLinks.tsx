@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { FC } from 'react'
 
 import styles from './SocialMediaLinks.module.scss'
@@ -12,6 +13,7 @@ const SocialMediaLinks: FC = () => (
       <a
         className={styles.SocialMediaLinks__link}
         href='https://www.youtube.com/user/Yamaguchichannel'
+        target='_blank'
       >
         <img
           alt='ссылка YouTube канал'
@@ -21,6 +23,7 @@ const SocialMediaLinks: FC = () => (
       <a
         className={styles.SocialMediaLinks__link}
         href='https://t.me/yamaguchi_ru'
+        target='_blank'
       >
         <img
           alt='ссылка Telegram канал'
@@ -30,6 +33,7 @@ const SocialMediaLinks: FC = () => (
       <a
         className={styles.SocialMediaLinks__link}
         href='https://vk.com/yamaguchi'
+        target='_blank'
       >
         <img
           alt='ссылка на Vkontakte'
@@ -39,6 +43,7 @@ const SocialMediaLinks: FC = () => (
       <a
         className={styles.SocialMediaLinks__link}
         href='https://www.tiktok.com/@yamaguchi.ru'
+        target='_blank'
       >
         <img
           alt='ссылка на TikTok'

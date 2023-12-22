@@ -3,6 +3,7 @@ import type { FC } from 'react'
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import Img from '@/src/components/atoms/Img/Img'
 import Container from '@/src/components/DynamicLayout/Container/Container'
+import { IconBonus } from '@/src/constants/icons'
 
 import styles from './BannerApp.module.scss'
 
@@ -32,7 +33,10 @@ const AppFooter: FC = () => (
           <div className={styles.footer__appPointsWrapper}>
             <p className={styles.footer__appPoints}>
               500
-              <IconWrapper IconComponent='/assets/icons/bonusIcon.svg' />
+              <IconWrapper
+                IconComponent={IconBonus}
+                iconClassname={styles.footer__svg}
+              />
               {' '}
               за регистрацию
               <span>

@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import type { FC } from 'react'
 
-import styles from './PaymentVariantBlock.module.scss'
+import styles from './PaymentVariant.module.scss'
 
 /** блок с вариантами оплаты */
-const PaymentVariantBlock: FC = () => (
+const PaymentVariant: FC = () => (
   <div className={styles.PaymentVariantBlock}>
     <span className={styles.PaymentVariantBlock__title}>
       Принимаем к оплате
@@ -41,4 +41,4 @@ const PaymentVariantBlock: FC = () => (
   </div>
 )
 
-export default PaymentVariantBlock
+export default PaymentVariant

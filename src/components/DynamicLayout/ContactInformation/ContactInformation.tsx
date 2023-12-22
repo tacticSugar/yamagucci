@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 
-import styles from './ContactsBlock.module.scss'
+import styles from './ContactInformation.module.scss'
 
 /** блок с контактами */
-const ContactsBlock: FC = () => (
+const ContactInformation: FC = () => (
   <div className={styles.contactsBlock}>
     <div className={styles.contactsBlock__wrapper}>
       <div className={styles.contactsBlock__title}>
@@ -32,4 +32,4 @@ const ContactsBlock: FC = () => (
   </div>
 )
 
-export default ContactsBlock
+export default ContactInformation

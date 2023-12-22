@@ -2,12 +2,12 @@ import Link from 'next/link'
 import type { FC } from 'react'
 
 import CompanyCredentials from '@/src/components/DynamicLayout/CompanyCredentials/CompanyCredentials'
-import ContactsBlock from '@/src/components/DynamicLayout/ContactsBlock/ContactsBlock'
+import ContactInformation from '@/src/components/DynamicLayout/ContactInformation/ContactInformation'
 import Container from '@/src/components/DynamicLayout/Container/Container'
-import PaymentVariantBlock from '@/src/components/DynamicLayout/PaymentVariantBlock/PaymentVariantBlock'
+import PaymentVariant from '@/src/components/DynamicLayout/PaymentVariant/PaymentVariant'
 import SocialMediaLinks from '@/src/components/DynamicLayout/SocialMediaLinks/SocialMediaLinks'
-import SubscribeBlock from '@/src/components/DynamicLayout/SubscribeBlock/SubscribeBlock'
-import YandexReviewsBlock from '@/src/components/DynamicLayout/YandexReviewsBlock/YandexReviewsBlock'
+import SubscribeFormMini from '@/src/components/DynamicLayout/SubscribeFormMini/SubscribeFormMini'
+import YandexReviews from '@/src/components/DynamicLayout/YandexReviews/YandexReviews'
 
 import styles from './PublicFooter.module.scss'
 
@@ -19,8 +19,8 @@ const PublicFooter: FC = () => (
         <div className={styles.footer__wrapper}>
           <div className={styles.footer__top}>
             <div className={styles.footer__ContactsWrapper}>
-              <ContactsBlock />
-              <YandexReviewsBlock />
+              <ContactInformation />
+              <YandexReviews />
             </div>
             <div className={styles.footer__catalog}>
               <span>
@@ -106,9 +106,9 @@ const PublicFooter: FC = () => (
               </ul>
             </div>
             <div className={styles.footer__subscribeFormLinks}>
-              <SubscribeBlock />
+              <SubscribeFormMini />
               <SocialMediaLinks />
-              <PaymentVariantBlock />
+              <PaymentVariant />
             </div>
           </div>
 

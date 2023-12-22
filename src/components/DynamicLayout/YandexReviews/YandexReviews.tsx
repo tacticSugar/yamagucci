@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 
-import styles from './YandexReviewsBlock.module.scss'
+import styles from './YandexReviews.module.scss'
 
 /** блок с отзывами Yandex */
-const YandexReviewsBlock: FC = () => (
+const YandexReviews: FC = () => (
   <div className={styles.YandexReviewsBlock}>
     <a
       className={styles.YandexReviewsBlock__link}
@@ -18,4 +18,4 @@ const YandexReviewsBlock: FC = () => (
   </div>
 )
 
-export default YandexReviewsBlock
+export default YandexReviews

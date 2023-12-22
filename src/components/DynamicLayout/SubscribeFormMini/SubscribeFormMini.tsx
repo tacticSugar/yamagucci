@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 
-import styles from './SubscribeBlock.module.scss'
+import styles from './SubscribeFormMini.module.scss'
 
 /** блок подписаться на рассылку */
-const SubscribeBlock: FC = () => (
+const SubscribeFormMini: FC = () => (
   <div className={styles.subscribeBlock}>
     <span className={styles.subscribeBlock__title}>
       Узнавайте об&nbsp;акциях первым!
@@ -32,4 +32,4 @@ const SubscribeBlock: FC = () => (
   </div>
 )
 
-export default SubscribeBlock
+export default SubscribeFormMini
