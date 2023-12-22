@@ -2,8 +2,8 @@ import { useQueryClient } from '@tanstack/react-query'
 import Cookies from 'js-cookie'
 import Router from 'next/router'
 import { type FC, HTMLAttributes, PropsWithChildren, useCallback } from 'react'
-import PublicHeader from '@/src/components/DynamicLayout/PublicHeader/PublicHeader'
 
+import PublicHeader from '@/src/components/DynamicLayout/PublicHeader/PublicHeader'
 import { COOKIES } from '@/src/constants/constants'
 
 import { DynamicLayoutTypes } from './_types'

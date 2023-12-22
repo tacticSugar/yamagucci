@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { memo, useState } from 'react'
 
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
+import { globalCategory } from '@/src/constants/categoryList'
 import {
   IconMassageChair
 } from '@/src/constants/icons'
 
 import { GlobalCategoryArrayTypes } from './_types'
-import { globalCategory } from '../../../../constants/categoryList'
 import styles from './PopupCatalog.module.scss'
 
 /** popup каталога в header */
