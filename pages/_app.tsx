@@ -56,6 +56,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         }
         body {
           background-color: ${isAdminRoute ? 'white' : '#181818'};
+          color: ${isAdminRoute ? 'black' : 'white'};
         }
       `}
         </style>
