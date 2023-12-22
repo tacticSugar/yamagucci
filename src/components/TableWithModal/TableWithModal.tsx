@@ -9,7 +9,7 @@ import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import ModalWrapper from '@/src/components/atoms/ModalWrapper/ModalWrapper'
 
-import { TableWithModalTypes } from './_types'
+import { ColumnVisibilityState, TableWithModalTypes } from './_types'
 import ColumnsVisibilitySwitcher from './ColumnsVisibilitySwitcher/ColumnsVisibilitySwitcher'
 import DebouncedInput from './DebouncedInput/DebouncedInput'
 import { fuzzyFilter } from './helpers/fuzzyFilter'
@@ -37,7 +37,7 @@ const Table: FC<TableWithModalTypes> = ({ columns: defaultColumns, data: default
     ...defaultColumns
   ])
   /** стейт видимости колонок */
-  const [columnVisibility, setColumnVisibility] = useState({ status: false })
+  const [columnVisibility, setColumnVisibility] = useState<ColumnVisibilityState>({ status: false })
 
   /** фильтры колонок */
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>(
@@ -85,6 +85,7 @@ const Table: FC<TableWithModalTypes> = ({ columns: defaultColumns, data: default
 
   /** обработчик сброса фильтров и поиска */
   const handleOnResetButton = () => {
+    setColumnVisibility({})
     setColumnFilters([])
     setGlobalFilter('')
     setExpanded({})

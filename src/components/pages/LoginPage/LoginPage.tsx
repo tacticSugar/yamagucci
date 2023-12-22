@@ -108,12 +108,14 @@ const LoginPage = () => {
           <MagicButton
             className={styles.magicButton}
             disabled={!isValid}
+            hueValue={200}
             type='submit'
           >
             Войти
           </MagicButton>
         </form>
       </div>
+      <div className={styles.gif} />
     </section>
   )
 }

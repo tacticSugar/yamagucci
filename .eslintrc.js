@@ -33,9 +33,7 @@ module.exports = {
     "simple-import-sort"
   ],
   "rules": {
-    "deprecate/import": ["error",
-    {"nameRegExp": "^src", "use": "@/src"},
-  ],
+    "deprecate/import": ["error", {"nameRegExp": "^src", "use": "@/src"},],
     "arrow-body-style": ["error", "as-needed"],
     "indent": ["error", 2, {
       "SwitchCase": 1
@@ -70,10 +68,7 @@ module.exports = {
     "spaced-comment": "error",
     "capitalized-comments": ["error", "never"],
     "no-duplicate-imports": "off",
-    "no-relative-import-paths/no-relative-import-paths": [
-      "error",
-      { "allowSameFolder": true, "prefix": "" }
-    ],
+    "no-relative-import-paths/no-relative-import-paths": ["error", { "allowSameFolder": true, "prefix": "", prefix: "@" }],
     "import/namespace": "off",
     "import/no-anonymous-default-export": 0,
     "import/first": "error",

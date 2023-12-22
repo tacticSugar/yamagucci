@@ -2,6 +2,17 @@
 
 .signin {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gif {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 45rem;
+  height: 25rem;
+  background: url('/assets/totoro.webp');
 }
 
 .formWrapper {
