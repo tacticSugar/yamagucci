@@ -1,13 +1,19 @@
-import type { FC } from 'react';
+import type { FC } from 'react'
 
-import styles from './CompanyLogo.module.scss';
+import styles from './CompanyLogo.module.scss'
 
-const CompanyLogo: FC = () => {
-    return (
-        <a className={styles.companyLogoLink} href="/">
-            <img className={styles.companyLogo} src="/assets/company-logo-public.svg" alt="logo"/>
-        </a>
-    );
-}
+/** отображает логотип компании */
+const CompanyLogo: FC = () => (
+  <a
+    className={styles.companyLogoLink}
+    href='/'
+  >
+    <img
+      alt='logo'
+      className={styles.companyLogo}
+      src='/assets/company-logo-public.svg'
+    />
+  </a>
+)
 
-export default CompanyLogo;
+export default CompanyLogo

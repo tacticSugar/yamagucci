@@ -1,70 +1,125 @@
-import type { FC } from 'react';
-import Image from 'next/image'
+import Link from 'next/link'
+import type { FC } from 'react'
 
-import Container from '@/src/components/DynamicLayout/Container/Container';
+import CompanyCredentials from '@/src/components/DynamicLayout/CompanyCredentials/CompanyCredentials'
+import ContactsBlock from '@/src/components/DynamicLayout/ContactsBlock/ContactsBlock'
+import Container from '@/src/components/DynamicLayout/Container/Container'
+import PaymentVariantBlock from '@/src/components/DynamicLayout/PaymentVariantBlock/PaymentVariantBlock'
+import SocialMediaLinks from '@/src/components/DynamicLayout/SocialMediaLinks/SocialMediaLinks'
+import SubscribeBlock from '@/src/components/DynamicLayout/SubscribeBlock/SubscribeBlock'
+import YandexReviewsBlock from '@/src/components/DynamicLayout/YandexReviewsBlock/YandexReviewsBlock'
 
-import styles from './PublicFooter.module.scss';
-import ContactsBlock from '../ContactsBlock/ContactsBlock';
-import SubscribeBlock from '../SubscribeBlock/SubscribeBlock';
-import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
-import PaymentVariantBlock from '../PaymentVariantBlock/PaymentVariantBlock';
-import YandexReviewsBlock from '../YandexReviewsBlock/YandexReviewsBlock';
-import CompanyCredentials from '../CompanyCredentials/CompanyCredentials';
+import styles from './PublicFooter.module.scss'
 
-/* Внешний футер */
+/** внешний футер сайта */
 const PublicFooter: FC = () => (
-   <div className={styles.footer}>
-        <div className={styles.footer__footerPublic}>
-            <Container>
-                <div className={styles.footer__wrapper}>
-                    <div className={styles.footer__top}>
-                        <div className={styles.footer__ContactsWrapper}>
-                            <ContactsBlock />
-                            <YandexReviewsBlock />
-                        </div>
-                        <div className={styles.footer__catalog}>
-                            <span>Каталог</span>
-                            <ul>
-                                <div className={styles.footer__navGroup}>
-                                    <li><a href="/massazhnyie-kresla">Массаж</a></li>
-                                    <li><a href="/domashnij-fitnes">Спорт</a></li>
-                                    <li><a href="/kosmetologicheskiye-apparaty">Красота</a></li>
-                                </div>
-                                <div className={styles.footer__navGroup}>
-                                    <li><a href="/new-products">Новинки</a></li>
-                                    <li><a href="/gifts.php">Хиты</a></li>
-                                    <li><a href="/sale">Акции</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div className={styles.footer__navigation}>
-                            <span>Навигация</span>
-                            <ul>
-                                <li><a href="/about.php">О компании</a></li>
-                                <li><a href="/view.php">Магазины</a></li>
-                                <li><a href="/slimness-marathon">Марафон</a></li>
-                                <li><a href="/service_center">Сервисный центр</a></li>
-                                <li><a href="/showroom">Виртуальный шоурум</a></li>
-                                <li><a href="/credit-card-payment.php">Оплата</a></li>
-                                <li><a href="/dostavka">Доставка</a></li>
-                            </ul>
-                        </div>
-                        <div className={styles.footer__subscribeFormLinks}>
-                            <SubscribeBlock />
-                            <SocialMediaLinks />
-                            <PaymentVariantBlock />
-                        </div>
-                    </div>
-
-                    <div className={styles.footer__bottom}>
-                        <CompanyCredentials />
-                    </div>
+  <div className={styles.footer}>
+    <div className={styles.footer__footerPublic}>
+      <Container>
+        <div className={styles.footer__wrapper}>
+          <div className={styles.footer__top}>
+            <div className={styles.footer__ContactsWrapper}>
+              <ContactsBlock />
+              <YandexReviewsBlock />
+            </div>
+            <div className={styles.footer__catalog}>
+              <span>
+                Каталог
+              </span>
+              <ul>
+                <div className={styles.footer__navGroup}>
+                  <li>
+                    <Link href='/massazhnyie-kresla'>
+                      Массаж
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/domashnij-fitnes'>
+                      Спорт
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/kosmetologicheskiye-apparaty'>
+                      Красота
+                    </Link>
+                  </li>
                 </div>
+                <div className={styles.footer__navGroup}>
+                  <li>
+                    <Link href='/new-products'>
+                      Новинки
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/gifts.php'>
+                      Хиты
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/sale'>
+                      Акции
+                    </Link>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div className={styles.footer__navigation}>
+              <span>
+                Навигация
+              </span>
+              <ul>
+                <li>
+                  <Link href='/about.php'>
+                    О компании
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/view.php'>
+                    Магазины
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/slimness-marathon'>
+                    Марафон
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/service_center'>
+                    Сервисный центр
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/showroom'>
+                    Виртуальный шоурум
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/credit-card-payment.php'>
+                    Оплата
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/dostavka'>
+                    Доставка
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.footer__subscribeFormLinks}>
+              <SubscribeBlock />
+              <SocialMediaLinks />
+              <PaymentVariantBlock />
+            </div>
+          </div>
 
-            </Container>
+          <div className={styles.footer__bottom}>
+            <CompanyCredentials />
+          </div>
         </div>
+      </Container>
+    </div>
 
-   </div>
-);
+  </div>
+)
 
-export default PublicFooter;
+export default PublicFooter

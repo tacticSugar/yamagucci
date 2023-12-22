@@ -1,24 +1,44 @@
-import type { FC } from 'react';
+import Link from 'next/link'
+import type { FC } from 'react'
 
-import styles from './PaymentVariantBlock.module.scss';
+import styles from './PaymentVariantBlock.module.scss'
 
-const PaymentVariantBlock: FC = () => {
-    return (
-        <div className={styles.PaymentVariantBlock}>
-            <span className={styles.PaymentVariantBlock__title}>Принимаем к оплате</span>
-            <div className={styles.PaymentVariantBlock__linkWrapper}>
-                <a className={styles.PaymentVariantBlock__link} href="/credit-card-payment.php">
-                    <img src={'/assets/icons/pay-ico-visa.svg'} alt="visa" />
-                </a>
-                <a className={styles.PaymentVariantBlock__link} href="/credit-card-payment.php">
-                    <img src={'/assets/icons/pay-ico-mc.svg'} alt="mastercard" />
-                </a>
-                <a className={styles.PaymentVariantBlock__link} href="/credit-card-payment.php">
-                    <img src={'/assets/icons/pay-ico-mir.svg'} alt="mir" />
-                </a>
-            </div>
-        </div>
-    );
-}
+/** блок с вариантами оплаты */
+const PaymentVariantBlock: FC = () => (
+  <div className={styles.PaymentVariantBlock}>
+    <span className={styles.PaymentVariantBlock__title}>
+      Принимаем к оплате
+    </span>
+    <div className={styles.PaymentVariantBlock__linkWrapper}>
+      <Link
+        className={styles.PaymentVariantBlock__link}
+        href='/credit-card-payment.php'
+      >
+        <img
+          alt='visa'
+          src={'/assets/icons/pay-ico-visa.svg'}
+        />
+      </Link>
+      <Link
+        className={styles.PaymentVariantBlock__link}
+        href='/credit-card-payment.php'
+      >
+        <img
+          alt='mastercard'
+          src={'/assets/icons/pay-ico-mc.svg'}
+        />
+      </Link>
+      <Link
+        className={styles.PaymentVariantBlock__link}
+        href='/credit-card-payment.php'
+      >
+        <img
+          alt='mir'
+          src={'/assets/icons/pay-ico-mir.svg'}
+        />
+      </Link>
+    </div>
+  </div>
+)
 
-export default PaymentVariantBlock;
+export default PaymentVariantBlock
