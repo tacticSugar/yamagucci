@@ -1,21 +1,21 @@
 @import 'styles/variables';
 
 .container {
-  padding: 5rem 0;
+  padding: 50px 0;
   background-color: $white;
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 100px;
 }
 
 .mainImg {
-  height: 63rem;
+  height: 630px;
   aspect-ratio: 1/1;
 }
 .meta {
   display: flex;
   flex-direction: column;
-  width: 52rem;
+  width: 520px;
 
   &__title {
     margin-bottom: 13px;
@@ -44,21 +44,21 @@
 
 .loader {
   &__img {
-    width: 63rem;
-    height: 63rem;
-    border-radius: 1.5rem;
-    margin-bottom: 1rem;
+    width: 630px;
+    height: 630px;
+    border-radius: 15px;
+    margin-bottom: 10px;
   }
   &__title {
-    width: 55rem;
-    height: 6rem;
-    border-radius: 1.5rem;
-    margin-bottom: 1rem;
+    width: 550px;
+    height: 60px;
+    border-radius: 15px;
+    margin-bottom: 10px;
   }
   &__slogan {
-    width: 63rem;
-    height: 12rem;
-    border-radius: 1.5rem;
-    margin-bottom: 1rem;
+    width: 630px;
+    height: 120px;
+    border-radius: 15px;
+    margin-bottom: 10px;
   }
 }

@@ -71,10 +71,10 @@
 }
 
 .react-datepicker {
-  font-size: 1.2rem;
+  font-size: 12px;
   background-color: #fff;
   color: #000;
-  border-radius: 1.5rem;
+  border-radius: 15px;
   display: inline-block;
   position: relative;
 }
@@ -87,8 +87,8 @@
 }
 .react-datepicker--time-only .react-datepicker__time,
 .react-datepicker--time-only .react-datepicker__time-box {
-  border-bottom-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 /* .react-datepicker__triangle {

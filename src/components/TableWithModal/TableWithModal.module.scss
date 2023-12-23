@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .wrapper {
-  padding: 1rem;
+  padding: 10px;
 }
 
 .modal {
@@ -34,8 +34,8 @@
 
 .header {
   display: inline-block;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -47,9 +47,9 @@
 }
 
 .searchAll {
-  padding: 1rem;
+  padding: 10px;
   border-width: 1px;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   &::placeholder {
     color: black;
@@ -58,7 +58,7 @@
 
 .deleteFilters {
   display: inline-block;
-  margin: 2rem;
+  margin: 20px;
   cursor: pointer;
   color: $red-main;
   &:active {
@@ -67,10 +67,10 @@
 }
 
 .buttonGroup {
-  padding: 2.5rem;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
   margin-top: auto;
 }
 

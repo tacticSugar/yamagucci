@@ -2,12 +2,12 @@
 
 .label {
   font-weight: bold;
-  font-size: 1.8rem;
-  margin-bottom: 2.5rem;
+  font-size: 18px;
+  margin-bottom: 25px;
   &_sm {
-    font-size: 1.5rem;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 2.5rem;
+    margin-bottom: 25px;
   }
 }
 
@@ -15,8 +15,8 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .contentClassName {
@@ -38,14 +38,14 @@
 }
 
 .mainOptionClassname {
-  font-size: 1.5rem;
+  font-size: 15px;
   color: $blue-main;
   font-weight: 700;
-  padding: 1rem;
+  padding: 10px;
 }
 
 .subOptionClassname {
-  font-size: 1.5rem;
+  font-size: 15px;
   color: $blue-main;
   font-weight: 400;
 }
@@ -62,8 +62,8 @@
 .selectedCategoriesModal {
   align-self: flex-end;
   width: 50%;
-  padding-left: 2rem;
-  padding-top: 2rem;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .selectedCategoriesContainer {
@@ -76,8 +76,8 @@
   justify-content: space-around;
   display: flex;
   align-items: center;
-  margin-top: 12rem;
-  gap: 2rem;
+  margin-top: 120px;
+  gap: 20px;
 
   .btnModal {
     width: 100%;

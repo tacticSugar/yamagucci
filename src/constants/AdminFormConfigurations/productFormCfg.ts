@@ -132,7 +132,7 @@ export const productFormCfg: FormTabs = {
           widthNumber: 19
         },
         {
-          cfgGroupStyles: { gap: '8rem', height: '6rem' },
+          cfgGroupStyles: { gap: '80px', height: '60px' },
           groupTitle: 'Системные бейджи',
           inputs: [
             {
@@ -176,7 +176,7 @@ export const productFormCfg: FormTabs = {
       panelClassName: 'tab-panel-landing',
       tabContent: [
         {
-          cfgStyles: { padding: '2rem' },
+          cfgStyles: { padding: '20px' },
           label: 'Категория для сравнения',
           name: 'category_compare',
           optionsApi: CATEGORIES_API,
@@ -186,7 +186,7 @@ export const productFormCfg: FormTabs = {
           widthNumber: 100
         },
         {
-          cfgStyles: { padding: '2rem' },
+          cfgStyles: { padding: '20px' },
           label: 'Категории товара',
           name: 'categories[]',
           optionsApi: CATEGORIES_SCHEMA_API,
@@ -236,7 +236,7 @@ export const productFormCfg: FormTabs = {
       panelClassName: 'tab-panel-seo',
       tabContent: [
         {
-          cfgStyles: { padding: '2rem' },
+          cfgStyles: { padding: '20px' },
           label: 'Заголовок страницы (seo_title)',
           name: 'seo_title',
           placeholder: 'Введите заголовок для СЕО',
@@ -245,7 +245,7 @@ export const productFormCfg: FormTabs = {
           widthNumber: 100
         },
         {
-          cfgStyles: { padding: '2rem' },
+          cfgStyles: { padding: '20px' },
           label: 'Ключевые слова (НЕТ ДАННЫХ. Пока search_keywords)',
           name: 'search_keywords',
           placeholder: 'Введите ключевые слова через пробел',
@@ -254,7 +254,7 @@ export const productFormCfg: FormTabs = {
           widthNumber: 100
         },
         {
-          cfgStyles: { padding: '2rem' },
+          cfgStyles: { padding: '20px' },
           label: 'Описание страницы (seo_description)',
           name: 'seo_description',
           placeholder: 'Введите описание страницы для СЕО',
@@ -263,8 +263,8 @@ export const productFormCfg: FormTabs = {
           widthNumber: 100
         },
         {
-          cfgGroupStyles: { gap: '1rem' },
-          cfgStyles: { borderBottom: '1px solid #E5E5E5', borderTop: '1px solid #E5E5E5', padding: '4rem 2rem' },
+          cfgGroupStyles: { gap: '10px' },
+          cfgStyles: { borderBottom: '1px solid #E5E5E5', borderTop: '1px solid #E5E5E5', padding: '40px 20px' },
           inputs: [
             {
               label: 'Категория для хлебных крошек (category_breadcrumbs_id)',
@@ -290,7 +290,7 @@ export const productFormCfg: FormTabs = {
           type: 'ckeditor'
         },
         {
-          cfgStyles: { margin: '2rem' },
+          cfgStyles: { margin: '20px' },
           label: 'Выгружать в YML',
           name: 'yandex_export_yml',
           type: 'checkbox',
@@ -299,7 +299,7 @@ export const productFormCfg: FormTabs = {
           widthNumber: 100
         },
         {
-          cfgStyles: { margin: '2rem' },
+          cfgStyles: { margin: '20px' },
           label: 'Исключение для XML файла',
           name: 'yandex_xml_exception',
           type: 'checkbox',
@@ -308,7 +308,7 @@ export const productFormCfg: FormTabs = {
           widthNumber: 100
         },
         {
-          cfgStyles: { padding: '2rem' },
+          cfgStyles: { padding: '20px' },
           label: 'Так же искать продукт по этим словам в поиске сайта',
           name: 'search_keywords',
           type: 'textarea',

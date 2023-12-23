@@ -1,9 +1,9 @@
-@import "styles/variables";
+@import 'styles/variables';
 
 .catalogPopup {
   display: flex;
-  min-width: 90.5rem;
-  height: 64rem;
+  min-width: 905px;
+  height: 640px;
   top: 100%;
   left: 0;
   z-index: 111;
@@ -24,42 +24,42 @@
 
     &_left {
       align-items: center;
-      width: 45.5rem;
-      padding: 1.5rem 0 2.5rem 2rem;
+      width: 455px;
+      padding: 15px 0 25px 20px;
       background-color: $bad-white;
-      border-radius: 0 0 0 1.5rem;
+      border-radius: 0 0 0 15px;
     }
 
     &_right {
-      min-width: 60rem;
+      min-width: 600px;
       background-color: $white;
-      padding: 1.5rem 2rem 2.5rem;
-      border-radius: 0 0 1.5rem 0;
+      padding: 15px 20px 25px;
+      border-radius: 0 0 15px 0;
     }
   }
 
   &__topImgBox {
     width: 100%;
     display: flex;
-    margin-bottom: 3.5rem;
-    column-gap: 2rem;
+    margin-bottom: 35px;
+    column-gap: 20px;
   }
 
   &__imgContainer {
     position: relative;
-    width: 12.5rem;
-    height: 12.5rem;
+    width: 125px;
+    height: 125px;
     overflow: hidden;
-    border-radius: 1.5rem;
+    border-radius: 15px;
   }
 
   &__textImg {
     position: absolute;
-    top: 1rem;
-    left: 1.5rem;
+    top: 10px;
+    left: 15px;
 
     color: $totally-black;
-    font-size: 1.2887rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 124%;
 
@@ -75,10 +75,10 @@
   &__globalCategories {
     display: flex;
     align-items: center;
-    padding-left: 1.5rem;
+    padding-left: 15px;
     width: 100%;
-    height: 5rem;
-    border-radius: 1.5rem 0 0 1.5rem;
+    height: 50px;
+    border-radius: 15px 0 0 15px;
 
     &:hover {
       cursor: pointer;
@@ -91,9 +91,9 @@
   }
 
   &__iconWrapper {
-    width: 4.5rem;
-    height: 4.5rem;
-    margin-right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
 
     svg {
       fill: $bad-white;
@@ -102,18 +102,18 @@
 
   &__title {
     color: $totally-black;
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: 500;
     line-height: 260%;
   }
 
   &__imgCategory {
     position: relative;
-    width: 41.5rem;
-    height: 12.5rem;
+    width: 415px;
+    height: 125px;
     overflow: hidden;
-    border-radius: 1.5rem;
-    margin-bottom: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 25px;
   }
 
   &__CategoryImg {
@@ -124,12 +124,12 @@
 
   &__nameCategory {
     position: absolute;
-    top: 1rem;
-    left: 2rem;
-    width: 12rem;
+    top: 10px;
+    left: 20px;
+    width: 120px;
 
     color: $gray-matt-black;
-    font-size: 1.8332rem;
+    font-size: 18px;
     font-weight: 500;
     line-height: 124%;
 
@@ -140,11 +140,11 @@
 
   &__linkCategory {
     position: absolute;
-    bottom: 1.5rem;
-    left: 2rem;
+    bottom: 15px;
+    left: 20px;
 
     color: $gray-matt-black;
-    font-size: 1.534rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 124%;
     text-decoration-line: underline !important;
@@ -157,20 +157,20 @@
   &__listSubcategories {
     display: flex;
     flex-flow: column wrap;
-    height: 46rem;
-    padding-left: .5rem;
-    gap: 2rem 1rem;
+    height: 460px;
+    padding-left: 5px;
+    gap: 20px 10px;
   }
 
   &__subcategory {
     display: flex;
     align-items: center;
-    width: 24.5rem;
+    width: 245px;
   }
 
   &__titleSubcategories {
     color: $totally-black;
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: 400;
 
     &:hover {

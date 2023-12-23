@@ -3,34 +3,34 @@
 .search {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 20px;
   border-top: 1px solid $gray-light;
   border-bottom: 1px solid $gray-light;
 }
 .customSearch {
-  margin: 3rem 0;
+  margin: 30px 0;
 }
 .list {
   user-select: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 10px;
 }
 .listTitle {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 .cardAdditionalProduct {
   display: flex;
-  gap: 1rem;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
   background-color: $bad-white;
   height: 126px;
   min-height: 126px;
-  border-radius: 1.5rem;
-  padding: 1rem;
+  border-radius: 15px;
+  padding: 10px;
   color: $black;
   user-select: 'none';
   position: relative;
@@ -47,18 +47,18 @@
 
 .product {
   &__id {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
   &__img {
-    border-radius: 1.5rem;
+    border-radius: 15px;
   }
   &__name {
     color: $blue-main;
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: 700;
   }
   &__price {
-    font-size: 2.2rem;
+    font-size: 22px;
     color: $gray-main;
   }
   &__delete {

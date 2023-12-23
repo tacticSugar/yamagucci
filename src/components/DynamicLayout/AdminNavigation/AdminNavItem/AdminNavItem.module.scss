@@ -3,22 +3,22 @@
 .item {
   display: flex;
   align-items: center;
-  gap: 1.7rem;
-  margin-bottom: 1rem;
+  gap: 17px;
+  margin-bottom: 10px;
   cursor: pointer;
 
   &__subItem {
-    padding-left: 1.5rem;
+    padding-left: 15px;
   }
 
   &__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 20px;
+    height: 20px;
   }
   &__title {
     color: $black;
     white-space: nowrap;
-    font-size: 1.5rem;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
   }

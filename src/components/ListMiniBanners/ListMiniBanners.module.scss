@@ -1,12 +1,12 @@
 .list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 20px;
   width: 100%;
 }
 
 .imgItem {
-  border-radius: 1.5rem;
+  border-radius: 15px;
   position: relative;
   overflow: hidden;
 }

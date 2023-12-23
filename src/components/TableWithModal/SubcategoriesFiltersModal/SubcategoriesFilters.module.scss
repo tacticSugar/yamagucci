@@ -3,19 +3,19 @@
 .columnVisibilityWrapper {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 25px;
   border-bottom: 1px solid $gray-light;
 }
 
 .checkboxGroupHeader {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 700;
   color: $gray-main;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .labelClassName {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
 }

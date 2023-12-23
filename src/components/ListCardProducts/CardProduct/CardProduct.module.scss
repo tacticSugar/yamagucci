@@ -1,13 +1,13 @@
 @import 'styles/variables';
 
 .card {
-  padding: 1.5rem;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   background: #292929;
-  border-radius: 2rem;
-  max-width: 26rem;
-  gap: 1rem;
+  border-radius: 20px;
+  max-width: 260px;
+  gap: 10px;
 }
 
 .priceWrapper {
@@ -16,23 +16,23 @@
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 20px;
   color: $white;
 }
 
 .priceOld {
-  font-size: 1.6rem;
+  font-size: 16px;
   color: $gray-main;
   text-decoration: line-through;
   text-decoration-color: red;
 }
 
 .name {
-  font-size: 1.4rem;
+  font-size: 14px;
   color: $gray-main;
 }
 
 .description {
-  font-size: 1.9rem;
+  font-size: 18px;
   color: $white;
 }

@@ -4,19 +4,19 @@
   max-width: 1920px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 23rem 4fr;
-  grid-template-rows: 6rem 1fr;
+  grid-template-columns: 230px 4fr;
+  grid-template-rows: 60px 1fr;
   gap: 0px 0px;
-  font-size: 2rem;
+  font-size: 20px;
   grid-template-areas:
     'header header .'
     'navigation main .'
     '. . .';
   main {
     grid-area: main;
-    padding-right: 1rem;
-    padding-left: 9rem;
-    margin-top: 2rem;
+    padding-right: 10px;
+    padding-left: 90px;
+    margin-top: 20px;
   }
   header {
     grid-area: header;
@@ -24,8 +24,8 @@
 
   nav {
     grid-area: navigation;
-    padding-left: 1rem;
-    margin-top: 2rem;
+    padding-left: 10px;
+    margin-top: 20px;
   }
 }
 

@@ -4,17 +4,17 @@
   width: 100%;
 }
 .table th {
-  padding-bottom: 2rem;
+  padding-bottom: 20px;
   font-weight: bold;
   text-align: left;
-  padding-left: 0.8rem;
-  font-size: 1.8rem;
+  padding-left: 8px;
+  font-size: 18px;
 }
 .table td {
   text-align: left;
 }
 .table tbody tr td {
-  padding: 0.8rem;
+  padding: 8px;
 }
 
 .th {
@@ -36,16 +36,16 @@
 }
 
 .nameCell {
-  width: 22rem;
+  width: 220px;
   white-space: nowrap;
   font-weight: 700;
-  font-size: 1.8rem;
-  max-width: 22rem;
+  font-size: 18px;
+  max-width: 220px;
 }
 
 .inputPrice {
-  padding: 2rem 3rem;
+  padding: 20px 30px;
   border: 1px solid $gray-main;
-  border-radius: 1.5rem;
-  max-width: 15rem;
+  border-radius: 15px;
+  max-width: 150px;
 }

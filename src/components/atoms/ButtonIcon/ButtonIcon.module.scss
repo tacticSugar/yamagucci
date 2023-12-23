@@ -4,11 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.5rem;
+  border-radius: 15px;
   height: fit-content;
-  gap: 1rem;
-  height: 6rem;
-  max-height: 6rem;
+  gap: 10px;
+  height: 60px;
+  max-height: 60px;
   cursor: pointer;
   &:active {
     scale: 0.9;
@@ -23,7 +23,7 @@
 .labelClassName {
   white-space: nowrap;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 // COLOR VARIANTS
@@ -53,7 +53,7 @@
     color: $green-main;
   }
 
-  &_grayMattBlack{
+  &_grayMattBlack {
     background-color: $gray-matt-black;
     color: $white;
   }
@@ -87,13 +87,13 @@
 // PADDING VARIANTS
 .padding {
   &_slim {
-    padding: 0.5rem 2rem;
-    height: 3rem;
-    max-height: 3rem;
-    border-radius: 0.8rem;
+    padding: 5px 20px;
+    height: 30px;
+    max-height: 30px;
+    border-radius: 8px;
   }
 
   &_wide {
-    padding: 2rem;
+    padding: 20px;
   }
 }

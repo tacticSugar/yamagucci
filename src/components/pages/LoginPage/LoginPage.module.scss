@@ -4,14 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 20px;
+  background-color: $white;
+  padding: 100px;
 }
 
 .gif {
-  border-radius: 1.5rem;
+  border-radius: 15px;
   overflow: hidden;
-  width: 45rem;
-  height: 25rem;
+  width: 450px;
+  height: 250px;
   background: url('/assets/totoro.webp');
 }
 
@@ -24,18 +26,18 @@
     -webkit-backdrop-filter: blur(8.5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 0.8rem;
+    border-radius: 8px;
     padding: 25px;
-    min-width: 32rem;
+    min-width: 320px;
     height: 40%;
-    min-height: 35rem;
+    min-height: 350px;
   }
 }
 
 .inputWrapper {
   position: relative;
-  margin-top: 1rem;
-  padding: 1.5rem 2rem;
+  margin-top: 10px;
+  padding: 15px 20px;
   .input {
     outline: 0;
     border: 0;
@@ -44,14 +46,14 @@
     padding: 7px 0;
     width: 100%;
     color: #383636;
-    font-size: 1.6rem;
+    font-size: 16px;
     &::placeholder {
       color: transparent;
     }
     &:placeholder-shown ~ .inputLabel {
       top: 20px;
       cursor: text;
-      font-size: 1.6rem;
+      font-size: 16px;
     }
   }
   .inputLabel {
@@ -60,7 +62,7 @@
     top: 0;
     transition: 0.2s;
     color: rgba(75, 72, 72, 0.62);
-    font-size: 1.2rem;
+    font-size: 12px;
     user-select: none;
   }
 }
@@ -75,7 +77,7 @@
     top: 0;
     transition: 0.2s;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 10px;
   }
 }
 
@@ -86,7 +88,7 @@
 .error {
   color: rgba(161, 15, 15, 0.81);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 10px;
 }
 
 .signInBtn {

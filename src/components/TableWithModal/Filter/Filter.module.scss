@@ -2,30 +2,30 @@
 
 .minMaxWrapper {
   display: flex;
-  gap: 1rem;
+  gap: 10px;
 }
 
 .minMaxInput {
-  border-radius: 0.25rem;
+  border-radius: 2.5px;
   border-width: 1px;
-  width: 6rem;
+  width: 60px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  &::placeholder{
-    font-size: 1rem;
+  &::placeholder {
+    font-size: 10px;
   }
 }
 
 .searchInput {
   width: 100%;
   position: relative;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px;
   border: 1px solid $gray-main;
-  border-radius: 1.5rem;
+  border-radius: 15px;
 
   &::placeholder {
-  // transform:translate3d(0,-1px,0);
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 400;
+    // transform:translate3d(0,-1px,0);
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
   }
 }

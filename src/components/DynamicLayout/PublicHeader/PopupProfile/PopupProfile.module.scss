@@ -1,9 +1,9 @@
-@import "styles/variables";
+@import 'styles/variables';
 
 .popupProfile {
-  padding-top: 1.5rem;
+  padding-top: 15px;
   top: 82%;
-  right: 2rem;
+  right: 20px;
   position: absolute;
   z-index: 444;
   transition: all 0.2s ease;
@@ -12,11 +12,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 32rem;
-    min-height: 59rem;
-    border-radius: 1.5rem;
+    width: 320px;
+    min-height: 590px;
+    border-radius: 15px;
     background-color: $white;
-    padding: 1.5rem 2rem 2.5rem;
+    padding: 15px 20px 25px;
   }
 
   &__list {
@@ -24,10 +24,10 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    row-gap: .5rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
-    border-bottom: .1rem solid $bad-white;
+    row-gap: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $bad-white;
 
     &:last-child {
       border: none;
@@ -43,9 +43,9 @@
   &__item {
     display: flex;
     align-items: center;
-    height: 3.5rem;
+    height: 35px;
     width: 100%;
-    column-gap: 1.5rem;
+    column-gap: 15px;
 
     &:hover {
       cursor: pointer;
@@ -61,12 +61,12 @@
   }
 
   &__iconWrapper {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 35px;
+    height: 35px;
 
     svg {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 25px;
+      height: 25px;
       fill: $gray-matt-black;
     }
 
@@ -77,10 +77,9 @@
     }
   }
 
-
   &__text {
     color: $black;
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: 400;
     line-height: 160%;
 
@@ -92,15 +91,14 @@
 
     &_phone {
       width: 100%;
-      margin-bottom: 2rem;
+      margin-bottom: 20px;
 
-      font-size: 1.2rem;
+      font-size: 12px;
     }
 
     &_color {
       color: $gray-main;
     }
-
   }
 
   &__ballBox {
@@ -108,16 +106,16 @@
     align-items: center;
     justify-content: space-between;
     margin-left: auto;
-    padding: 0 1rem 0 .5rem;
-    max-width: 13rem;
-    height: 3rem;
+    padding: 0 10px 0 5px;
+    max-width: 130px;
+    height: 30px;
     background-color: $violet;
-    border-radius: .7rem;
+    border-radius: 8px;
   }
 
   &__ballQuantity {
     color: $white;
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: 600;
     line-height: 160%;
   }
@@ -126,8 +124,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 2rem;
-    min-height: 2rem;
+    min-width: 20px;
+    min-height: 20px;
 
     svg {
       ellipse {

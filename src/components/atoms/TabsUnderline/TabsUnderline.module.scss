@@ -12,11 +12,11 @@
     align-items: center;
     position: relative;
     z-index: 10;
-    gap: 6rem;
-    padding: 2rem;
+    gap: 60px;
+    padding: 20px;
     border: 1px solid $gray-light;
-    border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 }
 
@@ -27,15 +27,15 @@
 }
 
 .loader {
-  height: 5rem;
-  border-radius: 0.8rem;
+  height: 50px;
+  border-radius: 8px;
   cursor: default;
 }
 
 .loaderPanel {
-  height: 10rem;
-  border-radius: 0.8rem;
-  margin-bottom: 2rem;
+  height: 100px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .panel {
