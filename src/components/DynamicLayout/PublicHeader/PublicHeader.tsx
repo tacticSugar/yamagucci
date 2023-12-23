@@ -1,7 +1,7 @@
 import { useToggle } from '@reactuses/core'
 import cn from 'classnames'
 import Link from 'next/link'
-import { memo } from 'react'
+import { FC, memo } from 'react'
 
 import ButtonIcon from '@/src/components/atoms/ButtonIcon/ButtonIcon'
 import HeaderLogo from '@/src/components/atoms/HeaderLogo/HeaderLogo'
@@ -25,7 +25,7 @@ import {
 } from '@/src/constants/icons'
 
 import {
-  navLinkArrayTypes
+  NavLinkArrayTypes, PublicHeaderTypes
 } from './_types'
 import {
   navigationLinksText
@@ -35,7 +35,7 @@ import PopupProfile from './PopupProfile/PopupProfile'
 import styles from './PublicHeader.module.scss'
 
 /** компонент Header в публичной части */
-const PublicHeader = (): JSX.Element => {
+const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
   // tODO: вынести все state в props убрать функционал на уровень выше
   // tODO: добавить анимации появления popup-ов
   /** состояние popup городов */
@@ -79,7 +79,7 @@ const PublicHeader = (): JSX.Element => {
           </div>
 
           <ul className={styles.navigation__list}>
-            {navigationLinksText.map((item: navLinkArrayTypes) => (
+            {navigationLinksText.map((item: NavLinkArrayTypes) => (
               <li key={item.id}>
                 <Link
                   className={styles.navigation__link}
@@ -274,7 +274,7 @@ const PublicHeader = (): JSX.Element => {
             </button>
 
             {showPopupProfile &&
-              <PopupProfile />}
+              <PopupProfile handleLogout={handleLogout} />}
           </div>
 
           {/* кнопка войти */}

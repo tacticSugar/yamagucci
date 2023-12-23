@@ -1,4 +1,4 @@
-export type navLinkArrayTypes = {
+export type NavLinkArrayTypes = {
     /** ссылка на страницу, для nav в шапке Header   */
     href: string
     /** id  строки , для key */
@@ -8,6 +8,11 @@ export type navLinkArrayTypes = {
 }
 
 export type PublicHeaderTypes = {
-    /** id  строки , для key */
-    id: number
+    /** функция логина */
+    handleLogout?: () => void
+}
+
+export type PopupProfileTypes = {
+    /** функция логина */
+    handleLogout?: () => void
 }

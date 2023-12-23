@@ -1,8 +1,9 @@
 import cn from 'classnames'
 import Link from 'next/link'
-import { memo } from 'react'
+import { FC, memo } from 'react'
 
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
+import { PopupProfileTypes } from '@/src/components/DynamicLayout/PublicHeader/_types'
 import {
   IconBall,
   IconExit,
@@ -20,7 +21,7 @@ import {
 import styles from './PopupProfile.module.scss'
 
 /** popup профиля, в header */
-const PopupProfile = (): JSX.Element => (
+const PopupProfile: FC<PopupProfileTypes> = ({ handleLogout }): JSX.Element => (
   // tODO: добавить counter подарков, сравнение избранное
   <div
     className={cn(
@@ -163,7 +164,10 @@ const PopupProfile = (): JSX.Element => (
             Сервис
           </p>
         </li>
-        <li className={styles.popupProfile__item}>
+        <li
+          className={styles.popupProfile__item}
+          onClick={handleLogout}
+        >
           <IconWrapper
             IconComponent={IconExit}
             wrapperClassname={styles.popupProfile__iconWrapper}

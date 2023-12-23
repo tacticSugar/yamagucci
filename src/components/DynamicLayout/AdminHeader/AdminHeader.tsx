@@ -14,11 +14,11 @@ type AdminHeaderTypes = {
   /** дополнительный класс */
   className?: string
   /** ф-я выхода */
-  handleLoginLogout?: () => void
+  handleLogout?: () => void
 };
 
 /** компонент хэдера */
-const AdminHeader: FC<AdminHeaderTypes> = ({ className, handleLoginLogout }) => (
+const AdminHeader: FC<AdminHeaderTypes> = ({ className, handleLogout }) => (
   <header className={cn(className, styles.header)}>
     <Container>
       <div className={styles.wrapper}>
@@ -34,7 +34,7 @@ const AdminHeader: FC<AdminHeaderTypes> = ({ className, handleLoginLogout }) => 
           <IconWrapper
             IconComponent={IconEnter}
             iconClassname={styles.iconClassname}
-            onClick={handleLoginLogout}
+            onClick={handleLogout}
           />
         </div>
       </div>

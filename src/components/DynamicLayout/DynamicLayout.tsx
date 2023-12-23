@@ -16,7 +16,7 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>> & Dyna
   /** queryClient */
   const queryClient = useQueryClient()
   /** ф-я выхода пользователя и очистки кэша */
-  const handleLoginLogout = useCallback(() => {
+  const handleLogout = useCallback(() => {
     queryClient.clear()
     Cookies.remove(COOKIES.AUTH_TOKEN)
     Router.reload()
@@ -28,14 +28,14 @@ const DynamicLayout: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>> & Dyna
       {isAdminRoute
         ? (
           <div className={styles.adminLayout}>
-            <AdminHeader handleLoginLogout={handleLoginLogout} />
+            <AdminHeader handleLogout={handleLogout} />
             <AdminNavigation />
             {children}
           </div>
         )
         : (
           <div className={styles.publicLayout}>
-            <PublicHeader />
+            <PublicHeader handleLogout={handleLogout} />
             {children}
             <footer>
               FOOTER
