@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import React, { FC } from 'react'
 
+import { FormTypes } from './_types'
 import BorbozaSearch from './BorbozaSearch/BorbozaSearch'
 import CategoriesModal from './CategoriesModal/CategoriesModal'
 import { CustomCheckbox } from './CustomCheckbox/CustomCheckbox'
@@ -89,7 +90,7 @@ const _createInputGroup = (group: any, index) => (
 )
 
 /** компонент отрисовки инпутов */
-const Form: FC<any> = ({ formContent }) => (
+const Form: FC<FormTypes> = ({ formContent }) => (
   formContent?.map((item, index) => {
     switch (item?.type) {
       case 'group':

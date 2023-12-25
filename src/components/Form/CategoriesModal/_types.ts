@@ -11,19 +11,19 @@ export type Category = {
 
 export type CategoriesModalTypes = {
   /** доп стили из конфига */
-  cfgStyles: {
+  cfgStyles?: {
     [key: string]: any
   }
   /** лейбл */
-  label: string
+  label?: string
   /** имя */
-  name: string
+  name?: string
   /** апи опшнов */
   optionsApi?: string
   /** вариант размера */
-  sizeVariant: string
+  sizeVariant?: string | number
   /** ширина */
-  widthNumber?: number
+  widthNumber?: number | string
 }
 
 export type CategoryCardTypes = {

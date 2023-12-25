@@ -9,7 +9,7 @@ import styles from './ProductHero.module.scss'
 
 type ProductHeroTypes = {}
 
-/** */
+/** компонент главной информации о продукте */
 const ProductHero: FC<ProductHeroTypes> = ({ gallery, isLoading, name, slogan_color, slogan_font_size, slogan_text, status }) => (
   <Container className={styles.container}>
     <LoaderQuery

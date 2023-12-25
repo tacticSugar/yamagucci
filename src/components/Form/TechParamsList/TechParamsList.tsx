@@ -12,21 +12,8 @@ import CustomSearch from '@/src/components/Form/CustomSearch/CustomSearch'
 import { IconArrowUpDown, IconEye, IconEyeCrossed, IconPlus, IconTrash } from '@/src/constants/icons'
 import times from '@/src/lib/times'
 
+import { handleChangeOptionParams, TechParamsListTypes } from './_types'
 import styles from './TechParamsList.module.scss'
-
-type TechParamsListTypes = {
-  /** название поля формы */
-  name: string
-}
-
-type handleChangeOptionParams = {
-  /** тип действия */
-  actionType: 'updateValue' | 'updateParameter' | 'updateFilter' | 'toggleActive' | 'delete' | 'addNew'
-  /** id */
-  itemId?: number
-  /** значение */
-  selectedValue?: any
-}
 
 /** компонент списка технических параметров продукта */
 const TechParamsList: FC<TechParamsListTypes> = ({ name }) => {
