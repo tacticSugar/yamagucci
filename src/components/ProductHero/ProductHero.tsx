@@ -11,7 +11,7 @@ type ProductHeroTypes = {}
 
 /** */
 const ProductHero: FC<ProductHeroTypes> = ({ gallery, isLoading, name, slogan_color, slogan_font_size, slogan_text, status }) => (
-  <section className={styles.container}>
+  <Container className={styles.container}>
     <LoaderQuery
       className={styles.loader__img}
       isLoading={isLoading}
@@ -64,7 +64,7 @@ const ProductHero: FC<ProductHeroTypes> = ({ gallery, isLoading, name, slogan_co
       />
     </div>
     {/* -------------------------meta------------------------- */}
-  </section>
+  </Container>
 )
 
 export default ProductHero

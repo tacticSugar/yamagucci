@@ -6,7 +6,7 @@ export const buttonAnim: Variants = {
   anim: {
     background: 'radial-gradient(70% 100% at 50% 110%, #b37afd 0%, rgb(77, 19, 212) 100%)',
     boxShadow:
-      '0 0 20rem 5rem rgba(65, 18, 161, 1), 0 2px 0 0 rgb(120, 54, 250) inset, 0 -2px 0 0 rgb(86, 4, 250) inset',
+      '0 0 200px 50px rgba(65, 18, 161, 1), 0 2px 0 0 rgb(120, 54, 250) inset, 0 -2px 0 0 rgb(86, 4, 250) inset',
     outline: '7px solid rgba(137, 87, 255, 0.2)',
     scale: 1.2,
     transition: {
@@ -17,7 +17,7 @@ export const buttonAnim: Variants = {
   },
   init: {
     background: 'radial-gradient(70% 90% at 50% 100%, rgb(31, 30, 31) 0%, rgb(31, 30, 31) 100%)',
-    boxShadow: '0 0 0rem 0rem rgba(66, 18, 161, 0)',
+    boxShadow: '0 0 0 0 rgba(66, 18, 161, 0)',
     outline: '7px solid rgba(129, 75, 255, 0)',
     scale: 1,
     transition: {

@@ -12,6 +12,7 @@
   height: 630px;
   aspect-ratio: 1/1;
 }
+
 .meta {
   display: flex;
   flex-direction: column;
@@ -22,6 +23,7 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 135%;
+    color: $black;
   }
 
   &__slogan {
@@ -39,6 +41,7 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 100%;
+    color: $black;
   }
 }
 
