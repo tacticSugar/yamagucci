@@ -14,7 +14,7 @@ import styles from './PopupCatalog.module.scss'
 /** popup каталога в header */
 const PopupCatalog = (): JSX.Element => {
   /** категория в каталоге, при наведении */
-  const [idFocusCategory, setFocusCategory] =
+  const [FocusedCategory, setFocusedCategory] =
    useState({
      href: '/',
      id: 1,
@@ -32,11 +32,11 @@ const PopupCatalog = (): JSX.Element => {
    })
 
   /** функция для получения id global category при наведении */
-  const handlerIdCategory = (idFocusCategory) => {
+  const handleFocusCategory = (idFocusCategory) => {
     /** выбор активной категории */
     const category = categoriesList.find((item) => item.id === idFocusCategory)
 
-    setFocusCategory(category)
+    setFocusedCategory(category)
   }
 
   return (
@@ -104,7 +104,7 @@ const PopupCatalog = (): JSX.Element => {
               key={category.id}
               onMouseEnter={() => {
                 // choosingCategory(subcategoriesArray, category.id)
-                handlerIdCategory(category.id)
+                handleFocusCategory(category.id)
               }}
             >
               <li className={styles.catalogPopup__globalCategories}>
@@ -132,24 +132,24 @@ const PopupCatalog = (): JSX.Element => {
           <img
             alt='товары'
             className={styles.catalogPopup__CategoryImg}
-            src={idFocusCategory?.src}
+            src={FocusedCategory?.src}
           />
           <p className={cn(styles.catalogPopup__nameCategory,
-            idFocusCategory?.id === 1 || idFocusCategory?.id === 5 ? styles.catalogPopup__nameCategory_colorWhite : '')}
+            FocusedCategory?.id === 1 || FocusedCategory?.id === 5 ? styles.catalogPopup__nameCategory_colorWhite : '')}
           >
-            {idFocusCategory?.name}
+            {FocusedCategory?.name}
           </p>
           <Link
             className={cn(styles.catalogPopup__linkCategory,
-              idFocusCategory?.id === 1 || idFocusCategory?.id === 5 ? styles.catalogPopup__linkCategory_colorWhite : '')}
-            href={idFocusCategory?.href}
+              FocusedCategory?.id === 1 || FocusedCategory?.id === 5 ? styles.catalogPopup__linkCategory_colorWhite : '')}
+            href={FocusedCategory?.href}
           >
             Смотреть все
           </Link>
         </div>
 
         <ul className={styles.catalogPopup__listSubcategories} >
-          {idFocusCategory.subcategories?.map((subcategory) => (
+          {FocusedCategory.subcategories?.map((subcategory) => (
             <Link
               href={subcategory.href}
               key={subcategory.id}
