@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { memo, useState } from 'react'
 
 import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
-import { globalCategory } from '@/src/constants/categoryList'
+import { categoriesList } from '@/src/constants/header'
 import {
   IconMassageChair
 } from '@/src/constants/icons'
@@ -34,7 +34,7 @@ const PopupCatalog = (): JSX.Element => {
   /** функция для получения id global category при наведении */
   const handlerIdCategory = (idFocusCategory) => {
     /** выбор активной категории */
-    const category = globalCategory.find((item) => item.id === idFocusCategory)
+    const category = categoriesList.find((item) => item.id === idFocusCategory)
 
     setFocusCategory(category)
   }
@@ -98,7 +98,7 @@ const PopupCatalog = (): JSX.Element => {
         </div>
 
         <ul className={styles.catalogPopup__globalCategoriesBox}>
-          {globalCategory.map((category: GlobalCategoryArrayTypes) => (
+          {categoriesList.map((category: GlobalCategoryArrayTypes) => (
             <Link
               href={category.href}
               key={category.id}

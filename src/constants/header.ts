@@ -10,7 +10,7 @@ import {
   IconWomansHead
 } from '@/src/constants/icons'
 
-export const globalCategory = [
+export const categoriesList = [
   {
     href: '/',
     id: 1,
@@ -165,4 +165,13 @@ export const globalCategory = [
     { href: '/', id: 5, name: 'Валики и аксессуары' }
   ]
   }
+]
+
+export const navigationLinks = [
+  { href: '/', id: 1, name: 'Акции' },
+  { href: '/', id: 2, name: 'Магазины' },
+  { href: '/', id: 3, name: 'Виртуальный шоурум' },
+  { href: '/', id: 4, name: 'Оплата' },
+  { href: '/', id: 5, name: 'Доставка' },
+  { href: '/', id: 6, name: 'О компании' }
 ]

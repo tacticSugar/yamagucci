@@ -18,7 +18,7 @@ export type BorbozaSearchTypes = {
   /** имя поля для формы */
   name?: 'borboza_id'
   /** функция обработчик */
-  onChange: (value: any) => void
+  onChange?: (value: any) => void
   /** класс на контейнере опшнов */
   optionWrapperClassname?: string
   /** плейсхолдер */
@@ -26,7 +26,7 @@ export type BorbozaSearchTypes = {
   /** доп класс на подопшн */
   subOptionClassname?: string
   /** ширина */
-  widthNumber?: string
+  widthNumber?: string | number
   /** с подсказкой */
   withTooltip?: boolean
 }
