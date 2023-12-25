@@ -9,6 +9,7 @@ import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import PopupCatalog from '@/src/components/DynamicLayout/PublicHeader/PopupCatalog/PopupCatalog'
 import PopupSupport from '@/src/components/DynamicLayout/PublicHeader/PopupSupport/PopupSupport'
 import PopupYourCity from '@/src/components/DynamicLayout/PublicHeader/PopupYourCity/PopupYourCity'
+import { navigationLinks } from '@/src/constants/header'
 import {
   IconArrowDown,
   IconCart,
@@ -27,9 +28,6 @@ import {
 import {
   NavLinkArrayTypes, PublicHeaderTypes
 } from './_types'
-import {
-  navigationLinksText
-} from './constants'
 import PopupMore from './PopupMore/PopupMore'
 import PopupProfile from './PopupProfile/PopupProfile'
 import styles from './PublicHeader.module.scss'
@@ -79,7 +77,7 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
           </div>
 
           <ul className={styles.navigation__list}>
-            {navigationLinksText.map((item: NavLinkArrayTypes) => (
+            {navigationLinks.map((item: NavLinkArrayTypes) => (
               <li key={item.id}>
                 <Link
                   className={styles.navigation__link}
