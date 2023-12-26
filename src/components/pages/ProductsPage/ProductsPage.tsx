@@ -118,6 +118,8 @@ const ProductPage = () => {
     []
   )
 
+  if (!data && !isLoading) return null
+
   return (
     <>
       {isLoading

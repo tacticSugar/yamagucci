@@ -102,6 +102,8 @@ const CategoriesPage = () => {
     []
   )
 
+  if (!data && !isLoading) return null
+
   return (
     <>
       {isLoading
