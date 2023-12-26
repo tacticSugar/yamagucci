@@ -40,14 +40,13 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element =>
 
           <ul className={styles.navigation__list}>
             {navigationLinks.map((item: NavLinkArrayTypes) => (
-              <li key={item.id}>
-                <Link
-                  className={styles.navigation__link}
-                  href={item.href}
-                >
-                  {item.name}
-                </Link>
-              </li>
+              <Link
+                className={styles.navigation__link}
+                href={item.href}
+                key={item.id}
+              >
+                {item.name}
+              </Link>
             ))}
 
             <PopupMore />

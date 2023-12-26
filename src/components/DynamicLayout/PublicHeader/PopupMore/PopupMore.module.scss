@@ -1,21 +1,12 @@
 @import 'styles/variables';
 
-.rotateArrow {
-  transform: rotate(180deg);
-}
-
-// .relativeBox{
-//   position: relative;
-// }
-
 .moreBtn {
   display: flex;
   position: relative;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
-
     svg {
       fill: $red-main;
     }
@@ -25,16 +16,15 @@
     }
   }
 
-  &__icon {
-    fill: $white;
-  }
-
   &__text {
     font-size: 14px;
     font-weight: 400;
     line-height: 160%;
-    color: $white;
   }
+}
+
+.rotateArrow {
+  transform: scale(-1);
 }
 
 .popupMore {
@@ -44,9 +34,10 @@
   width: 230px;
   min-height: 500px;
   padding: 20px 30px 10px 30px;
-  border-radius: 0 0 0 15px;
-  background-color: #212327;
-  transition: all 0.2s ease-in-out;
+  border-radius: 0 0 15px 15px;
+  background-color: $black;
+  transition: all 0.15s ease-in-out;
+  z-index: 10;
 
   &_close {
     visibility: hidden;

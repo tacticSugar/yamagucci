@@ -1,25 +1,5 @@
 @import 'styles/variables';
 
-.rotateArrow {
-  transform: rotate(180deg);
-}
-
-.hide {
-  display: none;
-}
-
-.relativeBox {
-  position: relative;
-}
-
-.imgArrow {
-  fill: $white;
-}
-
-.IconLocation {
-  fill: $white;
-}
-
 .publicHeader {
   width: 100%;
   display: flex;
@@ -161,7 +141,32 @@
     font-weight: 400;
     line-height: 160%;
     color: $white;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $red-main;
+    }
   }
+}
+
+.rotateArrow {
+  transform: rotate(180deg);
+}
+
+.hide {
+  display: none;
+}
+
+.relativeBox {
+  position: relative;
+}
+
+.imgArrow {
+  fill: $white;
+}
+
+.IconLocation {
+  fill: $white;
 }
 
 .mobBtnContainer {

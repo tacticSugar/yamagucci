@@ -37,42 +37,34 @@ const PopupMore = (): JSX.Element => {
   }, [toggleShowPopupNavigation, showPopupNavigation, handleClickOutside])
 
   return (
-    <div className={styles.relativeBox}>
-      <li
+    <div ref={popupMoreRef}>
+      <div
         className={styles.moreBtn}
-        onClick={() => toggleShowPopupNavigation()}
+        onClick={toggleShowPopupNavigation}
       >
         <p className={styles.moreBtn__text}>
           Ещё
         </p>
         <IconWrapper
           IconComponent={IconArrowDown}
-          iconClassname={cn(
-            styles.moreBtn__icon,
-            showPopupNavigation ? styles.rotateArrow : ''
-          )}
+          iconClassname={showPopupNavigation && styles.rotateArrow}
         />
-      </li>
+      </div>
 
       <div
-        className={cn(
-          styles.popupMore,
-          showPopupNavigation ? '' : styles.popupMore_close
-        )}
-        ref={popupMoreRef}
+        className={cn(styles.popupMore, !showPopupNavigation && styles.popupMore_close)}
       >
         <ul className={styles.popupMore__list}>
           {moreArray.map((item: moreArrayTypes) => (
-            <li key={item.id}>
-              <Link
-                className={
-                  styles.popupMore__item
-                }
-                href={item.href}
-              >
-                {item.name}
-              </Link>
-            </li>
+            <Link
+              className={
+                styles.popupMore__item
+              }
+              href={item.href}
+              key={item.id}
+            >
+              {item.name}
+            </Link>
           ))}
 
           <li className={styles.popupMore__item}>
