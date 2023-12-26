@@ -33,28 +33,20 @@ const PopupProfile: FC<PopupProfileTypes> = ({ handleLogout }): JSX.Element => {
       onMouseLeave={() => toggleShowPopupProfile(false)}
     >
       <button
-        className={cn(styles.btnProfile)}
+        className={styles.btnProfile}
         type='button'
       >
-        <span className={cn(styles.btnProfile__name)}>
+        <span className={styles.btnProfile__name}>
           Г
         </span>
       </button>
 
       <div
-        className={cn(
-          styles.popupProfile,
-          showPopupProfile
-            ? ''
-            : styles.popupProfile_close
-        )}
+        className={cn(styles.popupProfile, !showPopupProfile && styles.popupProfile_close)}
       >
-        <div className={cn(styles.popupProfile__popupProfileWrapper)}>
+        <div className={styles.popupProfile__popupProfileWrapper}>
           <h4
-            className={cn(
-              styles.popupProfile__text,
-              styles.popupProfile__text_weight
-            )}
+            className={cn(styles.popupProfile__text, styles.popupProfile__text_weight)}
           >
             Uewrwer
           </h4>

@@ -34,7 +34,7 @@
   }
 
   &__iconWrapper {
-    width: 27px;
+    width: 30px;
     object-fit: contain;
 
     &_whatsapp {
@@ -57,6 +57,7 @@
   padding-top: 15px;
   position: absolute;
   transition: all 0.2s ease;
+  z-index: 1;
 
   &__wrapper {
     display: flex;
@@ -64,14 +65,13 @@
     background-color: $white;
     border-radius: 15px;
     height: 410px;
-    padding: 15px 13px;
+    padding: 15px 15px;
     column-gap: 15px;
   }
 
   &_close {
     visibility: hidden;
     opacity: 0;
-    z-index: -1;
     transform: scale(0.5);
   }
 
