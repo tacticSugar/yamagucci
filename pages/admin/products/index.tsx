@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   try {
     await Promise.all([
-      await queryClient.prefetchQuery({
+      queryClient.prefetchQuery({
         queryFn: () => getProducts(),
         queryKey: [QUERY_KEY_FETCH_PRODUCTS]
       })
@@ -37,6 +37,11 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+export const getStaticPaths = async (): Promise<any> => ({
+  fallback: 'blocking',
+  paths: []
+})
 
 // ts-prune-ignore-next
 export default memo(ProductsPage)

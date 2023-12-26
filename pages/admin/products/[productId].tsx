@@ -19,19 +19,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     await Promise.all([
-      await queryClient.prefetchQuery({
+      queryClient.prefetchQuery({
         queryFn: () => getProduct({ productId }),
         queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId }]
       }),
-      await queryClient.prefetchQuery({
+      queryClient.prefetchQuery({
         queryFn: () => getRentTypes({}),
         queryKey: [QUERY_KEY_FETCH_RENT_TYPES, {}]
       }),
-      await queryClient.prefetchQuery({
+      queryClient.prefetchQuery({
         queryFn: () => getSizeTypes({}),
         queryKey: [QUERY_KEY_FETCH_SIZE_TYPES, {}]
       }),
-      await queryClient.prefetchQuery({
+      queryClient.prefetchQuery({
         queryFn: () => getBorbozaIds(),
         queryKey: [QUERY_KEY_FETCH_BORBOZA_IDS]
       })
