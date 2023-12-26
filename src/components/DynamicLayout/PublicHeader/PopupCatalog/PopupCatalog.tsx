@@ -8,7 +8,6 @@ import IconWrapper from '@/src/components/atoms/IconWrapper/IconWrapper'
 import { categoriesList } from '@/src/constants/header'
 import {
   IconCross,
-  IconMassageChair,
   IconThreeLanes
 } from '@/src/constants/icons'
 
