@@ -36,55 +36,56 @@ const PopupYourCity = (): JSX.Element => {
   }, [toggleShowPopupCity, showPopupCity, handleClickOutside])
 
   return (
-    <div
-      className={styles.btnCity}
-      onClick={() => toggleShowPopupCity()}
-    >
-      <IconWrapper
-        IconComponent={IconLocation}
-        iconClassname={styles.btnCity__IconLocation}
-        wrapperClassname={styles.btnCity__IconLocationWrapper}
-      />
-      <p className={styles.btnCity__cityName}>
-        Москва
-      </p>
-      <IconWrapper
-        IconComponent={IconArrowDown}
-        iconClassname={cn(
-          styles.btnCity__imgArrow,
-          showPopupCity ? styles.rotateArrow : ''
-        )}
-      />
-
+    <div ref={popupCityRef}>
       <div
-        className={cn(
-          styles.popupYourCity,
-          showPopupCity
-            ? ''
-            : styles.popupYourCity_close
-        )}
-        ref={popupCityRef}
+        className={styles.btnCity}
+        onClick={() => toggleShowPopupCity()}
       >
-        <div
-          className={cn(styles.popupYourCity__dropDown, styles.dropDawnList)}
-        >
-          <input
-            className={cn(styles.popupYourCity__input, styles.dropDawnList)}
-            type='text'
-          />
-          {/* tODO: добавить dropDawn , стилизовать input */}
-        </div>
+        <IconWrapper
+          IconComponent={IconLocation}
+          iconClassname={styles.btnCity__IconLocation}
+          wrapperClassname={styles.btnCity__IconLocationWrapper}
+        />
+        <p className={styles.btnCity__cityName}>
+          Москва
+        </p>
+        <IconWrapper
+          IconComponent={IconArrowDown}
+          iconClassname={cn(
+            styles.btnCity__imgArrow,
+            showPopupCity ? styles.rotateArrow : ''
+          )}
+        />
 
-        <ul className={styles.popupYourCity__list}>
-          {arrayCity.map((item: string, index: number) => (
-            <li
-              className={styles.popupYourCity__item}
-              key={index}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div
+          className={cn(
+            styles.popupYourCity,
+            showPopupCity
+              ? ''
+              : styles.popupYourCity_close
+          )}
+        >
+          <div
+            className={cn(styles.popupYourCity__dropDown, styles.dropDawnList)}
+          >
+            <input
+              className={cn(styles.popupYourCity__input, styles.dropDawnList)}
+              type='text'
+            />
+            {/* tODO: добавить dropDawn , стилизовать input */}
+          </div>
+
+          <ul className={styles.popupYourCity__list}>
+            {arrayCity.map((item: string, index: number) => (
+              <li
+                className={styles.popupYourCity__item}
+                key={index}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   )
