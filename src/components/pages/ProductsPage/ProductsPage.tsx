@@ -123,7 +123,7 @@ const ProductPage = () => {
   return (
     <>
       {isLoading
-        ? times(4)?.map((x, key) => (
+        ? times(6)?.map((x, key) => (
           <LoaderQuery
             className={styles.loader}
             isLoading={isLoading}
