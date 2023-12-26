@@ -1,5 +1,58 @@
 @import 'styles/variables';
 
+.relativeBox {
+  position: relative;
+}
+
+.btnSupport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  max-height: unset;
+  border-radius: 15px;
+  background-color: $gray-matt-black;
+
+  &:hover {
+    background-color: $red-main;
+  }
+
+  @include nsm {
+    background-color: $black;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  @include nsm {
+    width: 7.8vw;
+    height: 7.8vw;
+  }
+
+
+  &__iconWrapper {
+    width: 27px;
+    object-fit: contain;
+
+    &_whatsapp {
+      width: 30px;
+    }
+
+    svg {
+      fill: $white;
+    }
+
+    @include nlg {
+      width: 7.8vw;
+    }
+  }
+}
+
+
 .popupSupport {
   top: 100%;
   right: -220px;
@@ -23,8 +76,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    // transform: translateX(100%);
-    z-index: -1;
+    transform: scale(.5);
   }
 
   &__box {

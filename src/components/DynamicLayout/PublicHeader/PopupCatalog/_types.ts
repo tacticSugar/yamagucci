@@ -17,6 +17,9 @@ export type GlobalCategoryArrayTypes = {
   /** название строки */
   name: string
 
+  /** ссылка на картинку, для картинки в блоке подкатегорий */
+  src: string
+
   /** массив подкатегорий  */
   subcategories: Array<SubcategoryArrayTypes>
 }

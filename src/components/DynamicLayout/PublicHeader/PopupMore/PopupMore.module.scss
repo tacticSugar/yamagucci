@@ -1,19 +1,59 @@
 @import 'styles/variables';
 
+.rotateArrow {
+  transform: rotate(180deg);
+}
+
+// .relativeBox{
+//   position: relative;
+// }
+
+.moreBtn {
+  display: flex;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      fill: $red-main;
+    }
+
+    .moreBtn__text {
+      color: $red-main;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    color: $white;
+  }
+}
+
 .popupMore {
-  top: 132%;
-  right: 0;
+  top: 100%;
+  right: 20px;
   position: absolute;
-  z-index: 444;
+  z-index: 333;
   width: 230px;
   min-height: 500px;
   padding: 20px 30px 10px 30px;
   border-radius: 0 0 0 15px;
   background-color: #212327;
+  transition: all .2s ease-in-out;
 
   &_close {
-    display: none;
-    // transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-150%);
   }
 
   &__list {
@@ -26,6 +66,7 @@
   &__item {
     font-size: 14px;
     color: $white;
+
     &:hover {
       cursor: pointer;
       color: $red-main;

@@ -1,5 +1,51 @@
 @import 'styles/variables';
 
+.rotateArrow {
+  transform: rotate(180deg);
+}
+
+.IconLocation {
+  fill: $white;
+}
+
+.btnCity {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 30px;
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      fill: $red-main;
+    }
+
+    .btnCity__cityName {
+      color: $red-main;
+    }
+  }
+
+  &__IconLocationWrapper {
+    width: 20px;
+    height: 20px;
+    min-width: unset;
+    min-height: unset;
+    margin-bottom: 5px;
+  }
+
+  &__cityName {
+    color: $white;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 160%;
+  }
+
+  &__imgArrow {
+    fill: $white;
+  }
+}
+
 .popupYourCity {
   position: absolute;
   z-index: 444;
