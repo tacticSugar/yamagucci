@@ -41,13 +41,12 @@
   top: 100%;
   right: 20px;
   position: absolute;
-  z-index: 333;
   width: 230px;
   min-height: 500px;
   padding: 20px 30px 10px 30px;
   border-radius: 0 0 0 15px;
   background-color: #212327;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &_close {
     visibility: hidden;

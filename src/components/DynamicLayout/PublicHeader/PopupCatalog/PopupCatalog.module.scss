@@ -29,15 +29,13 @@
   height: 640px;
   top: 100%;
   left: 0;
-  z-index: -1;
   position: absolute;
-  z-index: 444;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  z-index: 1;
 
   &_close {
     visibility: hidden;
     opacity: 0;
-    z-index: -1;
     transform: translateX(-100%);
   }
 

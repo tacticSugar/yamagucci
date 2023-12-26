@@ -1,22 +1,13 @@
 @import 'styles/variables';
 
-.rotateArrow {
-  transform: rotate(180deg);
-}
-
-.IconLocation {
-  fill: $white;
-}
-
 .btnCity {
   display: flex;
   align-items: center;
   position: relative;
   height: 30px;
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
-
     svg {
       fill: $red-main;
     }
@@ -26,52 +17,39 @@
     }
   }
 
-  &__IconLocationWrapper {
-    width: 20px;
-    height: 20px;
-    min-width: unset;
-    min-height: unset;
-    margin-bottom: 5px;
-  }
-
   &__cityName {
-    color: $white;
     font-size: 14px;
     font-weight: 300;
     line-height: 160%;
   }
+}
 
-  &__imgArrow {
-    fill: $white;
-  }
+.rotateArrow {
+  transform: scale(-1);
 }
 
 .popupYourCity {
   position: absolute;
-  z-index: 444;
-  transition: all 0.2s ease;
+  z-index: 10;
+  transition: all 0.25s ease;
   width: 600px;
-  // height: 1350px;
   padding: 20px 0 35px;
   top: 100%;
   left: -20px;
   background-color: $white;
-
-  border-radius: 0 0 15px 0;
+  padding: 25px;
+  border-radius: 0 15px 15px 0;
 
   &_close {
     transform: translateX(-100%);
     visibility: hidden;
     opacity: 0;
-    z-index: -1;
   }
 
   &__list {
     display: grid;
-    // flex-flow: column wrap;
     grid-template-columns: 1fr 2fr;
-    padding: 0 25px;
-    max-height: 84vh;
+    max-height: 80vh;
     row-gap: 15px;
     overflow-y: auto;
 
@@ -98,6 +76,21 @@
     width: 220px;
     font-weight: 300;
     font-size: 18px;
+    color: $black;
+    white-space: nowrap;
+    cursor: pointer;
+    &:hover {
+      color: $red-main;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $gray-main;
+    border-radius: 15px;
+    padding: 0 15px;
+    margin-bottom: 20px;
     color: $black;
   }
 }

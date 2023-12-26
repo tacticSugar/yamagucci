@@ -17,7 +17,7 @@ import ErrorBoundary from '@/src/lib/ErrorBoundary'
 /** основной шрифт сайта */
 const monserrat = Montserrat({
   subsets: ['cyrillic'],
-  weight: ['400', '500', '700']
+  weight: ['300', '400', '500', '700']
 })
 
 /** app */

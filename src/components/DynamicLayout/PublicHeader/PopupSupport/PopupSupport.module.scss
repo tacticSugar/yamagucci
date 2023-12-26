@@ -33,7 +33,6 @@
     height: 7.8vw;
   }
 
-
   &__iconWrapper {
     width: 27px;
     object-fit: contain;
@@ -52,14 +51,11 @@
   }
 }
 
-
 .popupSupport {
   top: 100%;
   right: -220px;
-  z-index: 333;
   padding-top: 15px;
   position: absolute;
-  z-index: 444;
   transition: all 0.2s ease;
 
   &__wrapper {
@@ -76,7 +72,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 
   &__box {
