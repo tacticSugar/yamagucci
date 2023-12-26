@@ -13,11 +13,23 @@ export const getStaticProps: GetStaticProps = async () => {
 
   try {
     await Promise.all([
-      await queryClient.prefetchQuery({
+      queryClient.prefetchQuery({
         queryFn: getCategories,
         queryKey: [QUERY_KEY_FETCH_CATEGORIES]
       })
     ])
+
+    /** список продуктов */
+    const categories = queryClient.getQueryData([QUERY_KEY_FETCH_CATEGORIES])
+
+    if (!categories) {
+      return {
+        redirect: {
+          destination: '/404',
+          permanent: false
+        }
+      }
+    }
 
     return {
       props: {
