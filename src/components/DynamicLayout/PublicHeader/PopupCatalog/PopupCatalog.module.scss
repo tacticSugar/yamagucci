@@ -1,12 +1,35 @@
 @import 'styles/variables';
 
+.btnCatalog {
+  width: 185px;
+  height: 45px;
+
+  &:hover {
+    div {
+      rotate: unset;
+    }
+  }
+
+  @include max_desktop {
+    width: 170px;
+  }
+
+  @include nlg {
+    width: 155px;
+  }
+
+  @include nlgs {
+    display: none;
+  }
+}
+
 .catalogPopup {
   display: flex;
   min-width: 905px;
   height: 640px;
   top: 100%;
   left: 0;
-  z-index: 111;
+  z-index: -1;
   position: absolute;
   z-index: 444;
   transition: all 0.2s ease;
@@ -15,7 +38,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
 
   &__box {

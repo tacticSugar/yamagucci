@@ -1,4 +1,3 @@
-import { useToggle } from '@reactuses/core'
 import cn from 'classnames'
 import Link from 'next/link'
 import { FC, memo } from 'react'
@@ -11,15 +10,11 @@ import PopupSupport from '@/src/components/DynamicLayout/PublicHeader/PopupSuppo
 import PopupYourCity from '@/src/components/DynamicLayout/PublicHeader/PopupYourCity/PopupYourCity'
 import { navigationLinks } from '@/src/constants/header'
 import {
-  IconArrowDown,
   IconCart,
-  IconCross,
   IconGiftBox,
   IconGlare,
   IconHeart,
-  IconLocation,
   IconLoupeStripes,
-  IconPhone,
   IconSearch,
   IconThreeLanes,
   IconWhatsapp
@@ -33,48 +28,15 @@ import PopupProfile from './PopupProfile/PopupProfile'
 import styles from './PublicHeader.module.scss'
 
 /** компонент Header в публичной части */
-const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
-  // tODO: вынести все state в props убрать функционал на уровень выше
-  // tODO: добавить анимации появления popup-ов
-  /** состояние popup городов */
-  const [showPopupCity, toggleShowPopupCity] = useToggle(false)
-  /** состояние popup навигации */
-  const [showPopupNavigation, toggleShowPopupNavigation] = useToggle(false)
-  /** состояние popup каталог */
-  const [showPopupCatalog, toggleShowPopupCatalog] = useToggle(false)
-  /** состояние popup поддержки */
-  const [showPopupSupport, toggleShowPopupSupport] = useToggle(false)
-  /** состояние popup профиля */
-  const [showPopupProfile, toggleShowPopupProfile] = useToggle(false)
+const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element =>
 
   // кнопки профиля и избранное не отображаются, когда пользователь не авторизован
-  return (
+  (
     <header className={styles.publicHeader}>
       <div className={styles.publicHeader__navigationBox}>
         <nav className={styles.navigation}>
-          <div
-            className={styles.navigation__btnCity}
-            onClick={() => toggleShowPopupCity()}
-          >
-            <IconWrapper
-              IconComponent={IconLocation}
-              iconClassname={styles.IconLocation}
-            />
-            <p className={styles.navigation__cityName}>
-              Москва
-            </p>
-            <IconWrapper
-              IconComponent={IconArrowDown}
-              iconClassname={cn(
-                styles.imgArrow,
-                showPopupCity ? styles.rotateArrow : ''
-              )}
-            />
-            {
-              showPopupCity &&
-                <PopupYourCity />
-            }
-          </div>
+
+          <PopupYourCity />
 
           <ul className={styles.navigation__list}>
             {navigationLinks.map((item: NavLinkArrayTypes) => (
@@ -87,24 +49,9 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
                 </Link>
               </li>
             ))}
-            <li
-              className={styles.navigation__moreBox}
-              onClick={() => toggleShowPopupNavigation()}
-            >
-              <p className={styles.navigation__more}>
-                Ещё
-              </p>
-              <IconWrapper
-                IconComponent={IconArrowDown}
-                iconClassname={cn(
-                  styles.imgArrow,
-                  showPopupNavigation ? styles.rotateArrow : ''
-                )}
-              />
-              { showPopupNavigation &&
-                <PopupMore />}
 
-            </li>
+            <PopupMore />
+
           </ul>
         </nav>
       </div>
@@ -133,19 +80,7 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
           styleLogoImg={styles.publicHeader__logo}
         />
 
-        <ButtonIcon
-          className={cn(styles.publicHeader__catalog, styles.btnCatalog)}
-          colorVariant='red'
-          icon={showPopupCatalog ? IconCross : IconThreeLanes}
-          label='Каталог'
-          onClick={() => toggleShowPopupCatalog()}
-          paddingVariant='wide'
-          withIcon={true}
-        />
-        {
-          showPopupCatalog &&
-            <PopupCatalog />
-        }
+        <PopupCatalog />
 
         <div className={styles.publicHeader__searchBox}>
           <input
@@ -207,26 +142,7 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
             />
           </button>
 
-          <div
-            className={styles.relativeBox}
-            onMouseEnter={() => toggleShowPopupSupport(true)}
-            onMouseLeave={() => toggleShowPopupSupport(false)}
-          >
-            <button
-              className={cn(styles.userPanel__btn)}
-              type='button'
-            >
-              <IconWrapper
-                IconComponent={IconPhone}
-                wrapperClassname={styles.userPanel__iconWrapper}
-              />
-            </button>
-            {
-              showPopupSupport &&
-                <PopupSupport />
-            }
-          </div>
-
+          <PopupSupport />
           {/* кнопка избранное  */}
           <button
             className={cn(styles.userPanel__btn)}
@@ -257,23 +173,9 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
             </span>
           </button>
 
-          {/* кнопка профиль */}
-          <div
-            onMouseEnter={() => toggleShowPopupProfile(true)}
-            onMouseLeave={() => toggleShowPopupProfile(false)}
-          >
-            <button
-              className={cn(styles.userPanel__btn)}
-              type='button'
-            >
-              <span className={cn(styles.userPanel__name)}>
-                Г
-              </span>
-            </button>
+          {/* кнопка и popup профиля */}
 
-            {showPopupProfile &&
-              <PopupProfile handleLogout={handleLogout} />}
-          </div>
+          <PopupProfile handleLogout={handleLogout} />
 
           {/* кнопка войти */}
           {/* <button className={cn(styles.userPanel__enter)}>
@@ -342,6 +244,5 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element => {
       </nav>
     </header>
   )
-}
 
 export default memo(PublicHeader)
