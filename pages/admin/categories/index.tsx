@@ -24,10 +24,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     if (!categories) {
       return {
-        redirect: {
-          destination: '/404',
-          permanent: false
-        }
+        notFound: true
       }
     }
 
