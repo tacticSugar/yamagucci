@@ -38,10 +38,5 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export const getStaticPaths = async (): Promise<any> => ({
-  fallback: 'blocking',
-  paths: []
-})
-
 // ts-prune-ignore-next
 export default memo(ProductsPage)

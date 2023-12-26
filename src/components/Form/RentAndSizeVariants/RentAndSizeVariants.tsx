@@ -14,9 +14,9 @@ import styles from './RentAndSize.module.scss'
 /** компонент отрисовки списка вариантов размеров или аренды */
 const RentAndSizeVariants: FC<RentAndSizeVariantsTypes> = ({ mockVariant, name }) => {
   /** варианты аренды */
-  const { data: rentTypes, isLoading: isLoadingRents } = useFetchRentTypes({ mockVariant, name })
+  const { data: rentTypes, isLoading: isLoadingRents } = useFetchRentTypes({ mockVariant })
   /** варианты размеров */
-  const { data: sizeTypes, isLoading: isLoadingSizes } = useFetchSizeTypes({ mockVariant, name })
+  const { data: sizeTypes, isLoading: isLoadingSizes } = useFetchSizeTypes({ mockVariant })
   /** урл для айди товара */
   const { query } = useRouter()
   /** методы формы */

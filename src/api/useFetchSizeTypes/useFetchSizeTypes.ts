@@ -27,8 +27,7 @@ export const getSizeTypes = async ({ mockVariant }: FetchSizeTypesParams): Promi
 }
 
 /** хук запроса списка продуктов */
-const useFetchSizeTypes = ({ mockVariant, name }: FetchSizeTypesParams): UseQueryResult<FetchSizeTypesOriginalResult, Error> => useQuery<FetchSizeTypesOriginalResult, Error, FetchSizeTypesOriginalResult, FetchSizeTypesQueryKeyType>({
-  enabled: name === 'size',
+const useFetchSizeTypes = ({ mockVariant }: FetchSizeTypesParams): UseQueryResult<FetchSizeTypesOriginalResult, Error> => useQuery<FetchSizeTypesOriginalResult, Error, FetchSizeTypesOriginalResult, FetchSizeTypesQueryKeyType>({
   queryFn: () => getSizeTypes({ mockVariant }),
   queryKey: [QUERY_KEY_FETCH_SIZE_TYPES, { mockVariant }]
 })

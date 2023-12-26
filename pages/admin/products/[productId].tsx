@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         queryKey: [QUERY_KEY_FETCH_SIZE_TYPES, {}]
       }),
       queryClient.prefetchQuery({
-        queryFn: () => getBorbozaIds(),
+        queryFn: getBorbozaIds,
         queryKey: [QUERY_KEY_FETCH_BORBOZA_IDS]
       })
     ])

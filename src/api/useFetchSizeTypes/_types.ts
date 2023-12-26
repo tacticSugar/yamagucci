@@ -14,6 +14,4 @@ export type FetchSizeTypesQueryKeyType = [typeof QUERY_KEY_FETCH_SIZE_TYPES,
 export type FetchSizeTypesParams = {
   /** mockVariant */
   mockVariant?:string
-  /** имя поля в форме */
-  name?: 'rent' | 'size'
 }

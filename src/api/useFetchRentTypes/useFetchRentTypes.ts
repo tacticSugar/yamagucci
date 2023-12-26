@@ -27,8 +27,7 @@ export const getRentTypes = async ({ mockVariant }: FetchRentTypesParams): Promi
 }
 
 /** хук запроса списка продуктов */
-const useFetchRentTypes = ({ mockVariant, name }: FetchRentTypesParams): UseQueryResult<FetchRentTypesOriginalResult, Error> => useQuery<FetchRentTypesOriginalResult, Error, FetchRentTypesOriginalResult, FetchRentTypesQueryKeyType>({
-  enabled: name === 'rent',
+const useFetchRentTypes = ({ mockVariant }: FetchRentTypesParams): UseQueryResult<FetchRentTypesOriginalResult, Error> => useQuery<FetchRentTypesOriginalResult, Error, FetchRentTypesOriginalResult, FetchRentTypesQueryKeyType>({
   queryFn: () => getRentTypes({ mockVariant }),
   queryKey: [QUERY_KEY_FETCH_RENT_TYPES, { mockVariant }]
 })
