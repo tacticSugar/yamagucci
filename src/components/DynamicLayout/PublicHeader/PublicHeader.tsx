@@ -104,20 +104,14 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element =>
 
           <IconWrapper
             IconComponent={IconGlare}
-            iconClassname={cn(styles.publicHeader__IconGlare)}
-            wrapperClassname={cn(
-              styles.btnGifts__imgGlareWrapper,
-              styles.btnGifts__imgGlareWrapper_left
-            )}
+            iconClassname={styles.publicHeader__IconGlare}
+            wrapperClassname={cn(styles.btnGifts__imgGlareWrapper, styles.btnGifts__imgGlareWrapper_left)}
           />
 
           <IconWrapper
             IconComponent={IconGlare}
             iconClassname={cn(styles.publicHeader__IconGlare)}
-            wrapperClassname={cn(
-              styles.btnGifts__imgGlareWrapper,
-              styles.btnGifts__imgGlareWrapper_right
-            )}
+            wrapperClassname={cn(styles.btnGifts__imgGlareWrapper, styles.btnGifts__imgGlareWrapper_right)}
           />
           <p className={styles.btnGifts__text}>
             Идеи подарков
@@ -126,18 +120,12 @@ const PublicHeader: FC<PublicHeaderTypes> = ({ handleLogout }): JSX.Element =>
 
         <div className={styles.userPanel}>
           <button
-            className={cn(
-              styles.userPanel__btn,
-              styles.userPanel__btn_whatsapp
-            )}
+            className={cn(styles.userPanel__btn, styles.userPanel__btn_whatsapp)}
             type='button'
           >
             <IconWrapper
               IconComponent={IconWhatsapp}
-              wrapperClassname={cn(
-                styles.userPanel__iconWrapper,
-                styles.userPanel__iconWrapper_whatsapp
-              )}
+              wrapperClassname={cn(styles.userPanel__iconWrapper, styles.userPanel__iconWrapper_whatsapp)}
             />
           </button>
 

@@ -4,12 +4,6 @@
   width: 185px;
   height: 45px;
 
-  &:hover {
-    div {
-      rotate: unset;
-    }
-  }
-
   @include max_desktop {
     width: 170px;
   }
@@ -25,7 +19,7 @@
 
 .catalogPopup {
   display: flex;
-  min-width: 905px;
+  min-width: 900px;
   height: 640px;
   top: 100%;
   left: 0;
@@ -137,7 +131,7 @@
     margin-bottom: 25px;
   }
 
-  &__CategoryImg {
+  &__categoryImg {
     width: 100%;
     object-fit: contain;
     object-position: center;
@@ -181,12 +175,6 @@
     height: 460px;
     padding-left: 5px;
     gap: 20px 10px;
-  }
-
-  &__subcategory {
-    display: flex;
-    align-items: center;
-    width: 245px;
   }
 
   &__titleSubcategories {

@@ -21,8 +21,7 @@ const PopupCatalog = (): JSX.Element => {
   /** popupCatalogRef */
   const popupCatalogRef = useRef<HTMLDivElement>(null)
   /** категория в каталоге, при наведении */
-  const [idFocusCategory, setFocusCategory] =
-   useState<GlobalCategoryArrayTypes>(categoriesList.find((item) => item.id === 1))
+  const [focusedCategory, setFocusedCategory] = useState<GlobalCategoryArrayTypes>(categoriesList.find((item) => item.id === 1))
 
   /** функция для клика вне модального окна */
   const handleClickOutside = useCallback((e) => {
@@ -42,38 +41,27 @@ const PopupCatalog = (): JSX.Element => {
   }, [toggleShowPopupCatalog, showPopupCatalog, handleClickOutside])
 
   /** функция для получения id global category при наведении */
-  const handlerIdCategory = (idFocusCategory) => {
+  const handlerIdCategory = (idFocusedCategory) => {
     /** выбор активной категории */
-    const category = categoriesList.find((item) => item.id === idFocusCategory)
+    const category = categoriesList.find((item) => item.id === idFocusedCategory)
 
-    setFocusCategory(category)
+    setFocusedCategory(category)
   }
 
   return (
     <div ref={popupCatalogRef}>
       <ButtonIcon
-        className={cn(styles.publicHeader__catalog, styles.btnCatalog)}
+        className={styles.btnCatalog}
         colorVariant='red'
         icon={showPopupCatalog ? IconCross : IconThreeLanes}
         label='Каталог'
-        onClick={() => toggleShowPopupCatalog()}
+        onClick={toggleShowPopupCatalog}
         paddingVariant='wide'
         withIcon={true}
       />
 
-      <div
-        className={cn(
-          styles.catalogPopup,
-          showPopupCatalog ? '' : styles.catalogPopup_close
-        )}
-      >
-        <div
-          className={cn(
-            styles.catalogPopup__box,
-            styles.catalogPopup__box_left
-          )}
-
-        >
+      <div className={cn(styles.catalogPopup, !showPopupCatalog && styles.catalogPopup_close)}>
+        <div className={cn(styles.catalogPopup__box, styles.catalogPopup__box_left)}>
           <div className={styles.catalogPopup__topImgBox}>
             <Link
               className={styles.catalogPopup__imgContainer}
@@ -105,12 +93,7 @@ const PopupCatalog = (): JSX.Element => {
               className={styles.catalogPopup__imgContainer}
               href='/'
             >
-              <h6
-                className={cn(
-                  styles.catalogPopup__textImg,
-                  styles.catalogPopup__textImg_white
-                )}
-              >
+              <h6 className={cn(styles.catalogPopup__textImg, styles.catalogPopup__textImg_white)}>
                 Домашний фитнес-зал
               </h6>
               <img
@@ -123,62 +106,50 @@ const PopupCatalog = (): JSX.Element => {
           <ul className={styles.catalogPopup__globalCategoriesBox}>
             {categoriesList.map((category: GlobalCategoryArrayTypes) => (
               <Link
+                className={styles.catalogPopup__globalCategories}
                 href={category.href}
                 key={category.id}
-                onMouseEnter={() => {
-                  handlerIdCategory(category.id)
-                }}
+                onMouseEnter={() => handlerIdCategory(category.id)}
               >
-                <li className={styles.catalogPopup__globalCategories}>
-                  <IconWrapper
-                    IconComponent={category.img}
-                    wrapperClassname={styles.catalogPopup__iconWrapper}
-                  />
-                  <p className={styles.catalogPopup__title}>
-                    {category.name}
-                  </p>
-                </li>
+                <IconWrapper
+                  IconComponent={category.img}
+                  wrapperClassname={styles.catalogPopup__iconWrapper}
+                />
+                <p className={styles.catalogPopup__title}>
+                  {category.name}
+                </p>
               </Link>
             ))}
           </ul>
         </div>
-        <div
-          className={cn(
-            styles.catalogPopup__box,
-            styles.catalogPopup__box_right
-          )}
-        >
-          <div
-            className={styles.catalogPopup__imgCategory}
-          >
+        <div className={cn(styles.catalogPopup__box, styles.catalogPopup__box_right)}>
+          <div className={styles.catalogPopup__imgCategory}>
             <img
               alt='товары'
-              className={styles.catalogPopup__CategoryImg}
-              src={idFocusCategory?.src}
+              className={styles.catalogPopup__categoryImg}
+              src={focusedCategory?.src}
             />
             <p className={cn(styles.catalogPopup__nameCategory,
-              idFocusCategory?.id === 1 || idFocusCategory?.id === 5 ? styles.catalogPopup__nameCategory_colorWhite : '')}
+              (focusedCategory?.id === 1 || focusedCategory?.id === 5) && styles.catalogPopup__nameCategory_colorWhite)}
             >
-              {idFocusCategory?.name}
+              {focusedCategory?.name}
             </p>
             <Link
               className={cn(styles.catalogPopup__linkCategory,
-                idFocusCategory?.id === 1 || idFocusCategory?.id === 5 ? styles.catalogPopup__linkCategory_colorWhite : '')}
-              href={idFocusCategory?.href}
+                (focusedCategory?.id === 1 || focusedCategory?.id === 5) && styles.catalogPopup__linkCategory_colorWhite)}
+              href={focusedCategory?.href}
             >
               Смотреть все
             </Link>
           </div>
 
           <ul className={styles.catalogPopup__listSubcategories} >
-            {idFocusCategory?.subcategories?.map((subcategory) => (
+            {focusedCategory?.subcategories?.map((subcategory) => (
               <Link
                 href={subcategory.href}
                 key={subcategory.id}
               >
-                <li
-                  className={styles.catalogPopup__subcategories}
-                >
+                <li className={styles.catalogPopup__subcategories}>
                   <p className={styles.catalogPopup__titleSubcategories}>
                     {subcategory.name}
                   </p>
