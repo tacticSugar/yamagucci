@@ -22,14 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
     /** список продуктов */
     const products = queryClient.getQueryData([QUERY_KEY_FETCH_PRODUCTS])
 
-    if (!products) {
-      return {
-        redirect: {
-          destination: '/404',
-          permanent: false
-        }
-      }
-    }
+    console.log('products', products)
 
     return {
       props: {
