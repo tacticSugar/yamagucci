@@ -19,15 +19,6 @@ export const getStaticProps: GetStaticProps = async () => {
       })
     ])
 
-    /** список продуктов */
-    const categories = queryClient.getQueryData([QUERY_KEY_FETCH_CATEGORIES])
-
-    if (!categories) {
-      return {
-        notFound: true
-      }
-    }
-
     return {
       props: {
         dehydratedState: dehydrate(queryClient)
