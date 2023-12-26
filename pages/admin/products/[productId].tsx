@@ -2,7 +2,10 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { GetStaticProps } from 'next'
 import { memo } from 'react'
 
+import { getBorbozaIds, QUERY_KEY_FETCH_BORBOZA_IDS } from '@/src/api/useFetchBorbozaIds/useFetchBorbozaIds'
 import { getProduct, QUERY_KEY_FETCH_PRODUCT } from '@/src/api/useFetchProduct/useFetchProduct'
+import { getRentTypes, QUERY_KEY_FETCH_RENT_TYPES } from '@/src/api/useFetchRentTypes/useFetchRentTypes'
+import { getSizeTypes, QUERY_KEY_FETCH_SIZE_TYPES } from '@/src/api/useFetchSizeTypes/useFetchSizeTypes'
 import AdminProductPage from '@/src/components/pages/AdminProductPage/AdminProductPage'
 
 /** загрузка данных. */
@@ -19,6 +22,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
       await queryClient.prefetchQuery({
         queryFn: () => getProduct({ productId }),
         queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId }]
+      }),
+      await queryClient.prefetchQuery({
+        queryFn: () => getRentTypes({}),
+        queryKey: [QUERY_KEY_FETCH_RENT_TYPES, {}]
+      }),
+      await queryClient.prefetchQuery({
+        queryFn: () => getSizeTypes({}),
+        queryKey: [QUERY_KEY_FETCH_SIZE_TYPES, {}]
+      }),
+      await queryClient.prefetchQuery({
+        queryFn: () => getBorbozaIds(),
+        queryKey: [QUERY_KEY_FETCH_BORBOZA_IDS]
       })
     ])
 
