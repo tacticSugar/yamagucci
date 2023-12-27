@@ -59,10 +59,7 @@ const mainMiddleware = async (req: NextRequest): Promise<any> => {
     }
   }
 
-  /**
-     * если все ок и никакие редиректы не нужны,
-     * то просто показываем нужную страницу
-     */
+  /** если все ок и никакие редиректы не нужны, то просто показываем нужную страницу */
   url.pathname = pathname
   response = NextResponse.rewrite(url)
 
