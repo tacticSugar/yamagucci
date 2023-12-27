@@ -44,7 +44,7 @@ const mainMiddleware = async (req: NextRequest): Promise<any> => {
         Authorization: `Bearer ${AUTH_TOKEN}`,
         'Content-Type': 'application/json'
       },
-      method: 'post'
+      method: 'POST'
     })
 
     /** роль юзера */
