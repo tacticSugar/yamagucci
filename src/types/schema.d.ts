@@ -9,2924 +9,227 @@ export interface paths {
   };
   "/api/admin/articles": {
     /** Список статей */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["ArticleSchema"][];
-            };
-          };
-        };
-      };
-    };
+    get: operations["6f2571c00a93467269052b80c2d34690"];
   };
   "/api/admin/articles/{article}": {
     /** Одна статья */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID статьи
-           * @example 3
-           */
-          article: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["ArticleSchema"];
-          };
-        };
-      };
-    };
+    get: operations["ca8e8d54f2696dd60e0e6413379ab91a"];
   };
   "/api/admin/badges": {
     /** Список бейджей */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 4 */
-                  id?: number;
-                  /**
-                   * @description ID группы
-                   * @example 12
-                   */
-                  group_id?: number | null;
-                  /**
-                   * @description Текст
-                   * @example Укрепи дружбу
-                   */
-                  text?: string | null;
-                  /**
-                   * @description Активен ли бейдж
-                   * @example 1
-                   */
-                  is_active?: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["e0fe065ca8d3dde9780cb63af7c4248a"];
   };
   "/api/admin/badges/{badge}": {
     /** Один бейдж */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID бейджа
-           * @example 3
-           */
-          badge: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 4 */
-                id?: number;
-                /**
-                 * @description ID группы
-                 * @example 12
-                 */
-                group_id?: number | null;
-                /**
-                 * @description Текст
-                 * @example Укрепи дружбу
-                 */
-                text?: string | null;
-                /**
-                 * @description Активен ли бейдж
-                 * @example 1
-                 */
-                is_active?: number | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["61484a3cc866ff6e8bbb53f934d3aae5"];
   };
   "/api/admin/badge_groups": {
     /** Список групп бейджей */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название бренда
-                   * @example YAMAGUCHI
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["5f901cf8a108221f238a2fc7a4425402"];
   };
   "/api/admin/badge_groups/{badge_group}": {
     /** Один бейдж */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID бренда
-           * @example 3
-           */
-          badge_group: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 3 */
-                id?: number;
-                /**
-                 * @description Название бренда
-                 * @example YAMAGUCHI
-                 */
-                name?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-                /**
-                 * @description Дата создания
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                created_at?: string | null;
-                /**
-                 * @description Дата обновления
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                updated_at?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["4e2282deafbe58eea84775997f8b605b"];
   };
   "/api/admin/banners": {
     /** Список баннеров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 1 */
-                  id?: number;
-                  /**
-                   * @description Название
-                   * @example Колесо фортуны
-                   */
-                  name?: string | null;
-                  /**
-                   * @description HTML-код баннера
-                   * @example <div...><div ...><a href...></a></div></div>
-                   */
-                  html?: string | null;
-                  /**
-                   * @description Позиция
-                   * @example 5
-                   */
-                  position?: number | null;
-                  /**
-                   * @description Задержка, сек
-                   * @example 4
-                   */
-                  delay?: number | null;
-                  /**
-                   * @description Дата начала отображения
-                   * @example 2023-08-08 18:00:49
-                   */
-                  date_start?: string | null;
-                  /**
-                   * @description Дата окончания отображения
-                   * @example 2023-12-12 23:55:31
-                   */
-                  date_end?: string | null;
-                  /**
-                   * @description Статус (публикация)
-                   * @example 1
-                   */
-                  status?: number | null;
-                  /**
-                   * @description Активность (архив)
-                   * @example 1
-                   */
-                  is_active?: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["2075efab0f0f5a8938f9bcf5deec03fa"];
   };
   "/api/admin/banners/{banner}": {
     /** Один баннер */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID баннера
-           * @example 26
-           */
-          banner: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 1 */
-                id?: number;
-                /**
-                 * @description Название
-                 * @example Колесо фортуны
-                 */
-                name?: string | null;
-                /**
-                 * @description HTML-код баннера
-                 * @example <div...><div ...><a href...></a></div></div>
-                 */
-                html?: string | null;
-                /**
-                 * @description Позиция
-                 * @example 5
-                 */
-                position?: number | null;
-                /**
-                 * @description Задержка, сек
-                 * @example 4
-                 */
-                delay?: number | null;
-                /**
-                 * @description Дата начала отображения
-                 * @example 2023-08-08 18:00:49
-                 */
-                date_start?: string | null;
-                /**
-                 * @description Дата окончания отображения
-                 * @example 2023-12-12 23:55:31
-                 */
-                date_end?: string | null;
-                /**
-                 * @description Статус (публикация)
-                 * @example 1
-                 */
-                status?: number | null;
-                /**
-                 * @description Активность (архив)
-                 * @example 1
-                 */
-                is_active?: number | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["a0739c1d5bed0ecafe9afa6ba88fca7a"];
   };
   "/api/admin/borboza_products/schema": {
     /** Все товары из борбозы для поля поиска по borboza id */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: ({
-                  /**
-                   * @description ID товара в Борбозе
-                   * @example 2518
-                   */
-                  item_id: number | null;
-                  /**
-                   * @description ID товара в Борбозе + Название товара в Борбозе
-                   * @example [2518] Бандаж на локтевой сустав Yamaguchi Aeroprene Elbow Support (черный, размер S)
-                   */
-                  title: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["358f4490ceb81e41b5a7e2685a4e66b9"];
   };
   "/api/admin/borboza_products/{item_id}": {
     /** Один товар */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID товара в Борбозе
-           * @example 6
-           */
-          item_id: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["BorbozaProductSchema"];
-            };
-          };
-        };
-      };
-    };
+    get: operations["ae583f2bff92a9e16756f4993c7748be"];
   };
   "/api/admin/brands": {
     /** Список брендов */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название бренда
-                   * @example YAMAGUCHI
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["f96eaf6d4d6aa05a51c59d0b28404677"];
   };
   "/api/admin/brands/{brand}": {
     /** Один бренд */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID бренда
-           * @example 3
-           */
-          brand: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 3 */
-                id?: number;
-                /**
-                 * @description Название бренда
-                 * @example YAMAGUCHI
-                 */
-                name?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-                /**
-                 * @description Дата создания
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                created_at?: string | null;
-                /**
-                 * @description Дата обновления
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                updated_at?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["6adf3c730f3effee8a32a3d260ad6288"];
   };
   "/api/admin/categories/schema": {
     /** Список категорий товаров с вложенностью */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: ({
-                  /** @example 2 */
-                  id: number;
-                  /**
-                   * @description ID родительской категории
-                   * @example 2
-                   */
-                  parent_id: number | null;
-                  /**
-                   * @description Название категории
-                   * @example Массажные кресла
-                   */
-                  name: string | null;
-                  /**
-                   * @description Количество товаров в категории
-                   * @example 10
-                   */
-                  products_qnt: number;
-                  /**
-                   * @description Количество фильтров в категории
-                   * @example 5
-                   */
-                  filters_qnt: number;
-                  subcategories: ({
-                      /** @example 85 */
-                      id?: number;
-                      /**
-                       * @description ID родительской категории
-                       * @example 2
-                       */
-                      parent_id?: number | null;
-                      /**
-                       * @description Название категории
-                       * @example Массажные кресла INADA
-                       */
-                      name?: string | null;
-                      /**
-                       * @description Количество товаров в категории
-                       * @example 10
-                       */
-                      products_qnt?: number;
-                      /**
-                       * @description Количество фильтров в категории
-                       * @example 5
-                       */
-                      filters_qnt?: number;
-                      /** @example [] */
-                      subcategories?: unknown[];
-                    })[];
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["b4cba4c0a0163a52ebe80d4733414437"];
   };
   "/api/admin/categories/list": {
     /** Список всех категорий товаров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: ({
-                  /** @example 2 */
-                  id: number;
-                  /**
-                   * @description ID родительской категории
-                   * @example 2
-                   */
-                  parent_id: number | null;
-                  /**
-                   * @description Название категории
-                   * @example Массажные кресла
-                   */
-                  name: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 2
-                   */
-                  sort: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["8b90169d865bd6d1388f0bcbd1938fb6"];
   };
   "/api/admin/categories": {
     /** Список категорий с пагинацией (Не используется) */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 138 */
-                  id?: number;
-                  /**
-                   * @description ID родительской категории
-                   * @example 12
-                   */
-                  parent_id?: number | null;
-                  /**
-                   * @description Название категории
-                   * @example Беговые дорожки и фитнес
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2023-11-01T01:00:21.000000Z
-                   */
-                  updated_at?: string | null;
-                  /**
-                   * @description Дата удаления (soft delete)
-                   * @example 2023-11-01T01:00:21.000000Z
-                   */
-                  deleted_at?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["eebefde71f4cd777e1333086df2adbcb"];
   };
   "/api/admin/categories/{category}": {
     /** Одна категория (Не используется) */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID категории
-           * @example 3
-           */
-          category: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 138 */
-                id?: number;
-                /**
-                 * @description ID родительской категории
-                 * @example 12
-                 */
-                parent_id?: number | null;
-                /**
-                 * @description Название категории
-                 * @example Беговые дорожки и фитнес
-                 */
-                name?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-                /**
-                 * @description Дата создания
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                created_at?: string | null;
-                /**
-                 * @description Дата обновления
-                 * @example 2023-11-01T01:00:21.000000Z
-                 */
-                updated_at?: string | null;
-                /**
-                 * @description Дата удаления (soft delete)
-                 * @example 2023-11-01T01:00:21.000000Z
-                 */
-                deleted_at?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["e38e6e031a1830d10eb294c4ebe686ed"];
   };
   "/api/admin/category_for_news": {
     /** Список категорий новостей */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["CategoryForNewsSchema"][];
-            };
-          };
-        };
-      };
-    };
+    get: operations["b211fbbdd20095a701f9d60a616265b4"];
   };
   "/api/admin/category_for_news/{category_for_news}": {
     /** Одна категория новостей */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID категории
-           * @example 3
-           */
-          category_for_news: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["CategoryForNewsSchema"];
-          };
-        };
-      };
-    };
+    get: operations["779b67a56d30dc228ee71be4b9df136a"];
   };
   "/api/admin/files": {
     /** Список файлов */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название бренда
-                   * @example YAMAGUCHI
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["c22528b30c6eefddd5c8d9d05fde611e"];
   };
   "/api/admin/files/{file}": {
     /** Один файл */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID файла
-           * @example 3
-           */
-          file: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 3 */
-                id?: number;
-                /**
-                 * @description Название бренда
-                 * @example YAMAGUCHI
-                 */
-                name?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-                /**
-                 * @description Дата создания
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                created_at?: string | null;
-                /**
-                 * @description Дата обновления
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                updated_at?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["9e529970f03fcc53308c5af0c398d7fc"];
   };
   "/api/admin/news": {
     /** Список новостей */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["NewsSchema"][];
-            };
-          };
-        };
-      };
-    };
+    get: operations["4ea974e5916a8f53d7d16936ab134215"];
   };
   "/api/admin/news/{news}": {
     /** Одна новость */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID новости
-           * @example 3
-           */
-          news: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["NewsSchema"];
-          };
-        };
-      };
-    };
+    get: operations["a3390624174deb086ec755fb1d0f2466"];
   };
   "/api/admin/pages": {
     /** Список страниц */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["PageSchema"][];
-            };
-          };
-        };
-      };
-    };
+    get: operations["e29f15ca6185b249e10f3f8575343b5d"];
   };
   "/api/admin/pages/{page}": {
     /** Одна страница */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID страницы
-           * @example 11
-           */
-          page: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["PageSchema"];
-          };
-        };
-      };
-    };
+    get: operations["12c8a0fec22a40f5b5794e2cb6cf9c4f"];
   };
   "/api/admin/products/schema": {
     /** Список товаров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: ({
-                  /** @example 331 */
-                  id: number;
-                  /**
-                   * @description ID товара в Борбозе
-                   * @example 1557
-                   */
-                  borboza_id: number | null;
-                  /**
-                   * @description Название товара
-                   * @example Массажная накидка US MEDICA Rumba
-                   */
-                  name: string | null;
-                  /**
-                   * @description Ссылка на товар на сайте
-                   * @example https://www.yamaguchi.ru/massazhery-dlya-tela/us-medica-miami.php
-                   */
-                  site_url: string | null;
-                  /**
-                   * @description Так же искать продукт по этим словам в поиске сайта
-                   * @example miami\r\nмиами\r\nмаями\r\nмиями
-                   */
-                  search_keywords: string | null;
-                  /**
-                   * @description Модель
-                   * @example Miami
-                   */
-                  model: string | null;
-                  /**
-                   * @description Бренд
-                   * @example US MEDICA
-                   */
-                  brand: string | null;
-                  /**
-                   * @description Цена
-                   * @example 1900
-                   */
-                  price: number | null;
-                  /**
-                   * @description Популярность
-                   * @example 11
-                   */
-                  popularity: number | null;
-                  /**
-                   * @description Категория
-                   * @example Электрические массажеры
-                   */
-                  category: string | null;
-                  /** @description Количество (МСК) */
-                  qnt: ({
-                    /**
-                     * @description Цвет плашки
-                     * @example purple
-                     */
-                    color: string | null;
-                    /**
-                     * @description Предзаказ или цифра количества
-                     * @example 11
-                     */
-                    text: string | null;
-                  }) | null;
-                  /**
-                   * @description Статус
-                   * @example Опубликован
-                   */
-                  status: string | null;
-                  /**
-                   * @description Первое фото товара в самом маленьком размере
-                   * @example https://yamaguchi.ru/storage/product_gallery/3/376/miami.webp
-                   */
-                  photo?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["d582f69da1832500b203d717f329b152"];
   };
   "/api/admin/products/{product}": {
     /** Один товар */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID товара
-           * @example 331
-           */
-          product: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["ProductSchema"];
-          };
-        };
-      };
-    };
+    get: operations["e7133a640a3cc611d6dbcbc55576dcc5"];
   };
   "/api/admin/products/{product}/updateStorage": {
     /** Обновляет складскую структуру товара и возвращет кол-во в Москве */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID товара
-           * @example 617
-           */
-          product: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": number;
-          };
-        };
-      };
-    };
+    get: operations["b8b93060d50de69af8864d36b6401f07"];
   };
   "/api/admin/products/schema/{product}": {
     /** Данные для формы товара (Не используется) */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID товара
-           * @example 331
-           */
-          product: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 331 */
-                id?: number;
-                /**
-                 * @description ID товара в Borboza
-                 * @example 2518
-                 */
-                borboza_id?: number | null;
-                /**
-                 * @description Цена
-                 * @example 1900
-                 */
-                price?: number | null;
-                /**
-                 * @description Цена по акции
-                 * @example 1900
-                 */
-                price_promotion?: number | null;
-                /**
-                 * @description Цена предзаказа
-                 * @example 1900
-                 */
-                price_preorder?: number | null;
-                /**
-                 * @description Название товара
-                 * @example Бандаж на локтевой сустав YAMAGUCHI Aeroprene Elbow Support
-                 */
-                name?: string | null;
-                /**
-                 * @description Слоган
-                 * @example Надежная защита и поддержка
-                 */
-                slogan_text?: string | null;
-                /**
-                 * @description Размер шрифта слогана
-                 * @example 30
-                 */
-                slogan_font_size?: string | null;
-                /**
-                 * @description Код цвета слогана
-                 * @example 30
-                 */
-                slogan_color?: string | null;
-                /**
-                 * @description ID бренда
-                 * @example 3
-                 */
-                brand_id?: number | null;
-                /**
-                 * @description Модель
-                 * @example Aeroprene Elbow Support
-                 */
-                model?: string | null;
-                /**
-                 * @description Короткое название
-                 * @example Бандаж на локтевой сустав
-                 */
-                short_name?: string | null;
-                /**
-                 * @description Адрес страницы
-                 * @example tovari-dlya-zdorovya/elbow_support.php
-                 */
-                url?: string | null;
-                /**
-                 * @description Системное название
-                 * @example aeroprene_elbow_support
-                 */
-                system_name?: string | null;
-                /**
-                 * @description Популярность
-                 * @example 12
-                 */
-                popularity?: number | null;
-                /**
-                 * @description Бейдж Акция
-                 * @example 1
-                 */
-                badge_promo?: number | null;
-                /**
-                 * @description Бейдж Новинка
-                 * @example 1
-                 */
-                badge_new?: number | null;
-                /**
-                 * @description Бейдж Хит
-                 * @example 1
-                 */
-                badge_bestseller?: number | null;
-                /**
-                 * @description ID статуса
-                 * @example 1
-                 */
-                status_id?: number | null;
-                /**
-                 * @description Примечание
-                 * @example Товары для СЕО, остаются в базе для спокойствия Александра Штанга и нашего благополучия
-                 */
-                note?: string | null;
-                /**
-                 * @description ID видео десктоп в лендинге
-                 * @example 333
-                 */
-                land_video_desktop_file_id?: number | null;
-                /**
-                 * @description ID видео мобайл в лендинге
-                 * @example 333
-                 */
-                land_video_mobile_file_id?: number | null;
-                /**
-                 * @description ID категории для сравнения
-                 * @example 138
-                 */
-                category_compare_id?: number | null;
-                /**
-                 * @description Короткое описание (фид для Яндекс)
-                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                 */
-                text_short?: string | null;
-                /**
-                 * @description Полное описание (если лендинга нет — выводится это описание)
-                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                 */
-                text_full?: string | null;
-                /**
-                 * @description Описание для приложения
-                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                 */
-                text_app?: string | null;
-                /**
-                 * @description Фраза о выгоде в год
-                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                 */
-                text_benefit?: string | null;
-                /**
-                 * @description ID категории для хлебных крошек
-                 * @example 137
-                 */
-                category_breadcrumbs_id?: number | null;
-                /**
-                 * @description ID категории для фида
-                 * @example 137
-                 */
-                category_feed_id?: number | null;
-                /**
-                 * @description Описание в YML
-                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                 */
-                yandex_desc?: string | null;
-                /**
-                 * @description Выгружать в YML
-                 * @example 1
-                 */
-                yandex_export_yml?: number | null;
-                /**
-                 * @description Исключение для XML файла
-                 * @example 1
-                 */
-                yandex_xml_exception?: number | null;
-                /**
-                 * @description Так же искать продукт по этим словам в поиске сайта
-                 * @example axiom\r\n аксиом\r\n yamaguchi\r\n ямагучи axiom кресло кресло axiom
-                 */
-                search_keywords?: string | null;
-                /**
-                 * @description Дата создания товара
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                created_at?: string | null;
-                /**
-                 * @description Дата обновления товара
-                 * @example 2023-11-01T01:00:21.000000Z
-                 */
-                updated_at?: string | null;
-                /**
-                 * @description Дата удаления товара (soft delete)
-                 * @example 2023-11-01T01:00:21.000000Z
-                 */
-                deleted_at?: string | null;
-                /** @description Бренд */
-                brand?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название бренда
-                   * @example YAMAGUCHI
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                }) | null;
-                /** @description Видео десктоп в лендинге */
-                land_video_desktop?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Путь к загруженному файлу
-                   * @example
-                   */
-                  src?: string | null;
-                  /**
-                   * @description Тип файла условный
-                   * @example
-                   */
-                  type?: string | null;
-                  /**
-                   * @description Изначальное имя файла
-                   * @example
-                   */
-                  name_init?: string | null;
-                  /**
-                   * @description Ширина для фото или видео
-                   * @example 1
-                   */
-                  width?: number | null;
-                  /**
-                   * @description Высота для фото или видео
-                   * @example 1
-                   */
-                  height?: number | null;
-                  /**
-                   * @description Путь к превью
-                   * @example
-                   */
-                  preview?: string | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                }) | null;
-                /** @description Видео десктоп в лендинге */
-                land_video_mobile?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Путь к загруженному файлу
-                   * @example
-                   */
-                  src?: string | null;
-                  /**
-                   * @description Тип файла условный
-                   * @example
-                   */
-                  type?: string | null;
-                  /**
-                   * @description Изначальное имя файла
-                   * @example
-                   */
-                  name_init?: string | null;
-                  /**
-                   * @description Ширина для фото или видео
-                   * @example 1
-                   */
-                  width?: number | null;
-                  /**
-                   * @description Высота для фото или видео
-                   * @example 1
-                   */
-                  height?: number | null;
-                  /**
-                   * @description Путь к превью
-                   * @example
-                   */
-                  preview?: string | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                }) | null;
-                /** @description Статусы товара */
-                status?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название статуса
-                   * @example Опубликован
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Описание статуса
-                   * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
-                   */
-                  description?: string | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                }) | null;
-                /** @description Категория для сравнения */
-                category_compare?: ({
-                  /** @example 138 */
-                  id?: number;
-                  /**
-                   * @description ID родительской категории
-                   * @example 12
-                   */
-                  parent_id?: number | null;
-                  /**
-                   * @description Название категории
-                   * @example Беговые дорожки и фитнес
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2023-11-01T01:00:21.000000Z
-                   */
-                  updated_at?: string | null;
-                  /**
-                   * @description Дата удаления (soft delete)
-                   * @example 2023-11-01T01:00:21.000000Z
-                   */
-                  deleted_at?: string | null;
-                }) | null;
-                /** @description Бейджи */
-                badges?: ({
-                  /** @example 4 */
-                  id?: number;
-                  /**
-                   * @description ID группы
-                   * @example 12
-                   */
-                  group_id?: number | null;
-                  /**
-                   * @description Текст
-                   * @example Укрепи дружбу
-                   */
-                  text?: string | null;
-                  /**
-                   * @description Активен ли бейдж
-                   * @example 1
-                   */
-                  is_active?: number | null;
-                }) | null;
-                /** @description Категории товара */
-                categories?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /**
-                     * @description ID родительской категории
-                     * @example 12
-                     */
-                    parent_id?: number | null;
-                    /**
-                     * @description Название категории
-                     * @example Беговые дорожки и фитнес
-                     */
-                    name?: string | null;
-                    /**
-                     * @description Сортировка
-                     * @example 1
-                     */
-                    sort?: number | null;
-                    /**
-                     * @description Дата создания
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    created_at?: string | null;
-                    /**
-                     * @description Дата обновления
-                     * @example 2023-11-01T01:00:21.000000Z
-                     */
-                    updated_at?: string | null;
-                    /**
-                     * @description Дата удаления (soft delete)
-                     * @example 2023-11-01T01:00:21.000000Z
-                     */
-                    deleted_at?: string | null;
-                  })[];
-                /** @description Параметры товара */
-                params?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /**
-                     * @description Название параметра
-                     * @example Кол-во ручных программ
-                     */
-                    parameter?: string | null;
-                    /**
-                     * @description Значение фильтра
-                     * @example 5 шт
-                     */
-                    filter?: string | null;
-                    /**
-                     * @description Значение параметра
-                     * @example 5 шт
-                     */
-                    value?: string | null;
-                    /**
-                     * @description Сортировка
-                     * @example 1
-                     */
-                    sort?: number | null;
-                    /**
-                     * @description Активность
-                     * @example 1
-                     */
-                    is_active?: number | null;
-                    /**
-                     * @description ID товара
-                     * @example 95
-                     */
-                    product_id?: number | null;
-                  })[];
-                /** @description Параметры товара */
-                q_r_codes?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /**
-                     * @description ID товара
-                     * @example 95
-                     */
-                    product_id?: number | null;
-                    /**
-                     * @description Куда будет вести QR-код? (ссылка)
-                     * @example https://youtu.be/e600o2k2zwU?si=1E27TkA_tRvc63Cn
-                     */
-                    link?: string | null;
-                    /**
-                     * @description Эту ссылку вшиваем в QR-код (https://www.yamaguchi.ru/qrcode/ + это поле)
-                     * @example II6107
-                     */
-                    code?: string | null;
-                    /**
-                     * @description Сортировка
-                     * @example 1
-                     */
-                    sort?: number | null;
-                    /**
-                     * @description Utm-метки, которые подставятся при редиректе
-                     * @example ?utm_source=qrcode&utm_medium=Box&utm_campaign=qr
-                     */
-                    name?: string | null;
-                  })[];
-                /** @description Варианты аренды товара */
-                rent?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /**
-                     * @description ID товара
-                     * @example 95
-                     */
-                    product_id?: number | null;
-                    /** @example 95 */
-                    rent_id?: number | null;
-                    /** @example 95 */
-                    borboza_id?: number | null;
-                    /** @example 95 */
-                    price?: number | null;
-                    /** @example 95 */
-                    price_promotion?: number | null;
-                    /** @example 95 */
-                    price_preorder?: number | null;
-                    /** @description Вариант аренды */
-                    rent?: ({
-                      /** @example 3 */
-                      id?: number;
-                      /**
-                       * @description Название типа аренды
-                       * @example Аренда на 1 месяц
-                       */
-                      name?: string | null;
-                      /**
-                       * @description Сортировка
-                       * @example 1
-                       */
-                      sort?: number | null;
-                    }) | null;
-                  })[];
-                /** @description Размеры */
-                size?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /**
-                     * @description ID товара
-                     * @example 95
-                     */
-                    product_id?: number | null;
-                    /** @example 95 */
-                    size_id?: number | null;
-                    /** @example 95 */
-                    borboza_id?: number | null;
-                    /** @example 95 */
-                    price?: number | null;
-                    /** @example 95 */
-                    price_promotion?: number | null;
-                    /** @example 95 */
-                    price_preorder?: number | null;
-                    /** @description Размер */
-                    size?: ({
-                      /** @example 3 */
-                      id?: number;
-                      /**
-                       * @description Название размера
-                       * @example S
-                       */
-                      name?: string | null;
-                      /**
-                       * @description Сортировка
-                       * @example 1
-                       */
-                      sort?: number | null;
-                    }) | null;
-                  })[];
-                /** @description С этим товаром покупают на лендинге */
-                additional_products_landing?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /** @example 95 */
-                    borboza_id?: number | null;
-                    /** @example 95 */
-                    price?: number | null;
-                    /** @example 95 */
-                    price_promotion?: number | null;
-                    /** @example 95 */
-                    price_preorder?: number | null;
-                  })[];
-                /** @description С этим товаром покупают в корзине */
-                additional_products_basket?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /** @example 95 */
-                    borboza_id?: number | null;
-                    /** @example 95 */
-                    price?: number | null;
-                    /** @example 95 */
-                    price_promotion?: number | null;
-                    /** @example 95 */
-                    price_preorder?: number | null;
-                  })[];
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["8152f2d02fe6548fecf5963b9cf70582"];
   };
   "/api/admin/products": {
     /** Список товаров с пагинацией (Не используется) */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 331 */
-                  id?: number;
-                  /**
-                   * @description ID товара в Borboza
-                   * @example 2518
-                   */
-                  borboza_id?: number | null;
-                  /**
-                   * @description Цена
-                   * @example 1900
-                   */
-                  price?: number | null;
-                  /**
-                   * @description Цена по акции
-                   * @example 1900
-                   */
-                  price_promotion?: number | null;
-                  /**
-                   * @description Цена предзаказа
-                   * @example 1900
-                   */
-                  price_preorder?: number | null;
-                  /**
-                   * @description Название товара
-                   * @example Бандаж на локтевой сустав YAMAGUCHI Aeroprene Elbow Support
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Слоган
-                   * @example Надежная защита и поддержка
-                   */
-                  slogan_text?: string | null;
-                  /**
-                   * @description Размер шрифта слогана
-                   * @example 30
-                   */
-                  slogan_font_size?: string | null;
-                  /**
-                   * @description Код цвета слогана
-                   * @example 30
-                   */
-                  slogan_color?: string | null;
-                  /**
-                   * @description ID бренда
-                   * @example 3
-                   */
-                  brand_id?: number | null;
-                  /**
-                   * @description Модель
-                   * @example Aeroprene Elbow Support
-                   */
-                  model?: string | null;
-                  /**
-                   * @description Короткое название
-                   * @example Бандаж на локтевой сустав
-                   */
-                  short_name?: string | null;
-                  /**
-                   * @description Адрес страницы
-                   * @example tovari-dlya-zdorovya/elbow_support.php
-                   */
-                  url?: string | null;
-                  /**
-                   * @description Системное название
-                   * @example aeroprene_elbow_support
-                   */
-                  system_name?: string | null;
-                  /**
-                   * @description Популярность
-                   * @example 12
-                   */
-                  popularity?: number | null;
-                  /**
-                   * @description Бейдж Акция
-                   * @example 1
-                   */
-                  badge_promo?: number | null;
-                  /**
-                   * @description Бейдж Новинка
-                   * @example 1
-                   */
-                  badge_new?: number | null;
-                  /**
-                   * @description Бейдж Хит
-                   * @example 1
-                   */
-                  badge_bestseller?: number | null;
-                  /**
-                   * @description ID статуса
-                   * @example 1
-                   */
-                  status_id?: number | null;
-                  /**
-                   * @description Примечание
-                   * @example Товары для СЕО, остаются в базе для спокойствия Александра Штанга и нашего благополучия
-                   */
-                  note?: string | null;
-                  /**
-                   * @description ID видео десктоп в лендинге
-                   * @example 333
-                   */
-                  land_video_desktop_file_id?: number | null;
-                  /**
-                   * @description ID видео мобайл в лендинге
-                   * @example 333
-                   */
-                  land_video_mobile_file_id?: number | null;
-                  /**
-                   * @description ID категории для сравнения
-                   * @example 138
-                   */
-                  category_compare_id?: number | null;
-                  /**
-                   * @description Короткое описание (фид для Яндекс)
-                   * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                   */
-                  text_short?: string | null;
-                  /**
-                   * @description Полное описание (если лендинга нет — выводится это описание)
-                   * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                   */
-                  text_full?: string | null;
-                  /**
-                   * @description Описание для приложения
-                   * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                   */
-                  text_app?: string | null;
-                  /**
-                   * @description Фраза о выгоде в год
-                   * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                   */
-                  text_benefit?: string | null;
-                  /**
-                   * @description ID категории для хлебных крошек
-                   * @example 137
-                   */
-                  category_breadcrumbs_id?: number | null;
-                  /**
-                   * @description ID категории для фида
-                   * @example 137
-                   */
-                  category_feed_id?: number | null;
-                  /**
-                   * @description Описание в YML
-                   * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
-                   */
-                  yandex_desc?: string | null;
-                  /**
-                   * @description Выгружать в YML
-                   * @example 1
-                   */
-                  yandex_export_yml?: number | null;
-                  /**
-                   * @description Исключение для XML файла
-                   * @example 1
-                   */
-                  yandex_xml_exception?: number | null;
-                  /**
-                   * @description Так же искать продукт по этим словам в поиске сайта
-                   * @example axiom\r\n аксиом\r\n yamaguchi\r\n ямагучи axiom кресло кресло axiom
-                   */
-                  search_keywords?: string | null;
-                  /**
-                   * @description Дата создания товара
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления товара
-                   * @example 2023-11-01T01:00:21.000000Z
-                   */
-                  updated_at?: string | null;
-                  /**
-                   * @description Дата удаления товара (soft delete)
-                   * @example 2023-11-01T01:00:21.000000Z
-                   */
-                  deleted_at?: string | null;
-                  /** @description Бренд */
-                  brand?: ({
-                    /** @example 3 */
-                    id?: number;
-                    /**
-                     * @description Название бренда
-                     * @example YAMAGUCHI
-                     */
-                    name?: string | null;
-                    /**
-                     * @description Сортировка
-                     * @example 1
-                     */
-                    sort?: number | null;
-                    /**
-                     * @description Дата создания
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    created_at?: string | null;
-                    /**
-                     * @description Дата обновления
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    updated_at?: string | null;
-                  }) | null;
-                  /** @description Видео десктоп в лендинге */
-                  land_video_desktop?: ({
-                    /** @example 3 */
-                    id?: number;
-                    /**
-                     * @description Путь к загруженному файлу
-                     * @example
-                     */
-                    src?: string | null;
-                    /**
-                     * @description Тип файла условный
-                     * @example
-                     */
-                    type?: string | null;
-                    /**
-                     * @description Изначальное имя файла
-                     * @example
-                     */
-                    name_init?: string | null;
-                    /**
-                     * @description Ширина для фото или видео
-                     * @example 1
-                     */
-                    width?: number | null;
-                    /**
-                     * @description Высота для фото или видео
-                     * @example 1
-                     */
-                    height?: number | null;
-                    /**
-                     * @description Путь к превью
-                     * @example
-                     */
-                    preview?: string | null;
-                    /**
-                     * @description Дата создания
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    created_at?: string | null;
-                    /**
-                     * @description Дата обновления
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    updated_at?: string | null;
-                  }) | null;
-                  /** @description Видео десктоп в лендинге */
-                  land_video_mobile?: ({
-                    /** @example 3 */
-                    id?: number;
-                    /**
-                     * @description Путь к загруженному файлу
-                     * @example
-                     */
-                    src?: string | null;
-                    /**
-                     * @description Тип файла условный
-                     * @example
-                     */
-                    type?: string | null;
-                    /**
-                     * @description Изначальное имя файла
-                     * @example
-                     */
-                    name_init?: string | null;
-                    /**
-                     * @description Ширина для фото или видео
-                     * @example 1
-                     */
-                    width?: number | null;
-                    /**
-                     * @description Высота для фото или видео
-                     * @example 1
-                     */
-                    height?: number | null;
-                    /**
-                     * @description Путь к превью
-                     * @example
-                     */
-                    preview?: string | null;
-                    /**
-                     * @description Дата создания
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    created_at?: string | null;
-                    /**
-                     * @description Дата обновления
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    updated_at?: string | null;
-                  }) | null;
-                  /** @description Статусы товара */
-                  status?: ({
-                    /** @example 3 */
-                    id?: number;
-                    /**
-                     * @description Название статуса
-                     * @example Опубликован
-                     */
-                    name?: string | null;
-                    /**
-                     * @description Описание статуса
-                     * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
-                     */
-                    description?: string | null;
-                    /**
-                     * @description Дата создания
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    created_at?: string | null;
-                    /**
-                     * @description Дата обновления
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    updated_at?: string | null;
-                  }) | null;
-                  /** @description Категория для сравнения */
-                  category_compare?: ({
-                    /** @example 138 */
-                    id?: number;
-                    /**
-                     * @description ID родительской категории
-                     * @example 12
-                     */
-                    parent_id?: number | null;
-                    /**
-                     * @description Название категории
-                     * @example Беговые дорожки и фитнес
-                     */
-                    name?: string | null;
-                    /**
-                     * @description Сортировка
-                     * @example 1
-                     */
-                    sort?: number | null;
-                    /**
-                     * @description Дата создания
-                     * @example 2022-03-21T17:07:02.000000Z
-                     */
-                    created_at?: string | null;
-                    /**
-                     * @description Дата обновления
-                     * @example 2023-11-01T01:00:21.000000Z
-                     */
-                    updated_at?: string | null;
-                    /**
-                     * @description Дата удаления (soft delete)
-                     * @example 2023-11-01T01:00:21.000000Z
-                     */
-                    deleted_at?: string | null;
-                  }) | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["011c5f713cfddfcc76cde6f341417be7"];
   };
   "/api/admin/products/search": {
     /** Список всех товаров для поля поиска товара (Не используется) */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": ({
-                /** @example 331 */
-                id: number;
-                /**
-                 * @description Название товара
-                 * @example Виброплатформа Yamaguchi VibroPlate
-                 */
-                name: string | null;
-              })[];
-          };
-        };
-      };
-    };
+    get: operations["aed659737108e11d897bf75222b6ecca"];
   };
   "/api/admin/products/search/{term}": {
     /** Список найденных товаров для поля поиска товара (Не используется) */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description Запрос
-           * @example кресло
-           */
-          term: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": ({
-                /** @example 331 */
-                id: number;
-                /**
-                 * @description Название товара
-                 * @example Виброплатформа Yamaguchi VibroPlate
-                 */
-                name: string | null;
-              })[];
-          };
-        };
-      };
-    };
+    get: operations["f44a187ee98ef4be2c0626b9b42fa2b6"];
   };
   "/api/admin/product_params": {
     /** Список параметров товаров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 138 */
-                  id?: number;
-                  /**
-                   * @description Название параметра
-                   * @example Кол-во ручных программ
-                   */
-                  parameter?: string | null;
-                  /**
-                   * @description Значение фильтра
-                   * @example 5 шт
-                   */
-                  filter?: string | null;
-                  /**
-                   * @description Значение параметра
-                   * @example 5 шт
-                   */
-                  value?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Активность
-                   * @example 1
-                   */
-                  is_active?: number | null;
-                  /**
-                   * @description ID товара
-                   * @example 95
-                   */
-                  product_id?: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["f859ed239832e4dee39f768ef376c78b"];
   };
   "/api/admin/product_params/{product_param}": {
     /** Один параметр товара */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID параметра товара
-           * @example 3
-           */
-          product_param: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 138 */
-                id?: number;
-                /**
-                 * @description Название параметра
-                 * @example Кол-во ручных программ
-                 */
-                parameter?: string | null;
-                /**
-                 * @description Значение фильтра
-                 * @example 5 шт
-                 */
-                filter?: string | null;
-                /**
-                 * @description Значение параметра
-                 * @example 5 шт
-                 */
-                value?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-                /**
-                 * @description Активность
-                 * @example 1
-                 */
-                is_active?: number | null;
-                /**
-                 * @description ID товара
-                 * @example 95
-                 */
-                product_id?: number | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["a2814a90a6337388693c14ade5e969ec"];
   };
   "/api/admin/product_statuses": {
     /** Список статусов товаров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название статуса
-                   * @example Опубликован
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Описание статуса
-                   * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
-                   */
-                  description?: string | null;
-                  /**
-                   * @description Дата создания
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  created_at?: string | null;
-                  /**
-                   * @description Дата обновления
-                   * @example 2022-03-21T17:07:02.000000Z
-                   */
-                  updated_at?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["ffc46beb4ff9fe666cd30da0c2030e01"];
   };
   "/api/admin/product_statuses/{product_status}": {
     /** Один статус товара */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID статуса товара
-           * @example 1
-           */
-          product_status: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 1 */
-                id?: number;
-                /**
-                 * @description Название статуса
-                 * @example Опубликован
-                 */
-                name?: string | null;
-                /**
-                 * @description Описание статуса
-                 * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
-                 */
-                description?: string | null;
-                /**
-                 * @description Дата создания
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                created_at?: string | null;
-                /**
-                 * @description Дата обновления
-                 * @example 2022-03-21T17:07:02.000000Z
-                 */
-                updated_at?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["837bd98a22b9d9cc46c37fd8c5c88614"];
   };
   "/api/admin/qr_codes": {
     /** Список QR-кодов */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 138 */
-                  id?: number;
-                  /**
-                   * @description ID товара
-                   * @example 95
-                   */
-                  product_id?: number | null;
-                  /**
-                   * @description Куда будет вести QR-код? (ссылка)
-                   * @example https://youtu.be/e600o2k2zwU?si=1E27TkA_tRvc63Cn
-                   */
-                  link?: string | null;
-                  /**
-                   * @description Эту ссылку вшиваем в QR-код (https://www.yamaguchi.ru/qrcode/ + это поле)
-                   * @example II6107
-                   */
-                  code?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                  /**
-                   * @description Utm-метки, которые подставятся при редиректе
-                   * @example ?utm_source=qrcode&utm_medium=Box&utm_campaign=qr
-                   */
-                  name?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["4b33be66fd446437ae4afd2f31f795d8"];
   };
-  "/api/admin/qr_codes/{qr_code}": {
-    /** Один QR-код */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID QR-кода
-           * @example 3
-           */
-          qr_code: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 138 */
-                id?: number;
-                /**
-                 * @description ID товара
-                 * @example 95
-                 */
-                product_id?: number | null;
-                /**
-                 * @description Куда будет вести QR-код? (ссылка)
-                 * @example https://youtu.be/e600o2k2zwU?si=1E27TkA_tRvc63Cn
-                 */
-                link?: string | null;
-                /**
-                 * @description Эту ссылку вшиваем в QR-код (https://www.yamaguchi.ru/qrcode/ + это поле)
-                 * @example II6107
-                 */
-                code?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-                /**
-                 * @description Utm-метки, которые подставятся при редиректе
-                 * @example ?utm_source=qrcode&utm_medium=Box&utm_campaign=qr
-                 */
-                name?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+  "/api/admin/qr_codes/{id}": {
+    /** Один QR-код по ID */
+    get: operations["860dbf885fff3b8195590c8e8b1aa5ba"];
+  };
+  "/api/admin/qr_codes/get_by_code/{code}": {
+    /** Один QR-код по полю Код */
+    get: operations["344d97350d99fd37683414b868a8fe63"];
   };
   "/api/admin/rent_types": {
     /** Список типов аренды */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название типа аренды
-                   * @example Аренда на 1 месяц
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["c580ef58d20b44d2ae6c244d9c8369f0"];
   };
   "/api/admin/rent_types/{rent_type}": {
     /** Один тип аренды */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID типа аренды
-           * @example 3
-           */
-          rent_type: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 3 */
-                id?: number;
-                /**
-                 * @description Название типа аренды
-                 * @example Аренда на 1 месяц
-                 */
-                name?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["894ebbfe98b915d6b56977d83ffa6d50"];
   };
   "/api/admin/seo": {
     /** Список SEO страниц */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["SeoSchema"][];
-            };
-          };
-        };
-      };
-    };
+    get: operations["d749a21f9fdabc85620d396b45b56862"];
   };
   "/api/admin/seo/{seo}": {
     /** Seo одной страницы */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID записи
-           * @example 3
-           */
-          seo: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["SeoSchema"];
-          };
-        };
-      };
-    };
+    get: operations["f3844fb011e6e9bd88b8a81b07b4dadd"];
   };
   "/api/admin/seo_meta": {
     /** Список мета-тегов */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data: components["schemas"]["SeoMetaSchema"][];
-            };
-          };
-        };
-      };
-    };
+    get: operations["3b5fb776c7eaa59858bd0f4974123fe6"];
   };
   "/api/admin/seo_meta/{seo_meta}": {
     /** Один мета тег */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID записи
-           * @example 1
-           */
-          seo_meta: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": components["schemas"]["SeoMetaSchema"];
-          };
-        };
-      };
-    };
+    get: operations["e2a0fdd631754e9197a1eb76e3920266"];
   };
   "/api/admin/sizes": {
     /** Список размеров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Название размера
-                   * @example S
-                   */
-                  name?: string | null;
-                  /**
-                   * @description Сортировка
-                   * @example 1
-                   */
-                  sort?: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["b4f3ce5135c7f7988b0fb3fbaafc3ed4"];
   };
   "/api/admin/sizes/{size}": {
     /** Один размер */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID размера
-           * @example 3
-           */
-          size: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 3 */
-                id?: number;
-                /**
-                 * @description Название размера
-                 * @example S
-                 */
-                name?: string | null;
-                /**
-                 * @description Сортировка
-                 * @example 1
-                 */
-                sort?: number | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["7dfc6c763faef647882d266e38e975dd"];
   };
   "/api/admin/tooltips": {
     /** Список тултипов */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 3 */
-                  id?: number;
-                  /**
-                   * @description Текст тултипа
-                   * @example Строка 1 в большой карточке товара (на лендинге)
-                   */
-                  value?: string | null;
-                  /**
-                   * @description Системный комментарий
-                   * @example Админка - Товар - Системное - Название товара
-                   */
-                  comment?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["cd78c2dcef2c3c4ef7b177401b6ee142"];
   };
   "/api/admin/tooltips/{tooltip}": {
     /** Один тултип */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID тултипа
-           * @example 1
-           */
-          tooltip: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 3 */
-                id?: number;
-                /**
-                 * @description Текст тултипа
-                 * @example Строка 1 в большой карточке товара (на лендинге)
-                 */
-                value?: string | null;
-                /**
-                 * @description Системный комментарий
-                 * @example Админка - Товар - Системное - Название товара
-                 */
-                comment?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["aa1f8199e9d9b7d6410aea32c6da2be3"];
   };
   "/api/admin/users": {
     /** Список */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 1 */
-                  id?: number;
-                  /** @example a.kopylova */
-                  username?: string;
-                  /**
-                   * @description Имя
-                   * @example Алексей
-                   */
-                  fname?: string | null;
-                  /**
-                   * @description Отчество
-                   * @example Викторович
-                   */
-                  mname?: string | null;
-                  /**
-                   * @description Фамилия
-                   * @example Поваров
-                   */
-                  lname?: string | null;
-                  /** @example povarovalexey@gmail.com */
-                  email?: string;
-                  /** @example 1 */
-                  status?: number;
-                  /** @example admin */
-                  role?: string;
-                  /** @example 79265656738 */
-                  phone?: string | null;
-                  /** @example 1970-06-11 */
-                  birthdate?: string | null;
-                  /**
-                   * @description Пол
-                   * @example m
-                   * @enum {string|null}
-                   */
-                  gender?: "m" | "f" | null;
-                  /** @example Тюмень */
-                  city?: string;
-                  /** @example 1 */
-                  participation_in_marathon?: number | null;
-                  /** @example 3546613 */
-                  customer_id?: number | null;
-                  /** @example 1 */
-                  confirmed_number?: number | null;
-                  /** @example 239c59c7412137a9634ac7c65.png */
-                  avatar?: string | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["decaa94cc129c2f36988dc0b4054f469"];
   };
   "/api/admin/users/{user}": {
     /** Один пользователь */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID пользователя
-           * @example 1
-           */
-          user: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 1 */
-                id?: number;
-                /** @example a.kopylova */
-                username?: string;
-                /**
-                 * @description Имя
-                 * @example Алексей
-                 */
-                fname?: string | null;
-                /**
-                 * @description Отчество
-                 * @example Викторович
-                 */
-                mname?: string | null;
-                /**
-                 * @description Фамилия
-                 * @example Поваров
-                 */
-                lname?: string | null;
-                /** @example povarovalexey@gmail.com */
-                email?: string;
-                /** @example 1 */
-                status?: number;
-                /** @example admin */
-                role?: string;
-                /** @example 79265656738 */
-                phone?: string | null;
-                /** @example 1970-06-11 */
-                birthdate?: string | null;
-                /**
-                 * @description Пол
-                 * @example m
-                 * @enum {string|null}
-                 */
-                gender?: "m" | "f" | null;
-                /** @example Тюмень */
-                city?: string;
-                /** @example 1 */
-                participation_in_marathon?: number | null;
-                /** @example 3546613 */
-                customer_id?: number | null;
-                /** @example 1 */
-                confirmed_number?: number | null;
-                /** @example 239c59c7412137a9634ac7c65.png */
-                avatar?: string | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["c22b99772a61d51fe7de4bab687fefa6"];
   };
   "/api/auth/login": {
     /** Авторизация */
-    post: {
-      requestBody?: {
-        content: {
-          "application/json": {
-            /** @example email@domain.com */
-            email?: string;
-            /** @example password */
-            password?: string;
-          };
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              /** @example foobar */
-              access_token: string;
-              /** @example bearer */
-              token_type: string;
-              /** @example 20160 */
-              expires_in: number;
-            };
-          };
-        };
-        /** @description Error: Unauthorized */
-        401: {
-          content: {
-            "application/json": {
-              /** @example Unauthorized */
-              error?: string;
-            };
-          };
-        };
-      };
-    };
+    post: operations["36efd705d963de2d5f25c7dd0813b5ef"];
   };
   "/api/auth/logout": {
     /** Выход */
-    post: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              /** @example Successfully logged out */
-              message?: string;
-            };
-          };
-        };
-      };
-    };
+    post: operations["11653b01bd971e43d3cdba09d181b8b2"];
   };
   "/api/auth/me": {
     /** Данные пользователя */
-    post: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              /** @example 1 */
-              id: number;
-              /**
-               * @description Имя
-               * @example Иван
-               */
-              first_name: string | null;
-              /**
-               * @description Отчество
-               * @example Иванович
-               */
-              middle_name: string | null;
-              /**
-               * @description Фамилия
-               * @example Иванов
-               */
-              last_name: string | null;
-              /**
-               * @description Email
-               * @example user@email.com
-               */
-              email: string;
-              /**
-               * @description Роль
-               * @example user
-               */
-              role: string | null;
-              /**
-               * @description Телефон
-               * @example 9151711111
-               */
-              phone: string | null;
-              /** @example 2023-07-07T07:11:40.000000Z */
-              created_at: Record<string, never>;
-              /** @example 2023-07-07T07:11:40.000000Z */
-              updated_at: Record<string, never>;
-            };
-          };
-        };
-        /** @description Error: Unauthorized */
-        401: {
-          content: {
-            "application/json": {
-              /** @example Unauthenticated */
-              error?: string;
-            };
-          };
-        };
-      };
-    };
+    post: operations["ea7118a3226abfbeaaa99e1ef8605a58"];
   };
   "/api/shop/banners": {
     /** Список баннеров */
-    get: {
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: ({
-                  /** @example 1 */
-                  id?: number;
-                  /**
-                   * @description Название
-                   * @example Колесо фортуны
-                   */
-                  name?: string | null;
-                  /**
-                   * @description HTML-код баннера
-                   * @example <div...><div ...><a href...></a></div></div>
-                   */
-                  html?: string | null;
-                  /**
-                   * @description Позиция
-                   * @example 5
-                   */
-                  position?: number | null;
-                  /**
-                   * @description Задержка, сек
-                   * @example 4
-                   */
-                  delay?: number | null;
-                  /**
-                   * @description Дата начала отображения
-                   * @example 2023-08-08 18:00:49
-                   */
-                  date_start?: string | null;
-                  /**
-                   * @description Дата окончания отображения
-                   * @example 2023-12-12 23:55:31
-                   */
-                  date_end?: string | null;
-                  /**
-                   * @description Статус (публикация)
-                   * @example 1
-                   */
-                  status?: number | null;
-                  /**
-                   * @description Активность (архив)
-                   * @example 1
-                   */
-                  is_active?: number | null;
-                })[];
-            };
-          };
-        };
-      };
-    };
+    get: operations["6aba05f7376eefa62dbf2c3685fd61e8"];
   };
   "/api/shop/banners/{banner}": {
     /** Один баннер */
-    get: {
-      parameters: {
-        path: {
-          /**
-           * @description ID баннера
-           * @example 26
-           */
-          banner: string;
-        };
-      };
-      responses: {
-        /** @description Ok */
-        200: {
-          content: {
-            "application/json": {
-              data?: {
-                /** @example 1 */
-                id?: number;
-                /**
-                 * @description Название
-                 * @example Колесо фортуны
-                 */
-                name?: string | null;
-                /**
-                 * @description HTML-код баннера
-                 * @example <div...><div ...><a href...></a></div></div>
-                 */
-                html?: string | null;
-                /**
-                 * @description Позиция
-                 * @example 5
-                 */
-                position?: number | null;
-                /**
-                 * @description Задержка, сек
-                 * @example 4
-                 */
-                delay?: number | null;
-                /**
-                 * @description Дата начала отображения
-                 * @example 2023-08-08 18:00:49
-                 */
-                date_start?: string | null;
-                /**
-                 * @description Дата окончания отображения
-                 * @example 2023-12-12 23:55:31
-                 */
-                date_end?: string | null;
-                /**
-                 * @description Статус (публикация)
-                 * @example 1
-                 */
-                status?: number | null;
-                /**
-                 * @description Активность (архив)
-                 * @example 1
-                 */
-                is_active?: number | null;
-              };
-            };
-          };
-        };
-      };
-    };
+    get: operations["0c68f2989ada236bc21403318438e6d7"];
+  };
+  "/api/shop/page_data": {
+    /** Данные для страницы по URN */
+    post: operations["6e6c24e0af16553f00cd03ad6c80ad60"];
   };
 }
 
@@ -3662,36 +965,8 @@ export interface components {
              */
             product_id?: number | null;
           })[];
-        /** @description Параметры товара */
-        q_r_codes: ({
-            /** @example 138 */
-            id?: number;
-            /**
-             * @description ID товара
-             * @example 95
-             */
-            product_id?: number | null;
-            /**
-             * @description Куда будет вести QR-код? (ссылка)
-             * @example https://youtu.be/e600o2k2zwU?si=1E27TkA_tRvc63Cn
-             */
-            link?: string | null;
-            /**
-             * @description Эту ссылку вшиваем в QR-код (https://www.yamaguchi.ru/qrcode/ + это поле)
-             * @example II6107
-             */
-            code?: string | null;
-            /**
-             * @description Сортировка
-             * @example 1
-             */
-            sort?: number | null;
-            /**
-             * @description Utm-метки, которые подставятся при редиректе
-             * @example ?utm_source=qrcode&utm_medium=Box&utm_campaign=qr
-             */
-            name?: string | null;
-          })[];
+        /** @description QR коды */
+        q_r_codes: components["schemas"]["QRCodeSchema"][];
         /** @description Варианты аренды товара */
         rent: ({
             /** @example 138 */
@@ -3794,6 +1069,56 @@ export interface components {
         borboza_product: components["schemas"]["BorbozaProductSchema"];
       };
     };
+    /** QR код */
+    QRCodeSchema: {
+      /** @example 138 */
+      id: number;
+      /**
+       * @description ID товара
+       * @example 95
+       */
+      product_id: number | null;
+      /**
+       * @description Куда будет вести QR-код? (ссылка)
+       * @example https://youtu.be/e600o2k2zwU?si=1E27TkA_tRvc63Cn
+       */
+      link: string | null;
+      /**
+       * @description Эту ссылку вшиваем в QR-код (https://www.yamaguchi.ru/ + это поле)
+       * @example II6107
+       */
+      code: string | null;
+      /**
+       * @description Путь к изображению штрихкода
+       * @example qr_codes/1.svg
+       */
+      img: string | null;
+      /**
+       * @description Название QR кода
+       * @example Плэйлист для Беговой дорожки Max Pro
+       */
+      name: string | null;
+      /**
+       * @description Сортировка
+       * @example 1
+       */
+      sort: number | null;
+      /**
+       * @description Utm-метки, которые подставятся при редиректе
+       * @example ?utm_source=qrcode&utm_medium=Box&utm_campaign=qr
+       */
+      utm: string | null;
+      /**
+       * @description URL изображения штрихкода
+       * @example http://localhost/storage/qr_codes/2.svg
+       */
+      img_url: string | null;
+      /**
+       * @description Эту ссылку вшиваем в QR-код
+       * @example https://www.yamaguchi.ru/qrcode/LL6539
+       */
+      inner_url: string | null;
+    };
     /** Мета-тег */
     SeoMetaSchema: {
       /**
@@ -3881,4 +1206,2815 @@ export type $defs = Record<string, never>;
 
 export type external = Record<string, never>;
 
-export type operations = Record<string, never>;
+export interface operations {
+
+  /** Список статей */
+  "6f2571c00a93467269052b80c2d34690": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["ArticleSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Одна статья */
+  ca8e8d54f2696dd60e0e6413379ab91a: {
+    parameters: {
+      path: {
+        /**
+         * @description ID статьи
+         * @example 3
+         */
+        article: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["ArticleSchema"];
+        };
+      };
+    };
+  };
+  /** Список бейджей */
+  e0fe065ca8d3dde9780cb63af7c4248a: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 4 */
+                id?: number;
+                /**
+                 * @description ID группы
+                 * @example 12
+                 */
+                group_id?: number | null;
+                /**
+                 * @description Текст
+                 * @example Укрепи дружбу
+                 */
+                text?: string | null;
+                /**
+                 * @description Активен ли бейдж
+                 * @example 1
+                 */
+                is_active?: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один бейдж */
+  "61484a3cc866ff6e8bbb53f934d3aae5": {
+    parameters: {
+      path: {
+        /**
+         * @description ID бейджа
+         * @example 3
+         */
+        badge: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 4 */
+              id?: number;
+              /**
+               * @description ID группы
+               * @example 12
+               */
+              group_id?: number | null;
+              /**
+               * @description Текст
+               * @example Укрепи дружбу
+               */
+              text?: string | null;
+              /**
+               * @description Активен ли бейдж
+               * @example 1
+               */
+              is_active?: number | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список групп бейджей */
+  "5f901cf8a108221f238a2fc7a4425402": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название бренда
+                 * @example YAMAGUCHI
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один бейдж */
+  "4e2282deafbe58eea84775997f8b605b": {
+    parameters: {
+      path: {
+        /**
+         * @description ID бренда
+         * @example 3
+         */
+        badge_group: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 3 */
+              id?: number;
+              /**
+               * @description Название бренда
+               * @example YAMAGUCHI
+               */
+              name?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+              /**
+               * @description Дата создания
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              created_at?: string | null;
+              /**
+               * @description Дата обновления
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              updated_at?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список баннеров */
+  "2075efab0f0f5a8938f9bcf5deec03fa": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 1 */
+                id?: number;
+                /**
+                 * @description Название
+                 * @example Колесо фортуны
+                 */
+                name?: string | null;
+                /**
+                 * @description HTML-код баннера
+                 * @example <div...><div ...><a href...></a></div></div>
+                 */
+                html?: string | null;
+                /**
+                 * @description Позиция
+                 * @example 5
+                 */
+                position?: number | null;
+                /**
+                 * @description Задержка, сек
+                 * @example 4
+                 */
+                delay?: number | null;
+                /**
+                 * @description Дата начала отображения
+                 * @example 2023-08-08 18:00:49
+                 */
+                date_start?: string | null;
+                /**
+                 * @description Дата окончания отображения
+                 * @example 2023-12-12 23:55:31
+                 */
+                date_end?: string | null;
+                /**
+                 * @description Статус (публикация)
+                 * @example 1
+                 */
+                status?: number | null;
+                /**
+                 * @description Активность (архив)
+                 * @example 1
+                 */
+                is_active?: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один баннер */
+  a0739c1d5bed0ecafe9afa6ba88fca7a: {
+    parameters: {
+      path: {
+        /**
+         * @description ID баннера
+         * @example 26
+         */
+        banner: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 1 */
+              id?: number;
+              /**
+               * @description Название
+               * @example Колесо фортуны
+               */
+              name?: string | null;
+              /**
+               * @description HTML-код баннера
+               * @example <div...><div ...><a href...></a></div></div>
+               */
+              html?: string | null;
+              /**
+               * @description Позиция
+               * @example 5
+               */
+              position?: number | null;
+              /**
+               * @description Задержка, сек
+               * @example 4
+               */
+              delay?: number | null;
+              /**
+               * @description Дата начала отображения
+               * @example 2023-08-08 18:00:49
+               */
+              date_start?: string | null;
+              /**
+               * @description Дата окончания отображения
+               * @example 2023-12-12 23:55:31
+               */
+              date_end?: string | null;
+              /**
+               * @description Статус (публикация)
+               * @example 1
+               */
+              status?: number | null;
+              /**
+               * @description Активность (архив)
+               * @example 1
+               */
+              is_active?: number | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Все товары из борбозы для поля поиска по borboza id */
+  "358f4490ceb81e41b5a7e2685a4e66b9": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: ({
+                /**
+                 * @description ID товара в Борбозе
+                 * @example 2518
+                 */
+                item_id: number | null;
+                /**
+                 * @description ID товара в Борбозе + Название товара в Борбозе
+                 * @example [2518] Бандаж на локтевой сустав Yamaguchi Aeroprene Elbow Support (черный, размер S)
+                 */
+                title: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один товар */
+  ae583f2bff92a9e16756f4993c7748be: {
+    parameters: {
+      path: {
+        /**
+         * @description ID товара в Борбозе
+         * @example 6
+         */
+        item_id: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["BorbozaProductSchema"];
+          };
+        };
+      };
+    };
+  };
+  /** Список брендов */
+  f96eaf6d4d6aa05a51c59d0b28404677: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название бренда
+                 * @example YAMAGUCHI
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один бренд */
+  "6adf3c730f3effee8a32a3d260ad6288": {
+    parameters: {
+      path: {
+        /**
+         * @description ID бренда
+         * @example 3
+         */
+        brand: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 3 */
+              id?: number;
+              /**
+               * @description Название бренда
+               * @example YAMAGUCHI
+               */
+              name?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+              /**
+               * @description Дата создания
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              created_at?: string | null;
+              /**
+               * @description Дата обновления
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              updated_at?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список категорий товаров с вложенностью */
+  b4cba4c0a0163a52ebe80d4733414437: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: ({
+                /** @example 2 */
+                id: number;
+                /**
+                 * @description ID родительской категории
+                 * @example 2
+                 */
+                parent_id: number | null;
+                /**
+                 * @description Название категории
+                 * @example Массажные кресла
+                 */
+                name: string | null;
+                /**
+                 * @description Количество товаров в категории
+                 * @example 10
+                 */
+                products_qnt: number;
+                /**
+                 * @description Количество фильтров в категории
+                 * @example 5
+                 */
+                filters_qnt: number;
+                subcategories: ({
+                    /** @example 85 */
+                    id?: number;
+                    /**
+                     * @description ID родительской категории
+                     * @example 2
+                     */
+                    parent_id?: number | null;
+                    /**
+                     * @description Название категории
+                     * @example Массажные кресла INADA
+                     */
+                    name?: string | null;
+                    /**
+                     * @description Количество товаров в категории
+                     * @example 10
+                     */
+                    products_qnt?: number;
+                    /**
+                     * @description Количество фильтров в категории
+                     * @example 5
+                     */
+                    filters_qnt?: number;
+                    /** @example [] */
+                    subcategories?: unknown[];
+                  })[];
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Список всех категорий товаров */
+  "8b90169d865bd6d1388f0bcbd1938fb6": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: ({
+                /** @example 2 */
+                id: number;
+                /**
+                 * @description ID родительской категории
+                 * @example 2
+                 */
+                parent_id: number | null;
+                /**
+                 * @description Название категории
+                 * @example Массажные кресла
+                 */
+                name: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 2
+                 */
+                sort: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Список категорий с пагинацией (Не используется) */
+  eebefde71f4cd777e1333086df2adbcb: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 138 */
+                id?: number;
+                /**
+                 * @description ID родительской категории
+                 * @example 12
+                 */
+                parent_id?: number | null;
+                /**
+                 * @description Название категории
+                 * @example Беговые дорожки и фитнес
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2023-11-01T01:00:21.000000Z
+                 */
+                updated_at?: string | null;
+                /**
+                 * @description Дата удаления (soft delete)
+                 * @example 2023-11-01T01:00:21.000000Z
+                 */
+                deleted_at?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Одна категория (Не используется) */
+  e38e6e031a1830d10eb294c4ebe686ed: {
+    parameters: {
+      path: {
+        /**
+         * @description ID категории
+         * @example 3
+         */
+        category: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 138 */
+              id?: number;
+              /**
+               * @description ID родительской категории
+               * @example 12
+               */
+              parent_id?: number | null;
+              /**
+               * @description Название категории
+               * @example Беговые дорожки и фитнес
+               */
+              name?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+              /**
+               * @description Дата создания
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              created_at?: string | null;
+              /**
+               * @description Дата обновления
+               * @example 2023-11-01T01:00:21.000000Z
+               */
+              updated_at?: string | null;
+              /**
+               * @description Дата удаления (soft delete)
+               * @example 2023-11-01T01:00:21.000000Z
+               */
+              deleted_at?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список категорий новостей */
+  b211fbbdd20095a701f9d60a616265b4: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["CategoryForNewsSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Одна категория новостей */
+  "779b67a56d30dc228ee71be4b9df136a": {
+    parameters: {
+      path: {
+        /**
+         * @description ID категории
+         * @example 3
+         */
+        category_for_news: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["CategoryForNewsSchema"];
+        };
+      };
+    };
+  };
+  /** Список файлов */
+  c22528b30c6eefddd5c8d9d05fde611e: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название бренда
+                 * @example YAMAGUCHI
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один файл */
+  "9e529970f03fcc53308c5af0c398d7fc": {
+    parameters: {
+      path: {
+        /**
+         * @description ID файла
+         * @example 3
+         */
+        file: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 3 */
+              id?: number;
+              /**
+               * @description Название бренда
+               * @example YAMAGUCHI
+               */
+              name?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+              /**
+               * @description Дата создания
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              created_at?: string | null;
+              /**
+               * @description Дата обновления
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              updated_at?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список новостей */
+  "4ea974e5916a8f53d7d16936ab134215": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["NewsSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Одна новость */
+  a3390624174deb086ec755fb1d0f2466: {
+    parameters: {
+      path: {
+        /**
+         * @description ID новости
+         * @example 3
+         */
+        news: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["NewsSchema"];
+        };
+      };
+    };
+  };
+  /** Список страниц */
+  e29f15ca6185b249e10f3f8575343b5d: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["PageSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Одна страница */
+  "12c8a0fec22a40f5b5794e2cb6cf9c4f": {
+    parameters: {
+      path: {
+        /**
+         * @description ID страницы
+         * @example 11
+         */
+        page: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["PageSchema"];
+        };
+      };
+    };
+  };
+  /** Список товаров */
+  d582f69da1832500b203d717f329b152: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: ({
+                /** @example 331 */
+                id: number;
+                /**
+                 * @description ID товара в Борбозе
+                 * @example 1557
+                 */
+                borboza_id: number | null;
+                /**
+                 * @description Название товара
+                 * @example Массажная накидка US MEDICA Rumba
+                 */
+                name: string | null;
+                /**
+                 * @description Ссылка на товар на сайте
+                 * @example https://www.yamaguchi.ru/massazhery-dlya-tela/us-medica-miami.php
+                 */
+                site_url: string | null;
+                /**
+                 * @description Так же искать продукт по этим словам в поиске сайта
+                 * @example miami\r\nмиами\r\nмаями\r\nмиями
+                 */
+                search_keywords: string | null;
+                /**
+                 * @description Модель
+                 * @example Miami
+                 */
+                model: string | null;
+                /**
+                 * @description Бренд
+                 * @example US MEDICA
+                 */
+                brand: string | null;
+                /**
+                 * @description Цена
+                 * @example 1900
+                 */
+                price: number | null;
+                /**
+                 * @description Популярность
+                 * @example 11
+                 */
+                popularity: number | null;
+                /**
+                 * @description Категория
+                 * @example Электрические массажеры
+                 */
+                category: string | null;
+                /** @description Количество (МСК) */
+                qnt: ({
+                  /**
+                   * @description Цвет плашки
+                   * @example purple
+                   */
+                  color: string | null;
+                  /**
+                   * @description Предзаказ или цифра количества
+                   * @example 11
+                   */
+                  text: string | null;
+                }) | null;
+                /**
+                 * @description Статус
+                 * @example Опубликован
+                 */
+                status: string | null;
+                /**
+                 * @description Первое фото товара в самом маленьком размере
+                 * @example https://yamaguchi.ru/storage/product_gallery/3/376/miami.webp
+                 */
+                photo?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один товар */
+  e7133a640a3cc611d6dbcbc55576dcc5: {
+    parameters: {
+      path: {
+        /**
+         * @description ID товара
+         * @example 331
+         */
+        product: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["ProductSchema"];
+        };
+      };
+    };
+  };
+  /** Обновляет складскую структуру товара и возвращет кол-во в Москве */
+  b8b93060d50de69af8864d36b6401f07: {
+    parameters: {
+      path: {
+        /**
+         * @description ID товара
+         * @example 617
+         */
+        product: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": number;
+        };
+      };
+    };
+  };
+  /** Данные для формы товара (Не используется) */
+  "8152f2d02fe6548fecf5963b9cf70582": {
+    parameters: {
+      path: {
+        /**
+         * @description ID товара
+         * @example 331
+         */
+        product: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 331 */
+              id?: number;
+              /**
+               * @description ID товара в Borboza
+               * @example 2518
+               */
+              borboza_id?: number | null;
+              /**
+               * @description Цена
+               * @example 1900
+               */
+              price?: number | null;
+              /**
+               * @description Цена по акции
+               * @example 1900
+               */
+              price_promotion?: number | null;
+              /**
+               * @description Цена предзаказа
+               * @example 1900
+               */
+              price_preorder?: number | null;
+              /**
+               * @description Название товара
+               * @example Бандаж на локтевой сустав YAMAGUCHI Aeroprene Elbow Support
+               */
+              name?: string | null;
+              /**
+               * @description Слоган
+               * @example Надежная защита и поддержка
+               */
+              slogan_text?: string | null;
+              /**
+               * @description Размер шрифта слогана
+               * @example 30
+               */
+              slogan_font_size?: string | null;
+              /**
+               * @description Код цвета слогана
+               * @example 30
+               */
+              slogan_color?: string | null;
+              /**
+               * @description ID бренда
+               * @example 3
+               */
+              brand_id?: number | null;
+              /**
+               * @description Модель
+               * @example Aeroprene Elbow Support
+               */
+              model?: string | null;
+              /**
+               * @description Короткое название
+               * @example Бандаж на локтевой сустав
+               */
+              short_name?: string | null;
+              /**
+               * @description Адрес страницы
+               * @example tovari-dlya-zdorovya/elbow_support.php
+               */
+              url?: string | null;
+              /**
+               * @description Системное название
+               * @example aeroprene_elbow_support
+               */
+              system_name?: string | null;
+              /**
+               * @description Популярность
+               * @example 12
+               */
+              popularity?: number | null;
+              /**
+               * @description Бейдж Акция
+               * @example 1
+               */
+              badge_promo?: number | null;
+              /**
+               * @description Бейдж Новинка
+               * @example 1
+               */
+              badge_new?: number | null;
+              /**
+               * @description Бейдж Хит
+               * @example 1
+               */
+              badge_bestseller?: number | null;
+              /**
+               * @description ID статуса
+               * @example 1
+               */
+              status_id?: number | null;
+              /**
+               * @description Примечание
+               * @example Товары для СЕО, остаются в базе для спокойствия Александра Штанга и нашего благополучия
+               */
+              note?: string | null;
+              /**
+               * @description ID видео десктоп в лендинге
+               * @example 333
+               */
+              land_video_desktop_file_id?: number | null;
+              /**
+               * @description ID видео мобайл в лендинге
+               * @example 333
+               */
+              land_video_mobile_file_id?: number | null;
+              /**
+               * @description ID категории для сравнения
+               * @example 138
+               */
+              category_compare_id?: number | null;
+              /**
+               * @description Короткое описание (фид для Яндекс)
+               * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+               */
+              text_short?: string | null;
+              /**
+               * @description Полное описание (если лендинга нет — выводится это описание)
+               * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+               */
+              text_full?: string | null;
+              /**
+               * @description Описание для приложения
+               * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+               */
+              text_app?: string | null;
+              /**
+               * @description Фраза о выгоде в год
+               * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+               */
+              text_benefit?: string | null;
+              /**
+               * @description ID категории для хлебных крошек
+               * @example 137
+               */
+              category_breadcrumbs_id?: number | null;
+              /**
+               * @description ID категории для фида
+               * @example 137
+               */
+              category_feed_id?: number | null;
+              /**
+               * @description Описание в YML
+               * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+               */
+              yandex_desc?: string | null;
+              /**
+               * @description Выгружать в YML
+               * @example 1
+               */
+              yandex_export_yml?: number | null;
+              /**
+               * @description Исключение для XML файла
+               * @example 1
+               */
+              yandex_xml_exception?: number | null;
+              /**
+               * @description Так же искать продукт по этим словам в поиске сайта
+               * @example axiom\r\n аксиом\r\n yamaguchi\r\n ямагучи axiom кресло кресло axiom
+               */
+              search_keywords?: string | null;
+              /**
+               * @description Дата создания товара
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              created_at?: string | null;
+              /**
+               * @description Дата обновления товара
+               * @example 2023-11-01T01:00:21.000000Z
+               */
+              updated_at?: string | null;
+              /**
+               * @description Дата удаления товара (soft delete)
+               * @example 2023-11-01T01:00:21.000000Z
+               */
+              deleted_at?: string | null;
+              /** @description Бренд */
+              brand?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название бренда
+                 * @example YAMAGUCHI
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              }) | null;
+              /** @description Видео десктоп в лендинге */
+              land_video_desktop?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Путь к загруженному файлу
+                 * @example
+                 */
+                src?: string | null;
+                /**
+                 * @description Тип файла условный
+                 * @example
+                 */
+                type?: string | null;
+                /**
+                 * @description Изначальное имя файла
+                 * @example
+                 */
+                name_init?: string | null;
+                /**
+                 * @description Ширина для фото или видео
+                 * @example 1
+                 */
+                width?: number | null;
+                /**
+                 * @description Высота для фото или видео
+                 * @example 1
+                 */
+                height?: number | null;
+                /**
+                 * @description Путь к превью
+                 * @example
+                 */
+                preview?: string | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              }) | null;
+              /** @description Видео десктоп в лендинге */
+              land_video_mobile?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Путь к загруженному файлу
+                 * @example
+                 */
+                src?: string | null;
+                /**
+                 * @description Тип файла условный
+                 * @example
+                 */
+                type?: string | null;
+                /**
+                 * @description Изначальное имя файла
+                 * @example
+                 */
+                name_init?: string | null;
+                /**
+                 * @description Ширина для фото или видео
+                 * @example 1
+                 */
+                width?: number | null;
+                /**
+                 * @description Высота для фото или видео
+                 * @example 1
+                 */
+                height?: number | null;
+                /**
+                 * @description Путь к превью
+                 * @example
+                 */
+                preview?: string | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              }) | null;
+              /** @description Статусы товара */
+              status?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название статуса
+                 * @example Опубликован
+                 */
+                name?: string | null;
+                /**
+                 * @description Описание статуса
+                 * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
+                 */
+                description?: string | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              }) | null;
+              /** @description Категория для сравнения */
+              category_compare?: ({
+                /** @example 138 */
+                id?: number;
+                /**
+                 * @description ID родительской категории
+                 * @example 12
+                 */
+                parent_id?: number | null;
+                /**
+                 * @description Название категории
+                 * @example Беговые дорожки и фитнес
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2023-11-01T01:00:21.000000Z
+                 */
+                updated_at?: string | null;
+                /**
+                 * @description Дата удаления (soft delete)
+                 * @example 2023-11-01T01:00:21.000000Z
+                 */
+                deleted_at?: string | null;
+              }) | null;
+              /** @description Бейджи */
+              badges?: ({
+                /** @example 4 */
+                id?: number;
+                /**
+                 * @description ID группы
+                 * @example 12
+                 */
+                group_id?: number | null;
+                /**
+                 * @description Текст
+                 * @example Укрепи дружбу
+                 */
+                text?: string | null;
+                /**
+                 * @description Активен ли бейдж
+                 * @example 1
+                 */
+                is_active?: number | null;
+              }) | null;
+              /** @description Категории товара */
+              categories?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /**
+                   * @description ID родительской категории
+                   * @example 12
+                   */
+                  parent_id?: number | null;
+                  /**
+                   * @description Название категории
+                   * @example Беговые дорожки и фитнес
+                   */
+                  name?: string | null;
+                  /**
+                   * @description Сортировка
+                   * @example 1
+                   */
+                  sort?: number | null;
+                  /**
+                   * @description Дата создания
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  created_at?: string | null;
+                  /**
+                   * @description Дата обновления
+                   * @example 2023-11-01T01:00:21.000000Z
+                   */
+                  updated_at?: string | null;
+                  /**
+                   * @description Дата удаления (soft delete)
+                   * @example 2023-11-01T01:00:21.000000Z
+                   */
+                  deleted_at?: string | null;
+                })[];
+              /** @description Параметры товара */
+              params?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /**
+                   * @description Название параметра
+                   * @example Кол-во ручных программ
+                   */
+                  parameter?: string | null;
+                  /**
+                   * @description Значение фильтра
+                   * @example 5 шт
+                   */
+                  filter?: string | null;
+                  /**
+                   * @description Значение параметра
+                   * @example 5 шт
+                   */
+                  value?: string | null;
+                  /**
+                   * @description Сортировка
+                   * @example 1
+                   */
+                  sort?: number | null;
+                  /**
+                   * @description Активность
+                   * @example 1
+                   */
+                  is_active?: number | null;
+                  /**
+                   * @description ID товара
+                   * @example 95
+                   */
+                  product_id?: number | null;
+                })[];
+              /** @description Параметры товара */
+              q_r_codes?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /**
+                   * @description ID товара
+                   * @example 95
+                   */
+                  product_id?: number | null;
+                  /**
+                   * @description Куда будет вести QR-код? (ссылка)
+                   * @example https://youtu.be/e600o2k2zwU?si=1E27TkA_tRvc63Cn
+                   */
+                  link?: string | null;
+                  /**
+                   * @description Эту ссылку вшиваем в QR-код (https://www.yamaguchi.ru/qrcode/ + это поле)
+                   * @example II6107
+                   */
+                  code?: string | null;
+                  /**
+                   * @description Сортировка
+                   * @example 1
+                   */
+                  sort?: number | null;
+                  /**
+                   * @description Utm-метки, которые подставятся при редиректе
+                   * @example ?utm_source=qrcode&utm_medium=Box&utm_campaign=qr
+                   */
+                  name?: string | null;
+                })[];
+              /** @description Варианты аренды товара */
+              rent?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /**
+                   * @description ID товара
+                   * @example 95
+                   */
+                  product_id?: number | null;
+                  /** @example 95 */
+                  rent_id?: number | null;
+                  /** @example 95 */
+                  borboza_id?: number | null;
+                  /** @example 95 */
+                  price?: number | null;
+                  /** @example 95 */
+                  price_promotion?: number | null;
+                  /** @example 95 */
+                  price_preorder?: number | null;
+                  /** @description Вариант аренды */
+                  rent?: ({
+                    /** @example 3 */
+                    id?: number;
+                    /**
+                     * @description Название типа аренды
+                     * @example Аренда на 1 месяц
+                     */
+                    name?: string | null;
+                    /**
+                     * @description Сортировка
+                     * @example 1
+                     */
+                    sort?: number | null;
+                  }) | null;
+                })[];
+              /** @description Размеры */
+              size?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /**
+                   * @description ID товара
+                   * @example 95
+                   */
+                  product_id?: number | null;
+                  /** @example 95 */
+                  size_id?: number | null;
+                  /** @example 95 */
+                  borboza_id?: number | null;
+                  /** @example 95 */
+                  price?: number | null;
+                  /** @example 95 */
+                  price_promotion?: number | null;
+                  /** @example 95 */
+                  price_preorder?: number | null;
+                  /** @description Размер */
+                  size?: ({
+                    /** @example 3 */
+                    id?: number;
+                    /**
+                     * @description Название размера
+                     * @example S
+                     */
+                    name?: string | null;
+                    /**
+                     * @description Сортировка
+                     * @example 1
+                     */
+                    sort?: number | null;
+                  }) | null;
+                })[];
+              /** @description С этим товаром покупают на лендинге */
+              additional_products_landing?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /** @example 95 */
+                  borboza_id?: number | null;
+                  /** @example 95 */
+                  price?: number | null;
+                  /** @example 95 */
+                  price_promotion?: number | null;
+                  /** @example 95 */
+                  price_preorder?: number | null;
+                })[];
+              /** @description С этим товаром покупают в корзине */
+              additional_products_basket?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /** @example 95 */
+                  borboza_id?: number | null;
+                  /** @example 95 */
+                  price?: number | null;
+                  /** @example 95 */
+                  price_promotion?: number | null;
+                  /** @example 95 */
+                  price_preorder?: number | null;
+                })[];
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список товаров с пагинацией (Не используется) */
+  "011c5f713cfddfcc76cde6f341417be7": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 331 */
+                id?: number;
+                /**
+                 * @description ID товара в Borboza
+                 * @example 2518
+                 */
+                borboza_id?: number | null;
+                /**
+                 * @description Цена
+                 * @example 1900
+                 */
+                price?: number | null;
+                /**
+                 * @description Цена по акции
+                 * @example 1900
+                 */
+                price_promotion?: number | null;
+                /**
+                 * @description Цена предзаказа
+                 * @example 1900
+                 */
+                price_preorder?: number | null;
+                /**
+                 * @description Название товара
+                 * @example Бандаж на локтевой сустав YAMAGUCHI Aeroprene Elbow Support
+                 */
+                name?: string | null;
+                /**
+                 * @description Слоган
+                 * @example Надежная защита и поддержка
+                 */
+                slogan_text?: string | null;
+                /**
+                 * @description Размер шрифта слогана
+                 * @example 30
+                 */
+                slogan_font_size?: string | null;
+                /**
+                 * @description Код цвета слогана
+                 * @example 30
+                 */
+                slogan_color?: string | null;
+                /**
+                 * @description ID бренда
+                 * @example 3
+                 */
+                brand_id?: number | null;
+                /**
+                 * @description Модель
+                 * @example Aeroprene Elbow Support
+                 */
+                model?: string | null;
+                /**
+                 * @description Короткое название
+                 * @example Бандаж на локтевой сустав
+                 */
+                short_name?: string | null;
+                /**
+                 * @description Адрес страницы
+                 * @example tovari-dlya-zdorovya/elbow_support.php
+                 */
+                url?: string | null;
+                /**
+                 * @description Системное название
+                 * @example aeroprene_elbow_support
+                 */
+                system_name?: string | null;
+                /**
+                 * @description Популярность
+                 * @example 12
+                 */
+                popularity?: number | null;
+                /**
+                 * @description Бейдж Акция
+                 * @example 1
+                 */
+                badge_promo?: number | null;
+                /**
+                 * @description Бейдж Новинка
+                 * @example 1
+                 */
+                badge_new?: number | null;
+                /**
+                 * @description Бейдж Хит
+                 * @example 1
+                 */
+                badge_bestseller?: number | null;
+                /**
+                 * @description ID статуса
+                 * @example 1
+                 */
+                status_id?: number | null;
+                /**
+                 * @description Примечание
+                 * @example Товары для СЕО, остаются в базе для спокойствия Александра Штанга и нашего благополучия
+                 */
+                note?: string | null;
+                /**
+                 * @description ID видео десктоп в лендинге
+                 * @example 333
+                 */
+                land_video_desktop_file_id?: number | null;
+                /**
+                 * @description ID видео мобайл в лендинге
+                 * @example 333
+                 */
+                land_video_mobile_file_id?: number | null;
+                /**
+                 * @description ID категории для сравнения
+                 * @example 138
+                 */
+                category_compare_id?: number | null;
+                /**
+                 * @description Короткое описание (фид для Яндекс)
+                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+                 */
+                text_short?: string | null;
+                /**
+                 * @description Полное описание (если лендинга нет — выводится это описание)
+                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+                 */
+                text_full?: string | null;
+                /**
+                 * @description Описание для приложения
+                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+                 */
+                text_app?: string | null;
+                /**
+                 * @description Фраза о выгоде в год
+                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+                 */
+                text_benefit?: string | null;
+                /**
+                 * @description ID категории для хлебных крошек
+                 * @example 137
+                 */
+                category_breadcrumbs_id?: number | null;
+                /**
+                 * @description ID категории для фида
+                 * @example 137
+                 */
+                category_feed_id?: number | null;
+                /**
+                 * @description Описание в YML
+                 * @example <p>Бандаж на локтевой сустав <strong>Yamaguchi Neoprene Elbow Support</strong> осуществляет поддержку в области локтя и разгрузку сухожилий. Изделие выполнено из «дышащего» неопрена, который обеспечивает равномерную компрессию, не скользит по руке и не собирается в складки.</p>
+                 */
+                yandex_desc?: string | null;
+                /**
+                 * @description Выгружать в YML
+                 * @example 1
+                 */
+                yandex_export_yml?: number | null;
+                /**
+                 * @description Исключение для XML файла
+                 * @example 1
+                 */
+                yandex_xml_exception?: number | null;
+                /**
+                 * @description Так же искать продукт по этим словам в поиске сайта
+                 * @example axiom\r\n аксиом\r\n yamaguchi\r\n ямагучи axiom кресло кресло axiom
+                 */
+                search_keywords?: string | null;
+                /**
+                 * @description Дата создания товара
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления товара
+                 * @example 2023-11-01T01:00:21.000000Z
+                 */
+                updated_at?: string | null;
+                /**
+                 * @description Дата удаления товара (soft delete)
+                 * @example 2023-11-01T01:00:21.000000Z
+                 */
+                deleted_at?: string | null;
+                /** @description Бренд */
+                brand?: ({
+                  /** @example 3 */
+                  id?: number;
+                  /**
+                   * @description Название бренда
+                   * @example YAMAGUCHI
+                   */
+                  name?: string | null;
+                  /**
+                   * @description Сортировка
+                   * @example 1
+                   */
+                  sort?: number | null;
+                  /**
+                   * @description Дата создания
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  created_at?: string | null;
+                  /**
+                   * @description Дата обновления
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  updated_at?: string | null;
+                }) | null;
+                /** @description Видео десктоп в лендинге */
+                land_video_desktop?: ({
+                  /** @example 3 */
+                  id?: number;
+                  /**
+                   * @description Путь к загруженному файлу
+                   * @example
+                   */
+                  src?: string | null;
+                  /**
+                   * @description Тип файла условный
+                   * @example
+                   */
+                  type?: string | null;
+                  /**
+                   * @description Изначальное имя файла
+                   * @example
+                   */
+                  name_init?: string | null;
+                  /**
+                   * @description Ширина для фото или видео
+                   * @example 1
+                   */
+                  width?: number | null;
+                  /**
+                   * @description Высота для фото или видео
+                   * @example 1
+                   */
+                  height?: number | null;
+                  /**
+                   * @description Путь к превью
+                   * @example
+                   */
+                  preview?: string | null;
+                  /**
+                   * @description Дата создания
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  created_at?: string | null;
+                  /**
+                   * @description Дата обновления
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  updated_at?: string | null;
+                }) | null;
+                /** @description Видео десктоп в лендинге */
+                land_video_mobile?: ({
+                  /** @example 3 */
+                  id?: number;
+                  /**
+                   * @description Путь к загруженному файлу
+                   * @example
+                   */
+                  src?: string | null;
+                  /**
+                   * @description Тип файла условный
+                   * @example
+                   */
+                  type?: string | null;
+                  /**
+                   * @description Изначальное имя файла
+                   * @example
+                   */
+                  name_init?: string | null;
+                  /**
+                   * @description Ширина для фото или видео
+                   * @example 1
+                   */
+                  width?: number | null;
+                  /**
+                   * @description Высота для фото или видео
+                   * @example 1
+                   */
+                  height?: number | null;
+                  /**
+                   * @description Путь к превью
+                   * @example
+                   */
+                  preview?: string | null;
+                  /**
+                   * @description Дата создания
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  created_at?: string | null;
+                  /**
+                   * @description Дата обновления
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  updated_at?: string | null;
+                }) | null;
+                /** @description Статусы товара */
+                status?: ({
+                  /** @example 3 */
+                  id?: number;
+                  /**
+                   * @description Название статуса
+                   * @example Опубликован
+                   */
+                  name?: string | null;
+                  /**
+                   * @description Описание статуса
+                   * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
+                   */
+                  description?: string | null;
+                  /**
+                   * @description Дата создания
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  created_at?: string | null;
+                  /**
+                   * @description Дата обновления
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  updated_at?: string | null;
+                }) | null;
+                /** @description Категория для сравнения */
+                category_compare?: ({
+                  /** @example 138 */
+                  id?: number;
+                  /**
+                   * @description ID родительской категории
+                   * @example 12
+                   */
+                  parent_id?: number | null;
+                  /**
+                   * @description Название категории
+                   * @example Беговые дорожки и фитнес
+                   */
+                  name?: string | null;
+                  /**
+                   * @description Сортировка
+                   * @example 1
+                   */
+                  sort?: number | null;
+                  /**
+                   * @description Дата создания
+                   * @example 2022-03-21T17:07:02.000000Z
+                   */
+                  created_at?: string | null;
+                  /**
+                   * @description Дата обновления
+                   * @example 2023-11-01T01:00:21.000000Z
+                   */
+                  updated_at?: string | null;
+                  /**
+                   * @description Дата удаления (soft delete)
+                   * @example 2023-11-01T01:00:21.000000Z
+                   */
+                  deleted_at?: string | null;
+                }) | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Список всех товаров для поля поиска товара (Не используется) */
+  aed659737108e11d897bf75222b6ecca: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": ({
+              /** @example 331 */
+              id: number;
+              /**
+               * @description Название товара
+               * @example Виброплатформа Yamaguchi VibroPlate
+               */
+              name: string | null;
+            })[];
+        };
+      };
+    };
+  };
+  /** Список найденных товаров для поля поиска товара (Не используется) */
+  f44a187ee98ef4be2c0626b9b42fa2b6: {
+    parameters: {
+      path: {
+        /**
+         * @description Запрос
+         * @example кресло
+         */
+        term: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": ({
+              /** @example 331 */
+              id: number;
+              /**
+               * @description Название товара
+               * @example Виброплатформа Yamaguchi VibroPlate
+               */
+              name: string | null;
+            })[];
+        };
+      };
+    };
+  };
+  /** Список параметров товаров */
+  f859ed239832e4dee39f768ef376c78b: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 138 */
+                id?: number;
+                /**
+                 * @description Название параметра
+                 * @example Кол-во ручных программ
+                 */
+                parameter?: string | null;
+                /**
+                 * @description Значение фильтра
+                 * @example 5 шт
+                 */
+                filter?: string | null;
+                /**
+                 * @description Значение параметра
+                 * @example 5 шт
+                 */
+                value?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+                /**
+                 * @description Активность
+                 * @example 1
+                 */
+                is_active?: number | null;
+                /**
+                 * @description ID товара
+                 * @example 95
+                 */
+                product_id?: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один параметр товара */
+  a2814a90a6337388693c14ade5e969ec: {
+    parameters: {
+      path: {
+        /**
+         * @description ID параметра товара
+         * @example 3
+         */
+        product_param: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 138 */
+              id?: number;
+              /**
+               * @description Название параметра
+               * @example Кол-во ручных программ
+               */
+              parameter?: string | null;
+              /**
+               * @description Значение фильтра
+               * @example 5 шт
+               */
+              filter?: string | null;
+              /**
+               * @description Значение параметра
+               * @example 5 шт
+               */
+              value?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+              /**
+               * @description Активность
+               * @example 1
+               */
+              is_active?: number | null;
+              /**
+               * @description ID товара
+               * @example 95
+               */
+              product_id?: number | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список статусов товаров */
+  ffc46beb4ff9fe666cd30da0c2030e01: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название статуса
+                 * @example Опубликован
+                 */
+                name?: string | null;
+                /**
+                 * @description Описание статуса
+                 * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
+                 */
+                description?: string | null;
+                /**
+                 * @description Дата создания
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                created_at?: string | null;
+                /**
+                 * @description Дата обновления
+                 * @example 2022-03-21T17:07:02.000000Z
+                 */
+                updated_at?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один статус товара */
+  "837bd98a22b9d9cc46c37fd8c5c88614": {
+    parameters: {
+      path: {
+        /**
+         * @description ID статуса товара
+         * @example 1
+         */
+        product_status: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 1 */
+              id?: number;
+              /**
+               * @description Название статуса
+               * @example Опубликован
+               */
+              name?: string | null;
+              /**
+               * @description Описание статуса
+               * @example Виден в поиске сайта, в каталогах и доступен для поисковиков
+               */
+              description?: string | null;
+              /**
+               * @description Дата создания
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              created_at?: string | null;
+              /**
+               * @description Дата обновления
+               * @example 2022-03-21T17:07:02.000000Z
+               */
+              updated_at?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список QR-кодов */
+  "4b33be66fd446437ae4afd2f31f795d8": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["QRCodeSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Один QR-код по ID */
+  "860dbf885fff3b8195590c8e8b1aa5ba": {
+    parameters: {
+      path: {
+        /**
+         * @description ID QR-кода
+         * @example 3
+         */
+        id: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["QRCodeSchema"];
+        };
+      };
+    };
+  };
+  /** Один QR-код по полю Код */
+  "344d97350d99fd37683414b868a8fe63": {
+    parameters: {
+      path: {
+        /**
+         * @description Код QR-кода
+         * @example LL6539
+         */
+        code: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["QRCodeSchema"];
+        };
+      };
+    };
+  };
+  /** Список типов аренды */
+  c580ef58d20b44d2ae6c244d9c8369f0: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название типа аренды
+                 * @example Аренда на 1 месяц
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один тип аренды */
+  "894ebbfe98b915d6b56977d83ffa6d50": {
+    parameters: {
+      path: {
+        /**
+         * @description ID типа аренды
+         * @example 3
+         */
+        rent_type: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 3 */
+              id?: number;
+              /**
+               * @description Название типа аренды
+               * @example Аренда на 1 месяц
+               */
+              name?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список SEO страниц */
+  d749a21f9fdabc85620d396b45b56862: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["SeoSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Seo одной страницы */
+  f3844fb011e6e9bd88b8a81b07b4dadd: {
+    parameters: {
+      path: {
+        /**
+         * @description ID записи
+         * @example 3
+         */
+        seo: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["SeoSchema"];
+        };
+      };
+    };
+  };
+  /** Список мета-тегов */
+  "3b5fb776c7eaa59858bd0f4974123fe6": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: components["schemas"]["SeoMetaSchema"][];
+          };
+        };
+      };
+    };
+  };
+  /** Один мета тег */
+  e2a0fdd631754e9197a1eb76e3920266: {
+    parameters: {
+      path: {
+        /**
+         * @description ID записи
+         * @example 1
+         */
+        seo_meta: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["SeoMetaSchema"];
+        };
+      };
+    };
+  };
+  /** Список размеров */
+  b4f3ce5135c7f7988b0fb3fbaafc3ed4: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Название размера
+                 * @example S
+                 */
+                name?: string | null;
+                /**
+                 * @description Сортировка
+                 * @example 1
+                 */
+                sort?: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один размер */
+  "7dfc6c763faef647882d266e38e975dd": {
+    parameters: {
+      path: {
+        /**
+         * @description ID размера
+         * @example 3
+         */
+        size: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 3 */
+              id?: number;
+              /**
+               * @description Название размера
+               * @example S
+               */
+              name?: string | null;
+              /**
+               * @description Сортировка
+               * @example 1
+               */
+              sort?: number | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список тултипов */
+  cd78c2dcef2c3c4ef7b177401b6ee142: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 3 */
+                id?: number;
+                /**
+                 * @description Текст тултипа
+                 * @example Строка 1 в большой карточке товара (на лендинге)
+                 */
+                value?: string | null;
+                /**
+                 * @description Системный комментарий
+                 * @example Админка - Товар - Системное - Название товара
+                 */
+                comment?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один тултип */
+  aa1f8199e9d9b7d6410aea32c6da2be3: {
+    parameters: {
+      path: {
+        /**
+         * @description ID тултипа
+         * @example 1
+         */
+        tooltip: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 3 */
+              id?: number;
+              /**
+               * @description Текст тултипа
+               * @example Строка 1 в большой карточке товара (на лендинге)
+               */
+              value?: string | null;
+              /**
+               * @description Системный комментарий
+               * @example Админка - Товар - Системное - Название товара
+               */
+              comment?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Список */
+  decaa94cc129c2f36988dc0b4054f469: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 1 */
+                id?: number;
+                /** @example a.kopylova */
+                username?: string;
+                /**
+                 * @description Имя
+                 * @example Алексей
+                 */
+                fname?: string | null;
+                /**
+                 * @description Отчество
+                 * @example Викторович
+                 */
+                mname?: string | null;
+                /**
+                 * @description Фамилия
+                 * @example Поваров
+                 */
+                lname?: string | null;
+                /** @example povarovalexey@gmail.com */
+                email?: string;
+                /** @example 1 */
+                status?: number;
+                /** @example admin */
+                role?: string;
+                /** @example 79265656738 */
+                phone?: string | null;
+                /** @example 1970-06-11 */
+                birthdate?: string | null;
+                /**
+                 * @description Пол
+                 * @example m
+                 * @enum {string|null}
+                 */
+                gender?: "m" | "f" | null;
+                /** @example Тюмень */
+                city?: string;
+                /** @example 1 */
+                participation_in_marathon?: number | null;
+                /** @example 3546613 */
+                customer_id?: number | null;
+                /** @example 1 */
+                confirmed_number?: number | null;
+                /** @example 239c59c7412137a9634ac7c65.png */
+                avatar?: string | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один пользователь */
+  c22b99772a61d51fe7de4bab687fefa6: {
+    parameters: {
+      path: {
+        /**
+         * @description ID пользователя
+         * @example 1
+         */
+        user: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 1 */
+              id?: number;
+              /** @example a.kopylova */
+              username?: string;
+              /**
+               * @description Имя
+               * @example Алексей
+               */
+              fname?: string | null;
+              /**
+               * @description Отчество
+               * @example Викторович
+               */
+              mname?: string | null;
+              /**
+               * @description Фамилия
+               * @example Поваров
+               */
+              lname?: string | null;
+              /** @example povarovalexey@gmail.com */
+              email?: string;
+              /** @example 1 */
+              status?: number;
+              /** @example admin */
+              role?: string;
+              /** @example 79265656738 */
+              phone?: string | null;
+              /** @example 1970-06-11 */
+              birthdate?: string | null;
+              /**
+               * @description Пол
+               * @example m
+               * @enum {string|null}
+               */
+              gender?: "m" | "f" | null;
+              /** @example Тюмень */
+              city?: string;
+              /** @example 1 */
+              participation_in_marathon?: number | null;
+              /** @example 3546613 */
+              customer_id?: number | null;
+              /** @example 1 */
+              confirmed_number?: number | null;
+              /** @example 239c59c7412137a9634ac7c65.png */
+              avatar?: string | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Авторизация */
+  "36efd705d963de2d5f25c7dd0813b5ef": {
+    requestBody?: {
+      content: {
+        "application/json": {
+          /** @example email@domain.com */
+          email?: string;
+          /** @example password */
+          password?: string;
+        };
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            /** @example foobar */
+            access_token: string;
+            /** @example bearer */
+            token_type: string;
+            /** @example 20160 */
+            expires_in: number;
+          };
+        };
+      };
+      /** @description Error: Unauthorized */
+      401: {
+        content: {
+          "application/json": {
+            /** @example Unauthorized */
+            error?: string;
+          };
+        };
+      };
+    };
+  };
+  /** Выход */
+  "11653b01bd971e43d3cdba09d181b8b2": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            /** @example Successfully logged out */
+            message?: string;
+          };
+        };
+      };
+    };
+  };
+  /** Данные пользователя */
+  ea7118a3226abfbeaaa99e1ef8605a58: {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            /** @example 1 */
+            id: number;
+            /**
+             * @description Имя
+             * @example Иван
+             */
+            first_name: string | null;
+            /**
+             * @description Отчество
+             * @example Иванович
+             */
+            middle_name: string | null;
+            /**
+             * @description Фамилия
+             * @example Иванов
+             */
+            last_name: string | null;
+            /**
+             * @description Email
+             * @example user@email.com
+             */
+            email: string;
+            /**
+             * @description Роль
+             * @example user
+             */
+            role: string | null;
+            /**
+             * @description Телефон
+             * @example 9151711111
+             */
+            phone: string | null;
+            /** @example 2023-07-07T07:11:40.000000Z */
+            created_at: Record<string, never>;
+            /** @example 2023-07-07T07:11:40.000000Z */
+            updated_at: Record<string, never>;
+          };
+        };
+      };
+      /** @description Error: Unauthorized */
+      401: {
+        content: {
+          "application/json": {
+            /** @example Unauthenticated */
+            error?: string;
+          };
+        };
+      };
+    };
+  };
+  /** Список баннеров */
+  "6aba05f7376eefa62dbf2c3685fd61e8": {
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: ({
+                /** @example 1 */
+                id?: number;
+                /**
+                 * @description Название
+                 * @example Колесо фортуны
+                 */
+                name?: string | null;
+                /**
+                 * @description HTML-код баннера
+                 * @example <div...><div ...><a href...></a></div></div>
+                 */
+                html?: string | null;
+                /**
+                 * @description Позиция
+                 * @example 5
+                 */
+                position?: number | null;
+                /**
+                 * @description Задержка, сек
+                 * @example 4
+                 */
+                delay?: number | null;
+                /**
+                 * @description Дата начала отображения
+                 * @example 2023-08-08 18:00:49
+                 */
+                date_start?: string | null;
+                /**
+                 * @description Дата окончания отображения
+                 * @example 2023-12-12 23:55:31
+                 */
+                date_end?: string | null;
+                /**
+                 * @description Статус (публикация)
+                 * @example 1
+                 */
+                status?: number | null;
+                /**
+                 * @description Активность (архив)
+                 * @example 1
+                 */
+                is_active?: number | null;
+              })[];
+          };
+        };
+      };
+    };
+  };
+  /** Один баннер */
+  "0c68f2989ada236bc21403318438e6d7": {
+    parameters: {
+      path: {
+        /**
+         * @description ID баннера
+         * @example 26
+         */
+        banner: string;
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data?: {
+              /** @example 1 */
+              id?: number;
+              /**
+               * @description Название
+               * @example Колесо фортуны
+               */
+              name?: string | null;
+              /**
+               * @description HTML-код баннера
+               * @example <div...><div ...><a href...></a></div></div>
+               */
+              html?: string | null;
+              /**
+               * @description Позиция
+               * @example 5
+               */
+              position?: number | null;
+              /**
+               * @description Задержка, сек
+               * @example 4
+               */
+              delay?: number | null;
+              /**
+               * @description Дата начала отображения
+               * @example 2023-08-08 18:00:49
+               */
+              date_start?: string | null;
+              /**
+               * @description Дата окончания отображения
+               * @example 2023-12-12 23:55:31
+               */
+              date_end?: string | null;
+              /**
+               * @description Статус (публикация)
+               * @example 1
+               */
+              status?: number | null;
+              /**
+               * @description Активность (архив)
+               * @example 1
+               */
+              is_active?: number | null;
+            };
+          };
+        };
+      };
+    };
+  };
+  /** Данные для страницы по URN */
+  "6e6c24e0af16553f00cd03ad6c80ad60": {
+    requestBody?: {
+      content: {
+        "application/json": {
+          /** @example trenazhery-dlya-doma/runway-x */
+          urn: string;
+        };
+      };
+    };
+    responses: {
+      /** @description Ok */
+      200: {
+        content: {
+          "application/json": {
+            data: {
+              /**
+               * @description Тип страницы
+               * @enum {string|null}
+               */
+              page_type: "main" | "category" | "page" | "product" | "redirect" | null;
+              /** @description Хлебные крошки */
+              breadcrumbs: unknown[][];
+              seo: {
+                title: string | null;
+                canonical: string | null;
+                meta?: unknown[][];
+              };
+            };
+          };
+        };
+      };
+    };
+  };
+}

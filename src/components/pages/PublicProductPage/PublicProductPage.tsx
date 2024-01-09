@@ -1,26 +1,19 @@
 import type { FC } from 'react'
 
-import useFetchProduct from '@/src/api/useFetchProduct/useFetchProduct'
+import Landing from '@/src/components/Landing/Landing'
 import ProductHero from '@/src/components/ProductHero/ProductHero'
-import Wysiwyg from '@/src/components/Wysiwyg'
 
-type PublicProductPageTypes = {}
+import { PublicProductPageTypes } from './_types'
 
 /** temp */
-const PublicProductPage: FC<PublicProductPageTypes> = () => {
-  /** получение данных */
-  const { data, isLoading } = useFetchProduct({ productId: '677' })
+const PublicProductPage: FC<PublicProductPageTypes> = ({ data }) => (
+  <>
+    <ProductHero
+      {...data?.product}
+    />
+    <Landing landingName='yamaguchi-xu' />
+  </>
 
-  return (
-    <>
-      <ProductHero
-        {...data?.data}
-        isLoading={isLoading}
-      />
-      <Wysiwyg landingName='yamaguchi-xu' />
-    </>
-
-  )
-}
+)
 
 export default PublicProductPage

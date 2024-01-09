@@ -23,7 +23,6 @@ const TechParamsList: FC<TechParamsListTypes> = ({ name }) => {
   const formMethods = useFormContext()
   /** изначальные значения */
   const defaultOptions = formMethods?.getValues(name)
-
   /** реф */
   const customHolderRef = useRef(null)
 

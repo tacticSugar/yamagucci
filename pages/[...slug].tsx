@@ -2,22 +2,38 @@ import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { GetStaticProps } from 'next'
 import { memo } from 'react'
 
-import { getProduct, QUERY_KEY_FETCH_PRODUCT } from '@/src/api/useFetchProduct/useFetchProduct'
-import PublicProductPage from '@/src/components/pages/PublicProductPage/PublicProductPage'
+import { FetchPageDataOriginalResult } from '@/src/api/useFetchPageData/_types'
+import { getPageData, QUERY_KEY_FETCH_PAGE_DATA } from '@/src/api/useFetchPageData/useFetchPageData'
+import DynamicPage from '@/src/components/pages/DynamicPage/DynamicPage'
 
 /** загрузка данных. */
 // ts-prune-ignore-next
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   /** queryClient */
   const queryClient = new QueryClient()
+
+  /** слаг */
+  const slug = ctx?.params?.slug
 
   try {
     await Promise.all([
       queryClient.prefetchQuery({
-        queryFn: () => getProduct({ productId: '677' }),
-        queryKey: [QUERY_KEY_FETCH_PRODUCT, { productId: '677' }]
+        queryFn: () => getPageData({ slug }),
+        queryKey: [QUERY_KEY_FETCH_PAGE_DATA, { slug }]
       })
     ])
+
+    /** список продуктов */
+    const page: FetchPageDataOriginalResult = queryClient.getQueryData([QUERY_KEY_FETCH_PAGE_DATA, { slug }])
+
+    if (!page?.data?.page_type) {
+      return {
+        redirect: {
+          destination: '/404',
+          permanent: false
+        }
+      }
+    }
 
     return {
       props: {
@@ -46,4 +62,4 @@ export const getStaticPaths = async (): Promise<any> => ({
 })
 
 // ts-prune-ignore-next
-export default memo(PublicProductPage)
+export default memo(DynamicPage)

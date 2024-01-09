@@ -42,8 +42,6 @@ const CustomSelect:FC<CustomInputTypes> = ({
   const currentOption = getValues(name)
   /** реф для закрытия опшнов */
   const selectRef = useRef(null)
-  // console.log('currentOption', currentOption)
-  // console.log('options', options)
 
   useOutsideClick(selectRef, () => {
     toggleOpen(false)

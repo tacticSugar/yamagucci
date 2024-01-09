@@ -1,6 +1,8 @@
 // admin api
 export const WEBAPI = 'https://api.yamaguchi.ru/api'
 
+export const PAGE_DATA_API = '/shop/page_data'
+
 export const BANNERS_API = '/admin/banners'
 export const BORBOZA_PRODUCTS_API = '/admin/borboza_products/schema'
 export const BRANDS_API = '/admin/brands'
