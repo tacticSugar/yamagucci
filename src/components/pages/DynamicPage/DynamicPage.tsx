@@ -10,13 +10,18 @@ const DynamicPage: FC = () => {
   const { query: { slug } } = useRouter()
 
   /** получение данных */
-  const { data } = useFetchPageData({ slug })
+  const { data, isLoading } = useFetchPageData({ slug })
 
   /** рендер страницы */
   const renderPage = () => {
     switch (data?.data?.page_type) {
       case 'product':
-        return <PublicProductPage data={data?.data} />
+        return (
+          <PublicProductPage
+            data={data?.data}
+            isLoading={isLoading}
+          />
+        )
       default:
         return '<NotFoundPage />'
     }

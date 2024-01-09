@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import type { FC } from 'react'
+import { type FC } from 'react'
 
 import { ImgTypes } from './_types'
 import styles from './Img.module.scss'
