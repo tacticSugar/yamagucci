@@ -16,12 +16,10 @@ const ProductHero: FC<ProductHeroTypes> = ({ gallery, isLoading, name, slogan_co
       className={styles.loader__img}
       isLoading={isLoading}
     >
-      <div>
-        <Img
-          imgClassname={styles.mainImg}
-          photos={gallery?.[0].photos}
-        />
-      </div>
+      <Img
+        imgClassname={styles.mainImg}
+        photos={gallery?.[0].photos}
+      />
     </LoaderQuery>
 
     {/* -------------------------meta------------------------- */}

@@ -12,8 +12,6 @@ const DynamicPage: FC = () => {
   /** получение данных */
   const { data } = useFetchPageData({ slug })
 
-  console.log('data', data)
-
   /** рендер страницы */
   const renderPage = () => {
     switch (data?.data?.page_type) {

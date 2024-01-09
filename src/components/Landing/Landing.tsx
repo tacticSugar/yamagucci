@@ -67,6 +67,7 @@ const Landing: FC<LandingTypes> = ({ landingName }) => {
     <div
       dangerouslySetInnerHTML={{ __html: htmlContent }}
       style={{ margin: '0 auto', maxWidth: '1920px', overflow: 'hidden' }}
+
     />
   )
 }
