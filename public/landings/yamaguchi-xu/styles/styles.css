@@ -4,103 +4,103 @@
 @font-face {
   font-family: Gothic;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/centurygothic.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/centurygothic.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: PTSans;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/PTSans.eot);
-  src: url(/yamaguchi-xu/fonts/PTSans.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/PTSans.woff2) format('woff2'), url(/yamaguchi-xu/fonts/PTSans.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/PTSans.ttf) format('truetype'), url(/yamaguchi-xu/fonts/PTSans.svg#PTSans) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/PTSans.eot);
+  src: url(/landings/yamaguchi-xu/fonts/PTSans.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/PTSans.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/PTSans.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/PTSans.ttf) format('truetype'), url(/landings/yamaguchi-xu/fonts/PTSans.svg#PTSans) format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: PTSans;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/PTSansBold.eot);
-  src: url(/yamaguchi-xu/fonts/PTSansBold.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/PTSansBold.woff2) format('woff2'), url(/yamaguchi-xu/fonts/PTSansBold.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/PTSansBold.ttf) format('truetype'), url(/yamaguchi-xu/fonts/PTSansBold.svg#PTSans) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/PTSansBold.eot);
+  src: url(/landings/yamaguchi-xu/fonts/PTSansBold.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/PTSansBold.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/PTSansBold.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/PTSansBold.ttf) format('truetype'), url(/landings/yamaguchi-xu/fonts/PTSansBold.svg#PTSans) format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: PTSans;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/PTSansItalic.ttf) format('truetype');
-  src: url(/yamaguchi-xu/fonts/PTSansItalic.woff2) format('woff2'), url(/yamaguchi-xu/fonts/PTSansItalic.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/PTSansItalic.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/PTSansItalic.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/PTSansItalic.woff) format('woff');
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: PTSansNarrow;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/PTSansNarrow.eot);
-  src: url(/yamaguchi-xu/fonts/PTSansNarrow.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/PTSansNarrow.woff2) format('woff2'), url(/yamaguchi-xu/fonts/PTSansNarrow.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/PTSansNarrow.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/PTSansNarrow.svg#PTSansNarrow) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/PTSansNarrow.eot);
+  src: url(/landings/yamaguchi-xu/fonts/PTSansNarrow.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrow.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/PTSansNarrow.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrow.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrow.svg#PTSansNarrow) format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: PTSansNarrow;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/PTSansNarrowBold.eot);
-  src: url(/yamaguchi-xu/fonts/PTSansNarrowBold.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/PTSansNarrowBold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/PTSansNarrowBold.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/PTSansNarrowBold.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/PTSansNarrowBold.svg#PTSansNarrow) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/PTSansNarrowBold.eot);
+  src: url(/landings/yamaguchi-xu/fonts/PTSansNarrowBold.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrowBold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrowBold.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrowBold.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/PTSansNarrowBold.svg#PTSansNarrow) format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: MyriadProLight;
-  src: url(/yamaguchi-xu/fonts/MyriadProLight.eot);
-  src: url(/yamaguchi-xu/fonts/MyriadProLight.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/MyriadProLight.woff) format('woff'), url(/yamaguchi-xu/fonts/MyriadProLight.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/MyriadProLight.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/MyriadProLight.svg#MyriadProLight) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/MyriadProLight.eot);
+  src: url(/landings/yamaguchi-xu/fonts/MyriadProLight.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/MyriadProLight.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/MyriadProLight.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/MyriadProLight.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/MyriadProLight.svg#MyriadProLight) format('svg');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Myriad Pro';
-  src: url(/yamaguchi-xu/fonts/MyriadPro.otf) format('opentype');
-  src: url(/yamaguchi-xu/fonts/MyriadPro.woff2) format('woff2'), url(/yamaguchi-xu/fonts/MyriadPro.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/MyriadPro.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/MyriadPro.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/MyriadPro.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: MyriadProBold;
-  src: url(/yamaguchi-xu/fonts/MyriadProBold.otf) format('opentype');
-  src: url(/yamaguchi-xu/fonts/MyriadProBold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/MyriadProBold.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/MyriadProBold.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/MyriadProBold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/MyriadProBold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: PragmaticaC;
-  src: url(/yamaguchi-xu/fonts/PTPragmaticaCyrillic.ttf) format('opentype');
-  src: url(/yamaguchi-xu/fonts/PTPragmaticaCyrillic.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/PTPragmaticaCyrillic.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/PTPragmaticaCyrillic.ttf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/PTPragmaticaCyrillic.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/PTPragmaticaCyrillic.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: PragmaticaC;
-  src: url(/yamaguchi-xu/fonts/PTPragmaticaBoldCyrillic.ttf) format('opentype');
-  src: url(/yamaguchi-xu/fonts/PTPragmaticaBoldCyrillic.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/PTPragmaticaBoldCyrillic.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/PTPragmaticaBoldCyrillic.ttf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/PTPragmaticaBoldCyrillic.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/PTPragmaticaBoldCyrillic.woff) format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -108,100 +108,100 @@
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Circe-Thin.eot);
-  src: url(/yamaguchi-xu/fonts/Circe-Thin.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Circe-Thin.woff) format('woff'), url(/yamaguchi-xu/fonts/Circe-Thin.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Circe-Thin.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Thin.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Thin.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Thin.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/Circe-Thin.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Thin.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Circe-ExtraLight.eot);
-  src: url(/yamaguchi-xu/fonts/Circe-ExtraLight.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Circe-ExtraLight.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Circe-ExtraLight.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Circe-ExtraLight.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Circe-ExtraLight.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Circe-ExtraLight.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Circe-ExtraLight.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Circe-ExtraLight.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Circe-ExtraLight.ttf) format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Circe-Light.eot);
-  src: url(/yamaguchi-xu/fonts/Circe-Light.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Circe-Light.woff) format('woff'), url(/yamaguchi-xu/fonts/Circe-Light.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Circe-Light.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Light.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Light.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Light.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/Circe-Light.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Light.ttf) format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Circe-Regular.eot);
-  src: url(/yamaguchi-xu/fonts/Circe-Regular.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Circe-Regular.woff) format('woff'), url(/yamaguchi-xu/fonts/Circe-Regular.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Circe-Regular.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Regular.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Regular.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Regular.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/Circe-Regular.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Regular.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Circe-Bold.eot);
-  src: url(/yamaguchi-xu/fonts/Circe-Bold.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Circe-Bold.woff) format('woff'), url(/yamaguchi-xu/fonts/Circe-Bold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Circe-Bold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Bold.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Circe-Bold.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Bold.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/Circe-Bold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Circe-Bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Circe-ExtraBold.eot);
-  src: url(/yamaguchi-xu/fonts/Circe-ExtraBold.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Circe-ExtraBold.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Circe-ExtraBold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Circe-ExtraBold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Circe-ExtraBold.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Circe-ExtraBold.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Circe-ExtraBold.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Circe-ExtraBold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Circe-ExtraBold.ttf) format('truetype');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(/yamaguchi-xu/fonts/bebasneuethin.woff2) format('woff2');
-  src: local('☺'), url(/yamaguchi-xu/fonts/bebasneuethin.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/bebasneuethin.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/bebasneuethin.woff2) format('woff2');
+  src: local('☺'), url(/landings/yamaguchi-xu/fonts/bebasneuethin.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/bebasneuethin.ttf) format('truetype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(/yamaguchi-xu/fonts/bebasneuelight.woff2) format('woff2');
-  src: local('☺'), url(/yamaguchi-xu/fonts/bebasneuelight.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/bebasneuelight.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/bebasneuelight.woff2) format('woff2');
+  src: local('☺'), url(/landings/yamaguchi-xu/fonts/bebasneuelight.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/bebasneuelight.woff) format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(/yamaguchi-xu/fonts/bebasneueregular.eot);
-  src: local('☺'), url(/yamaguchi-xu/fonts/bebasneueregular.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/bebasneueregular.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/bebasneueregular.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/bebasneueregular.svg) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/bebasneueregular.eot);
+  src: local('☺'), url(/landings/yamaguchi-xu/fonts/bebasneueregular.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/bebasneueregular.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/bebasneueregular.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/bebasneueregular.svg) format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(/yamaguchi-xu/fonts/bebasneuebold.eot);
-  src: local('☺'), url(/yamaguchi-xu/fonts/bebasneuebold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/bebasneuebold.woff) format('woff'), url(/yamaguchi-xu/fonts/bebasneuebold.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/bebasneuebold.svg) format('svg');
+  src: url(/landings/yamaguchi-xu/fonts/bebasneuebold.eot);
+  src: local('☺'), url(/landings/yamaguchi-xu/fonts/bebasneuebold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/bebasneuebold.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/bebasneuebold.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/bebasneuebold.svg) format('svg');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -210,8 +210,8 @@
   font-family: Montserrat;
   font-display: swap;
   src: local('Montserrat Light'), local('Montserrat-Light'),
-    url(/yamaguchi-xu/fonts/Montserrat-Light.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Montserrat-Light.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Light.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Light.woff) format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -219,8 +219,8 @@
   font-family: Montserrat;
   font-display: swap;
   src: local('Montserrat'), local('Montserrat-Regular'),
-    url(/yamaguchi-xu/fonts/Montserrat-Regular.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Montserrat-Regular.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Regular.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -228,8 +228,8 @@
   font-family: Montserrat;
   font-display: swap;
   src: local('Montserrat'), local('Montserrat-Regular'),
-    url(/yamaguchi-xu/fonts/Montserrat-Medium.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Montserrat-Medium.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Medium.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Medium.woff) format('woff');
   font-weight: 500;
   font-style: normal;
 }
@@ -237,8 +237,8 @@
   font-family: Montserrat;
   font-display: swap;
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
-    url(/yamaguchi-xu/fonts/Montserrat-Bold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Montserrat-Bold.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Bold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Bold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -246,17 +246,17 @@
   font-family: Montserrat;
   font-display: swap;
   src: local('Montserrat Black'), local('Montserrat-Black'),
-    url(/yamaguchi-xu/fonts/Montserrat-Black.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Montserrat-Black.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Black.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Montserrat-Black.woff) format('woff');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: Morpha;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/Morpha-Bold.woff2) format('woff2');
-  src: local('☺'), url(/yamaguchi-xu/fonts/Morpha-Bold.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Morpha-Bold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Morpha-Bold.woff2) format('woff2');
+  src: local('☺'), url(/landings/yamaguchi-xu/fonts/Morpha-Bold.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Morpha-Bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -264,8 +264,8 @@
   font-family: 'Neue Machina';
   font-display: swap;
   src: local('NeueMachina-Bold'), local('NeueMachina-Bold'),
-    url(/yamaguchi-xu/fonts/NeueMachina-Bold.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/NeueMachina-Bold.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/NeueMachina-Bold.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/NeueMachina-Bold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -273,29 +273,29 @@
   font-family: 'Neue Machina';
   font-display: swap;
   src: local('NeueMachina-Black'), local('NeueMachina-Black'),
-    url(/yamaguchi-xu/fonts/NeueMachina-Black.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/NeueMachina-Bold.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/NeueMachina-Black.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/NeueMachina-Bold.woff) format('woff');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: Norican;
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/norican-regular.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/norican-regular.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Cy Grotesk';
   font-display: swap;
-  src: url(/yamaguchi-xu/fonts/cy-grotesk-grand-dark.otf);
+  src: url(/landings/yamaguchi-xu/fonts/cy-grotesk-grand-dark.otf);
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: RainerTestv04;
-  src: url(/yamaguchi-xu/fonts/RainerTestv04-Bold.woff2), url(/yamaguchi-xu/fonts/RainerTestv04-Bold.woff);
+  src: url(/landings/yamaguchi-xu/fonts/RainerTestv04-Bold.woff2), url(/landings/yamaguchi-xu/fonts/RainerTestv04-Bold.woff);
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -303,25 +303,25 @@
 @font-face {
   font-family: Anticva;
   font-display: swap;
-  src: local('Anticva'), local('Anticva'), url(/yamaguchi-xu/fonts/Anticva-Regular.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Anticva-Regular.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Anticva-Regular.otf) format('truetype');
+  src: local('Anticva'), local('Anticva'), url(/landings/yamaguchi-xu/fonts/Anticva-Regular.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Anticva-Regular.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Anticva-Regular.otf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Halvar Breitschrift';
   src: local('HalvarBreit-Blk'), local('HalvarBreit-Blk'),
-    url(/yamaguchi-xu/fonts/HalvarBreit-Blk.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/HalvarBreit-Blk.woff) format('woff');
+    url(/landings/yamaguchi-xu/fonts/HalvarBreit-Blk.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/HalvarBreit-Blk.woff) format('woff');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: Damn;
   font-display: swap;
-  src: local('Damn'), local('Damn'), url(/yamaguchi-xu/fonts/Damn.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/Damn.woff) format('woff'), url(/yamaguchi-xu/fonts/Damn.ttf) format('truetype');
+  src: local('Damn'), local('Damn'), url(/landings/yamaguchi-xu/fonts/Damn.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/Damn.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/Damn.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -329,340 +329,340 @@
   font-family: 'Monologue DEMO';
   font-display: swap;
   src: local('Monologue_DEMO'), local('Monologue_DEMO'),
-    url(/yamaguchi-xu/fonts/Monologue_DEMO.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Monologue_DEMO.ttf) format('opentype');
+    url(/landings/yamaguchi-xu/fonts/Monologue_DEMO.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Monologue_DEMO.ttf) format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Nasalization;
   font-display: swap;
-  src: local('Nasalization'), local('Nasalization'), url(/yamaguchi-xu/fonts/Nasalization.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Nasalization.otf) format('opentype');
+  src: local('Nasalization'), local('Nasalization'), url(/landings/yamaguchi-xu/fonts/Nasalization.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Nasalization.otf) format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: PatsySans;
   font-display: swap;
-  src: local('PatsySans'), local('PatsySans'), url(/yamaguchi-xu/fonts/PatsySans.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/PatsySans.otf) format('opentype');
+  src: local('PatsySans'), local('PatsySans'), url(/landings/yamaguchi-xu/fonts/PatsySans.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/PatsySans.otf) format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Lighthaus;
-  src: url(/yamaguchi-xu/fonts/Lighthaus.eot);
-  src: url(/yamaguchi-xu/fonts/Lighthaus.eot?#iefix) format('embedded-opentype'),
-    url(/yamaguchi-xu/fonts/Lighthaus.woff2) format('woff2'), url(/yamaguchi-xu/fonts/Lighthaus.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Lighthaus.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Lighthaus.eot);
+  src: url(/landings/yamaguchi-xu/fonts/Lighthaus.eot?#iefix) format('embedded-opentype'),
+    url(/landings/yamaguchi-xu/fonts/Lighthaus.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/Lighthaus.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Lighthaus.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: UltramonoWide-LightItalic;
-  src: url(/yamaguchi-xu/fonts/UltramonoWide-LightItalic.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/UltramonoWide-LightItalic.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/UltramonoWide-LightItalic.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/UltramonoWide-LightItalic.woff) format('woff');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: UltramonoWide-Light;
-  src: url(/yamaguchi-xu/fonts/UltramonoWide-Light.woff2) format('woff2'),
-    url(/yamaguchi-xu/fonts/UltramonoWide-Light.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/UltramonoWide-Light.woff2) format('woff2'),
+    url(/landings/yamaguchi-xu/fonts/UltramonoWide-Light.woff) format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Nikkyou Sans';
-  src: url(/yamaguchi-xu/fonts/NikkyouSans.woff2) format('woff2'), url(/yamaguchi-xu/fonts/NikkyouSans.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/NikkyouSans.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/NikkyouSans.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Corvetta;
-  src: url(/yamaguchi-xu/fonts/Corvetta.woff2) format('woff2'), url(/yamaguchi-xu/fonts/Corvetta.woff) format('woff'),
-    url(/yamaguchi-xu/fonts/Corvetta.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Corvetta.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/Corvetta.woff) format('woff'),
+    url(/landings/yamaguchi-xu/fonts/Corvetta.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: a_LCDNovaObl;
-  src: url(/yamaguchi-xu/fonts/a_lcdnovaobl.woff) format('woff'), url(/yamaguchi-xu/fonts/a_lcdnovaobl.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/a_lcdnovaobl.woff) format('woff'), url(/landings/yamaguchi-xu/fonts/a_lcdnovaobl.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Felidae;
-  src: url(/yamaguchi-xu/fonts/Felidae.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Felidae.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-Thin.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-Thin.otf);
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExpandedTrial-Regular.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExpandedTrial-Regular.otf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExpandedTrial-RegularItalic.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExpandedTrial-RegularItalic.otf);
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExpandedTrial-ExtraBold.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExpandedTrial-ExtraBold.otf);
   font-weight: 750;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExpandedTrial-ExtraBoldItalic.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExpandedTrial-ExtraBoldItalic.otf);
   font-weight: 750;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExpandedTrial-Heavy.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExpandedTrial-Heavy.otf);
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Expanded Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExpandedTrialThinItalic.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExpandedTrialThinItalic.otf);
   font-weight: 100;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next ExtraCond Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-ExtraBold.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-ExtraBold.otf);
   font-weight: 750;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next ExtraCond Trial Heavy';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-HeavyItalic.otf) format('opentype'),
-    url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-HeavyItalic.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-HeavyItalic.otf) format('opentype'),
+    url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-HeavyItalic.ttf) format('truetype');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next ExtraCond Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-ExtraBoldItalic.ttf) format('truetype'),
-    url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-ExtraBoldItalic.woff2) format('woff2');
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-ExtraBoldItalic.ttf) format('truetype'),
+    url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-ExtraBoldItalic.woff2) format('woff2');
   font-weight: 750;
   font-style: italic;
 }
 @font-face {
   font-family: 'Muller Next ExtraCond Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-Regular.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-Regular.otf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next ExtraCond Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrial-RegularItalic.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrial-RegularItalic.otf);
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next ExtraCond Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextExtraCondTrialThin.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextExtraCondTrialThin.otf);
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextTrial-Regular.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextTrial-Regular.otf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextTrial-ExtraBold.otf);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextTrial-ExtraBold.otf);
   font-weight: 750;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Muller Next Wide Trial';
-  src: url(/yamaguchi-xu/fonts/MullerNextTrial-ThinItalic.woff2);
+  src: url(/landings/yamaguchi-xu/fonts/MullerNextTrial-ThinItalic.woff2);
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: Cakra;
-  src: url(/yamaguchi-xu/fonts/Cakra-Normal.otf) format('opentype');
-  src: url(/yamaguchi-xu/fonts/Cakra-Normal.woff2) format('woff2'), url(/yamaguchi-xu/fonts/Cakra-Normal.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/Cakra-Normal.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/Cakra-Normal.woff2) format('woff2'), url(/landings/yamaguchi-xu/fonts/Cakra-Normal.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Noteworthy;
-  src: url(/yamaguchi-xu/fonts/NoteworthyLight.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/NoteworthyLight.ttf) format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Technology;
-  src: url(/yamaguchi-xu/fonts/Technology.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Technology.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Technology;
-  src: url(/yamaguchi-xu/fonts/Technology-Bold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Technology-Bold.ttf) format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Unbounded;
-  src: url(/yamaguchi-xu/fonts/Unbounded-Bold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Unbounded-Bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Unbounded;
-  src: url(/yamaguchi-xu/fonts/Unbounded-Black.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Unbounded-Black.ttf) format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Inter;
-  src: url(/yamaguchi-xu/fonts/Inter-Medium.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Inter-Medium.ttf) format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Inter;
-  src: url(/yamaguchi-xu/fonts/Inter-SemiBold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/Inter-SemiBold.ttf) format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url(/yamaguchi-xu/fonts/MontserratAlternates-Light.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/MontserratAlternates-Light.ttf) format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Snell Roundhand';
-  src: url(/yamaguchi-xu/fonts/snell-roundhand-900.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/snell-roundhand-900.otf) format('opentype');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Snell Roundhand';
-  src: url(/yamaguchi-xu/fonts/snell-roundhand-700.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/snell-roundhand-700.otf) format('opentype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: Lighthaus;
-  src: url(/yamaguchi-xu/fonts/Lighthaus-400.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/Lighthaus-400.otf) format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Code pro black';
-  src: url(/yamaguchi-xu/fonts/code_pro_black.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/code_pro_black.otf) format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Boldstrom;
-  src: url(/yamaguchi-xu/fonts/Boldstrom-b.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/Boldstrom-b.otf) format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Europe ext regular';
-  src: url(/yamaguchi-xu/fonts/europeext.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/europeext.otf) format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Europe ext bold';
-  src: url(/yamaguchi-xu/fonts/europeext_bold.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/europeext_bold.otf) format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Europe ext bold italic';
-  src: url(/yamaguchi-xu/fonts/europeext_bold_italic.otf) format('opentype');
+  src: url(/landings/yamaguchi-xu/fonts/europeext_bold_italic.otf) format('opentype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'TT Smalls Trial';
-  src: url(/yamaguchi-xu/fonts/TT-Smalls-Trial-Black.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/TT-Smalls-Trial-Black.woff) format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mak;
-  src: url(/yamaguchi-xu/fonts/MAK.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/MAK.woff) format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: GTEestiProDisplay;
-  src: url(/yamaguchi-xu/fonts/GTEestiProDisplay-Bold.woff2) format('woff2');
-  src: url(/yamaguchi-xu/fonts/GTEestiProDisplay-Bold.woff) format('woff');
-  src: url(/yamaguchi-xu/fonts/GTEestiProDisplay-Bold.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/GTEestiProDisplay-Bold.woff2) format('woff2');
+  src: url(/landings/yamaguchi-xu/fonts/GTEestiProDisplay-Bold.woff) format('woff');
+  src: url(/landings/yamaguchi-xu/fonts/GTEestiProDisplay-Bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: EuropeExt;
-  src: url(/yamaguchi-xu/fonts/europeextnormal.woff2) format('woff2');
-  src: url(/yamaguchi-xu/fonts/europeextnormal.ttf) format('truetype');
+  src: url(/landings/yamaguchi-xu/fonts/europeextnormal.woff2) format('woff2');
+  src: url(/landings/yamaguchi-xu/fonts/europeextnormal.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

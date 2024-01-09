@@ -45,7 +45,7 @@ const Landing: FC<LandingTypes> = ({ landingName }) => {
     const fetchHtmlContent = async () => {
       try {
         /** загружаем контент из папки паблик */
-        const response = await fetch(`/${landingName}/index.html`)
+        const response = await fetch(`/landings/${landingName}/index.html`)
 
         if (response.ok) {
           /** получаем контент */
